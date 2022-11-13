@@ -7,10 +7,9 @@
     "build": "next build",
     "start": "next start",
     "import": "node ./contentful/setup.js",
-    "export": "npx contentful export",
-    "generate": "",
-    "sync": "npm export && npm generate ",
-    "lint": "next lint"
+    "generate": "npx cf-content-types-generator contentful/export.json -o contentful/types",
+    "lint": "next lint",
+    "postinstall": "npm run generate"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.4.0",
