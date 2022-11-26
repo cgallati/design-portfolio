@@ -878,6 +878,169 @@
           }
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "66So5HrsofY95zlRWXaXVm",
+        "type": "Entry",
+        "createdAt": "2022-11-13T17:36:52.376Z",
+        "updatedAt": "2022-11-13T17:36:54.846Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-11-13T17:36:54.846Z",
+        "firstPublishedAt": "2022-11-13T17:36:54.846Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sample Project (1)"
+        },
+        "slug": {
+          "en-US": "sample-project-1"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "excerpt": {
+          "en-US": "Cheeseburger fondue roquefort"
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4ys1lfW1EJxTNkQWLHCckI"
+            }
+          }
+        }
+      }
     }
   ],
   "assets": [
@@ -982,91 +1145,6 @@
             "linkType": "Environment",
             "id": "master",
             "uuid": "46691690-207b-4e14-91d3-297136264e5f"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "createdAt": "2022-11-13T02:29:50Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedAt": "2022-11-13T02:29:50Z"
-      }
-    }
-  ],
-  "webhooks": [
-  ],
-  "roles": [
-    {
-      "name": "Editor",
-      "description": "Allows editing, publishing and archiving of content",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
-      },
-      "sys": {
-        "type": "Role",
-        "id": "7zFNZSPo6zGKUrF9kQpGDF",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
           }
         },
         "createdBy": {
