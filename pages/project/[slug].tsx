@@ -1,7 +1,6 @@
 import { getProject, getProjectList } from "../../contentful/api";
 import { NextPage } from "next";
 import { IProject } from "../../types/project";
-import { BLOCKS, Document } from "@contentful/rich-text-types";
 import { ProjectDetail } from "../../components";
 
 const Project: NextPage<{ project: IProject }> = ({ project }) => {
