@@ -9,6 +9,7 @@ import {
   BottomNav,
   BottomNavLink,
   BodyParagraph,
+  NextPreviousIcon,
 } from "./project-detail.styles";
 import { FC } from "react";
 import { EmbeddedImage } from "./EmbeddedImage";
@@ -60,13 +61,15 @@ export const ProjectDetail: FC<{ project: IProject }> = ({ project }) => {
           href={"/project/" + project.previous}
           disabled={!project.previous}
         >
-          {"< "}Previous Project
+          <NextPreviousIcon src={"/tricle.png"} orientation={"left"} />
+          Previous Project
         </BottomNavLink>
         <BottomNavLink
           href={"/project/" + project.next}
           disabled={!project.next}
         >
-          Next Project{" >"}
+          Next Project
+          <NextPreviousIcon src={"/tricle.png"} orientation={"right"} />
         </BottomNavLink>
       </BottomNav>
     </>

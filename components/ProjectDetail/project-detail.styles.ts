@@ -52,3 +52,14 @@ export const BottomNavLink = styled(Link)<{ disabled: boolean }>`
     `;
   }}
 `;
+
+export const NextPreviousIcon = styled.img<{ orientation: string }>`
+  width: 15px;
+  ${({ orientation }) =>
+    orientation === "left" ? "margin-right" : "margin-left"}: 10px;
+
+  display: inline;
+  transform: rotate(
+    ${({ orientation }) => (orientation === "left" ? 270 : 90)}deg
+  );
+`;
