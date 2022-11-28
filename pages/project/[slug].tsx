@@ -15,13 +15,13 @@ export async function getStaticPaths() {
 
   return {
     paths: [...slugParams],
-    fallback: false,
+    fallback: true,
   };
 }
 
 export async function getStaticProps({ params }) {
   const project = await getProject(params.slug);
-  return { props: { project }, revalidate: 10 };
+  return { props: { project } };
 }
 
 export default Project;
