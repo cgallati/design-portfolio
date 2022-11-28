@@ -36,7 +36,7 @@ export const BottomNav = styled.div`
   flex-direction: row;
   justify-content: space-between;
   cursor: default;
-  margin: 2rem 0 5rem;
+  margin: 2rem 0 0;
 `;
 
 export const BottomNavLink = styled(Link)<{ disabled: boolean }>`

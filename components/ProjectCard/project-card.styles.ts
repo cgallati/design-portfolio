@@ -22,7 +22,6 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
   position: relative;
   animation-duration: 0.5s;
   animation-name: ${animationFade};
-  animation-delay: 0.15s;
   animation-fill-mode: backwards;
 
   div {

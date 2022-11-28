@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { css } from "@emotion/react";
 import { mq, responsiveValues, tokens } from "../../lib/theme";
 import { animationFade } from "../ProjectCard/project-card.styles";
 
@@ -24,7 +23,6 @@ export const Header = styled.header`
   animation-duration: 0.5s;
   animation-name: ${animationFade};
   animation-fill-mode: backwards;
-  animation-delay: 0.15s;
 `;
 
 export const NavBar = styled.nav`
