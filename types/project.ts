@@ -9,4 +9,5 @@ export interface IProject {
   content: CFRichTextTypes.Block | CFRichTextTypes.Inline;
   next?: string;
   previous?: string;
+  order?: number;
 }

@@ -7,6 +7,7 @@ export interface TypeProjectFields {
   content: CFRichTextTypes.Block | CFRichTextTypes.Inline;
   excerpt: Contentful.EntryFields.Symbol;
   coverImage: Contentful.Asset;
+  order: Contentful.EntryFields.Integer;
 }
 
 export type TypeProject = Contentful.Entry<TypeProjectFields>;

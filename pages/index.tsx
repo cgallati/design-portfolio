@@ -4,14 +4,18 @@ import { IProject } from "../types/project";
 
 export default function Index({
   preview,
-  projectList,
+  projects,
 }: {
   preview: boolean;
-  projectList: IProject[];
+  projects: IProject[];
 }) {
+  const data = projects.map((project) => ({
+    name: project.title,
+    order: project.order,
+  }));
   return (
     <ProjectListSection>
-      {projectList.map(({ title, bgImage, subtitle, slug }, index) => (
+      {projects.map(({ title, bgImage, subtitle, slug }, index) => (
         <ProjectCard
           key={title}
           img={bgImage}
@@ -27,7 +31,13 @@ export default function Index({
 
 export async function getStaticProps({ preview = false }) {
   const projectList = (await getProjectList()) ?? [];
+  const projects = projectList
+    .map((project) => ({
+      ...project,
+      order: project.order ? project.order : null,
+    }))
+    .sort((a, b) => (a.order <= b.order ? -1 : 1));
   return {
-    props: { preview, projectList },
+    props: { preview, projects },
   };
 }

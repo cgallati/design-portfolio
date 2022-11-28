@@ -16,6 +16,7 @@ export const getProjectList = async (): Promise<IProject[]> => {
       slug: project.fields.slug,
       id: project.sys.id,
       content: project.fields.content,
+      order: project.fields.order,
     }))
   );
 };
