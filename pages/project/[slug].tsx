@@ -21,6 +21,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const project = await getProject(params.slug);
-  return { props: { project } };
+  return { props: { project }, revalidate: 10 };
 }
+
 export default Project;

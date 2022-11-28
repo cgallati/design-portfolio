@@ -8,6 +8,7 @@ export const TopRule = styled.hr`
   ${mq[0]} {
     border-width: 1px;
   }
+  margin: 0;
 `;
 
 export const Title = styled.h1`
