@@ -1,15 +1,18 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { responsiveValues } from "../../lib/theme";
+import { keyframes } from "@emotion/react";
 
 export const ProjectListSection = styled.section`
   margin: auto;
 `;
 
-export const ProjectCardArticle = styled.article<{
-  width: number;
-  height: number;
-  ratio: number;
-}>`
+export const animationFade = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+`;
+
+export const ProjectCardArticle = styled.article<{ index: number }>`
   height: max-content;
   box-sizing: border-box;
   margin: 0 auto 2rem;
@@ -17,6 +20,11 @@ export const ProjectCardArticle = styled.article<{
   flex-direction: column;
   justify-content: center;
   position: relative;
+  animation-duration: 0.5s;
+  animation-name: ${animationFade};
+  animation-delay: 0.15s;
+  animation-fill-mode: backwards;
+
   div {
     position: absolute;
     pointer-events: none;
@@ -27,9 +35,11 @@ export const ProjectCardArticle = styled.article<{
     transition: all 0.5s ease;
     opacity: 0;
     color: white;
-
+    width: 100%;
     h2 {
-      font-size: 20px;
+      font-family: ${({ theme }) => theme.typography.display.family};
+      ${({ theme }) =>
+        responsiveValues("font-size", theme.typography.display.size)};
     }
 
     h3 {
@@ -52,5 +62,3 @@ export const ProjectCardImage = styled(Image)`
     filter: brightness(40%);
   }
 `;
-
-export const Title = styled.h2``;

@@ -11,13 +11,14 @@ export default function Index({
 }) {
   return (
     <ProjectListSection>
-      {projectList.map(({ title, bgImage, subtitle, slug }) => (
+      {projectList.map(({ title, bgImage, subtitle, slug }, index) => (
         <ProjectCard
           key={title}
           img={bgImage}
           title={title}
           subtitle={subtitle}
           slug={slug}
+          index={index}
         />
       ))}
     </ProjectListSection>

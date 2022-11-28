@@ -1,21 +1,34 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { mq, responsiveValues, tokens } from "../../lib/theme";
 
 export const TopRule = styled.hr`
-  margin-top: -2rem;
+  display: block;
+  border: solid 0.5px ${tokens.color[9]};
+  ${mq[0]} {
+    border-width: 1px;
+  }
 `;
 
 export const Title = styled.h1`
   text-align: center;
+  font-family: ${({ theme }) => theme.typography.display.family};
+  ${({ theme }) =>
+    responsiveValues("font-size", theme.typography.display.size)};
 `;
 
 export const Subtitle = styled.h2`
   text-align: center;
   font-size: 18px;
+  ${({ theme }) => responsiveValues("margin-bottom", theme.spacing.breathing)};
 `;
 
-export const BottomRule = styled.hr`
-  margin-top: 2rem;
+export const BodyParagraph = styled.p`
+  margin-bottom: ${tokens.spacing[2]};
+`;
+
+export const BottomRule = styled(TopRule)`
+  ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
 `;
 
 export const BottomNav = styled.div`

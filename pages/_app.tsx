@@ -1,6 +1,11 @@
 import { Layout } from "../components/";
 import { NAV_LINKS } from "../lib/constants";
 import { useRouter } from "next/router";
+import { ThemeProvider } from "@emotion/react";
+import { lightTheme } from "../lib/theme";
+
+// global style reset
+import "../lib/theme/reset.css";
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
@@ -17,9 +22,11 @@ function MyApp({ Component, pageProps }) {
   }));
 
   return (
-    <Layout navLinks={linksWithState}>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider theme={lightTheme}>
+      <Layout navLinks={linksWithState}>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 

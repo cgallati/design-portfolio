@@ -23,11 +23,16 @@ export const getProjectList = async (): Promise<IProject[]> => {
 export const getProject = async (slug: string): Promise<IProject> => {
   const projects = await getProjectList();
   const projectIndex = projects.findIndex((project) => project.slug === slug);
+  const project = projects[projectIndex];
+  const next = projects[projectIndex + 1];
+  const prev = projects[projectIndex - 1];
+
+  let parsedData = await client.parseEntries<TypeProjectFields>(project);
   return {
-    ...projects[projectIndex],
-    next: projects[projectIndex + 1] ? projects[projectIndex + 1].slug : null,
-    previous: projects[projectIndex - 1]
-      ? projects[projectIndex - 1].slug
-      : null,
+    ...project,
+    // @ts-ignore
+    content: parsedData.content,
+    next: next ? next.slug : null,
+    previous: prev ? prev.slug : null,
   };
 };

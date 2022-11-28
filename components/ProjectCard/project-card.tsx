@@ -7,22 +7,23 @@ export const ProjectCard = ({
   subtitle,
   img,
   slug,
+  index,
 }: {
   title: string;
   subtitle: string;
   img: Asset;
   slug: string;
+  index: number;
 }) => {
   const imgSize = img.fields.file.details.image;
-  const ratio = imgSize.height / imgSize.width;
   return (
     <Link href={"/project/" + slug}>
-      <ProjectCardArticle {...imgSize} ratio={ratio}>
+      <ProjectCardArticle index={index}>
         <ProjectCardImage
           alt={img.fields.description}
           src={"https:" + img.fields.file.url}
-          width={img.fields.file.details.image.width}
-          height={img.fields.file.details.image.height}
+          width={imgSize.width}
+          height={imgSize.height}
           sizes="100vw"
           style={{
             width: "100%",
