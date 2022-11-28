@@ -3,6 +3,7 @@ import { NAV_LINKS } from "../lib/constants";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "@emotion/react";
 import { lightTheme } from "../lib/theme";
+import { DefaultSeo } from "next-seo";
 
 // global style reset
 import "../lib/theme/reset.css";
@@ -23,6 +24,30 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={lightTheme}>
+      <DefaultSeo
+        title={"STEVEN VASIL"}
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: "https://stevenvasil.com/",
+          siteName: "STEVEN VASIL",
+          description: "Portfolio",
+          images: [
+            {
+              url: "https://www.example.ie/og-image-01.jpg",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <Layout navLinks={linksWithState}>
         <Component {...pageProps} />
       </Layout>
