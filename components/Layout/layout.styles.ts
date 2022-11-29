@@ -46,8 +46,7 @@ export const NavLink = styled(Link)<{ current: boolean }>`
     position: absolute;
     bottom: -5px;
     height: 2px;
-    width: 80%;
-    margin-left: -10%;
+    width: 100%;
     transition: all 300ms cubic-bezier(0.04, 0.1, 0.98, 0.88);
     background-color: ${({ current }) => (current ? "black" : "white")};
   }
@@ -57,7 +56,7 @@ export const NavLink = styled(Link)<{ current: boolean }>`
     }
   }
   :last-of-type {
-    padding-right: 0;
+    margin-right: 0;
   }
 `;
 
