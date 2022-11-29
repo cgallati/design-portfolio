@@ -30,13 +30,8 @@ export default function Index({
 }
 
 export async function getStaticProps({ preview = false }) {
-  const projectList = (await getProjectList()) ?? [];
-  const projects = projectList
-    .map((project) => ({
-      ...project,
-      order: project.order ? project.order : null,
-    }))
-    .sort((a, b) => (a.order <= b.order ? -1 : 1));
+  const projects = (await getProjectList()) ?? [];
+
   return {
     props: { preview, projects },
   };

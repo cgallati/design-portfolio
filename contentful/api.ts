@@ -8,7 +8,7 @@ const client = createClient({
 });
 
 export const getProjectList = async (): Promise<IProject[]> => {
-  return await client.getEntries<TypeProjectFields>().then((res) =>
+  const projectList = await client.getEntries<TypeProjectFields>().then((res) =>
     res.items.map((project) => ({
       title: project.fields.title,
       subtitle: project.fields.excerpt,
@@ -19,6 +19,12 @@ export const getProjectList = async (): Promise<IProject[]> => {
       order: project.fields.order,
     }))
   );
+  return projectList
+    .map((project) => ({
+      ...project,
+      order: project.order ? project.order : null,
+    }))
+    .sort((a, b) => (a.order <= b.order ? -1 : 1));
 };
 
 export const getProject = async (slug: string): Promise<IProject> => {
