@@ -74,12 +74,20 @@ export const lightTheme: Theme = {
   typography: {
     display: {
       family: tokens.typography.font.serif,
-      // stretch:
       size: {
-        s: tokens.typography.size[4],
-        m: tokens.typography.size[5],
+        s: tokens.typography.size[3],
+        m: tokens.typography.size[4],
         l: tokens.typography.size[5],
         xl: tokens.typography.size[5],
+      },
+    },
+    subheading: {
+      family: tokens.typography.font.sans,
+      size: {
+        s: tokens.typography.size[1],
+        m: tokens.typography.size[2],
+        l: tokens.typography.size[3],
+        xl: tokens.typography.size[3],
       },
     },
     body: {

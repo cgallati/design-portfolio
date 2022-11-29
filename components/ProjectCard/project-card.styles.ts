@@ -42,7 +42,9 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
     }
 
     h3 {
-      font-size: 16px;
+      font-family: ${({ theme }) => theme.typography.subheading.family};
+      ${({ theme }) =>
+        responsiveValues("font-size", theme.typography.subheading.size)};
     }
   }
 

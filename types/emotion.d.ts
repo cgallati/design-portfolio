@@ -49,6 +49,7 @@ declare module "@emotion/react" {
     };
     typography: {
       display: TypeFace;
+      subheading: TypeFace;
       body: TypeFace;
       nav: TypeFace;
     };
