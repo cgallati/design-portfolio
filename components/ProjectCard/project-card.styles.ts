@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { responsiveValues } from "../../lib/theme";
+import { responsiveValues, tokens } from "../../lib/theme";
 import { keyframes } from "@emotion/react";
 
 export const ProjectListSection = styled.section`
@@ -25,6 +25,7 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
   animation-fill-mode: backwards;
 
   div {
+    padding: 0 ${tokens.spacing[2]};
     position: absolute;
     pointer-events: none;
     text-align: center;
