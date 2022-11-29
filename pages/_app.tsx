@@ -7,6 +7,7 @@ import { DefaultSeo } from "next-seo";
 
 // global style reset
 import "../lib/theme/reset.css";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
@@ -24,6 +25,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={lightTheme}>
+        <Head>
+            <link rel="stylesheet" href="https://use.typekit.net/cnq7erv.css"/>
+            <title>STEVEN VASIL</title>
+        </Head>
       <DefaultSeo
         title={"STEVEN VASIL"}
         openGraph={{

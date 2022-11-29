@@ -26,8 +26,8 @@ export const tokens: Tokens = {
   },
   typography: {
     font: {
-      serif: "serif",
-      sans: "sans-serif",
+      serif: "Monarcha, serif",
+      sans: "Interstate, sans-serif",
     },
     size: {
       0: "0.875rem",
@@ -74,6 +74,7 @@ export const lightTheme: Theme = {
   typography: {
     display: {
       family: tokens.typography.font.serif,
+      // stretch:
       size: {
         s: tokens.typography.size[4],
         m: tokens.typography.size[5],
