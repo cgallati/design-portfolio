@@ -12,10 +12,9 @@ export async function getStaticPaths() {
   const slugParams = projectList.map((project) => ({
     params: { slug: project.slug },
   }));
-
   return {
     paths: [...slugParams],
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
