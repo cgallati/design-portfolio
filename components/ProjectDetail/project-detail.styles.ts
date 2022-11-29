@@ -14,18 +14,26 @@ export const TopRule = styled.hr`
 export const Title = styled.h1`
   text-align: center;
   font-family: ${({ theme }) => theme.typography.display.family};
+  font-weight: ${({ theme }) => theme.typography.display.weight};
   ${({ theme }) =>
     responsiveValues("font-size", theme.typography.display.size)};
+  ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
 `;
 
 export const Subtitle = styled.h2`
   text-align: center;
-  font-size: 18px;
+  ${({ theme }) =>
+    responsiveValues("font-size", theme.typography.subheading.size)};
   ${({ theme }) => responsiveValues("margin-bottom", theme.spacing.breathing)};
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 2px;
 `;
 
 export const BodyParagraph = styled.p`
   margin-bottom: ${tokens.spacing[2]};
+  font-weight: ${({ theme }) => theme.typography.body.weight};
+  ${({ theme }) => responsiveValues("font-size", theme.typography.body.size)}
 `;
 
 export const BottomRule = styled(TopRule)`
@@ -42,7 +50,10 @@ export const BottomNav = styled.div`
 
 export const BottomNavLink = styled(Link)<{ disabled: boolean }>`
   color: black;
+  ${({ theme }) =>
+    responsiveValues("font-size", theme.typography.interactive.size)}
   text-decoration: none;
+  letter-spacing: 2px;
   ${({ disabled }) => {
     if (disabled)
       return `

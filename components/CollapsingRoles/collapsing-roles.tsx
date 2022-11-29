@@ -42,7 +42,7 @@ export const CollapsingRoles: FC<CollapsingRolesProps> = ({ roles }) => {
         ))}
       </Roles>
       <Header onClick={handleClick}>
-        <RolesHeading>{isOpen ? "CLOSE" : "OPEN"} ROLES</RolesHeading>
+        <RolesHeading>{isOpen ? "CLOSE" : "LEARN"} ROLES</RolesHeading>
         <Image
           src={icon}
           width={20}

@@ -25,13 +25,13 @@ declare module "@emotion/react" {
         serif: string;
         sans: string;
       };
-      size: { [key: number]: string };
+      size: { [key: number | string]: string };
     };
   }
 
   interface TypeFace {
     family: string;
-    weight?: Responsive<number>;
+    weight?: number | string;
     height?: Responsive<string>;
     size: Responsive<string>;
   }
@@ -52,6 +52,7 @@ declare module "@emotion/react" {
       subheading: TypeFace;
       body: TypeFace;
       nav: TypeFace;
+      interactive: TypeFace;
     };
   }
 }

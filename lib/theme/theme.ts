@@ -30,6 +30,7 @@ export const tokens: Tokens = {
       sans: "Interstate, sans-serif",
     },
     size: {
+      "01": ".75rem",
       0: "0.875rem",
       1: "1rem",
       2: "1.25rem",
@@ -74,29 +75,31 @@ export const lightTheme: Theme = {
   typography: {
     display: {
       family: tokens.typography.font.serif,
+      weight: 400,
       size: {
-        s: tokens.typography.size[3],
-        m: tokens.typography.size[4],
-        l: tokens.typography.size[5],
+        s: tokens.typography.size[2],
+        m: tokens.typography.size[3],
+        l: tokens.typography.size[4],
         xl: tokens.typography.size[5],
       },
     },
     subheading: {
       family: tokens.typography.font.sans,
       size: {
-        s: tokens.typography.size[1],
-        m: tokens.typography.size[2],
-        l: tokens.typography.size[3],
-        xl: tokens.typography.size[3],
+        s: tokens.typography.size["01"],
+        m: tokens.typography.size[1],
+        l: tokens.typography.size[1],
+        xl: tokens.typography.size[1],
       },
     },
     body: {
       family: tokens.typography.font.sans,
+      weight: 400,
       size: {
-        s: tokens.typography.size[0],
-        m: tokens.typography.size[2],
-        l: tokens.typography.size[3],
-        xl: tokens.typography.size[5],
+        s: tokens.typography.size["01"],
+        m: tokens.typography.size[0],
+        l: tokens.typography.size[1],
+        xl: tokens.typography.size[2],
       },
     },
     nav: {
@@ -106,6 +109,16 @@ export const lightTheme: Theme = {
         m: tokens.typography.size[1],
         l: tokens.typography.size[2],
         xl: tokens.typography.size[2],
+      },
+    },
+    interactive: {
+      family: tokens.typography.font.sans,
+      weight: 400,
+      size: {
+        s: tokens.typography.size["01"],
+        m: tokens.typography.size[0],
+        l: tokens.typography.size[0],
+        xl: tokens.typography.size[0],
       },
     },
   },

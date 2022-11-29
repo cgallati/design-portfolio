@@ -62,13 +62,13 @@ export const ProjectDetail: FC<{ project: IProject }> = ({ project }) => {
           disabled={!project.previous}
         >
           <NextPreviousIcon src={"/tricle.png"} orientation={"left"} />
-          Previous Project
+          PREVIOUS PROJECT
         </BottomNavLink>
         <BottomNavLink
           href={"/project/" + project.next}
           disabled={!project.next}
         >
-          Next Project
+          NEXT PROJECT
           <NextPreviousIcon src={"/tricle.png"} orientation={"right"} />
         </BottomNavLink>
       </BottomNav>

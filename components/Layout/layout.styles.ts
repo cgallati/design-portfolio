@@ -34,13 +34,13 @@ export const NavBar = styled.nav`
 
 export const NavLink = styled(Link)<{ current: boolean }>`
   flex: 1;
-  padding: 0 1rem;
   text-decoration: none;
   position: relative;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   color: black;
+  margin-right: 1rem;
   ::after {
     content: "";
     position: absolute;
@@ -55,6 +55,9 @@ export const NavLink = styled(Link)<{ current: boolean }>`
     ::after {
       background-color: ${({ current }) => (current ? "black" : "darkgray")};
     }
+  }
+  :last-of-type {
+    padding-right: 0;
   }
 `;
 
