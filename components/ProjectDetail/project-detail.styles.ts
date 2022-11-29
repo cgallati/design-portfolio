@@ -34,6 +34,8 @@ export const BodyParagraph = styled.p`
   margin-bottom: ${tokens.spacing[2]};
   font-weight: ${({ theme }) => theme.typography.body.weight};
   ${({ theme }) => responsiveValues("font-size", theme.typography.body.size)}
+  letter-spacing: 2px;
+  line-height: 1.8;
 `;
 
 export const BottomRule = styled(TopRule)`
