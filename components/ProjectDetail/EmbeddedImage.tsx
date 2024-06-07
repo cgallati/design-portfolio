@@ -27,7 +27,6 @@ export const EmbeddedImage = ({
       style={{
         width: "100%",
         height: "auto",
-        marginBottom: tokens.spacing[2],
       }}
     />
   );

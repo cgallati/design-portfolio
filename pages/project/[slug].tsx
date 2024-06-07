@@ -1,16 +1,15 @@
-import { getProject, getProjectList } from "../../contentful/api";
+import {getProject, getProjectList, ProjectWithPointers} from "../../contentful/api";
 import { NextPage } from "next";
-import { IProject } from "../../types/project";
 import { ProjectDetail } from "../../components";
 
-const Project: NextPage<{ project: IProject }> = ({ project }) => {
+const Project: NextPage<{ project: ProjectWithPointers }> = ({ project }) => {
   return <ProjectDetail project={project} />;
 };
 
 export async function getStaticPaths() {
   const projectList = (await getProjectList()) ?? [];
   const slugParams = projectList.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.fields.slug },
   }));
   return {
     paths: [...slugParams],

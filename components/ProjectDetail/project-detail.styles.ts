@@ -11,24 +11,6 @@ export const TopRule = styled.hr`
   margin: 0;
 `;
 
-export const Title = styled.h1`
-  text-align: center;
-  font-family: ${({ theme }) => theme.typography.display.family};
-  font-weight: ${({ theme }) => theme.typography.display.weight};
-  ${({ theme }) =>
-    responsiveValues("font-size", theme.typography.display.size)};
-  ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
-`;
-
-export const Subtitle = styled.h2`
-  text-align: center;
-  ${({ theme }) =>
-    responsiveValues("font-size", theme.typography.subheading.size)};
-  ${({ theme }) => responsiveValues("margin-bottom", theme.spacing.breathing)};
-  line-height: 30px;
-  font-weight: 400;
-  letter-spacing: 2px;
-`;
 
 export const BodyParagraph = styled.p`
   margin-bottom: ${tokens.spacing[2]};
@@ -36,10 +18,6 @@ export const BodyParagraph = styled.p`
   ${({ theme }) => responsiveValues("font-size", theme.typography.body.size)}
   letter-spacing: 2px;
   line-height: 1.8;
-`;
-
-export const BottomRule = styled(TopRule)`
-  ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
 `;
 
 export const BottomNav = styled.div`

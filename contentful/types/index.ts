@@ -1,3 +1,9 @@
 export type { TypeAuthor, TypeAuthorFields } from "./TypeAuthor";
+export type { TypeBanner, TypeBannerFields } from "./TypeBanner";
+export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from "./TypeBrandElementsDisplay";
+export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypePost, TypePostFields } from "./TypePost";
 export type { TypeProject, TypeProjectFields } from "./TypeProject";
+export type { TypeSection, TypeSectionFields } from "./TypeSection";
+export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
+export type { TypeSideBySide, TypeSideBySideFields } from "./TypeSideBySide";

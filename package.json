@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "contentful space export --config contentful/export-config.json",
+    "sync-content": "npm run export && npm run generate",
+    "export": "contentful space export --config contentful/export-config.json --space-id 32imgqslv3rc",
     "generate": "npx cf-content-types-generator contentful/export.json -o contentful/types",
     "lint": "next lint",
     "postinstall": "npm run generate"

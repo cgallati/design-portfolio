@@ -4,7 +4,8 @@ import { responsiveValues, tokens } from "../../lib/theme";
 import { keyframes } from "@emotion/react";
 
 export const ProjectListSection = styled.section`
-  margin: auto;
+    margin: auto;
+    ${({ theme }) => responsiveValues("padding", theme.spacing.frame)}
 `;
 
 export const animationFade = keyframes`
@@ -13,9 +14,10 @@ export const animationFade = keyframes`
 `;
 
 export const ProjectCardArticle = styled.article<{ index: number }>`
+  border-radius: 1rem;
   height: max-content;
   box-sizing: border-box;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +26,11 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
   animation-name: ${animationFade};
   animation-fill-mode: backwards;
 
+  :hover {       
+      div {
+          opacity: 1;
+      }
+  }
   div {
     padding: 0 ${tokens.spacing[2]};
     position: absolute;
@@ -36,23 +43,20 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
     opacity: 0;
     color: white;
     width: 100%;
+    line-height: 1;
+    h2,h3 {
+          font-family: ${({ theme }) => theme.typography.display.family};
+          font-weight: ${({ theme }) => theme.typography.cover.weight};
+    }
     h2 {
-      font-family: ${({ theme }) => theme.typography.display.family};
-      ${({ theme }) =>
-        responsiveValues("font-size", theme.typography.display.size)};
+        ${({ theme }) =>
+        responsiveValues("font-size", theme.typography.cover.size)};
     }
 
     h3 {
-      font-family: ${({ theme }) => theme.typography.subheading.family};
-      ${({ theme }) =>
-        responsiveValues("font-size", theme.typography.subheading.size)};
-    }
-  }
-
-  :hover {
-    div {
-      opacity: 1;
-    }
+      ${({ theme }) => responsiveValues("font-size", theme.typography.subheading.size)}
+      ${({ theme }) =>responsiveValues("margin-top", theme.spacing.breathing)}};
+    } 
   }
 `;
 
@@ -60,6 +64,7 @@ export const ProjectCardImage = styled(Image)`
   display: block;
   transition: all 0.5s ease;
   object-fit: cover;
+  border-radius: ${({ theme }) => theme.radius.l};
   :hover {
     filter: brightness(40%);
   }
