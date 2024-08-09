@@ -6,11 +6,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "storybook": "storybook dev -p 6006",
     "sync-content": "npm run export && npm run generate",
     "export": "contentful space export --config contentful/export-config.json --space-id 32imgqslv3rc",
     "generate": "npx cf-content-types-generator contentful/export.json -o contentful/types",
     "lint": "next lint",
-    "postinstall": "npm run generate"
+    "postinstall": "npm run generate",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.12.1",
@@ -26,7 +28,17 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
     "@emotion/eslint-plugin": "^11.10.0",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/addon-onboarding": "^8.2.7",
+    "@storybook/addon-themes": "^8.2.7",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/nextjs": "^8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/test": "^8.2.7",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "autoprefixer": "10.4.2",
@@ -34,8 +46,10 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-storybook": "^0.8.0",
     "postcss": "8.4.5",
     "prettier": "^2.7.1",
+    "storybook": "^8.2.7",
     "tailwindcss": "^3.0.15",
     "typescript": "^4.8.4"
   }
