@@ -32,7 +32,7 @@ export const NavBar = styled.nav`
   align-items: center;
 `;
 
-export const NavLink = styled(Link)<{ current: boolean }>`
+export const NavLink = styled(Link)`
   flex: 1;
   text-decoration: none;
   position: relative;
@@ -41,9 +41,10 @@ export const NavLink = styled(Link)<{ current: boolean }>`
   cursor: pointer;
   color: ${({ theme }) => theme.color.primary};
   margin-right: 1rem;
+
   :hover {
-   
   }
+
   :last-of-type {
     margin-right: 0;
   }
@@ -55,19 +56,22 @@ export const Logo = styled.img`
   ${mq[0]} {
     width: ${tokens.spacing[4]};
   }
+
   ${mq[1]} {
     width: ${tokens.spacing[5]};
   }
+
   ${mq[2]} {
     width: ${tokens.spacing[6]};
   }
+
   cursor: pointer;
 `;
 
 export const SlideFrame = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    height: calc(50vw * 1.12);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: calc(50vw * 1.12);
 `;

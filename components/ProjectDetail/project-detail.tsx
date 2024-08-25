@@ -1,8 +1,3 @@
-import {
-  BottomNav,
-  BottomNavLink,
-  NextPreviousIcon,
-} from "./project-detail.styles";
 import React, { FC, useEffect } from "react";
 import { EmbeddedImage } from "./EmbeddedImage";
 import { IntroSection } from "../IntroSection";
@@ -57,16 +52,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
         addVisibleSection={addVisibleSection}
         removeVisibleSection={removeVisibleSection}
       />
-      <BottomNav>
-        <BottomNavLink href={"/project/" + previous} disabled={!previous}>
-          <NextPreviousIcon src={"/tricle.png"} orientation={"left"} />
-          PREVIOUS PROJECT
-        </BottomNavLink>
-        <BottomNavLink href={"/project/" + next} disabled={!next}>
-          NEXT PROJECT
-          <NextPreviousIcon src={"/tricle.png"} orientation={"right"} />
-        </BottomNavLink>
-      </BottomNav>
     </>
   );
 };
