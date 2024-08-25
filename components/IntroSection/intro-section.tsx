@@ -1,23 +1,25 @@
-import {FC} from "react";
+import { FC } from "react";
 import {
-    IntroSectionFrame,
-    IntroSectionSubtitle,
-    IntroSectionTextContainer,
-    IntroSectionTitle
+  IntroSectionFrame,
+  IntroSectionSubtitle,
+  IntroSectionTextContainer,
+  IntroSectionTitle,
 } from "./intro-section.styles";
 
-
 type IntroSectionProps = {
-    title: string;
-    introduction: string;
-}
-export const IntroSection: FC<IntroSectionProps> = ({ title, introduction }) => {
-    return (
+  title: string;
+  introduction: string;
+};
+export const IntroSection: FC<IntroSectionProps> = ({
+  title,
+  introduction,
+}) => {
+  return (
     <IntroSectionFrame>
-        <IntroSectionTextContainer>
+      <IntroSectionTextContainer>
         <IntroSectionTitle>{title}</IntroSectionTitle>
         <IntroSectionSubtitle>{introduction}</IntroSectionSubtitle>
-        </IntroSectionTextContainer>
+      </IntroSectionTextContainer>
     </IntroSectionFrame>
-)
-}
+  );
+};

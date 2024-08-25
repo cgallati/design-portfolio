@@ -1,47 +1,79 @@
-import {TypeSection, TypeSectionFields} from "../../contentful/types";
-import {FC} from "react";
-import {Entry} from "contentful";
-import {SideBySide} from "../SideBySide";
-import {BrandElementsDisplay} from "../BrandElementsDisplay";
+import { TypeSection, TypeSectionFields } from "../../contentful/types";
+import { FC, useEffect } from "react";
+import { Entry } from "contentful";
+import { SideBySide } from "../SideBySide";
+import { BrandElementsDisplay } from "../BrandElementsDisplay";
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 type ProjectSectionsProps = {
-    sections: Entry<TypeSectionFields>[];
-}
+  sections: Entry<TypeSectionFields>[];
+  addVisibleSection: (section: number) => void;
+  removeVisibleSection: (section: number) => void;
+};
 
 type ProjectSlidesProps = {
-    slides: Entry<Record<string, any>>[]
-}
+  slides: Entry<Record<string, any>>[];
+  index: number;
+  setVisible: (arg0: boolean) => void;
+};
 
+export const ProjectSections: FC<ProjectSectionsProps> = ({
+  sections,
+  addVisibleSection,
+  removeVisibleSection,
+}) => {
+  const handleSetVisible = (index: number) => (isVisible: boolean) => {
+    if (isVisible) {
+      addVisibleSection(index);
+    } else {
+      removeVisibleSection(index);
+    }
+  };
 
-
-export const ProjectSections: FC<ProjectSectionsProps> = ({sections}) => {
-    return (
-        <>
-        {sections.map((section, index) =>
-            <section key={index}>
-                <SectionSlides slides={section.fields.content} />
-            </section>
-        )}
-        </>
-    );
-}
-
-// const Component = SECTION_COMPONENTS[section.sys.contentType.sys.id];
-// return <Component key={index} {...section} />;
-
+  return (
+    <>
+      {sections.map((section, index) => (
+        <section key={index} id={`project-slide-${index}`}>
+          <SectionSlides
+            slides={section.fields.content}
+            setVisible={handleSetVisible(index)}
+            index={index}
+          />
+        </section>
+      ))}
+    </>
+  );
+};
 
 const SLIDE_COMPONENT_MAP: Record<string, FC> = {
-    "sideBySide": SideBySide,
-    "brandElementsDisplay": BrandElementsDisplay,
-}
-const SectionSlides: FC<ProjectSlidesProps> = ({slides}) => {
-    return (
-        <>
-        {slides?.map((slide, index) => {
-            const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
-            // @ts-ignore
-            return <Component key={index} {...slide} />
-        })}
-        </>
-    );
-}
+  sideBySide: SideBySide,
+  brandElementsDisplay: BrandElementsDisplay,
+};
+const SectionSlides: FC<ProjectSlidesProps> = ({
+  slides,
+  setVisible,
+  index,
+}) => {
+  const [ref, entry] = useIntersectionObserver({
+    threshold: 0.1,
+    root: null,
+    rootMargin: "0px",
+  });
+
+  useEffect(() => {
+    if (entry?.isIntersecting) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  }, [entry?.isIntersecting]);
+
+  return (
+    <div ref={ref} id={"intersection-ref-" + index}>
+      {slides?.map((slide, index) => {
+        const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
+        return <Component key={index + "inner"} {...slide} />;
+      })}
+    </div>
+  );
+};
