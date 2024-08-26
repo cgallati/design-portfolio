@@ -1,4 +1,4 @@
-import { TypeSection, TypeSectionFields } from "../../contentful/types";
+import { TypeSectionFields } from "../../contentful/types";
 import { FC, useEffect } from "react";
 import { Entry } from "contentful";
 import { SideBySide } from "../SideBySide";
@@ -72,6 +72,7 @@ const SectionSlides: FC<ProjectSlidesProps> = ({
     <div ref={ref} id={"intersection-ref-" + index}>
       {slides?.map((slide, index) => {
         const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
+        if (!Component) return "FAILED TO MAP CONTENT TO BLOCK COMPONENT";
         return <Component key={index + "inner"} {...slide} />;
       })}
     </div>

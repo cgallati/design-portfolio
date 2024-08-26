@@ -14,16 +14,13 @@ export const EmbeddedImage = ({
   alt: string;
   priority?: boolean;
 }) => {
-  const props = {
-    src,
-    height,
-    width,
-    alt,
-    priority,
-  };
   return (
     <Image
-      {...props}
+      src={src}
+      height={height}
+      width={width}
+      priority={priority}
+      alt={alt}
       style={{
         width: "100%",
         height: "auto",

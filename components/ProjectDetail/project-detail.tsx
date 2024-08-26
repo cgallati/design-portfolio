@@ -2,7 +2,7 @@ import React, { FC, useEffect } from "react";
 import { EmbeddedImage } from "./EmbeddedImage";
 import { IntroSection } from "../IntroSection";
 import { ProjectNavBar } from "../ProjectNavBar";
-import { ProjectSections } from "../ProjectSections/project-sections";
+import { ProjectSections } from "../ProjectSections";
 import { ProjectWithPointers } from "../../contentful/api";
 import { CenterStage } from "../CenterStage";
 
