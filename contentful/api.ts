@@ -1,35 +1,36 @@
 import { createClient } from "contentful";
-import { IProject } from "../types/project";
-import { TypeProjectFields } from "./types";
+import {HomePage, Project} from "../types/content-model";
+import {TypeHomePage, TypeHomePageFields, TypeProject, TypeProjectFields} from "./types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_TOKEN,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export const getProjectList = async (): Promise<IProject[]> => {
-  const projectList = await client.getEntries<TypeProjectFields>().then((res) =>
-    res.items.map((project) => ({
-      title: project.fields.title,
-      subtitle: project.fields.excerpt,
-      bgImage: project.fields.coverImage,
-      slug: project.fields.slug,
-      id: project.sys.id,
-      content: project.fields.content,
-      order: project.fields.order,
-    }))
-  );
-  return projectList
-    .map((project) => ({
-      ...project,
-      order: project.order ? project.order : null,
-    }))
-    .sort((a, b) => (a.order <= b.order ? -1 : 1));
+export const getHomePage = async (): Promise<TypeHomePage> => {
+    const homePage = await client.getEntries<TypeHomePageFields>({
+        content_type: "homePage",
+    });
+    return homePage.items[0];
 };
 
-export const getProject = async (slug: string): Promise<IProject> => {
+export const getProjectList = async (): Promise<TypeProject[]> => {
+  return client.getEntries<TypeProjectFields>({
+    content_type: "project",
+    include: 2,
+  }).then(projects => projects.items
+    .map((project) => ({
+      ...project,
+      order: project.fields.order ? project.fields.order : null,
+    }))
+    .sort((a, b) => (a.order <= b.order ? -1 : 1)));
+};
+
+export type ProjectWithPointers = TypeProject & {next: string, previous: string};
+
+export const getProject = async (slug: string): Promise<ProjectWithPointers> => {
   const projects = await getProjectList();
-  const projectIndex = projects.findIndex((project) => project.slug === slug);
+  const projectIndex = projects.findIndex((project) => project.fields.slug === slug);
   const project = projects[projectIndex];
   const next = projects[projectIndex + 1];
   const prev = projects[projectIndex - 1];
@@ -38,8 +39,8 @@ export const getProject = async (slug: string): Promise<IProject> => {
   return {
     ...project,
     // @ts-ignore
-    content: parsedData.content,
-    next: next ? next.slug : null,
-    previous: prev ? prev.slug : null,
+    content: parsedData.content || null,
+    next: next ? next.fields.slug : null,
+    previous: prev ? prev.fields.slug : null,
   };
 };

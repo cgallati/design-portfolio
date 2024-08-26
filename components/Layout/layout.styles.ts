@@ -5,13 +5,11 @@ import { animationFade } from "../ProjectCard/project-card.styles";
 
 export const PageContainer = styled.div`
   margin: auto;
-  ${({ theme }) => responsiveValues("padding", theme.spacing.frame)}
-  ${({ theme }) => responsiveValues("max-width", theme.spacing.content)}
+  background-color: ${({ theme }) => theme.color.background};
 `;
 
 export const PageContent = styled.div`
   font-family: ${({ theme }) => theme.typography.body.family};
-  ${({ theme }) => responsiveValues("padding-top", theme.spacing.breathing)}
 `;
 
 export const Header = styled.header`
@@ -23,6 +21,8 @@ export const Header = styled.header`
   animation-duration: 0.5s;
   animation-name: ${animationFade};
   animation-fill-mode: backwards;
+  ${({ theme }) => responsiveValues("padding", theme.spacing.frame)}
+  padding-bottom: 0 !important;
 `;
 
 export const NavBar = styled.nav`
@@ -32,45 +32,46 @@ export const NavBar = styled.nav`
   align-items: center;
 `;
 
-export const NavLink = styled(Link)<{ current: boolean }>`
+export const NavLink = styled(Link)`
   flex: 1;
   text-decoration: none;
   position: relative;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  color: black;
+  color: ${({ theme }) => theme.color.primary};
   margin-right: 1rem;
-  ::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    transition: all 300ms cubic-bezier(0.04, 0.1, 0.98, 0.88);
-    background-color: ${({ current }) => (current ? "black" : "white")};
-  }
+
   :hover {
-    ::after {
-      background-color: ${({ current }) => (current ? "black" : "darkgray")};
-    }
   }
+
   :last-of-type {
     margin-right: 0;
   }
 `;
 
 export const Logo = styled.img`
-  width: ${tokens.spacing[4]};
+  width: ${tokens.spacing[3]};
 
   ${mq[0]} {
-    width: ${tokens.spacing[6]};
+    width: ${tokens.spacing[4]};
   }
+
   ${mq[1]} {
-    width: ${tokens.spacing[6]};
+    width: ${tokens.spacing[5]};
   }
+
   ${mq[2]} {
     width: ${tokens.spacing[6]};
   }
+
   cursor: pointer;
+`;
+
+export const SlideFrame = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: calc(50vw * 1.12);
 `;

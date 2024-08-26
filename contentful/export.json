@@ -45,7 +45,8 @@
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/post"
       },
       "displayField": "title",
       "name": "Post",
@@ -256,7 +257,8 @@
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/author"
       },
       "displayField": "name",
       "name": "Author",
@@ -299,7 +301,7 @@
         "id": "project",
         "type": "ContentType",
         "createdAt": "2022-11-13T02:37:19.863Z",
-        "updatedAt": "2022-11-28T23:12:15.956Z",
+        "updatedAt": "2024-06-11T02:34:51.812Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -307,8 +309,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2022-11-28T23:12:15.956Z",
+        "publishedVersion": 31,
+        "publishedAt": "2024-06-11T02:34:51.812Z",
         "firstPublishedAt": "2022-11-13T02:37:20.098Z",
         "createdBy": {
           "sys": {
@@ -324,15 +326,16 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/project"
       },
       "displayField": "title",
       "name": "Project",
@@ -341,6 +344,34 @@
         {
           "id": "title",
           "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortName",
+          "name": "Short Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 20
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "introduction",
+          "name": "Introduction",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -478,6 +509,627 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "sections",
+          "name": "Sections",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "section"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "centerStage",
+          "name": "Center Stage",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "banner",
+        "type": "ContentType",
+        "createdAt": "2024-05-26T21:58:44.084Z",
+        "updatedAt": "2024-05-26T21:58:44.415Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-05-26T21:58:44.415Z",
+        "firstPublishedAt": "2024-05-26T21:58:44.415Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/banner"
+      },
+      "displayField": "bannerText",
+      "name": "Banner",
+      "description": "When one is published, a banner with the provided text will be added to the top of all pages.",
+      "fields": [
+        {
+          "id": "bannerText",
+          "name": "Banner Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "homePage",
+        "type": "ContentType",
+        "createdAt": "2024-06-09T00:25:30.746Z",
+        "updatedAt": "2024-06-09T03:09:30.518Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-09T03:09:30.518Z",
+        "firstPublishedAt": "2024-06-09T00:25:31.052Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/homePage"
+      },
+      "displayField": "title",
+      "name": "Home Page",
+      "description": "Featuring an intro message and list of projects.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "introduction",
+          "name": "Introduction",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "projects",
+          "name": "Projects",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "project"
+                ],
+                "message": "Projects go in this list."
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "section",
+        "type": "ContentType",
+        "createdAt": "2024-06-09T01:06:42.354Z",
+        "updatedAt": "2024-06-09T01:06:42.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-06-09T01:06:42.821Z",
+        "firstPublishedAt": "2024-06-09T01:06:42.821Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/section"
+      },
+      "displayField": "title",
+      "name": "Section",
+      "description": "The full width components that make up a project's content",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "sectionCenteredText",
+        "type": "ContentType",
+        "createdAt": "2024-06-10T03:43:00.871Z",
+        "updatedAt": "2024-06-10T03:43:01.214Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-06-10T03:43:01.214Z",
+        "firstPublishedAt": "2024-06-10T03:43:01.214Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/sectionCenteredText"
+      },
+      "displayField": "text",
+      "name": "Section: Centered Text",
+      "description": "",
+      "fields": [
+        {
+          "id": "text",
+          "name": "text",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": null,
+                "max": 360
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "sideBySide",
+        "type": "ContentType",
+        "createdAt": "2024-06-11T01:30:02.496Z",
+        "updatedAt": "2024-06-25T00:03:45.915Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-06-25T00:03:45.915Z",
+        "firstPublishedAt": "2024-06-11T01:30:02.844Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/sideBySide"
+      },
+      "displayField": "title",
+      "name": "Side by Side",
+      "description": "A photo and rich text block, living side by side in harmony.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "darkMode",
+          "name": "Dark Mode",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "asset",
+          "name": "asset",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "richText",
+          "name": "Rich Text",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+              ],
+              "message": "Marks are not allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "hr"
+              ],
+              "message": "Only horizontal rule nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photoOnLeft",
+          "name": "Photo on Left",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": true
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "offsetImage",
+          "name": "Offset Image",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "brandElementsDisplay",
+        "type": "ContentType",
+        "createdAt": "2024-06-25T00:23:08.724Z",
+        "updatedAt": "2024-06-27T03:22:48.093Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-06-27T03:22:48.093Z",
+        "firstPublishedAt": "2024-06-25T00:23:08.999Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/brandElementsDisplay"
+      },
+      "displayField": "name",
+      "name": "Brand Elements Display",
+      "description": "Some brand colors and icons.",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "colors",
+          "name": "Colors",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "regexp": {
+                  "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$",
+                  "flags": null
+                },
+                "message": "Must be a hex color, i.e. #ABC123"
+              }
+            ]
+          }
+        },
+        {
+          "id": "icons",
+          "name": "Icons",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "leftLogo",
+          "name": "Left Logo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
         }
       ]
     }
@@ -633,7 +1285,7 @@
             "linkType": "Space"
           }
         },
-        "version": 11,
+        "version": 31,
         "createdAt": "2022-11-13T02:37:20.224Z",
         "createdBy": {
           "sys": {
@@ -642,7 +1294,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2022-11-28T23:12:17.153Z",
+        "updatedAt": "2024-06-11T02:34:52.361Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -712,6 +1364,16 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "shortName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "introduction",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "slug",
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -735,6 +1397,418 @@
           "fieldId": "order",
           "widgetId": "numberEditor",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sections",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "centerStage",
+          "settings": {
+            "helpText": "The first block of text that appears alone after the navigation bar."
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-05-26T21:58:44.537Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-05-26T21:58:44.921Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "banner",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "bannerText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-06-09T00:25:31.232Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-09T03:09:31.120Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "homePage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "The primary text of the introduction screen"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "introduction",
+          "settings": {
+            "helpText": "The longer message on the introduction screen"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "projects",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-06-09T01:06:42.934Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-09T01:06:43.560Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "section",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-06-10T03:43:01.355Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-10T03:43:01.769Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "sectionCenteredText",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "text",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2024-06-11T01:30:02.984Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-25T00:03:46.449Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "sideBySide",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Appears above the text block"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "darkMode",
+          "settings": {
+            "trueLabel": "On",
+            "falseLabel": "Off"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "asset",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "richText",
+          "settings": {
+            "helpText": "Use horizontal rules for the dividing lines."
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photoOnLeft",
+          "settings": {
+            "trueLabel": "Yes",
+            "falseLabel": "No, on the right."
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "offsetImage",
+          "settings": {
+            "helpText": "Display the image smaller and offset against a backdrop, instead of taking up the entire frame.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-06-25T00:23:09.207Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-27T03:22:48.643Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "brandElementsDisplay",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "settings": {
+            "helpText": "Just used to identify this piece of content. Does not appear on the website."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "colors",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icons",
+          "settings": {
+            "helpText": "Designed for 3, but accepts 1-5 icons to display. Provide SVGs.",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "leftLogo",
+          "settings": {
+            "helpText": "The logo that appears to the left of the icon list.",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     }
@@ -743,6 +1817,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -753,10 +1829,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "4aE8ko3VCWWY0vHKkcr8Vl",
+        "id": "1ntRr4HOKIS3VCZFzoEUdt",
         "type": "Entry",
-        "createdAt": "2022-11-13T02:38:23.479Z",
-        "updatedAt": "2022-11-28T23:12:26.678Z",
+        "createdAt": "2022-11-28T22:42:36.177Z",
+        "updatedAt": "2024-06-11T02:35:17.950Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -764,9 +1840,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2022-11-28T23:12:26.678Z",
-        "firstPublishedAt": "2022-11-13T02:46:11.616Z",
+        "publishedVersion": 53,
+        "publishedAt": "2024-06-11T02:35:17.950Z",
+        "firstPublishedAt": "2022-11-28T22:43:15.296Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -781,13 +1857,20 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 3,
-        "version": 11,
+        "publishedCounter": 13,
+        "version": 54,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
           }
         },
         "contentType": {
@@ -796,14 +1879,21 @@
             "linkType": "ContentType",
             "id": "project"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1ntRr4HOKIS3VCZFzoEUdt"
       },
       "fields": {
         "title": {
-          "en-US": "The lady of the cheese"
+          "en-US": "Everything Zen Sailing Charters"
+        },
+        "shortName": {
+          "en-US": "Everything Zen"
+        },
+        "introduction": {
+          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
         },
         "slug": {
-          "en-US": "sample-project"
+          "en-US": "project-1"
         },
         "content": {
           "en-US": {
@@ -819,163 +1909,12 @@
                     },
                     "marks": [
                     ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
+                    "value": "Everything Zen Sailing Charters is a charter company based out of Charleston who was looking to utilize good brand design to compete with their competitors. My job was to research their demographics and competition, and provide them with design solutions that met their goals. I spent time creating their branding, doing their photography, creating marketing materials, designing their website and booking solutions– all with the goal of forming brand equity that would kick start their business and intrigue potential customers. After implementing my design solutions, each charter season has seen their booking rate increase 2 fold per year and they continue to exceed their profit expectations each season.",
                     "nodeType": "text"
                   }
                 ],
                 "nodeType": "paragraph"
               },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "excerpt": {
-          "en-US": "Cheeseburger fondue roquefort"
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "4ys1lfW1EJxTNkQWLHCckI"
-            }
-          }
-        },
-        "order": {
-          "en-US": 1
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
-        "id": "66So5HrsofY95zlRWXaXVm",
-        "type": "Entry",
-        "createdAt": "2022-11-13T17:36:52.376Z",
-        "updatedAt": "2022-11-28T23:13:39.733Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 19,
-        "publishedAt": "2022-11-28T23:13:39.733Z",
-        "firstPublishedAt": "2022-11-13T17:36:54.846Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 8,
-        "version": 20,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "The stinky big cheese"
-        },
-        "slug": {
-          "en-US": "sample-project-1"
-        },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
               {
                 "data": {
                 },
@@ -993,7 +1932,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "ART DIRECTION ",
+                            "value": "Brand Identity",
                             "nodeType": "text"
                           }
                         ],
@@ -1015,7 +1954,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "ILLUSTRATION ",
+                            "value": "Copywriting",
                             "nodeType": "text"
                           }
                         ],
@@ -1037,7 +1976,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "PRINTING ",
+                            "value": "Market Research",
                             "nodeType": "text"
                           }
                         ],
@@ -1059,7 +1998,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "COPYWRIGHTING ",
+                            "value": "Photography",
                             "nodeType": "text"
                           }
                         ],
@@ -1081,7 +2020,29 @@
                             },
                             "marks": [
                             ],
-                            "value": "PHOTOGRAPHY",
+                            "value": "UX/UI Design",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Printing",
                             "nodeType": "text"
                           }
                         ],
@@ -1095,24 +2056,9 @@
               },
               {
                 "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
                   "target": {
                     "sys": {
-                      "id": "7DQXP6vO90T9zpbvqQnIMz",
+                      "id": "1QEPmeEzYzWOgi3ATRJ3kN",
                       "type": "Link",
                       "linkType": "Asset"
                     }
@@ -1131,11 +2077,67 @@
                     },
                     "marks": [
                     ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
+                    "value": "Pantone 345 C is a rich navy blue with a teal hue and gives sharp contrast against white. I used white as a secondary color to create an elegant appearance that correlated with the bright, vibrant white of the boats fiberglass. To further the brand direction, I created logo assets that can be used across different materials. This gives the brand a more professional appearance and makes the materials more intriguing.",
                     "nodeType": "text"
                   }
                 ],
                 "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "1zaBlA4pdQip4ETtAMtjBU",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7i7msyZiGzHaYrYYVwtXqJ",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "NukSd3zdwTukCnjNIV2Ly",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "1zbrK7ke2acWoJ0rbiLLcR",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
               },
               {
                 "data": {
@@ -1146,37 +2148,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
+                    "value": "",
                     "nodeType": "text"
                   }
                 ],
@@ -1187,459 +2159,62 @@
           }
         },
         "excerpt": {
-          "en-US": "Cheeseburger fondue roquefort"
+          "en-US": "Client Work, UX/UI, Branding, Marketing"
         },
         "coverImage": {
           "en-US": {
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "19l7kmmVwEBjyZkcOvesbh"
-            }
-          }
-        },
-        "order": {
-          "en-US": 4
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
-        "id": "1sbHFxVojrPwxS4exDHH44",
-        "type": "Entry",
-        "createdAt": "2022-11-28T22:42:34.032Z",
-        "updatedAt": "2022-11-28T23:27:12.344Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 11,
-        "publishedAt": "2022-11-28T23:27:12.344Z",
-        "firstPublishedAt": "2022-11-28T22:43:57.151Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 12,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "New Project 2"
-        },
-        "slug": {
-          "en-US": "new-project-2"
-        },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 1",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 2",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "excerpt": {
-          "en-US": "Project 2 subheading"
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "4ys1lfW1EJxTNkQWLHCckI"
-            }
-          }
-        },
-        "order": {
-          "en-US": 1
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
-        "id": "1ntRr4HOKIS3VCZFzoEUdt",
-        "type": "Entry",
-        "createdAt": "2022-11-28T22:42:36.177Z",
-        "updatedAt": "2022-11-28T23:12:35.875Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2022-11-28T23:12:35.875Z",
-        "firstPublishedAt": "2022-11-28T22:43:15.296Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Project 1"
-        },
-        "slug": {
-          "en-US": "project-1"
-        },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 1",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 2",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "excerpt": {
-          "en-US": "Project 1 subheading"
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "4ys1lfW1EJxTNkQWLHCckI"
+              "id": "2rH8qlbhAf5eV98ihD0nUG"
             }
           }
         },
         "order": {
           "en-US": 2
+        },
+        "sections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4bP1JjnW4arhbbI3hNrc6t"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "Ozzbbgzc0i88itmQPk6pE"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "15gLVVuxrECmkXMGvUSzgt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "11z1Ln7MDEZW52xyRGFYei"
+              }
+            }
+          ]
+        },
+        "centerStage": {
+          "en-US": "Over 90% of charging happens at home — and our Wall Charger has you covered. When you venture out, fast charge at our expanding Rivian Adventure Network, one of the many public charging networks, and now at over 15,000 Tesla Supercharger locations with the Rivian NACS DC adapter."
         }
       }
     },
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -1650,10 +2225,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "2JqjTRLCQRuVRnT366tnNu",
+        "id": "4uY7DHGLRydzzAyntibYo6",
         "type": "Entry",
-        "createdAt": "2022-11-28T23:00:07.569Z",
-        "updatedAt": "2022-11-28T23:13:04.585Z",
+        "createdAt": "2024-06-09T01:07:11.940Z",
+        "updatedAt": "2024-06-09T03:09:58.030Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1661,9 +2236,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2022-11-28T23:13:04.585Z",
-        "firstPublishedAt": "2022-11-28T23:00:23.132Z",
+        "publishedVersion": 12,
+        "publishedAt": "2024-06-09T03:09:58.030Z",
+        "firstPublishedAt": "2024-06-09T01:07:48.555Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1678,8 +2253,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1687,176 +2262,47 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "homePage"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4uY7DHGLRydzzAyntibYo6"
       },
       "fields": {
         "title": {
-          "en-US": "Project 3"
+          "en-US": "Hello, I’m Steven."
         },
-        "slug": {
-          "en-US": "project-3"
+        "introduction": {
+          "en-US": "I’m a UX design student at SCAD who believes experience design should focus on the entire journey, where each impression matters."
         },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 1",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 2",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
+        "projects": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1ntRr4HOKIS3VCZFzoEUdt"
               }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "excerpt": {
-          "en-US": "Project 3 subheading"
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "4ys1lfW1EJxTNkQWLHCckI"
             }
-          }
-        },
-        "order": {
-          "en-US": 3
+          ]
         }
       }
     },
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -1867,10 +2313,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "19p53n6Q2kay8nyTYeTPf1",
+        "id": "2H6uazGIvWLbsYBbykzAS1",
         "type": "Entry",
-        "createdAt": "2022-11-28T23:14:31.295Z",
-        "updatedAt": "2022-11-28T23:14:42.631Z",
+        "createdAt": "2024-06-10T03:43:09.921Z",
+        "updatedAt": "2024-06-10T03:43:18.922Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1879,8 +2325,8 @@
           }
         },
         "publishedVersion": 2,
-        "publishedAt": "2022-11-28T23:14:42.631Z",
-        "firstPublishedAt": "2022-11-28T23:14:42.631Z",
+        "publishedAt": "2024-06-10T03:43:18.922Z",
+        "firstPublishedAt": "2024-06-10T03:43:18.922Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1904,22 +2350,459 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "sectionCenteredText"
           }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/2H6uazGIvWLbsYBbykzAS1"
+      },
+      "fields": {
+        "text": {
+          "en-US": "Over 90% of charging happens at home — and our\nWall Charger has you covered. When you venture out,\nfast charge at our expanding Rivian Adventure\nNetwork, one of the many public charging networks,\nand now at over 15,000 Tesla Supercharger locations\nwith the Rivian NACS DC adapter."
         }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4bP1JjnW4arhbbI3hNrc6t",
+        "type": "Entry",
+        "createdAt": "2024-06-10T03:43:32.390Z",
+        "updatedAt": "2024-06-12T03:35:51.873Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2024-06-12T03:35:51.873Z",
+        "firstPublishedAt": "2024-06-10T03:44:04.507Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4bP1JjnW4arhbbI3hNrc6t"
       },
       "fields": {
         "title": {
-          "en-US": "Project 4"
-        },
-        "slug": {
-          "en-US": "project-4"
+          "en-US": "Research"
         },
         "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3q949MaN4Uk2DWhNokGjch"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6rSKxaHGlC5mU1MWWnqllJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4K0YCD7yAsg8xhIvQBSmw0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CHxA3lfMhRS2GBuiOf6dj"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "Ozzbbgzc0i88itmQPk6pE",
+        "type": "Entry",
+        "createdAt": "2024-06-10T03:52:36.041Z",
+        "updatedAt": "2024-06-25T00:56:32.228Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-06-25T00:56:32.228Z",
+        "firstPublishedAt": "2024-06-10T03:52:41.947Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/Ozzbbgzc0i88itmQPk6pE"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discovery"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "46ZqUzsXsllZS8e9R9bSys"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "QHkqNq4eYaLWanfndx7Dy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "15gLVVuxrECmkXMGvUSzgt",
+        "type": "Entry",
+        "createdAt": "2024-06-10T03:52:49.217Z",
+        "updatedAt": "2024-06-10T03:52:54.347Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-10T03:52:54.347Z",
+        "firstPublishedAt": "2024-06-10T03:52:54.347Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/15gLVVuxrECmkXMGvUSzgt"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ideation"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "11z1Ln7MDEZW52xyRGFYei",
+        "type": "Entry",
+        "createdAt": "2024-06-10T03:52:59.321Z",
+        "updatedAt": "2024-06-10T03:53:04.783Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-10T03:53:04.783Z",
+        "firstPublishedAt": "2024-06-10T03:53:04.783Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/11z1Ln7MDEZW52xyRGFYei"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Delivery"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3q949MaN4Uk2DWhNokGjch",
+        "type": "Entry",
+        "createdAt": "2024-06-11T01:32:38.918Z",
+        "updatedAt": "2024-06-12T02:58:52.201Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-06-12T02:58:52.201Z",
+        "firstPublishedAt": "2024-06-11T01:34:06.487Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3q949MaN4Uk2DWhNokGjch"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Research"
+        },
+        "darkMode": {
+          "en-US": false
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4CvgV4XQuLlJ9MozpBgnOo"
+            }
+          }
+        },
+        "richText": {
           "en-US": {
             "data": {
             },
@@ -1931,120 +2814,9 @@
                   {
                     "data": {
                     },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 1",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Role 2",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                     ],
-                    "value": "I love cheese, especially cheddar red leicester. Pepper jack st. agur blue cheese taleggio squirty cheese bavarian bergkase manchego cheese and biscuits stilton. Cauliflower cheese hard cheese cheese on toast goat edam stinking bishop airedale cheesy feet. Say cheese hard cheese edam.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Red leicester cheese strings fromage frais. Melted cheese feta goat cheesy feet blue castello cheese on toast smelly cheese cauliflower cheese. Ricotta red leicester red leicester bavarian bergkase cheesy grin chalk and cheese mascarpone cheese on toast. Cheddar stilton.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Rubber cheese danish fontina cheesy feet. Parmesan emmental chalk and cheese cheese and wine melted cheese cheesy feet cut the cheese mozzarella. Cheese on toast goat cut the cheese lancashire queso cheesecake airedale cheese triangles. Cheese and biscuits brie.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Taleggio cheese strings smelly cheese. Cheeseburger fondue roquefort ricotta hard cheese fromage frais cottage cheese cheese slices. Monterey jack swiss lancashire cheese and wine emmental pepper jack cottage cheese cream cheese. Halloumi jarlsberg gouda stinking bishop emmental cream cheese swiss.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Ricotta airedale fromage frais. Queso cauliflower cheese everyone loves roquefort babybel feta cheesy grin cottage cheese. Chalk and cheese cheese triangles cheesy grin parmesan cheese and wine camembert de normandie airedale babybel. Dolcelatte cheesy grin rubber cheese port-salut mascarpone lancashire everyone loves who moved my cheese. Cheese strings feta cheesecake caerphilly.",
+                    "value": "This process involved a big research phase that focused on a comprehensive competitor analysis as well as a thorough identification of the target demographics. I worked with the companies owner to identify existing customers, and weak points in the customer journey, as well as comparing his existing brand and experience with his competitors. ",
                     "nodeType": "text"
                   }
                 ],
@@ -2054,20 +2826,712 @@
             "nodeType": "document"
           }
         },
-        "excerpt": {
-          "en-US": "Project 3 subheading"
+        "photoOnLeft": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
         },
-        "coverImage": {
+        "id": "6rSKxaHGlC5mU1MWWnqllJ",
+        "type": "Entry",
+        "createdAt": "2024-06-11T03:25:47.481Z",
+        "updatedAt": "2024-06-12T03:36:36.705Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2024-06-12T03:36:36.705Z",
+        "firstPublishedAt": "2024-06-11T03:25:59.835Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6rSKxaHGlC5mU1MWWnqllJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Competitors"
+        },
+        "darkMode": {
+          "en-US": false
+        },
+        "asset": {
           "en-US": {
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "4ys1lfW1EJxTNkQWLHCckI"
+              "id": "1KUJeo6LnoFnfXGvmfGIal"
             }
           }
         },
-        "order": {
-          "en-US": 7
+        "richText": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Dated UI and inconsistent branding",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Cluttered websites with overloaded text",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lack of quality content and structure",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hard to navigate websites with third party booking",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photoOnLeft": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4K0YCD7yAsg8xhIvQBSmw0",
+        "type": "Entry",
+        "createdAt": "2024-06-12T03:33:04.850Z",
+        "updatedAt": "2024-06-12T03:33:27.951Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-12T03:33:27.951Z",
+        "firstPublishedAt": "2024-06-12T03:33:27.951Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4K0YCD7yAsg8xhIvQBSmw0"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Demographics"
+        },
+        "darkMode": {
+          "en-US": true
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4CvgV4XQuLlJ9MozpBgnOo"
+            }
+          }
+        },
+        "richText": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Before moving into designing the brand and defining the user experience, I needed to understand the companies demographics. This included identifying past charter guests, as well as researching reviews across multiple competitors platforms to identity patterns and expectations.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photoOnLeft": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5CHxA3lfMhRS2GBuiOf6dj",
+        "type": "Entry",
+        "createdAt": "2024-06-12T03:34:01.686Z",
+        "updatedAt": "2024-06-12T03:35:20.553Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-06-12T03:35:20.553Z",
+        "firstPublishedAt": "2024-06-12T03:35:20.553Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5CHxA3lfMhRS2GBuiOf6dj"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Goals"
+        },
+        "darkMode": {
+          "en-US": true
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1KUJeo6LnoFnfXGvmfGIal"
+            }
+          }
+        },
+        "richText": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Highlight modern features",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Create a brand story",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Design custom booking process",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                ],
+                "nodeType": "hr"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Develop high-end service appeal",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photoOnLeft": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "46ZqUzsXsllZS8e9R9bSys",
+        "type": "Entry",
+        "createdAt": "2024-06-24T23:59:03.632Z",
+        "updatedAt": "2024-06-25T00:03:55.419Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-25T00:03:55.419Z",
+        "firstPublishedAt": "2024-06-25T00:00:38.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/46ZqUzsXsllZS8e9R9bSys"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discovery"
+        },
+        "darkMode": {
+          "en-US": false
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3uCx8Sh0ubnLqYx8nZwPeb"
+            }
+          }
+        },
+        "richText": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Over 90% of charging happens at home — and our\nWall Charger has you covered. When you venture out,\nfast charge at our expanding Rivian Adventure\nNetwork, one of the many public charging networks,\nand now at over 15,000 Tesla Supercharger locations\nwith the Rivian NACS DC adapter.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photoOnLeft": {
+          "en-US": false
+        },
+        "offsetImage": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "QHkqNq4eYaLWanfndx7Dy",
+        "type": "Entry",
+        "createdAt": "2024-06-25T00:23:54.549Z",
+        "updatedAt": "2024-06-27T03:23:41.537Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2024-06-27T03:23:41.537Z",
+        "firstPublishedAt": "2024-06-25T00:54:08.555Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "brandElementsDisplay"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/QHkqNq4eYaLWanfndx7Dy"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Everything Zen Brand Elements"
+        },
+        "colors": {
+          "en-US": [
+            "#A53D05",
+            "#638BA9",
+            "#00263A",
+            "#ACBFCB",
+            "#EBEBEB"
+          ]
+        },
+        "icons": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6WudTDz5iRAxRL9JQYXBTG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4osjTA9MVTwKSqRD5Grwv5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6WudTDz5iRAxRL9JQYXBTG"
+              }
+            }
+          ]
+        },
+        "leftLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5Off6RVYomDSugaVTwqGn3"
+            }
+          }
         }
       }
     }
@@ -2122,7 +3586,8 @@
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4ys1lfW1EJxTNkQWLHCckI"
       },
       "fields": {
         "title": {
@@ -2196,7 +3661,8 @@
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/19l7kmmVwEBjyZkcOvesbh"
       },
       "fields": {
         "title": {
@@ -2270,7 +3736,8 @@
             "linkType": "User",
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7DQXP6vO90T9zpbvqQnIMz"
       },
       "fields": {
         "title": {
@@ -2291,6 +3758,1329 @@
             },
             "fileName": "authentic-swiss-cheese-fondue.jpg",
             "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5UL2zcT37ad46ARPt9bwLS",
+        "type": "Asset",
+        "createdAt": "2022-11-29T00:10:48.364Z",
+        "updatedAt": "2022-11-29T19:07:07.338Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2022-11-29T19:07:07.338Z",
+        "firstPublishedAt": "2022-11-29T00:11:32.863Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/5UL2zcT37ad46ARPt9bwLS"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Peterson Cover"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/5UL2zcT37ad46ARPt9bwLS/365274257b4700edcb6212c672a733a4/WebsiteGraphics-01.png",
+            "details": {
+              "size": 110948,
+              "image": {
+                "width": 3168,
+                "height": 2288
+              }
+            },
+            "fileName": "WebsiteGraphics-01.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2rH8qlbhAf5eV98ihD0nUG",
+        "type": "Asset",
+        "createdAt": "2022-11-29T00:17:35.109Z",
+        "updatedAt": "2024-06-10T01:29:31.153Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2024-06-10T01:29:31.153Z",
+        "firstPublishedAt": "2022-11-29T00:17:53.513Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/2rH8qlbhAf5eV98ihD0nUG"
+      },
+      "fields": {
+        "title": {
+          "en-US": "EZ Mockups"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/2rH8qlbhAf5eV98ihD0nUG/3ba473b2b915e80ac8527cc89b654681/ez-mockup.jpg",
+            "details": {
+              "size": 1192189,
+              "image": {
+                "width": 3840,
+                "height": 2162
+              }
+            },
+            "fileName": "ez-mockup.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4YdX2XrwQw4WGc41jZ3QL9",
+        "type": "Asset",
+        "createdAt": "2022-11-29T18:55:01.877Z",
+        "updatedAt": "2022-11-29T18:55:28.787Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-11-29T18:55:28.787Z",
+        "firstPublishedAt": "2022-11-29T18:55:28.787Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4YdX2XrwQw4WGc41jZ3QL9"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Car"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4YdX2XrwQw4WGc41jZ3QL9/6db688eef029efdf2b4db7be01195bcf/WebsiteGraphics-02.png",
+            "details": {
+              "size": 78634,
+              "image": {
+                "width": 3167,
+                "height": 2288
+              }
+            },
+            "fileName": "WebsiteGraphics-02.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "437zVhA4hVpGgz0fqLI1JK",
+        "type": "Asset",
+        "createdAt": "2022-11-29T18:56:30.641Z",
+        "updatedAt": "2022-11-29T18:57:02.124Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-11-29T18:57:02.124Z",
+        "firstPublishedAt": "2022-11-29T18:57:02.124Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/437zVhA4hVpGgz0fqLI1JK"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Poster"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/437zVhA4hVpGgz0fqLI1JK/db9562cd00d0c9fa04f7abefe7e30166/WebsiteGraphics-03.png",
+            "details": {
+              "size": 117774,
+              "image": {
+                "width": 3251,
+                "height": 2835
+              }
+            },
+            "fileName": "WebsiteGraphics-03.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1QEPmeEzYzWOgi3ATRJ3kN",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:02:12.650Z",
+        "updatedAt": "2022-11-29T19:03:31.910Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-11-29T19:03:31.910Z",
+        "firstPublishedAt": "2022-11-29T19:03:31.910Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/1QEPmeEzYzWOgi3ATRJ3kN"
+      },
+      "fields": {
+        "title": {
+          "en-US": "CAG 8034-2"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/1QEPmeEzYzWOgi3ATRJ3kN/c28b36a6f879ec6a7929b9193bc388db/CAG_8034-2.jpg",
+            "details": {
+              "size": 8201221,
+              "image": {
+                "width": 4570,
+                "height": 3264
+              }
+            },
+            "fileName": "CAG_8034-2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1zaBlA4pdQip4ETtAMtjBU",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:03:43.690Z",
+        "updatedAt": "2022-11-29T19:04:00.920Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-11-29T19:04:00.920Z",
+        "firstPublishedAt": "2022-11-29T19:04:00.920Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/1zaBlA4pdQip4ETtAMtjBU"
+      },
+      "fields": {
+        "title": {
+          "en-US": "WebsiteGraphics-05"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/1zaBlA4pdQip4ETtAMtjBU/d275e495f4a41229a70487126534e69c/WebsiteGraphics-05.png",
+            "details": {
+              "size": 64181,
+              "image": {
+                "width": 3759,
+                "height": 2289
+              }
+            },
+            "fileName": "WebsiteGraphics-05.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7iVg1quxudjhUKvYAbDqtc",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:18:01.970Z",
+        "updatedAt": "2022-11-29T19:22:46.639Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:22:46.639Z",
+        "firstPublishedAt": "2022-11-29T19:22:46.639Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7iVg1quxudjhUKvYAbDqtc"
+      },
+      "fields": {
+        "title": {
+          "en-US": "WebsiteGraphics-07"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7iVg1quxudjhUKvYAbDqtc/2eb8c5993b9edf494eaf02bfaad4d1d6/WebsiteGraphics-07.png",
+            "details": {
+              "size": 54090,
+              "image": {
+                "width": 3168,
+                "height": 2289
+              }
+            },
+            "fileName": "WebsiteGraphics-07.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "ZLZkQv8SS7daw7qFWVo78",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:18:01.986Z",
+        "updatedAt": "2022-11-29T19:22:53.875Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:22:53.875Z",
+        "firstPublishedAt": "2022-11-29T19:22:53.875Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/ZLZkQv8SS7daw7qFWVo78"
+      },
+      "fields": {
+        "title": {
+          "en-US": "WebsiteGraphics-09"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/ZLZkQv8SS7daw7qFWVo78/b4926cc85ea9b21e8663e708eb07b486/WebsiteGraphics-09.png",
+            "details": {
+              "size": 61614,
+              "image": {
+                "width": 3168,
+                "height": 2289
+              }
+            },
+            "fileName": "WebsiteGraphics-09.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3EmMfZpUBIHDIL68ZWipEH",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:18:02.104Z",
+        "updatedAt": "2022-11-29T19:22:58.570Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:22:58.570Z",
+        "firstPublishedAt": "2022-11-29T19:22:58.570Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3EmMfZpUBIHDIL68ZWipEH"
+      },
+      "fields": {
+        "title": {
+          "en-US": "WebsiteGraphics-06"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3EmMfZpUBIHDIL68ZWipEH/9cc911394dc6d1d6ec947baa90522bb2/WebsiteGraphics-06.png",
+            "details": {
+              "size": 96644,
+              "image": {
+                "width": 3168,
+                "height": 2289
+              }
+            },
+            "fileName": "WebsiteGraphics-06.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "NukSd3zdwTukCnjNIV2Ly",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:19:56.220Z",
+        "updatedAt": "2022-11-29T19:21:43.673Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:21:43.673Z",
+        "firstPublishedAt": "2022-11-29T19:21:43.673Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/NukSd3zdwTukCnjNIV2Ly"
+      },
+      "fields": {
+        "title": {
+          "en-US": "CAG 8127"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/NukSd3zdwTukCnjNIV2Ly/8558daa510748bc4c72d2f9cc32304d8/CAG_8127.jpg",
+            "details": {
+              "size": 5915586,
+              "image": {
+                "width": 4231,
+                "height": 3022
+              }
+            },
+            "fileName": "CAG_8127.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7i7msyZiGzHaYrYYVwtXqJ",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:19:56.258Z",
+        "updatedAt": "2022-11-29T19:21:35.505Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:21:35.505Z",
+        "firstPublishedAt": "2022-11-29T19:21:35.505Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7i7msyZiGzHaYrYYVwtXqJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "NewEZHero(desktop)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7i7msyZiGzHaYrYYVwtXqJ/68f29c51957e26f06571d48cb160f479/NewEZHero_desktop_.jpg",
+            "details": {
+              "size": 1617847,
+              "image": {
+                "width": 2200,
+                "height": 1500
+              }
+            },
+            "fileName": "NewEZHero(desktop).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1zbrK7ke2acWoJ0rbiLLcR",
+        "type": "Asset",
+        "createdAt": "2022-11-29T19:19:56.282Z",
+        "updatedAt": "2022-11-29T19:21:54.183Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-11-29T19:21:54.183Z",
+        "firstPublishedAt": "2022-11-29T19:21:54.183Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/1zbrK7ke2acWoJ0rbiLLcR"
+      },
+      "fields": {
+        "title": {
+          "en-US": "CAG 8092"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/1zbrK7ke2acWoJ0rbiLLcR/f995a4e4934461aa6fa5735aedc73df4/CAG_8092.jpg",
+            "details": {
+              "size": 8324426,
+              "image": {
+                "width": 4570,
+                "height": 3264
+              }
+            },
+            "fileName": "CAG_8092.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4CvgV4XQuLlJ9MozpBgnOo",
+        "type": "Asset",
+        "createdAt": "2024-06-11T01:33:33.385Z",
+        "updatedAt": "2024-06-11T01:33:51.947Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-06-11T01:33:51.947Z",
+        "firstPublishedAt": "2024-06-11T01:33:51.947Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4CvgV4XQuLlJ9MozpBgnOo"
+      },
+      "fields": {
+        "title": {
+          "en-US": "wine"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4CvgV4XQuLlJ9MozpBgnOo/f24c233225cd147d448de3d80d015344/wine.jpg",
+            "details": {
+              "size": 714086,
+              "image": {
+                "width": 1920,
+                "height": 2152
+              }
+            },
+            "fileName": "wine.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1KUJeo6LnoFnfXGvmfGIal",
+        "type": "Asset",
+        "createdAt": "2024-06-12T03:34:59.258Z",
+        "updatedAt": "2024-06-12T03:35:10.598Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-12T03:35:10.598Z",
+        "firstPublishedAt": "2024-06-12T03:35:10.598Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/1KUJeo6LnoFnfXGvmfGIal"
+      },
+      "fields": {
+        "title": {
+          "en-US": "bridge"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/1KUJeo6LnoFnfXGvmfGIal/b486ca939445f2efc728fde3d435588e/bridge.jpg",
+            "details": {
+              "size": 596258,
+              "image": {
+                "width": 1920,
+                "height": 2152
+              }
+            },
+            "fileName": "bridge.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3uCx8Sh0ubnLqYx8nZwPeb",
+        "type": "Asset",
+        "createdAt": "2024-06-25T00:00:15.573Z",
+        "updatedAt": "2024-06-25T00:00:28.012Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-25T00:00:28.012Z",
+        "firstPublishedAt": "2024-06-25T00:00:28.012Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3uCx8Sh0ubnLqYx8nZwPeb"
+      },
+      "fields": {
+        "title": {
+          "en-US": "plug-in"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3uCx8Sh0ubnLqYx8nZwPeb/b2dd8c07f707704cb5a86faa6d22e205/plug-in.jpg",
+            "details": {
+              "size": 459909,
+              "image": {
+                "width": 1024,
+                "height": 1611
+              }
+            },
+            "fileName": "plug-in.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4osjTA9MVTwKSqRD5Grwv5",
+        "type": "Asset",
+        "createdAt": "2024-06-25T00:53:10.628Z",
+        "updatedAt": "2024-06-25T00:53:27.514Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-25T00:53:27.514Z",
+        "firstPublishedAt": "2024-06-25T00:53:27.514Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4osjTA9MVTwKSqRD5Grwv5"
+      },
+      "fields": {
+        "title": {
+          "en-US": "e/z"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4osjTA9MVTwKSqRD5Grwv5/0332f5dcd65119b3c52af5f54cb982a5/Group_5.svg",
+            "details": {
+              "size": 1306,
+              "image": {
+                "width": 105,
+                "height": 104
+              }
+            },
+            "fileName": "Group_5.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6WudTDz5iRAxRL9JQYXBTG",
+        "type": "Asset",
+        "createdAt": "2024-06-25T00:53:32.686Z",
+        "updatedAt": "2024-06-25T00:53:50.689Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-25T00:53:50.689Z",
+        "firstPublishedAt": "2024-06-25T00:53:50.689Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/6WudTDz5iRAxRL9JQYXBTG"
+      },
+      "fields": {
+        "title": {
+          "en-US": "n/e/s/w"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/6WudTDz5iRAxRL9JQYXBTG/c08eb9c5b1d86315017c14a6269022d1/Group_405.svg",
+            "details": {
+              "size": 3174,
+              "image": {
+                "width": 104,
+                "height": 104
+              }
+            },
+            "fileName": "Group_405.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5Off6RVYomDSugaVTwqGn3",
+        "type": "Asset",
+        "createdAt": "2024-06-27T03:23:08.584Z",
+        "updatedAt": "2024-06-27T03:23:25.836Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-27T03:23:25.836Z",
+        "firstPublishedAt": "2024-06-27T03:23:25.836Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/5Off6RVYomDSugaVTwqGn3"
+      },
+      "fields": {
+        "title": {
+          "en-US": "EZ Logo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/5Off6RVYomDSugaVTwqGn3/9fbe463eaa6797913e5a2f338d7774e2/ezlogo.png",
+            "details": {
+              "size": 18896,
+              "image": {
+                "width": 732,
+                "height": 236
+              }
+            },
+            "fileName": "ezlogo.png",
+            "contentType": "image/png"
           }
         }
       }

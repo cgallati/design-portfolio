@@ -14,11 +14,15 @@ declare module "@emotion/react" {
       [key: number]: string;
     };
     spacing: {
-      [key: string | number]: string;
+      auto: 'auto';
+      '1px': '1px';
+      [key: number]: string;
       mobile: string;
       tablet: string;
       desktop: string;
       largeDesktop: string;
+      block: Responsive<string>;
+      content: Responsive<string>;
     };
     typography: {
       font: {
@@ -26,6 +30,10 @@ declare module "@emotion/react" {
         sans: string;
       };
       size: { [key: number | string]: string };
+      weight: {
+        light: number
+        regular: number
+      };
     };
   }
 
@@ -38,18 +46,29 @@ declare module "@emotion/react" {
 
   export interface Theme {
     breakpoints: Omit<Responsive<number>, "xl">;
+    radius: {
+        s: string;
+        m: string;
+        l: string;
+    }
     color: {
       primary: string;
+      secondary: string;
       background: string;
+      darkGray: string;
     };
     spacing: {
       content: Responsive<string>;
-      breathing: Responsive<T>;
+      breathing: Responsive<string>;
+      padding: Responsive<string>;
       frame: Responsive<T>;
+      block: Responsive<string>;
+      centerStage: Responsive<string>;
     };
     typography: {
       display: TypeFace;
       subheading: TypeFace;
+      cover: TypeFace;
       body: TypeFace;
       nav: TypeFace;
       interactive: TypeFace;

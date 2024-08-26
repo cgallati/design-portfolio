@@ -28,7 +28,7 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
         </Link>
         <NavBar>
           {navLinks.map(({ href, display, active }) => (
-            <NavLink key={display} href={href} current={active}>
+            <NavLink key={display} href={href}>
               {display}
             </NavLink>
           ))}

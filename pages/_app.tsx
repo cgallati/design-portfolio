@@ -1,13 +1,12 @@
 import { Layout } from "../components/";
 import { NAV_LINKS } from "../lib/constants";
 import { useRouter } from "next/router";
-import { ThemeProvider } from "@emotion/react";
+import {Global, ThemeProvider} from "@emotion/react";
 import { lightTheme } from "../lib/theme";
 import { DefaultSeo } from "next-seo";
 
-// global style reset
-import "../lib/theme/reset.css";
 import Head from "next/head";
+import {globalStyles} from "../lib/theme/globalStyles";
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
@@ -24,13 +23,13 @@ function MyApp({ Component, pageProps }) {
   }));
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={lightTheme} >
+        <Global styles={globalStyles(lightTheme)} />
         <Head>
-            <link rel="stylesheet" href="https://use.typekit.net/cnq7erv.css"/>
             <title>STEVEN VASIL</title>
         </Head>
       <DefaultSeo
-        title={"STEVEN VASIL"}
+        title={"Steven Vasil"}
         openGraph={{
           type: "website",
           locale: "en_IE",

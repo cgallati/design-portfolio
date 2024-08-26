@@ -1,38 +1,40 @@
-import { getProjectList } from "../contentful/api";
-import { ProjectCard, ProjectListSection } from "../components/";
-import { IProject } from "../types/project";
+import {getHomePage} from "../contentful/api";
+import {TypeHomePage} from "../contentful/types";
+import {IntroSection} from "../components/IntroSection";
+import {ProjectCard, ProjectListSection} from "../components";
 
 export default function Index({
   preview,
-  projects,
+  content,
 }: {
   preview: boolean;
-  projects: IProject[];
+  content: TypeHomePage;
 }) {
-  const data = projects.map((project) => ({
-    name: project.title,
-    order: project.order,
-  }));
+  const {title, introduction, projects} = content.fields;
   return (
-    <ProjectListSection>
-      {projects.map(({ title, bgImage, subtitle, slug }, index) => (
-        <ProjectCard
-          key={title}
-          img={bgImage}
-          title={title}
-          subtitle={subtitle}
-          slug={slug}
-          index={index}
-        />
-      ))}
-    </ProjectListSection>
+    <>
+      <IntroSection title={title} introduction={introduction}/>
+      {projects &&
+        <ProjectListSection>
+          {projects.map(({fields}, index) => (
+              <ProjectCard
+                  key={fields.title}
+                  img={fields.coverImage}
+                  title={title}
+                  subtitle={fields.excerpt}
+                  slug={fields.slug}
+                  index={index}
+              />
+          ))}
+        </ProjectListSection>
+      }
+    </>
   );
 }
 
 export async function getStaticProps({ preview = false }) {
-  const projects = (await getProjectList()) ?? [];
-
+  const content = await getHomePage();
   return {
-    props: { preview, projects },
+    props: { preview, content },
   };
 }
