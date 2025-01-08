@@ -5,6 +5,9 @@ import { ProjectNavBar } from "../ProjectNavBar";
 import { ProjectSections } from "../ProjectSections";
 import { ProjectWithPointers } from "../../contentful/api";
 import { CenterStage } from "../CenterStage";
+import { ProjectMetadata } from "../ProjectMetadata";
+import styled from "@emotion/styled";
+import { ProjectContext } from "../ProjectContext";
 
 export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
   project,
@@ -27,9 +30,28 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
   }, [visibleSections]);
 
   const { next, previous, fields } = project;
-  const { introduction, shortName, title, coverImage, sections, centerStage } =
-    fields;
+  const {
+    introduction,
+    shortName,
+    title,
+    coverImage,
+    sections,
+    centerStage,
+    metadata,
+    projectContextSections,
+  } = fields;
+  const { role, team, skills, timeline } = metadata.fields;
   const { description, file } = coverImage.fields;
+  const contextSections = projectContextSections.map(
+    (projectContextSection) => {
+      const { title, paragraph1, paragraph2, paragraph3 } =
+        projectContextSection.fields;
+      return {
+        title,
+        paragraphs: [paragraph1, paragraph2, paragraph3],
+      };
+    }
+  );
 
   return (
     <>
@@ -41,6 +63,16 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
         height={file.details.image.height}
         priority={true}
       />
+      <ProjectIntroWrapper>
+        <ProjectContext sections={contextSections} />
+        <ProjectMetadata
+          introduction={introduction}
+          role={role}
+          team={team}
+          skills={skills}
+          timeline={timeline}
+        />
+      </ProjectIntroWrapper>
       <ProjectNavBar
         title={shortName}
         sections={sections}
@@ -55,3 +87,7 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
     </>
   );
 };
+
+const ProjectIntroWrapper = styled.div`
+  padding: 73px 121px 0;
+`;

@@ -301,7 +301,7 @@
         "id": "project",
         "type": "ContentType",
         "createdAt": "2022-11-13T02:37:19.863Z",
-        "updatedAt": "2024-06-11T02:34:51.812Z",
+        "updatedAt": "2025-01-04T23:16:44.314Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -309,8 +309,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 31,
-        "publishedAt": "2024-06-11T02:34:51.812Z",
+        "publishedVersion": 45,
+        "publishedAt": "2025-01-04T23:16:44.314Z",
         "firstPublishedAt": "2022-11-13T02:37:20.098Z",
         "createdBy": {
           "sys": {
@@ -326,8 +326,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 16,
-        "version": 32,
+        "publishedCounter": 23,
+        "version": 46,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -370,6 +370,17 @@
           "omitted": false
         },
         {
+          "id": "excerpt",
+          "name": "Excerpt",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "introduction",
           "name": "Introduction",
           "type": "Symbol",
@@ -379,6 +390,47 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "projectContextSections",
+          "name": "Project Context Sections",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "projectContextSection"
+                ],
+                "message": "One or more Project Context Sections are required."
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "metadata",
+          "name": "Metadata",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "projectMetadata"
+              ],
+              "message": "You must select a Project Metadata content entry.  "
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
         },
         {
           "id": "slug",
@@ -477,17 +529,6 @@
           "omitted": false
         },
         {
-          "id": "excerpt",
-          "name": "Excerpt",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
           "id": "coverImage",
           "name": "Cover Image",
           "type": "Link",
@@ -515,7 +556,7 @@
           "name": "Sections",
           "type": "Array",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -557,7 +598,7 @@
         "id": "banner",
         "type": "ContentType",
         "createdAt": "2024-05-26T21:58:44.084Z",
-        "updatedAt": "2024-05-26T21:58:44.415Z",
+        "updatedAt": "2024-08-25T20:51:31.518Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -565,8 +606,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-05-26T21:58:44.415Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-08-25T20:51:31.518Z",
         "firstPublishedAt": "2024-05-26T21:58:44.415Z",
         "createdBy": {
           "sys": {
@@ -582,8 +623,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -593,13 +634,24 @@
         },
         "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/banner"
       },
-      "displayField": "bannerText",
+      "displayField": "title",
       "name": "Banner",
-      "description": "When one is published, a banner with the provided text will be added to the top of all pages.",
+      "description": "A narrow, full width block with title on the left and a block of text on the right.",
       "fields": [
         {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "bannerText",
-          "name": "Banner Text",
+          "name": "text",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -721,7 +773,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2024-06-09T01:06:42.821Z",
+        "updatedAt": "2024-12-16T01:52:21.967Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -729,8 +781,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-06-09T01:06:42.821Z",
+        "publishedVersion": 3,
+        "publishedAt": "2024-12-16T01:52:21.967Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -746,8 +798,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -788,6 +840,13 @@
           "items": {
             "type": "Link",
             "validations": [
+              {
+                "linkContentType": [
+                  "banner",
+                  "sideBySide",
+                  "brandElementsDisplay"
+                ]
+              }
             ],
             "linkType": "Entry"
           }
@@ -1022,7 +1081,7 @@
         "id": "brandElementsDisplay",
         "type": "ContentType",
         "createdAt": "2024-06-25T00:23:08.724Z",
-        "updatedAt": "2024-06-27T03:22:48.093Z",
+        "updatedAt": "2024-06-29T23:46:04.140Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1030,8 +1089,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-06-27T03:22:48.093Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-29T23:46:04.140Z",
         "firstPublishedAt": "2024-06-25T00:23:08.999Z",
         "createdBy": {
           "sys": {
@@ -1047,8 +1106,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1105,8 +1164,8 @@
           "validations": [
             {
               "size": {
-                "min": 1,
-                "max": 5
+                "min": 3,
+                "max": 3
               }
             }
           ],
@@ -1130,6 +1189,229 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "projectMetadata",
+        "type": "ContentType",
+        "createdAt": "2024-12-16T00:51:44.662Z",
+        "updatedAt": "2024-12-16T00:51:45.052Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-12-16T00:51:45.052Z",
+        "firstPublishedAt": "2024-12-16T00:51:45.052Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/projectMetadata"
+      },
+      "displayField": "contentEntryTitle",
+      "name": "Project Metadata",
+      "description": "Info about Steven's contribution to the project, teammates, and the project length.",
+      "fields": [
+        {
+          "id": "contentEntryTitle",
+          "name": "Content Entry Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "team",
+          "name": "Team",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "skills",
+          "name": "Skills",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "timeline",
+          "name": "Timeline",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "projectContextSection",
+        "type": "ContentType",
+        "createdAt": "2025-01-04T23:15:16.969Z",
+        "updatedAt": "2025-01-04T23:15:17.292Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-01-04T23:15:17.292Z",
+        "firstPublishedAt": "2025-01-04T23:15:17.292Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/projectContextSection"
+      },
+      "displayField": "title",
+      "name": "Project Context Section",
+      "description": "High level information about a project composed of a title and one or more paragraphs. Each project has one or more of these and they appear between the hero image and project metadata.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "paragraph1",
+          "name": "paragraph 1",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "paragraph2",
+          "name": "paragraph 2",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "paragraph3",
+          "name": "paragraph 3",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -1285,7 +1567,7 @@
             "linkType": "Space"
           }
         },
-        "version": 31,
+        "version": 45,
         "createdAt": "2022-11-13T02:37:20.224Z",
         "createdBy": {
           "sys": {
@@ -1294,7 +1576,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-06-11T02:34:52.361Z",
+        "updatedAt": "2025-01-04T23:16:46.455Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1365,12 +1647,38 @@
         },
         {
           "fieldId": "shortName",
+          "settings": {
+            "helpText": "This appears as the main header on the project detail page."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "excerpt",
+          "settings": {
+            "helpText": "This appears as the secondary text when you hover over the project card."
+          },
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
           "fieldId": "introduction",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "projectContextSections",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadata",
+          "widgetId": "entryCardEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -1381,11 +1689,6 @@
         {
           "fieldId": "content",
           "widgetId": "richTextEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "excerpt",
-          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
@@ -1424,7 +1727,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 8,
         "createdAt": "2024-05-26T21:58:44.537Z",
         "createdBy": {
           "sys": {
@@ -1433,7 +1736,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-05-26T21:58:44.921Z",
+        "updatedAt": "2024-08-25T20:51:32.055Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1457,6 +1760,11 @@
         }
       },
       "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
         {
           "fieldId": "bannerText",
           "widgetId": "singleLine",
@@ -1542,7 +1850,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -1551,7 +1859,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-06-09T01:06:43.560Z",
+        "updatedAt": "2024-12-16T01:52:22.718Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1744,7 +2052,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 8,
         "createdAt": "2024-06-25T00:23:09.207Z",
         "createdBy": {
           "sys": {
@@ -1753,7 +2061,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-06-27T03:22:48.643Z",
+        "updatedAt": "2024-06-29T23:46:04.729Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1811,6 +2119,143 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-12-16T00:51:45.256Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-16T00:51:45.682Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "projectMetadata",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "contentEntryTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "team",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "skills",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "timeline",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-01-04T23:15:17.709Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-04T23:15:19.445Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "projectContextSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "paragraph1",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "paragraph2",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "paragraph3",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -1832,7 +2277,7 @@
         "id": "1ntRr4HOKIS3VCZFzoEUdt",
         "type": "Entry",
         "createdAt": "2022-11-28T22:42:36.177Z",
-        "updatedAt": "2024-06-11T02:35:17.950Z",
+        "updatedAt": "2024-12-16T01:56:32.002Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1840,8 +2285,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 53,
-        "publishedAt": "2024-06-11T02:35:17.950Z",
+        "publishedVersion": 60,
+        "publishedAt": "2024-12-16T01:56:32.002Z",
         "firstPublishedAt": "2022-11-28T22:43:15.296Z",
         "createdBy": {
           "sys": {
@@ -1857,8 +2302,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 13,
-        "version": 54,
+        "publishedCounter": 15,
+        "version": 61,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1866,13 +2311,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1885,6 +2330,15 @@
       "fields": {
         "title": {
           "en-US": "Everything Zen Sailing Charters"
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "qYDm96rROOFY1xp39InQk"
+            }
+          }
         },
         "shortName": {
           "en-US": "Everything Zen"
@@ -2159,7 +2613,7 @@
           }
         },
         "excerpt": {
-          "en-US": "Client Work, UX/UI, Branding, Marketing"
+          "en-US": "Hover text goes here."
         },
         "coverImage": {
           "en-US": {
@@ -2171,7 +2625,7 @@
           }
         },
         "order": {
-          "en-US": 2
+          "en-US": 1
         },
         "sections": {
           "en-US": [
@@ -2228,7 +2682,7 @@
         "id": "4uY7DHGLRydzzAyntibYo6",
         "type": "Entry",
         "createdAt": "2024-06-09T01:07:11.940Z",
-        "updatedAt": "2024-06-09T03:09:58.030Z",
+        "updatedAt": "2024-12-16T01:54:03.796Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2236,8 +2690,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2024-06-09T03:09:58.030Z",
+        "publishedVersion": 14,
+        "publishedAt": "2024-12-16T01:54:03.796Z",
         "firstPublishedAt": "2024-06-09T01:07:48.555Z",
         "createdBy": {
           "sys": {
@@ -2253,8 +2707,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 5,
-        "version": 13,
+        "publishedCounter": 6,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2262,13 +2716,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2292,6 +2746,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "1ntRr4HOKIS3VCZFzoEUdt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7wHX9qWgNf5zACwGpHtOns"
               }
             }
           ]
@@ -2350,13 +2811,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2424,13 +2885,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2530,13 +2991,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2588,7 +3049,7 @@
         "id": "15gLVVuxrECmkXMGvUSzgt",
         "type": "Entry",
         "createdAt": "2024-06-10T03:52:49.217Z",
-        "updatedAt": "2024-06-10T03:52:54.347Z",
+        "updatedAt": "2024-06-29T23:43:09.585Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2596,8 +3057,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2024-06-10T03:52:54.347Z",
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-29T23:43:09.585Z",
         "firstPublishedAt": "2024-06-10T03:52:54.347Z",
         "createdBy": {
           "sys": {
@@ -2613,8 +3074,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2622,13 +3083,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2641,6 +3102,17 @@
       "fields": {
         "title": {
           "en-US": "Ideation"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6szn0rk3hHZnm4AGrLe2N9"
+              }
+            }
+          ]
         }
       }
     },
@@ -2662,7 +3134,7 @@
         "id": "11z1Ln7MDEZW52xyRGFYei",
         "type": "Entry",
         "createdAt": "2024-06-10T03:52:59.321Z",
-        "updatedAt": "2024-06-10T03:53:04.783Z",
+        "updatedAt": "2024-08-25T23:49:52.213Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2670,8 +3142,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2024-06-10T03:53:04.783Z",
+        "publishedVersion": 4,
+        "publishedAt": "2024-08-25T23:49:52.213Z",
         "firstPublishedAt": "2024-06-10T03:53:04.783Z",
         "createdBy": {
           "sys": {
@@ -2687,8 +3159,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2696,13 +3168,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2715,6 +3187,17 @@
       "fields": {
         "title": {
           "en-US": "Delivery"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CqDcUKAn2OfSjA6jJFTAE"
+              }
+            }
+          ]
         }
       }
     },
@@ -2736,7 +3219,7 @@
         "id": "3q949MaN4Uk2DWhNokGjch",
         "type": "Entry",
         "createdAt": "2024-06-11T01:32:38.918Z",
-        "updatedAt": "2024-06-12T02:58:52.201Z",
+        "updatedAt": "2024-08-25T20:35:20.015Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2744,8 +3227,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-06-12T02:58:52.201Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-08-25T20:35:20.015Z",
         "firstPublishedAt": "2024-06-11T01:34:06.487Z",
         "createdBy": {
           "sys": {
@@ -2761,8 +3244,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 4,
-        "version": 12,
+        "publishedCounter": 6,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2770,13 +3253,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2883,13 +3366,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3062,13 +3545,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3175,13 +3658,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3354,13 +3837,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3470,13 +3953,13 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "automationTags": [
-        ],
         "fieldStatus": {
           "*": {
             "en-US": "published"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3534,12 +4017,874 @@
           }
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6szn0rk3hHZnm4AGrLe2N9",
+        "type": "Entry",
+        "createdAt": "2024-06-29T23:42:28.265Z",
+        "updatedAt": "2024-06-29T23:42:58.629Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-06-29T23:42:58.629Z",
+        "firstPublishedAt": "2024-06-29T23:42:58.629Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sideBySide"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6szn0rk3hHZnm4AGrLe2N9"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ideation"
+        },
+        "darkMode": {
+          "en-US": false
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4CvgV4XQuLlJ9MozpBgnOo"
+            }
+          }
+        },
+        "richText": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This process involved a big research phase that focused on a comprehensive competitor analysis as well as a thorough identification of the target demographics. I worked with the companies owner to identify existing customers, and weak points in the customer journey, as well as comparing his existing brand and experience with his competitors. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photoOnLeft": {
+          "en-US": true
+        },
+        "offsetImage": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5CqDcUKAn2OfSjA6jJFTAE",
+        "type": "Entry",
+        "createdAt": "2024-08-25T20:49:00.938Z",
+        "updatedAt": "2024-08-25T20:50:13.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-08-25T20:50:13.995Z",
+        "firstPublishedAt": "2024-08-25T20:49:20.359Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "banner"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5CqDcUKAn2OfSjA6jJFTAE"
+      },
+      "fields": {
+        "bannerText": {
+          "en-US": "Our vehicles feature a CCS chargeport so you can access many public charging networks. Starting in 2024, we’ll be offering a NACS adapter so you can also charge at select Tesla Supercharger locations."
+        },
+        "title": {
+          "en-US": "Delivery"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "qYDm96rROOFY1xp39InQk",
+        "type": "Entry",
+        "createdAt": "2024-12-16T00:53:26.274Z",
+        "updatedAt": "2024-12-16T01:09:03.961Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-12-16T01:09:03.961Z",
+        "firstPublishedAt": "2024-12-16T00:54:32.198Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/qYDm96rROOFY1xp39InQk"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Everything Zen Project Metadata"
+        },
+        "role": {
+          "en-US": "Design Lead"
+        },
+        "team": {
+          "en-US": [
+            "Chad Gallati (Software Developer)"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "UX/UI Design",
+            "Brand Identity Design",
+            "Print Design",
+            "Service Design"
+          ]
+        },
+        "timeline": {
+          "en-US": "3 Months"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7wHX9qWgNf5zACwGpHtOns",
+        "type": "Entry",
+        "createdAt": "2024-12-16T01:41:44.511Z",
+        "updatedAt": "2025-01-04T23:26:37.853Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-01-04T23:26:37.853Z",
+        "firstPublishedAt": "2024-12-16T01:45:48.303Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/7wHX9qWgNf5zACwGpHtOns"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rune"
+        },
+        "shortName": {
+          "en-US": "Rune"
+        },
+        "excerpt": {
+          "en-US": "Hover text goes here."
+        },
+        "introduction": {
+          "en-US": "A powerful AI platform that bridges the gap between educators and students, enabling objective, real-time assessments of writing development."
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2XUpZM2KIcnUBOLThHCXPu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "247V0KvXQKNrz91zWr4j6E"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5mm1V8wwH0PsIZhUpwxwyr"
+            }
+          }
+        },
+        "slug": {
+          "en-US": "rune"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Every classroom has students who face unseen challenges. One of the most overlooked yet impactful difficulties is related to writing development. Writing difficulties often go unnoticed or are misunderstood, affecting students confidence, academic performance, and engagement.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2p2EDhorU678d4XO9iTnYD"
+            }
+          }
+        },
+        "sections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4gsj0zJzQUTSQcEabTLna9"
+              }
+            }
+          ]
+        },
+        "centerStage": {
+          "en-US": "Every classroom has students who face unseen challenges. One of the most overlooked yet impactful difficulties is related to writing development. Writing difficulties often go unnoticed or are misunderstood, affecting students confidence, academic performance, and engagement."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5mm1V8wwH0PsIZhUpwxwyr",
+        "type": "Entry",
+        "createdAt": "2024-12-16T01:41:49.647Z",
+        "updatedAt": "2024-12-16T01:43:08.011Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-12-16T01:43:08.011Z",
+        "firstPublishedAt": "2024-12-16T01:43:08.011Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5mm1V8wwH0PsIZhUpwxwyr"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Rune Project Metadata"
+        },
+        "role": {
+          "en-US": "Design Lead"
+        },
+        "team": {
+          "en-US": [
+            "Max Bloom (Project Manager)",
+            "Austin Joseph (Physical Designer)",
+            "Max Clardie-Hook (Digital Designer)"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "UX/UI Design",
+            "Brand Identity Design",
+            "Human Factors",
+            "Industrial Design"
+          ]
+        },
+        "timeline": {
+          "en-US": "3 Months"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4gsj0zJzQUTSQcEabTLna9",
+        "type": "Entry",
+        "createdAt": "2024-12-16T01:50:46.735Z",
+        "updatedAt": "2024-12-16T01:51:30.958Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-12-16T01:51:30.958Z",
+        "firstPublishedAt": "2024-12-16T01:51:30.958Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4gsj0zJzQUTSQcEabTLna9"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Arbitrary"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "49yBhPpvxxR0XM7vVp2eph"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "49yBhPpvxxR0XM7vVp2eph",
+        "type": "Entry",
+        "createdAt": "2024-12-16T01:51:17.327Z",
+        "updatedAt": "2024-12-16T01:51:28.009Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-12-16T01:51:28.009Z",
+        "firstPublishedAt": "2024-12-16T01:51:28.009Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "banner"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/49yBhPpvxxR0XM7vVp2eph"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Arbitrary Banner"
+        },
+        "bannerText": {
+          "en-US": "Arb banner "
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2XUpZM2KIcnUBOLThHCXPu",
+        "type": "Entry",
+        "createdAt": "2025-01-04T23:16:57.920Z",
+        "updatedAt": "2025-01-04T23:17:58.444Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-04T23:17:58.444Z",
+        "firstPublishedAt": "2025-01-04T23:17:58.444Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/2XUpZM2KIcnUBOLThHCXPu"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "With Rune, we empower educators and support students by transforming writing assessment from subjective observation to precise, data-driven insight. All while enhancing class engagement and the learning environment."
+        },
+        "paragraph2": {
+          "en-US": "Our pen design and intuitive UI offer an integrated approach that enhances understanding, fosters student confidence, and promotes academic success."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "247V0KvXQKNrz91zWr4j6E",
+        "type": "Entry",
+        "createdAt": "2025-01-04T23:26:01.396Z",
+        "updatedAt": "2025-01-04T23:27:21.486Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-04T23:27:21.486Z",
+        "firstPublishedAt": "2025-01-04T23:27:21.486Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/247V0KvXQKNrz91zWr4j6E"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "With Rune, we empower educators and support students by transforming writing assessment from subjective observation to precise, data-driven insight. All while enhancing class engagement and the learning environment."
+        }
+      }
     }
   ],
   "assets": [
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3615,6 +4960,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3690,6 +5037,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3765,6 +5114,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3837,6 +5188,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3850,7 +5203,7 @@
         "id": "2rH8qlbhAf5eV98ihD0nUG",
         "type": "Asset",
         "createdAt": "2022-11-29T00:17:35.109Z",
-        "updatedAt": "2024-06-10T01:29:31.153Z",
+        "updatedAt": "2024-08-25T23:38:37.993Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3858,8 +5211,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 20,
-        "publishedAt": "2024-06-10T01:29:31.153Z",
+        "publishedVersion": 25,
+        "publishedAt": "2024-08-25T23:38:37.993Z",
         "firstPublishedAt": "2022-11-29T00:17:53.513Z",
         "createdBy": {
           "sys": {
@@ -3875,8 +5228,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 4,
-        "version": 21,
+        "publishedCounter": 5,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3884,11 +5237,19 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
         "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/2rH8qlbhAf5eV98ihD0nUG"
       },
       "fields": {
         "title": {
           "en-US": "EZ Mockups"
+        },
+        "description": {
+          "en-US": "An array of iPhones displaying different pages of the Everything Zen Sailing Charters website and booking application."
         },
         "file": {
           "en-US": {
@@ -3909,6 +5270,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -3984,6 +5347,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4059,6 +5424,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4134,6 +5501,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4209,6 +5578,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4281,6 +5652,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4353,6 +5726,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4425,6 +5800,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4497,6 +5874,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4569,6 +5948,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4641,6 +6022,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4654,7 +6037,7 @@
         "id": "4CvgV4XQuLlJ9MozpBgnOo",
         "type": "Asset",
         "createdAt": "2024-06-11T01:33:33.385Z",
-        "updatedAt": "2024-06-11T01:33:51.947Z",
+        "updatedAt": "2024-08-25T23:37:23.033Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4662,8 +6045,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-06-11T01:33:51.947Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-08-25T23:37:23.033Z",
         "firstPublishedAt": "2024-06-11T01:33:51.947Z",
         "createdBy": {
           "sys": {
@@ -4679,8 +6062,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4688,11 +6071,19 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
         "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4CvgV4XQuLlJ9MozpBgnOo"
       },
       "fields": {
         "title": {
-          "en-US": "wine"
+          "en-US": "wine (don't publish in final version)"
+        },
+        "description": {
+          "en-US": "test image"
         },
         "file": {
           "en-US": {
@@ -4713,6 +6104,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4788,6 +6181,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4863,6 +6258,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -4938,6 +6335,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -5013,6 +6412,8 @@
     {
       "metadata": {
         "tags": [
+        ],
+        "concepts": [
         ]
       },
       "sys": {
@@ -5080,6 +6481,88 @@
               }
             },
             "fileName": "ezlogo.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2p2EDhorU678d4XO9iTnYD",
+        "type": "Asset",
+        "createdAt": "2024-12-16T01:44:46.040Z",
+        "updatedAt": "2024-12-16T01:45:21.991Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-12-16T01:45:21.991Z",
+        "firstPublishedAt": "2024-12-16T01:45:21.991Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/2p2EDhorU678d4XO9iTnYD"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rune Rainbow"
+        },
+        "description": {
+          "en-US": "4 Rune pens displayed in an arced array. "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/2p2EDhorU678d4XO9iTnYD/4431026a0d5707ad833e00ca192ee453/Screenshot_2024-12-15_at_8.44.31_PM.png",
+            "details": {
+              "size": 307932,
+              "image": {
+                "width": 1648,
+                "height": 926
+              }
+            },
+            "fileName": "Screenshot 2024-12-15 at 8.44.31 PM.png",
             "contentType": "image/png"
           }
         }

@@ -4,6 +4,7 @@ import { Entry } from "contentful";
 import { SideBySide } from "../SideBySide";
 import { BrandElementsDisplay } from "../BrandElementsDisplay";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
+import { Banner } from "../Banner";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -48,6 +49,7 @@ export const ProjectSections: FC<ProjectSectionsProps> = ({
 const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   sideBySide: SideBySide,
   brandElementsDisplay: BrandElementsDisplay,
+  banner: Banner,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,

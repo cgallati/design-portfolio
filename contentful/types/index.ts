@@ -4,6 +4,8 @@ export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from ".
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypePost, TypePostFields } from "./TypePost";
 export type { TypeProject, TypeProjectFields } from "./TypeProject";
+export type { TypeProjectContextSection, TypeProjectContextSectionFields } from "./TypeProjectContextSection";
+export type { TypeProjectMetadata, TypeProjectMetadataFields } from "./TypeProjectMetadata";
 export type { TypeSection, TypeSectionFields } from "./TypeSection";
 export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
 export type { TypeSideBySide, TypeSideBySideFields } from "./TypeSideBySide";

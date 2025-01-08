@@ -3,6 +3,7 @@ import { responsiveValues } from "../../lib/theme";
 
 export const IntroSectionFrame = styled.section`
   display: flex;
+  padding-left: 270px;
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vw * 0.45);
@@ -11,9 +12,9 @@ export const IntroSectionFrame = styled.section`
 
 export const IntroSectionTextContainer = styled.div`
   text-align: left;
-  ${({ theme }) => responsiveValues("max-width", theme.spacing.content)}
-  margin-left: 14%;
-  margin-right: 10%;
+  ${({ theme }) =>
+    responsiveValues("max-width", theme.spacing.content)}//margin-left: 14%;
+          //margin-right: 10%;
 `;
 
 export const IntroSectionTitle = styled.h1`
