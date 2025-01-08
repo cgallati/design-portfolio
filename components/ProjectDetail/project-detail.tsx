@@ -42,7 +42,7 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
   } = fields;
   const { role, team, skills, timeline } = metadata.fields;
   const { description, file } = coverImage.fields;
-  const contextSections = projectContextSections.map(
+  const contextSections = projectContextSections?.map(
     (projectContextSection) => {
       const { title, paragraph1, paragraph2, paragraph3 } =
         projectContextSection.fields;
@@ -64,7 +64,7 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
         priority={true}
       />
       <ProjectIntroWrapper>
-        <ProjectContext sections={contextSections} />
+        <ProjectContext sections={contextSections || []} />
         <ProjectMetadata
           introduction={introduction}
           role={role}
