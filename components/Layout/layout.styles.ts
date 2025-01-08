@@ -32,7 +32,7 @@ export const NavBar = styled.nav`
   align-items: center;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(Link)<{ active: boolean }>`
   flex: 1;
   text-decoration: none;
   position: relative;
@@ -40,6 +40,7 @@ export const NavLink = styled(Link)`
   flex-direction: column;
   cursor: pointer;
   color: ${({ theme }) => theme.color.primary};
+  opacity: 0.3;
   margin-right: 1rem;
 
   :hover {
@@ -48,6 +49,12 @@ export const NavLink = styled(Link)`
   :last-of-type {
     margin-right: 0;
   }
+
+  ${({ active, theme }) =>
+    active &&
+    `
+    opacity: 1;
+  `}
 `;
 
 export const Logo = styled.img`
