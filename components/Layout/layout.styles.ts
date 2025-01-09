@@ -69,20 +69,24 @@ export const NavLink = styled(Link)<{ active: boolean }>`
 `;
 
 export const Logo = styled.img`
-  width: ${tokens.spacing[4]};
+  width: ${tokens.spacing[5]};
+  height: ${tokens.spacing[5]};
+  aspect-ratio: 1;
 
   ${mq[0]} {
-    width: ${tokens.spacing[4]};
+    width: ${tokens.spacing[5]};
+    height: ${tokens.spacing[5]};
   }
 
   ${mq[1]} {
-    width: ${tokens.spacing[5]};
+    width: ${tokens.spacing[6]};
+    height: ${tokens.spacing[6]};
   }
 
   ${mq[2]} {
     width: ${tokens.spacing[6]};
+    height: ${tokens.spacing[6]};
   }
-
   cursor: pointer;
 `;
 

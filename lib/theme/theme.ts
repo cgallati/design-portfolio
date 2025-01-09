@@ -96,8 +96,8 @@ export const lightTheme: Theme = {
       xl: tokens.spacing[14],
     },
     frame: {
-      s: tokens.spacing[9] + " " + tokens.spacing[4]  + " " + tokens.spacing[2],
-      m: tokens.spacing[2] + " " + tokens.spacing[2]  + " " + tokens.spacing[4],
+      s: tokens.spacing[6] + " " + tokens.spacing[4]  + " " + tokens.spacing[2],
+      m: tokens.spacing[3] + " " + tokens.spacing[4]  + " " + tokens.spacing[4],
       l: tokens.spacing[4] + " " + tokens.spacing[4]  + " " + tokens.spacing[6],
       xl: tokens.spacing[4] + " " + tokens.spacing[6]  + " " + tokens.spacing[8] ,
     },

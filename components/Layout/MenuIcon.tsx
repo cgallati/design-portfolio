@@ -30,8 +30,8 @@ const IconWrapper = styled.button`
 
 const Bar = styled.span<{ isOpen: boolean }>`
   position: absolute;
-  width: 24px;
-  height: 2px;
+  width: 38px;
+  height: 4px;
   background-color: currentColor;
   transition: transform 0.3s ease;
 
