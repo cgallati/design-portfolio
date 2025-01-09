@@ -16,6 +16,16 @@ const IconWrapper = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: inherit;
+  outline: none;
+  border-radius: 0;
+
+  &:hover {
+    color: inherit;
+  }
 `;
 
 const Bar = styled.span<{ isOpen: boolean }>`
