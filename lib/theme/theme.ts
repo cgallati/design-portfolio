@@ -22,7 +22,7 @@ export const tokens: Tokens = {
     auto: "auto",
     "1px": "1px",
     0: "0",
-    ...eightPixelScale(15),
+    ...eightPixelScale(50),
     block: {
         s: "2rem",
         m: "5rem",
@@ -30,8 +30,8 @@ export const tokens: Tokens = {
         xl: "12rem",
     },
     content: {
-      s: "20rem",
-      m: "25rem",
+      s: "none",
+      m: "none",
       l: "40rem",
       xl: "68rem",
     },
@@ -50,7 +50,7 @@ export const tokens: Tokens = {
       0: "0.875rem",
       1: "1rem",
       2: "1.25rem",
-      3: "1.5rem",
+      3: "1.75rem",
       4: "2rem",
       "4.5": "2.5rem",
       5: "2.88rem",
@@ -96,7 +96,7 @@ export const lightTheme: Theme = {
       xl: tokens.spacing[14],
     },
     frame: {
-      s: tokens.spacing[1] + " " + tokens.spacing[1]  + " " + tokens.spacing[2],
+      s: tokens.spacing[9] + " " + tokens.spacing[4]  + " " + tokens.spacing[2],
       m: tokens.spacing[2] + " " + tokens.spacing[2]  + " " + tokens.spacing[4],
       l: tokens.spacing[4] + " " + tokens.spacing[4]  + " " + tokens.spacing[6],
       xl: tokens.spacing[4] + " " + tokens.spacing[6]  + " " + tokens.spacing[8] ,
@@ -113,8 +113,8 @@ export const lightTheme: Theme = {
       family: tokens.typography.font.sans,
       weight: tokens.typography.weight.regular,
       size: {
-        s: tokens.typography.size[0],
-        m: tokens.typography.size[1],
+        s: tokens.typography.size[3],
+        m: tokens.typography.size[3],
         l: tokens.typography.size[3],
         xl: tokens.typography.size[5],
       },

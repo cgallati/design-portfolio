@@ -2,6 +2,8 @@ import { getHomePage } from "../contentful/api";
 import { TypeHomePage } from "../contentful/types";
 import { IntroSection } from "../components/IntroSection";
 import { ProjectCard, ProjectListSection } from "../components";
+import { mq, responsiveValues, tokens } from "../lib/theme";
+
 import styled from "@emotion/styled";
 
 export default function Index({
@@ -41,5 +43,10 @@ export async function getStaticProps({ preview = false }) {
 }
 
 const PageWrapper = styled.div`
-  margin: 0 215px;
+  ${({ theme }) => responsiveValues("margin", {
+    s: "0 " + tokens.spacing[4],
+    m: "0 " + tokens.spacing[4],
+    l: "0 " + tokens.spacing[7],
+    xl: "0 " + "13rem",
+  })};
 `;

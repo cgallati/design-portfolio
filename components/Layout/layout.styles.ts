@@ -58,7 +58,7 @@ export const NavLink = styled(Link)<{ active: boolean }>`
 `;
 
 export const Logo = styled.img`
-  width: ${tokens.spacing[3]};
+  width: ${tokens.spacing[4]};
 
   ${mq[0]} {
     width: ${tokens.spacing[4]};
