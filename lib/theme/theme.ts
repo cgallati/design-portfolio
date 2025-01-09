@@ -70,9 +70,10 @@ export const tokens: Tokens = {
 export const lightTheme: Theme = {
   breakpoints: { s: 576, m: 800, l: 1200 },
   radius: {
-    s: tokens.spacing[2],
-    m: tokens.spacing[3],
-    l: tokens.spacing[4],
+    s: "10px",
+    m: "15px",
+    l: "20px",
+    xl: "25px",
   },
   color: {
     primary: tokens.color[10],

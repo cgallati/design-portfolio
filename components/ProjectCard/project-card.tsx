@@ -1,4 +1,14 @@
-import { ProjectCardArticle, ProjectCardImage } from "./project-card.styles";
+import { 
+  ProjectCardArticle, 
+  ProjectCardImage, 
+  MobileProjectInfo, 
+  MobileProjectTitle, 
+  MobileProjectSubtitle, 
+  Arrow,
+  HoverProjectInfo,
+  HoverProjectTitle,
+  HoverProjectSubtitle,
+} from "./project-card.styles";
 import { Asset } from "contentful";
 import Link from "next/link";
 
@@ -30,10 +40,16 @@ export const ProjectCard = ({
             height: "auto",
           }}
         />
-        <div>
-          <h2>{title}</h2>
-          <h3>{subtitle}</h3>
-        </div>
+        <HoverProjectInfo className="hover-info">
+          <HoverProjectTitle>{title}</HoverProjectTitle>
+          <HoverProjectSubtitle>{subtitle}</HoverProjectSubtitle>
+        </HoverProjectInfo>
+        <MobileProjectInfo>
+          <MobileProjectTitle>{title}</MobileProjectTitle>
+          <MobileProjectSubtitle>
+            {subtitle} <Arrow>→</Arrow>
+          </MobileProjectSubtitle>
+        </MobileProjectInfo>
       </ProjectCardArticle>
     </Link>
   );

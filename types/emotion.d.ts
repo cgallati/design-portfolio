@@ -50,6 +50,7 @@ declare module "@emotion/react" {
         s: string;
         m: string;
         l: string;
+        xl: string;
     }
     color: {
       primary: string;
