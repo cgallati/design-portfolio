@@ -89,21 +89,27 @@ export const MobileProjectInfo = styled.div`
 `;
 
 export const MobileProjectTitle = styled.h2`
+  display: flex;
+  align-items: top;
   font-family: ${({ theme }) => theme.typography.display.family};
   font-weight: ${({ theme }) => theme.typography.cover.weight};
-  ${({ theme }) => responsiveValues("font-size", theme.typography.cover.size)};
+  ${({ theme }) => responsiveValues("font-size", {
+    s: "24px",
+    m: "32px",
+    l: "36px",
+    xl: "40px"
+  })};
+  line-height: 150%;
 `;
 
 export const MobileProjectSubtitle = styled.h3`
   font-family: ${({ theme }) => theme.typography.display.family};
   font-weight: ${({ theme }) => theme.typography.cover.weight};
-  ${({ theme }) => responsiveValues("font-size", theme.typography.subheading.size)};
+  ${({ theme }) => responsiveValues("font-size", {
+    s: "16px",
+    m: "18px",
+    l: "20px",
+    xl: "22px"
+  })};
   color: ${tokens.color[4]};
-`;
-
-export const Arrow = styled.span`
-  display: inline-block;
-  margin-left: ${tokens.spacing[2]};
-  font-size: 1.5rem;
-  line-height: 1;
 `;

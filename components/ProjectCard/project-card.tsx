@@ -1,16 +1,16 @@
-import { 
-  ProjectCardArticle, 
-  ProjectCardImage, 
-  MobileProjectInfo, 
-  MobileProjectTitle, 
-  MobileProjectSubtitle, 
-  Arrow,
+import {
+  ProjectCardArticle,
+  ProjectCardImage,
+  MobileProjectInfo,
+  MobileProjectTitle,
+  MobileProjectSubtitle,
   HoverProjectInfo,
   HoverProjectTitle,
   HoverProjectSubtitle,
 } from "./project-card.styles";
 import { Asset } from "contentful";
 import Link from "next/link";
+import Image from "next/image";
 
 export const ProjectCard = ({
   title,
@@ -27,7 +27,10 @@ export const ProjectCard = ({
 }) => {
   const imgSize = img.fields.file.details.image;
   return (
-    <Link href={"/project/" + slug}>
+    <Link
+      href={"/project/" + slug}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <ProjectCardArticle index={index}>
         <ProjectCardImage
           alt={img.fields.description}
@@ -45,10 +48,21 @@ export const ProjectCard = ({
           <HoverProjectSubtitle>{subtitle}</HoverProjectSubtitle>
         </HoverProjectInfo>
         <MobileProjectInfo>
-          <MobileProjectTitle>{title}</MobileProjectTitle>
-          <MobileProjectSubtitle>
-            {subtitle} <Arrow>→</Arrow>
-          </MobileProjectSubtitle>
+          <MobileProjectTitle>
+            {title}
+            <Image
+              src="/assets/right-arrow.svg"
+              alt="Right arrow"
+              width={24}
+              height={18}
+              style={{
+                marginLeft: "auto",
+                marginRight: "8px",
+                marginTop: "10px",
+              }}
+            />
+          </MobileProjectTitle>
+          <MobileProjectSubtitle>{subtitle}</MobileProjectSubtitle>
         </MobileProjectInfo>
       </ProjectCardArticle>
     </Link>

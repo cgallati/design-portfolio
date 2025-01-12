@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 interface MenuIconProps {
   isOpen: boolean;
@@ -31,18 +31,16 @@ const IconWrapper = styled.button`
 const Bar = styled.span<{ isOpen: boolean }>`
   position: absolute;
   width: 38px;
-  height: 4px;
+  height: 3px;
   background-color: currentColor;
   transition: transform 0.3s ease;
 
   &:first-of-type {
-    transform: ${({ isOpen }) =>
-      isOpen ? 'rotate(45deg)' : 'rotate(90deg)'};
+    transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(90deg)")};
   }
 
   &:last-of-type {
-    transform: ${({ isOpen }) =>
-      isOpen ? 'rotate(-45deg)' : 'rotate(0deg)'};
+    transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
   }
 `;
 
