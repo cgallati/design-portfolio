@@ -11,6 +11,7 @@ export interface TypeProjectFields {
     introduction: Contentful.EntryFields.Symbol;
     projectContextSections: Contentful.Entry<TypeProjectContextSectionFields>[];
     metadata: Contentful.Entry<TypeProjectMetadataFields>;
+    largeImageCard: Contentful.Asset;
     slug: Contentful.EntryFields.Symbol;
     content: CFRichTextTypes.Block | CFRichTextTypes.Inline;
     coverImage: Contentful.Asset;

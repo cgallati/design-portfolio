@@ -9,6 +9,7 @@ import { ProjectMetadata } from "../ProjectMetadata";
 import styled from "@emotion/styled";
 import { ProjectContext } from "../ProjectContext";
 import { responsiveValues, tokens } from "../../lib/theme";
+import { LargeImageCard } from "../LargeImageCard/large-image-card";
 
 
 
@@ -78,6 +79,10 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
           timeline={timeline}
         />
       </ProjectIntroWrapper>
+      <LargeImageCard
+        src={"https:" + file.url}
+        alt={description}
+      />
       <ProjectNavBar
         title={shortName}
         sections={sections}

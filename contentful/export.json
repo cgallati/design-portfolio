@@ -301,7 +301,7 @@
         "id": "project",
         "type": "ContentType",
         "createdAt": "2022-11-13T02:37:19.863Z",
-        "updatedAt": "2025-01-04T23:16:44.314Z",
+        "updatedAt": "2025-01-13T03:12:37.564Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -309,8 +309,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 45,
-        "publishedAt": "2025-01-04T23:16:44.314Z",
+        "publishedVersion": 47,
+        "publishedAt": "2025-01-13T03:12:37.564Z",
         "firstPublishedAt": "2022-11-13T02:37:20.098Z",
         "createdBy": {
           "sys": {
@@ -326,8 +326,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 23,
-        "version": 46,
+        "publishedCounter": 24,
+        "version": 48,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -431,6 +431,18 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
+        },
+        {
+          "id": "largeImageCard",
+          "name": "Large Image Card",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
         },
         {
           "id": "slug",
@@ -1567,7 +1579,7 @@
             "linkType": "Space"
           }
         },
-        "version": 45,
+        "version": 47,
         "createdAt": "2022-11-13T02:37:20.224Z",
         "createdBy": {
           "sys": {
@@ -1576,7 +1588,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-01-04T23:16:46.455Z",
+        "updatedAt": "2025-01-13T03:12:38.463Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1679,6 +1691,11 @@
         {
           "fieldId": "metadata",
           "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "largeImageCard",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -4322,7 +4339,7 @@
         "id": "7wHX9qWgNf5zACwGpHtOns",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:44.511Z",
-        "updatedAt": "2025-01-04T23:26:37.853Z",
+        "updatedAt": "2025-01-13T03:13:07.323Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4330,8 +4347,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2025-01-04T23:26:37.853Z",
+        "publishedVersion": 17,
+        "publishedAt": "2025-01-13T03:13:07.323Z",
         "firstPublishedAt": "2024-12-16T01:45:48.303Z",
         "createdBy": {
           "sys": {
@@ -4347,8 +4364,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 5,
-        "version": 16,
+        "publishedCounter": 6,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4409,6 +4426,15 @@
               "type": "Link",
               "linkType": "Entry",
               "id": "5mm1V8wwH0PsIZhUpwxwyr"
+            }
+          }
+        },
+        "largeImageCard": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2p2EDhorU678d4XO9iTnYD"
             }
           }
         },

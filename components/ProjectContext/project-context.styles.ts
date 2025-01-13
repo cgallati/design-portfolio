@@ -20,7 +20,7 @@ export const ParagraphsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-  gap: 90px;
+  gap: 62px;
 `;
 export const ContextParagraph = styled.p`
   color: #636363;
