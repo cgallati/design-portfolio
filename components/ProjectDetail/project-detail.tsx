@@ -8,6 +8,9 @@ import { CenterStage } from "../CenterStage";
 import { ProjectMetadata } from "../ProjectMetadata";
 import styled from "@emotion/styled";
 import { ProjectContext } from "../ProjectContext";
+import { responsiveValues, tokens } from "../../lib/theme";
+
+
 
 export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
   project,
@@ -55,7 +58,9 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
 
   return (
     <>
-      <IntroSection title={title} introduction={introduction} />
+      <IntroSectionWrapper>
+        <IntroSection title={title} introduction={introduction} />
+      </IntroSectionWrapper>
       <EmbeddedImage
         src={"https:" + file.url}
         alt={description}
@@ -87,6 +92,15 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
     </>
   );
 };
+
+const IntroSectionWrapper = styled.div`
+  ${responsiveValues("margin", {
+    s: "0 " + tokens.spacing[4],
+    m: "0 " + tokens.spacing[4],
+    l: "0 " + tokens.spacing[7],
+    xl: "0 " + "13rem",
+  })};
+`;
 
 const ProjectIntroWrapper = styled.div`
   padding: 73px 121px 0;
