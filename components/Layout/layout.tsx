@@ -31,7 +31,7 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <PageContainer isMenuOpen={isMenuOpen}>
+    <PageContainer>
       <Header>
         <Link href={"/"}>
           <Logo src={"/logo.svg"} alt="Logo" width={32} height={32} />

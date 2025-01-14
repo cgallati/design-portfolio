@@ -36,7 +36,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
   const { next, previous, fields } = project;
   const {
     introduction,
-    shortName,
     title,
     coverImage,
     sections,
@@ -84,7 +83,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
         alt={description}
       />
       <ProjectNavBar
-        title={shortName}
         sections={sections}
         activeSection={activeSection}
       />

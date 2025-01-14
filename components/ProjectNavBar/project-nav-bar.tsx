@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import {
   ProjectNav,
   ProjectNavItem,
-  ProjectTitle,
   StickyNavBar,
+  MobileNavToggle,
+  NavList,
+  ChevronIcon,
 } from "./project-nav-bar.styled";
 import * as Contentful from "contentful";
 import { TypeSectionFields } from "../../contentful/types";
 import { useWindowScroll } from "@uidotdev/usehooks";
 
 interface StickyHeaderProps {
-  title: string;
   sections: Contentful.Entry<TypeSectionFields>[];
   activeSection: number;
 }
 
 export const ProjectNavBar: React.FC<StickyHeaderProps> = ({
-  title,
   sections,
   activeSection,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [_coords, scrollTo] = useWindowScroll();
 
   const handleNavClick = (
@@ -34,16 +36,32 @@ export const ProjectNavBar: React.FC<StickyHeaderProps> = ({
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsOpen(false);
   };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const activeTitle = sections[activeSection]?.fields.title || sections[0]?.fields.title || "";
+
   return (
     <StickyNavBar>
-      <ProjectTitle onClick={(event) => handleNavClick(event, -1)}>
-        {title}
-      </ProjectTitle>
       <ProjectNav>
-        <ul>
+        <MobileNavToggle onClick={toggleDropdown} isOpen={isOpen}>
+          {activeTitle}
+          <ChevronIcon isOpen={isOpen}>
+            <Image 
+              src="/assets/chevron-down.svg" 
+              alt="Dropdown toggle" 
+              width={12} 
+              height={12} 
+            />
+          </ChevronIcon>
+        </MobileNavToggle>
+        <NavList isOpen={isOpen}>
           {sections.map((section, index) => {
-            const { title, content } = section.fields;
+            const { title } = section.fields;
             return (
               <ProjectNavItem
                 key={title}
@@ -54,7 +72,7 @@ export const ProjectNavBar: React.FC<StickyHeaderProps> = ({
               </ProjectNavItem>
             );
           })}
-        </ul>
+        </NavList>
       </ProjectNav>
     </StickyNavBar>
   );

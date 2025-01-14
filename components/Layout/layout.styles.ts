@@ -3,19 +3,18 @@ import Link from "next/link";
 import { mq, responsiveValues, tokens } from "../../lib/theme";
 import { animationFade } from "../ProjectCard/project-card.styles";
 
-export const PageContainer = styled.div<{ isMenuOpen: boolean }>`
+export const PageContainer = styled.div`
   margin: auto;
   background-color: ${({ theme }) => theme.color.background};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: ${({ isMenuOpen }) => isMenuOpen ? 'hidden' : 'auto'};
-  position: ${({ isMenuOpen }) => isMenuOpen ? 'fixed' : 'relative'};
   width: 100%;
 `;
 
 export const PageContent = styled.div`
   font-family: ${({ theme }) => theme.typography.body.family};
+  width: 100%;
 `;
 
 export const Header = styled.header`
