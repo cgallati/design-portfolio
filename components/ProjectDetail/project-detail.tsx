@@ -10,6 +10,7 @@ import styled from "@emotion/styled";
 import { ProjectContext } from "../ProjectContext";
 import { responsiveValues, tokens } from "../../lib/theme";
 import { LargeImageCard } from "../LargeImageCard/large-image-card";
+import { AssetGrid } from "../";
 
 
 
@@ -42,8 +43,10 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
     centerStage,
     metadata,
     projectContextSections,
+    largeImageCard,
+    assetGrid
   } = fields;
-  const { role, team, skills, timeline } = metadata.fields;
+  const { role, team, skills, timeline, metadataDescription } = metadata.fields;
   const { description, file } = coverImage.fields;
   const contextSections = projectContextSections?.map(
     (projectContextSection) => {
@@ -71,27 +74,45 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
       <ProjectIntroWrapper>
         <ProjectContext sections={contextSections || []} />
         <ProjectMetadata
-          introduction={introduction}
+          introduction={metadataDescription}
           role={role}
           team={team}
           skills={skills}
           timeline={timeline}
         />
       </ProjectIntroWrapper>
-      <LargeImageCard
-        src={"https:" + file.url}
-        alt={description}
-      />
-      <ProjectNavBar
-        sections={sections}
-        activeSection={activeSection}
-      />
-      <CenterStage text={centerStage} />
-      <ProjectSections
-        sections={sections}
-        addVisibleSection={addVisibleSection}
-        removeVisibleSection={removeVisibleSection}
-      />
+      {assetGrid && <AssetGrid images={assetGrid.map((image) => ({
+        file: { 
+          url: image.fields.file.url,
+          details: {
+            image: {
+              width: image.fields.file.details.image.width,
+              height: image.fields.file.details.image.height
+            }
+          }
+        },
+        description: image.fields.description,
+      }))} />}
+      {largeImageCard && (
+        <LargeImageCard
+          src={"https:" + largeImageCard.fields.file.url}
+          alt={largeImageCard.fields.description}
+        />
+      )}
+      {sections && (
+        <>
+          <ProjectNavBar
+            sections={sections}
+            activeSection={activeSection}
+          />
+          <CenterStage text={centerStage} />
+          <ProjectSections
+            sections={sections}
+            addVisibleSection={addVisibleSection}
+            removeVisibleSection={removeVisibleSection}
+          />
+        </>
+      )}
     </>
   );
 };
@@ -106,5 +127,10 @@ const IntroSectionWrapper = styled.div`
 `;
 
 const ProjectIntroWrapper = styled.div`
-  padding: 73px 121px 0;
+  ${responsiveValues("padding", {
+    s: "3.5rem 1rem 0",
+    m: "5rem 2.5rem 0",
+    l: "7rem 4rem 0",
+    xl: "10rem 6rem 0",
+  })};
 `;

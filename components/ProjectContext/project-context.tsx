@@ -23,7 +23,7 @@ export const ProjectContext: React.FC<ProjectContextProps> = ({ sections }) => {
           <ContextSection key={"context-section-" + idx}>
             <ContextTitle>{title}</ContextTitle>
             <ParagraphsWrapper>
-              {paragraphs.map((paragraph, idxx) => (
+              {paragraphs.filter(paragraph => paragraph).map((paragraph, idxx) => (
                 <ContextParagraph key={"context-paragraph-" + idx + "" + idxx}>
                   {paragraph}
                 </ContextParagraph>

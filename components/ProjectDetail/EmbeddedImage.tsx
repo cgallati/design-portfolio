@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { tokens } from "../../lib/theme";
+import { mq, tokens } from "../../lib/theme";
+import styled from "@emotion/styled";
 
 export const EmbeddedImage = ({
   src,
@@ -15,6 +16,7 @@ export const EmbeddedImage = ({
   priority?: boolean;
 }) => {
   return (
+    // <EmbeddedImageContainer>
     <Image
       src={src}
       height={height}
@@ -26,5 +28,14 @@ export const EmbeddedImage = ({
         height: "auto",
       }}
     />
+    // </EmbeddedImageContainer>
   );
 };
+
+
+const EmbeddedImageContainer = styled.div`
+  ${mq[0]} {
+    width: 100vw;
+    height: 100vh;
+  }
+`;

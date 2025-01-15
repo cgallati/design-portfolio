@@ -6,6 +6,7 @@ import {
   MetadataItemsValue,
   MetadataItemsWrapper,
   MetadataWrapper,
+  MobileOnlyMetadataItemDivider,
 } from "./project-metadata.styles";
 
 export const ProjectMetadata = ({
@@ -26,6 +27,7 @@ export const ProjectMetadata = ({
       <MetadataDescriptionWrapper>
         <MetadataDescription>{introduction}</MetadataDescription>
       </MetadataDescriptionWrapper>
+      <MobileOnlyMetadataItemDivider />
       <MetadataItemsWrapper>
         <MetadataItemsKey>Role</MetadataItemsKey>
         <MetadataItemsValue>{role}</MetadataItemsValue>
