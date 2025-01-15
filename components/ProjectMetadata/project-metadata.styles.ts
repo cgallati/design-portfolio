@@ -3,10 +3,10 @@ import { mq, responsiveValues } from "../../lib/theme";
 
 export const MetadataWrapper = styled.section`
   ${responsiveValues("margin", {
-    s: "0 0 52px",
-    m: "0 0 2rem",
-    l: "1rem 0 3rem",
-    xl: "2rem 0 4rem",
+    s: "0 0 8rem",
+    m: "0 0 8rem",
+    l: "1rem 0 10rem",
+    xl: "2rem 0 12rem",
   })};
   display: flex;
   flex-direction: column;

@@ -15,12 +15,7 @@ export const ContextTitle = styled.h2`
   font-family: Poppins, sans-serif;
   ${({
     theme,
-  }) => responsiveValues("font-size", {
-    s: "21px",
-    m: "26px",
-    l: "36px",
-    xl: "48px",
-  })};
+  }) => responsiveValues("font-size", theme.typography.display.size)};
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
@@ -36,10 +31,10 @@ export const ParagraphsWrapper = styled.div`
   width: 100%;
   gap: 62px;
   ${responsiveValues("margin-bottom", {
-    s: "3rem",
-    m: "5rem",
-    l: "8rem",
-    xl: "12rem",
+    s: "10rem",
+    m: "12rem",
+    l: "12rem",
+    xl: "16rem",
   })};
   ${responsiveValues("margin-top", {
     s: "0",
@@ -54,8 +49,8 @@ export const ContextParagraph = styled.p`
   ${({
     theme,
   }) => responsiveValues("font-size", {
-    s: "12px",
-    m: "16px",
+    s: "15px",
+    m: "18px",
     l: "20px",
     xl: "24px",
   })};
