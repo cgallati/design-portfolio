@@ -31,7 +31,7 @@ export const EmbeddedImage = ({
 const EmbeddedImageContainer = styled.div`
   position: relative;
   width: 100vw;
-  height: 100vw;
+  height: 70vw;
   ${mq[0]} {
     width: 100%;
     height: auto;

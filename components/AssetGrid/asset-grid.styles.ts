@@ -18,7 +18,12 @@ export const AssetGridContainer = styled.div`
     l: "0 " + tokens.spacing[7],
     xl: "0 " + tokens.spacing[10],
   })};
-  margin-bottom: 2rem;
+  ${responsiveValues("margin-bottom", {
+    s: "4rem",
+    m: "6rem",
+    l: "12rem",
+    xl: "16rem",
+  })};
 
   img {
     ${({ theme }) => responsiveValues("border-radius", theme.radius)};

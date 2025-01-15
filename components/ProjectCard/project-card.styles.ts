@@ -40,7 +40,12 @@ export const HoverProjectTitle = styled.h2`
 export const HoverProjectSubtitle = styled.h3`
   font-family: ${({ theme }) => theme.typography.display.family};
   font-weight: ${({ theme }) => theme.typography.cover.weight};
-  ${({ theme }) => responsiveValues("font-size", theme.typography.subheading.size)};
+  ${({ theme }) => responsiveValues("font-size", {
+    s: "16px",
+    m: "18px",
+    l: "20px",
+    xl: "22px"
+  })};
   ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
 `;
 
@@ -107,9 +112,16 @@ export const MobileProjectSubtitle = styled.h3`
   font-weight: ${({ theme }) => theme.typography.cover.weight};
   ${({ theme }) => responsiveValues("font-size", {
     s: "16px",
-    m: "18px",
-    l: "20px",
-    xl: "22px"
+    m: "20px",
+    l: "24px",
+    xl: "30px"
   })};
   color: ${tokens.color[4]};
+  ${({ theme }) => responsiveValues("padding-right", {
+    s: "2.2rem",
+    m: "0",
+    l: "0",
+    xl: "0"
+  })};
+
 `;

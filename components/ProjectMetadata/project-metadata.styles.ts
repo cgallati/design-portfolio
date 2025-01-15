@@ -3,10 +3,10 @@ import { mq, responsiveValues } from "../../lib/theme";
 
 export const MetadataWrapper = styled.section`
   ${responsiveValues("margin", {
-    s: "0 0 52px",
-    m: "0 0 2rem",
-    l: "1rem 0 3rem",
-    xl: "2rem 0 4rem",
+    s: "0 0 8rem",
+    m: "0 0 8rem",
+    l: "1rem 0 10rem",
+    xl: "2rem 0 12rem",
   })};
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ export const MetadataDescription = styled.h3`
   color: #636363;
   font-family: Poppins, sans-serif;
   ${responsiveValues("font-size", {
-    s: "20px",
+    s: "22px",
     m: "22px",
     l: "24px",
     xl: "28px",
@@ -47,7 +47,7 @@ export const MetadataItemsWrapper = styled.div`
     width: 50%;
   }
   ${responsiveValues("font-size", {
-    s: "14px",
+    s: "16px",
     m: "16px",
     l: "18px",
     xl: "20px",
@@ -74,10 +74,9 @@ export const MetadataItemsValue = styled.p`
 
 export const MetadataItemDivider = styled.div<{ inView: boolean }>`
   height: 1px;
-  width: ${({ inView }) => (inView ? "100%" : "0%")};
+  width: 100%;
   background: rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
-  transition: width 2s ease-out .3s;
 `;
 
 export const MobileOnlyMetadataItemDivider = styled(MetadataItemDivider)`

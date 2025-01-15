@@ -86,7 +86,7 @@ const AboutParagraph = styled.p`
     s: "28px",
     m: "32px",
     l: "36px",
-    xl: "41.929px",
+    xl: "42px",
   })};
   font-style: normal;
   font-weight: 300;
@@ -101,7 +101,6 @@ const AboutParagraph = styled.p`
 
 const FlexRow = styled.div`
   display: flex;
-  gap: 2rem;
   ${responsiveValues("margin", {
     s: "0",
     m: "0",
@@ -119,11 +118,15 @@ const ImageWrapper = styled.div`
   position: relative;
   aspect-ratio: 1/1;
   ${responsiveValues("width", {
-    s: "100px",
+    s: "150px",
     m: "150px",
     l: "180px",
     xl: "200px",
   })};
+
+  margin-top: 4rem;
+  ${mq[0]} {
+    margin-top: 0;
 `;
 
 const ImageContainer = styled.div`
@@ -173,8 +176,8 @@ const PrimaryText = styled.p`
   color: #151515;
 font-family: Poppins;
   ${responsiveValues("font-size", {
-    s: "16px",
-    m: "18px",
+    s: "18px",
+    m: "20px",
     l: "22px",
     xl: "26px",
   })};
@@ -187,8 +190,8 @@ const SecondaryText = styled.p`
   color: #ADADAD;
 font-family: Poppins;
   ${responsiveValues("font-size", {
-    s: "13px",
-    m: "16px",
+    s: "16px",
+    m: "18px",
     l: "18px",
     xl: "20px",
   })};
@@ -204,20 +207,20 @@ const VeepRow = styled(FlexRow)`
 
 const VeepText = styled.p`
 flex: 1;
-color: #131313;
+color: #636363;
 font-family: Poppins;
 ${responsiveValues("font-size", {
-    s: "15px",
+    s: "18px",
     m: "18px",
     l: "22px",
     xl: "24px",
   })};
 font-style: normal;
 font-weight: 300;
-line-height: ${responsiveValues("line-height", {
-    s: "26px",
-    m: "30px",
-    l: "34px",
+${responsiveValues("line-height", {
+    s: "34px",
+    m: "33px",
+    l: "40px",
     xl: "48px",
   })};
 max-width: 600px;

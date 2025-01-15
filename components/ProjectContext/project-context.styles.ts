@@ -31,10 +31,10 @@ export const ParagraphsWrapper = styled.div`
   width: 100%;
   gap: 62px;
   ${responsiveValues("margin-bottom", {
-    s: "3rem",
-    m: "5rem",
-    l: "8rem",
-    xl: "12rem",
+    s: "10rem",
+    m: "12rem",
+    l: "12rem",
+    xl: "16rem",
   })};
   ${responsiveValues("margin-top", {
     s: "0",
