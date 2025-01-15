@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { responsiveValues, tokens } from "../../lib/theme";
+import { css } from "@emotion/react";
+import { mq, responsiveValues, tokens } from "../../lib/theme";
 
 export const StickyNavBar = styled.div`
   position: sticky;
@@ -8,91 +9,96 @@ export const StickyNavBar = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.color.background};
   z-index: 1000;
+  border-top: 1px solid rgba(19, 19, 19, 0.1);
   border-bottom: 1px solid rgba(19, 19, 19, 0.1);
-  // padding-left: ${tokens.spacing[9]};
-  ${({ theme }) =>
-    responsiveValues("padding-left", {
-      s: tokens.spacing[2],
-      m: tokens.spacing[4],
-      l: tokens.spacing[7],
-      xl: tokens.spacing[9],
-    })};
-`;
-
-export const ProjectTitle = styled.h1`
-  ${({ theme }) => responsiveValues("font-size", theme.typography.nav.size)};
-  font-weight: ${({ theme }) => theme.typography.nav.weight};
-  line-height: 1;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  ${({ theme }) => responsiveValues("margin-right", theme.spacing.padding)};
-  ${({ theme }) =>
-    responsiveValues("padding-top", {
-      s: tokens.spacing[1],
-      m: tokens.spacing[2],
-      l: tokens.spacing[3],
-      xl: tokens.spacing[3],
-    })};
-  ${({ theme }) =>
-    responsiveValues("padding-bottom", {
-      s: tokens.spacing[1],
-      m: tokens.spacing[2],
-      l: tokens.spacing[3],
-      xl: tokens.spacing[3],
-    })};
 `;
 
 export const ProjectNav = styled.nav`
-  ul {
+  width: 100%;
+  position: relative;
+`;
+
+export const NavList = styled.ul<{ isOpen: boolean }>`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: ${({ theme }) => theme.color.background};
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      max-height: 500px; /* Adjust based on content size */
+      opacity: 1;
+    `}
+
+  ${mq[0]} {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: none;
+    opacity: 1;
+  }
+`;
+
+export const MobileNavToggle = styled.button<{ isOpen: boolean }>`
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: ${tokens.spacing[3]} ${tokens.spacing[2]};
+  cursor: pointer;
+  ${({ theme }) => responsiveValues("font-size", theme.typography.nav.size)};
+  font-weight: ${({ theme }) => theme.typography.nav.weight};
+  color: ${({ theme }) => theme.color.primary};
+
+  ${mq[0]} {
+    display: none;
+  }
+`;
+
+export const ChevronIcon = styled.span<{ isOpen: boolean }>`
+  display: inline-flex;
+  align-items: center;
+  margin-left: ${tokens.spacing[2]};
+  transform: rotate(${({ isOpen }) => (isOpen ? "180deg" : "0deg")});
+  transition: transform 0.2s ease;
+
+  img {
+    transition: transform 0.2s ease;
   }
 `;
 
 export const ProjectNavItem = styled.li<{ active: boolean }>`
   cursor: pointer;
-  ${({ theme }) =>
-    responsiveValues("padding-top", {
-      s: tokens.spacing[1],
-      m: tokens.spacing[2],
-      l: tokens.spacing[3],
-      xl: tokens.spacing[3],
-    })};
-  ${({ theme }) =>
-    responsiveValues("padding-bottom", {
-      s: tokens.spacing[1],
-      m: tokens.spacing[2],
-      l: tokens.spacing[3],
-      xl: tokens.spacing[3],
-    })};
-  ${({ theme }) => responsiveValues("margin-right", theme.spacing.breathing)};
+  padding: ${tokens.spacing[2]} ${tokens.spacing[3]};
   ${({ theme }) => responsiveValues("font-size", theme.typography.nav.size)};
-  font-weight: ${({ theme }) => theme.typography.nav.weight};
+  font-weight: ${({ theme, active }) => 
+    active ? 700 : theme.typography.nav.weight
+  };
   color: ${({ theme, active }) =>
     active ? theme.color.primary : theme.color.secondary};
-  line-height: 1;
+  transition: color 0.2s ease;
 
-  ::after {
-    content: "";
-    display: block;
+  ${mq[0]} {
     ${({ theme }) =>
-      responsiveValues("transform", {
-        s: `translate(-10%, ${tokens.spacing[1]})`,
-        m: `translate(-10%, ${tokens.spacing[2]})`,
-        l: `translate(-10%, ${tokens.spacing[3]})`,
-        xl: `translate(-10%, ${tokens.spacing[3]})`,
-      })}
-    border-radius: 2px;
-    width: 130%;
-    height: 3px;
-    background-color: ${({ theme, active }) =>
-      active ? theme.color.primary : "transparent"};
-    transition: background-color 0.3s;
+      responsiveValues("padding-top", {
+        s: tokens.spacing[2],
+        m: tokens.spacing[2],
+        l: tokens.spacing[3],
+        xl: tokens.spacing[3],
+      })};
+    ${({ theme }) =>
+      responsiveValues("padding-bottom", {
+        s: tokens.spacing[2],
+        m: tokens.spacing[2],
+        l: tokens.spacing[3],
+        xl: tokens.spacing[3],
+      })};
   }
 
   &:hover {

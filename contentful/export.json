@@ -301,7 +301,7 @@
         "id": "project",
         "type": "ContentType",
         "createdAt": "2022-11-13T02:37:19.863Z",
-        "updatedAt": "2025-01-04T23:16:44.314Z",
+        "updatedAt": "2025-01-14T19:58:19.341Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -309,8 +309,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 45,
-        "publishedAt": "2025-01-04T23:16:44.314Z",
+        "publishedVersion": 67,
+        "publishedAt": "2025-01-14T19:58:19.341Z",
         "firstPublishedAt": "2022-11-13T02:37:20.098Z",
         "createdBy": {
           "sys": {
@@ -326,8 +326,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 23,
-        "version": 46,
+        "publishedCounter": 34,
+        "version": 68,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -357,7 +357,7 @@
           "name": "Short Name",
           "type": "Symbol",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
             {
               "size": {
@@ -366,8 +366,8 @@
               }
             }
           ],
-          "disabled": false,
-          "omitted": false
+          "disabled": true,
+          "omitted": true
         },
         {
           "id": "excerpt",
@@ -433,6 +433,47 @@
           "linkType": "Entry"
         },
         {
+          "id": "coverImage",
+          "name": "Cover Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "assetGrid",
+          "name": "Asset Grid",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "largeImageCard",
+          "name": "Large Image Card",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
           "id": "slug",
           "name": "Slug",
           "type": "Symbol",
@@ -448,7 +489,7 @@
           "name": "Content",
           "type": "RichText",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
             {
               "enabledMarks": [
@@ -529,18 +570,6 @@
           "omitted": false
         },
         {
-          "id": "coverImage",
-          "name": "Cover Image",
-          "type": "Link",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Asset"
-        },
-        {
           "id": "order",
           "name": "order",
           "type": "Integer",
@@ -556,7 +585,7 @@
           "name": "Sections",
           "type": "Array",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -578,7 +607,7 @@
           "name": "Center Stage",
           "type": "Text",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -773,7 +802,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2024-12-16T01:52:21.967Z",
+        "updatedAt": "2025-01-15T05:07:22.308Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -781,8 +810,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-12-16T01:52:21.967Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-01-15T05:07:22.308Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -798,8 +827,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -820,9 +849,6 @@
           "localized": false,
           "required": true,
           "validations": [
-            {
-              "unique": true
-            }
           ],
           "disabled": false,
           "omitted": false
@@ -844,7 +870,10 @@
                 "linkContentType": [
                   "banner",
                   "sideBySide",
-                  "brandElementsDisplay"
+                  "brandElementsDisplay",
+                  "sectionCenteredText",
+                  "projectContextSection",
+                  "sectionDoubleQuote"
                 ]
               }
             ],
@@ -1204,7 +1233,7 @@
         "id": "projectMetadata",
         "type": "ContentType",
         "createdAt": "2024-12-16T00:51:44.662Z",
-        "updatedAt": "2024-12-16T00:51:45.052Z",
+        "updatedAt": "2025-01-14T23:25:02.526Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1212,8 +1241,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-12-16T00:51:45.052Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-14T23:25:02.526Z",
         "firstPublishedAt": "2024-12-16T00:51:45.052Z",
         "createdBy": {
           "sys": {
@@ -1229,8 +1258,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1254,6 +1283,17 @@
             {
               "unique": true
             }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metadataDescription",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
           ],
           "disabled": false,
           "omitted": false
@@ -1326,7 +1366,7 @@
         "id": "projectContextSection",
         "type": "ContentType",
         "createdAt": "2025-01-04T23:15:16.969Z",
-        "updatedAt": "2025-01-04T23:15:17.292Z",
+        "updatedAt": "2025-01-14T19:45:03.368Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1334,8 +1374,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2025-01-04T23:15:17.292Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-14T19:45:03.368Z",
         "firstPublishedAt": "2025-01-04T23:15:17.292Z",
         "createdBy": {
           "sys": {
@@ -1351,8 +1391,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1362,10 +1402,21 @@
         },
         "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/projectContextSection"
       },
-      "displayField": "title",
+      "displayField": "hiddenTitle",
       "name": "Project Context Section",
       "description": "High level information about a project composed of a title and one or more paragraphs. Each project has one or more of these and they appear between the hero image and project metadata.",
       "fields": [
+        {
+          "id": "hiddenTitle",
+          "name": "hidden title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
         {
           "id": "title",
           "name": "title",
@@ -1373,9 +1424,6 @@
           "localized": false,
           "required": true,
           "validations": [
-            {
-              "unique": true
-            }
           ],
           "disabled": false,
           "omitted": false
@@ -1408,6 +1456,129 @@
           "type": "Text",
           "localized": false,
           "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "sectionDoubleQuote",
+        "type": "ContentType",
+        "createdAt": "2025-01-15T05:06:54.156Z",
+        "updatedAt": "2025-01-15T05:06:54.632Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-01-15T05:06:54.632Z",
+        "firstPublishedAt": "2025-01-15T05:06:54.632Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/sectionDoubleQuote"
+      },
+      "displayField": "hiddenName",
+      "name": "Section: Double Quote",
+      "description": "A blurb to the left, two quotes with labels to the right.",
+      "fields": [
+        {
+          "id": "hiddenName",
+          "name": "Hidden name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blurb",
+          "name": "blurb",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "label1",
+          "name": "Label 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "label2",
+          "name": "Label 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "quote1",
+          "name": "Quote 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "quote2",
+          "name": "Quote 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -1567,7 +1738,7 @@
             "linkType": "Space"
           }
         },
-        "version": 45,
+        "version": 67,
         "createdAt": "2022-11-13T02:37:20.224Z",
         "createdBy": {
           "sys": {
@@ -1576,7 +1747,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-01-04T23:16:46.455Z",
+        "updatedAt": "2025-01-14T19:58:20.080Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1642,6 +1813,9 @@
       "controls": [
         {
           "fieldId": "title",
+          "settings": {
+            "helpText": "This appears on the Project Card on the home page and as the main heading on a Project Detail page."
+          },
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -1682,6 +1856,31 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "coverImage",
+          "settings": {
+            "helpText": "The image shown on the project card on the Homepage and as the hero image on the Project Detail page.",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "assetGrid",
+          "settings": {
+            "helpText": "A grid of photo assets. Currently only supports a static arrangement of up to 5 images.",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "largeImageCard",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "slug",
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -1689,11 +1888,6 @@
         {
           "fieldId": "content",
           "widgetId": "richTextEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "coverImage",
-          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -1850,7 +2044,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 12,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -1859,7 +2053,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-12-16T01:52:22.718Z",
+        "updatedAt": "2025-01-15T05:07:22.881Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -2131,7 +2325,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 6,
         "createdAt": "2024-12-16T00:51:45.256Z",
         "createdBy": {
           "sys": {
@@ -2140,7 +2334,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-12-16T00:51:45.682Z",
+        "updatedAt": "2025-01-14T23:25:03.042Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -2166,6 +2360,11 @@
       "controls": [
         {
           "fieldId": "contentEntryTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadataDescription",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -2202,7 +2401,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 6,
         "createdAt": "2025-01-04T23:15:17.709Z",
         "createdBy": {
           "sys": {
@@ -2211,7 +2410,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-01-04T23:15:19.445Z",
+        "updatedAt": "2025-01-14T19:45:04.022Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -2236,6 +2435,14 @@
       },
       "controls": [
         {
+          "fieldId": "hiddenTitle",
+          "settings": {
+            "helpText": "This is just the internal name for this content fragment. It won't appear on the site."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "title",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
@@ -2253,6 +2460,88 @@
         {
           "fieldId": "paragraph3",
           "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-01-15T05:06:54.811Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-15T05:06:55.360Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "sectionDoubleQuote",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blurb",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "label1",
+          "settings": {
+            "helpText": "The first quote label."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "label2",
+          "settings": {
+            "helpText": "The second quote label"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "quote1",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "quote2",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2274,415 +2563,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "1ntRr4HOKIS3VCZFzoEUdt",
-        "type": "Entry",
-        "createdAt": "2022-11-28T22:42:36.177Z",
-        "updatedAt": "2024-12-16T01:56:32.002Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 60,
-        "publishedAt": "2024-12-16T01:56:32.002Z",
-        "firstPublishedAt": "2022-11-28T22:43:15.296Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 15,
-        "version": 61,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1ntRr4HOKIS3VCZFzoEUdt"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Everything Zen Sailing Charters"
-        },
-        "metadata": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "qYDm96rROOFY1xp39InQk"
-            }
-          }
-        },
-        "shortName": {
-          "en-US": "Everything Zen"
-        },
-        "introduction": {
-          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
-        },
-        "slug": {
-          "en-US": "project-1"
-        },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Everything Zen Sailing Charters is a charter company based out of Charleston who was looking to utilize good brand design to compete with their competitors. My job was to research their demographics and competition, and provide them with design solutions that met their goals. I spent time creating their branding, doing their photography, creating marketing materials, designing their website and booking solutions– all with the goal of forming brand equity that would kick start their business and intrigue potential customers. After implementing my design solutions, each charter season has seen their booking rate increase 2 fold per year and they continue to exceed their profit expectations each season.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Brand Identity",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Copywriting",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Market Research",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Photography",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "UX/UI Design",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Printing",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "1QEPmeEzYzWOgi3ATRJ3kN",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Pantone 345 C is a rich navy blue with a teal hue and gives sharp contrast against white. I used white as a secondary color to create an elegant appearance that correlated with the bright, vibrant white of the boats fiberglass. To further the brand direction, I created logo assets that can be used across different materials. This gives the brand a more professional appearance and makes the materials more intriguing.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "1zaBlA4pdQip4ETtAMtjBU",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "7i7msyZiGzHaYrYYVwtXqJ",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "NukSd3zdwTukCnjNIV2Ly",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "1zbrK7ke2acWoJ0rbiLLcR",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "excerpt": {
-          "en-US": "Hover text goes here."
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "2rH8qlbhAf5eV98ihD0nUG"
-            }
-          }
-        },
-        "order": {
-          "en-US": 1
-        },
-        "sections": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "4bP1JjnW4arhbbI3hNrc6t"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "Ozzbbgzc0i88itmQPk6pE"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "15gLVVuxrECmkXMGvUSzgt"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "11z1Ln7MDEZW52xyRGFYei"
-              }
-            }
-          ]
-        },
-        "centerStage": {
-          "en-US": "Over 90% of charging happens at home — and our Wall Charger has you covered. When you venture out, fast charge at our expanding Rivian Adventure Network, one of the many public charging networks, and now at over 15,000 Tesla Supercharger locations with the Rivian NACS DC adapter."
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
         "id": "4uY7DHGLRydzzAyntibYo6",
         "type": "Entry",
         "createdAt": "2024-06-09T01:07:11.940Z",
-        "updatedAt": "2024-12-16T01:54:03.796Z",
+        "updatedAt": "2025-01-15T02:56:04.083Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2690,8 +2574,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2024-12-16T01:54:03.796Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-01-15T02:56:04.083Z",
         "firstPublishedAt": "2024-06-09T01:07:48.555Z",
         "createdBy": {
           "sys": {
@@ -2707,8 +2591,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 6,
-        "version": 15,
+        "publishedCounter": 9,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2745,14 +2629,21 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "1ntRr4HOKIS3VCZFzoEUdt"
+                "id": "7wHX9qWgNf5zACwGpHtOns"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "7wHX9qWgNf5zACwGpHtOns"
+                "id": "4opOgiAkkvsov7Ix6M04M0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "15j2rGKkw1qQKTlf8SGGLe"
               }
             }
           ]
@@ -4322,7 +4213,7 @@
         "id": "7wHX9qWgNf5zACwGpHtOns",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:44.511Z",
-        "updatedAt": "2025-01-04T23:26:37.853Z",
+        "updatedAt": "2025-01-15T05:03:40.738Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4330,8 +4221,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2025-01-04T23:26:37.853Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-01-15T05:03:40.738Z",
         "firstPublishedAt": "2024-12-16T01:45:48.303Z",
         "createdBy": {
           "sys": {
@@ -4347,8 +4238,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 5,
-        "version": 16,
+        "publishedCounter": 8,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4412,6 +4303,24 @@
             }
           }
         },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2p2EDhorU678d4XO9iTnYD"
+            }
+          }
+        },
+        "largeImageCard": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2p2EDhorU678d4XO9iTnYD"
+            }
+          }
+        },
         "slug": {
           "en-US": "rune"
         },
@@ -4439,15 +4348,6 @@
             "nodeType": "document"
           }
         },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "2p2EDhorU678d4XO9iTnYD"
-            }
-          }
-        },
         "sections": {
           "en-US": [
             {
@@ -4456,11 +4356,15 @@
                 "linkType": "Entry",
                 "id": "4gsj0zJzQUTSQcEabTLna9"
               }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6k2epcQmhvLSTVmClc1oln"
+              }
             }
           ]
-        },
-        "centerStage": {
-          "en-US": "Every classroom has students who face unseen challenges. One of the most overlooked yet impactful difficulties is related to writing development. Writing difficulties often go unnoticed or are misunderstood, affecting students confidence, academic performance, and engagement."
         }
       }
     },
@@ -4482,7 +4386,7 @@
         "id": "5mm1V8wwH0PsIZhUpwxwyr",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:49.647Z",
-        "updatedAt": "2024-12-16T01:43:08.011Z",
+        "updatedAt": "2025-01-15T03:01:15.546Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4490,8 +4394,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-12-16T01:43:08.011Z",
+        "publishedVersion": 12,
+        "publishedAt": "2025-01-15T03:01:15.546Z",
         "firstPublishedAt": "2024-12-16T01:43:08.011Z",
         "createdBy": {
           "sys": {
@@ -4507,8 +4411,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 11,
+        "publishedCounter": 2,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4535,6 +4439,9 @@
       "fields": {
         "contentEntryTitle": {
           "en-US": "Rune Project Metadata"
+        },
+        "metadataDescription": {
+          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
         },
         "role": {
           "en-US": "Design Lead"
@@ -4577,7 +4484,7 @@
         "id": "4gsj0zJzQUTSQcEabTLna9",
         "type": "Entry",
         "createdAt": "2024-12-16T01:50:46.735Z",
-        "updatedAt": "2024-12-16T01:51:30.958Z",
+        "updatedAt": "2025-01-15T05:08:27.975Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4585,8 +4492,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-12-16T01:51:30.958Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-01-15T05:08:27.975Z",
         "firstPublishedAt": "2024-12-16T01:51:30.958Z",
         "createdBy": {
           "sys": {
@@ -4602,8 +4509,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 5,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4637,7 +4544,21 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "49yBhPpvxxR0XM7vVp2eph"
+                "id": "3tE0j4CJHu8BQtvzVZjtl7"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5xGXa2GiIn82qElgeIWpTv"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7A5ykgq2oEHFz0CdvRZxFG"
               }
             }
           ]
@@ -4739,7 +4660,7 @@
         "id": "2XUpZM2KIcnUBOLThHCXPu",
         "type": "Entry",
         "createdAt": "2025-01-04T23:16:57.920Z",
-        "updatedAt": "2025-01-04T23:17:58.444Z",
+        "updatedAt": "2025-01-14T22:44:24.795Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4747,8 +4668,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-01-04T23:17:58.444Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-01-14T22:44:24.795Z",
         "firstPublishedAt": "2025-01-04T23:17:58.444Z",
         "createdBy": {
           "sys": {
@@ -4764,8 +4685,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4790,6 +4711,9 @@
         "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/2XUpZM2KIcnUBOLThHCXPu"
       },
       "fields": {
+        "hiddenTitle": {
+          "en-US": "Rune Background"
+        },
         "title": {
           "en-US": "Background"
         },
@@ -4819,7 +4743,741 @@
         "id": "247V0KvXQKNrz91zWr4j6E",
         "type": "Entry",
         "createdAt": "2025-01-04T23:26:01.396Z",
-        "updatedAt": "2025-01-04T23:27:21.486Z",
+        "updatedAt": "2025-01-14T22:44:26.917Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-14T22:44:26.917Z",
+        "firstPublishedAt": "2025-01-04T23:27:21.486Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/247V0KvXQKNrz91zWr4j6E"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Rune Solution"
+        },
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "With Rune, we empower educators and support students by transforming writing assessment from subjective observation to precise, data-driven insight. All while enhancing class engagement and the learning environment."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "15j2rGKkw1qQKTlf8SGGLe",
+        "type": "Entry",
+        "createdAt": "2025-01-14T19:36:07.514Z",
+        "updatedAt": "2025-01-14T20:51:50.467Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 24,
+        "publishedAt": "2025-01-14T20:51:50.467Z",
+        "firstPublishedAt": "2025-01-14T19:45:36.582Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 25,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/15j2rGKkw1qQKTlf8SGGLe"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest Redesign"
+        },
+        "excerpt": {
+          "en-US": "Increasing usability and adding features"
+        },
+        "introduction": {
+          "en-US": "Here is a quick description of this project. "
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "F2wTIWY05jcS3brO5DMb7"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6SCaUMu5ex73NXJK0tuzII"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tifnQhz7wi0fV54DX15g8"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2rH8qlbhAf5eV98ihD0nUG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3uCx8Sh0ubnLqYx8nZwPeb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2p2EDhorU678d4XO9iTnYD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4CvgV4XQuLlJ9MozpBgnOo"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "nest-redesign"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "F2wTIWY05jcS3brO5DMb7",
+        "type": "Entry",
+        "createdAt": "2025-01-14T19:36:58.953Z",
+        "updatedAt": "2025-01-14T22:24:41.074Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-01-14T22:24:41.074Z",
+        "firstPublishedAt": "2025-01-14T19:45:13.042Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/F2wTIWY05jcS3brO5DMb7"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Nest Background"
+        },
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "Our objective was to transform the Nest thermostat into a standalone brand that embodies both high-end luxury and innovative technology. We aimed to create a product that seamlessly integrates into modern homes while providing unparalleled control and efficiency in climate management."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6SCaUMu5ex73NXJK0tuzII",
+        "type": "Entry",
+        "createdAt": "2025-01-14T19:37:25.119Z",
+        "updatedAt": "2025-01-14T22:24:55.299Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-01-14T22:24:55.299Z",
+        "firstPublishedAt": "2025-01-14T19:45:31.922Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6SCaUMu5ex73NXJK0tuzII"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Nest Solution"
+        },
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "Our design emphasizes innovation, aiming to reinvent the thermostat by enhancing its features to create a unique and luxurious experience without sacrificing practicality and usability."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7tifnQhz7wi0fV54DX15g8",
+        "type": "Entry",
+        "createdAt": "2025-01-14T19:37:40.522Z",
+        "updatedAt": "2025-01-15T02:25:57.991Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2025-01-15T02:25:57.991Z",
+        "firstPublishedAt": "2025-01-14T19:38:50.104Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/7tifnQhz7wi0fV54DX15g8"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Nest Metadata"
+        },
+        "metadataDescription": {
+          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
+        },
+        "role": {
+          "en-US": "Project Lead"
+        },
+        "team": {
+          "en-US": [
+            "Max Bloom (Project Manager)",
+            "Austin Joseph (Physical Designer)",
+            "Max Clardie-Hook (Digital Designer)"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "UX/UI Design",
+            "Brand Identity Design",
+            "Human Factors",
+            "Industrial Design"
+          ]
+        },
+        "timeline": {
+          "en-US": "10 Weeks"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4opOgiAkkvsov7Ix6M04M0",
+        "type": "Entry",
+        "createdAt": "2025-01-15T02:51:46.872Z",
+        "updatedAt": "2025-01-15T02:56:41.059Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-01-15T02:56:41.059Z",
+        "firstPublishedAt": "2025-01-15T02:55:32.732Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4opOgiAkkvsov7Ix6M04M0"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Everything Zen"
+        },
+        "excerpt": {
+          "en-US": "Here is a quick description of this project."
+        },
+        "introduction": {
+          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3TYNmIBjfiXpvR1DBzWmPc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "fDQ5MBEseO3hhtL2nZRh3"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2XImKA5kJwycwtVaShxNl8"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2rH8qlbhAf5eV98ihD0nUG"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2rH8qlbhAf5eV98ihD0nUG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3uCx8Sh0ubnLqYx8nZwPeb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2p2EDhorU678d4XO9iTnYD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4CvgV4XQuLlJ9MozpBgnOo"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "everything-zen"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3TYNmIBjfiXpvR1DBzWmPc",
+        "type": "Entry",
+        "createdAt": "2025-01-15T02:52:26.075Z",
+        "updatedAt": "2025-01-15T02:53:07.016Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-15T02:53:07.016Z",
+        "firstPublishedAt": "2025-01-15T02:52:50.568Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3TYNmIBjfiXpvR1DBzWmPc"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Everything Zen Background"
+        },
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "Our objective was to transform the Nest thermostat into a standalone brand that embodies both high-end luxury and innovative technology. We aimed to create a product that seamlessly integrates into modern homes while providing unparalleled control and efficiency in climate management."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "fDQ5MBEseO3hhtL2nZRh3",
+        "type": "Entry",
+        "createdAt": "2025-01-15T02:53:18.920Z",
+        "updatedAt": "2025-01-15T02:53:38.294Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4828,8 +5486,8 @@
           }
         },
         "publishedVersion": 3,
-        "publishedAt": "2025-01-04T23:27:21.486Z",
-        "firstPublishedAt": "2025-01-04T23:27:21.486Z",
+        "publishedAt": "2025-01-15T02:53:38.294Z",
+        "firstPublishedAt": "2025-01-15T02:53:38.294Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -4867,14 +5525,514 @@
             "id": "projectContextSection"
           }
         },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/247V0KvXQKNrz91zWr4j6E"
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/fDQ5MBEseO3hhtL2nZRh3"
       },
       "fields": {
+        "hiddenTitle": {
+          "en-US": "Everything Zen Solution"
+        },
         "title": {
           "en-US": "Solution"
         },
         "paragraph1": {
-          "en-US": "With Rune, we empower educators and support students by transforming writing assessment from subjective observation to precise, data-driven insight. All while enhancing class engagement and the learning environment."
+          "en-US": "Our design emphasizes innovation, aiming to reinvent the thermostat by enhancing its features to create a unique and luxurious experience without sacrificing practicality and usability."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2XImKA5kJwycwtVaShxNl8",
+        "type": "Entry",
+        "createdAt": "2025-01-15T02:53:49.718Z",
+        "updatedAt": "2025-01-15T02:55:17.210Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-01-15T02:55:17.210Z",
+        "firstPublishedAt": "2025-01-15T02:55:17.210Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/2XImKA5kJwycwtVaShxNl8"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Everything Zen Metadata"
+        },
+        "metadataDescription": {
+          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
+        },
+        "role": {
+          "en-US": "Project Lead"
+        },
+        "team": {
+          "en-US": [
+            "Chad Gallati (Software Engineer)"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "UX/UI Design",
+            "Brand Identity Design",
+            "Human Factors"
+          ]
+        },
+        "timeline": {
+          "en-US": "10 Weeks"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5xGXa2GiIn82qElgeIWpTv",
+        "type": "Entry",
+        "createdAt": "2025-01-15T03:53:27.200Z",
+        "updatedAt": "2025-01-15T03:53:33.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-01-15T03:53:33.745Z",
+        "firstPublishedAt": "2025-01-15T03:53:33.745Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sectionCenteredText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5xGXa2GiIn82qElgeIWpTv"
+      },
+      "fields": {
+        "text": {
+          "en-US": "At first our team researched ways to ease and relieve writing pain associated with dysgraphia and fine motor regression, but once we stepped back and examined all our insights, we realized a much bigger gap in the education system as it is today."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6k2epcQmhvLSTVmClc1oln",
+        "type": "Entry",
+        "createdAt": "2025-01-15T04:35:05.503Z",
+        "updatedAt": "2025-01-15T04:36:44.427Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-01-15T04:36:44.427Z",
+        "firstPublishedAt": "2025-01-15T04:36:44.427Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6k2epcQmhvLSTVmClc1oln"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Research"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2z2JYIkVBni2e6L1cliCSq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2z2JYIkVBni2e6L1cliCSq",
+        "type": "Entry",
+        "createdAt": "2025-01-15T04:35:11.476Z",
+        "updatedAt": "2025-01-15T04:35:46.454Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T04:35:46.454Z",
+        "firstPublishedAt": "2025-01-15T04:35:46.454Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/2z2JYIkVBni2e6L1cliCSq"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Rune: Why is this "
+        },
+        "title": {
+          "en-US": "Why is this?"
+        },
+        "paragraph1": {
+          "en-US": "Traditional educational approaches rely heavily on teacher observation to identify issues. While dedicated, teachers face large class sizes and limited resources, making it difficult to catch nuanced writing issues."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3tE0j4CJHu8BQtvzVZjtl7",
+        "type": "Entry",
+        "createdAt": "2025-01-15T05:03:56.078Z",
+        "updatedAt": "2025-01-15T05:04:00.641Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-01-15T05:04:00.641Z",
+        "firstPublishedAt": "2025-01-15T05:04:00.641Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sectionCenteredText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3tE0j4CJHu8BQtvzVZjtl7"
+      },
+      "fields": {
+        "text": {
+          "en-US": "Every classroom has students who face unseen challenges. One of the most overlooked yet impactful difficulties is related to writing development. Writing difficulties often go unnoticed or are misunderstood, affecting students confidence, academic performance, and engagement."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7A5ykgq2oEHFz0CdvRZxFG",
+        "type": "Entry",
+        "createdAt": "2025-01-15T05:07:47.861Z",
+        "updatedAt": "2025-01-15T05:08:24.454Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-15T05:08:24.454Z",
+        "firstPublishedAt": "2025-01-15T05:08:24.454Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sectionDoubleQuote"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/7A5ykgq2oEHFz0CdvRZxFG"
+      },
+      "fields": {
+        "hiddenName": {
+          "en-US": "Rune Respondent Quotes"
+        },
+        "blurb": {
+          "en-US": "We heard numerous stories of people experiencing misunderstanding with their teachers. Expressing a student-teacher disconnect across all of our insights. This became a large problem area we felt the need to address."
+        },
+        "label1": {
+          "en-US": "Respondent 1"
+        },
+        "label2": {
+          "en-US": "Respondent 2"
+        },
+        "quote1": {
+          "en-US": "“I had accommodations very late in my scolarity. Before that teachers considered me as someone who put no effort in writing”"
+        },
+        "quote2": {
+          "en-US": "“No accommodations are yet made for me, my teachers aren't even aware of anything named dysgraphia\""
         }
       }
     }
@@ -6563,6 +7721,88 @@
               }
             },
             "fileName": "Screenshot 2024-12-15 at 8.44.31 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6TLTt2BRI5AxyCWTPqjXAJ",
+        "type": "Asset",
+        "createdAt": "2025-01-14T19:49:58.013Z",
+        "updatedAt": "2025-01-14T19:50:17.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-14T19:50:17.133Z",
+        "firstPublishedAt": "2025-01-14T19:50:17.133Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/6TLTt2BRI5AxyCWTPqjXAJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest Thermostat Redesign"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/6TLTt2BRI5AxyCWTPqjXAJ/8b36eee65e75efb581725fa9d609b050/temp-nest-image.png",
+            "details": {
+              "size": 262079,
+              "image": {
+                "width": 1725,
+                "height": 970
+              }
+            },
+            "fileName": "temp-nest-image.png",
             "contentType": "image/png"
           }
         }

@@ -3,18 +3,34 @@ import { responsiveValues } from "../../lib/theme";
 
 export const IntroSectionFrame = styled.section`
   display: flex;
-  padding-left: 270px;
+  ${responsiveValues("padding-left", {
+    s: "0",
+    m: "0",
+    l: "1.5rem",
+    xl: "1.5rem",
+  })};
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vw * 0.45);
+  ${responsiveValues("min-height", {
+    s: "none",
+    m: "calc(100vw * 0.45)",
+    l: "calc(100vw * 0.45)",
+    xl: "calc(100vw * 0.45)",
+  })};
+  ${responsiveValues("margin", {
+    s: "5rem 0",
+    m: "8rem 0",
+    l: "0",
+    xl: "0",
+  })};
+
   background-color: ${({ theme }) => theme.color.background};
 `;
 
 export const IntroSectionTextContainer = styled.div`
   text-align: left;
   ${({ theme }) =>
-    responsiveValues("max-width", theme.spacing.content)}//margin-left: 14%;
-          //margin-right: 10%;
+    responsiveValues("max-width", theme.spacing.content)}
 `;
 
 export const IntroSectionTitle = styled.h1`

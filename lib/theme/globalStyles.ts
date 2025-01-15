@@ -33,6 +33,11 @@ export const globalStyles = (theme: Theme) => css`
         scroll-behavior: smooth;
     }
 
+    html, body {
+        overflow-x: hidden;
+    }
+
+
     /* Set core body defaults */
     body {
         min-height: 100vh;

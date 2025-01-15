@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { responsiveValues, tokens } from "../../lib/theme";
+import { responsiveValues, tokens, mq } from "../../lib/theme";
 import { keyframes } from "@emotion/react";
 
 export const ProjectListSection = styled.section`
-  margin: auto;
+  margin: 0 auto;
 `;
 
 export const animationFade = keyframes`
@@ -14,6 +14,34 @@ export const animationFade = keyframes`
   100% {
     opacity: 1;
   }
+`;
+
+export const HoverProjectInfo = styled.div`
+  padding: 0 ${tokens.spacing[2]};
+  position: absolute;
+  pointer-events: none;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  color: white;
+  width: 100%;
+  line-height: 1;
+`;
+
+export const HoverProjectTitle = styled.h2`
+  font-family: ${({ theme }) => theme.typography.display.family};
+  font-weight: ${({ theme }) => theme.typography.cover.weight};
+  ${({ theme }) => responsiveValues("font-size", theme.typography.cover.size)};
+`;
+
+export const HoverProjectSubtitle = styled.h3`
+  font-family: ${({ theme }) => theme.typography.display.family};
+  font-weight: ${({ theme }) => theme.typography.cover.weight};
+  ${({ theme }) => responsiveValues("font-size", theme.typography.subheading.size)};
+  ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)};
 `;
 
 export const ProjectCardArticle = styled.article<{ index: number }>`
@@ -29,53 +57,59 @@ export const ProjectCardArticle = styled.article<{ index: number }>`
   animation-name: ${animationFade};
   animation-fill-mode: backwards;
 
-  :hover {
-    div {
-      opacity: 1;
+  ${mq[1]} {
+    :hover {
+      .hover-info {
+        opacity: 1;
+      }
     }
   }
-
-  div {
-    padding: 0 ${tokens.spacing[2]};
-    position: absolute;
-    pointer-events: none;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
-    opacity: 0;
-    color: white;
-    width: 100%;
-    line-height: 1;
-
-    h2, h3 {
-      font-family: ${({ theme }) => theme.typography.display.family};
-      font-weight: ${({ theme }) => theme.typography.cover.weight};
-    }
-
-    h2 {
-      ${({ theme }) =>
-        responsiveValues("font-size", theme.typography.cover.size)};
-    }
-
-    h3 {
-      ${({ theme }) =>
-        responsiveValues("font-size", theme.typography.subheading.size)}
-      ${({ theme }) => responsiveValues("margin-top", theme.spacing.breathing)}
-    }
-  ;
-  }
-}
 `;
 
 export const ProjectCardImage = styled(Image)`
   display: block;
   transition: all 0.5s ease;
   object-fit: cover;
-  border-radius: ${({ theme }) => theme.radius.l};
+${({ theme }) => responsiveValues("border-radius", theme.radius)};
 
-  :hover {
-    filter: brightness(40%);
+  ${mq[1]} {
+    :hover {
+      filter: brightness(40%);
+    }
   }
+`;
+
+export const MobileProjectInfo = styled.div`
+  display: block;
+  margin-top: ${tokens.spacing[3]};
+
+  ${mq[1]} {
+    display: none;
+  }
+`;
+
+export const MobileProjectTitle = styled.h2`
+  display: flex;
+  align-items: top;
+  font-family: ${({ theme }) => theme.typography.display.family};
+  font-weight: ${({ theme }) => theme.typography.cover.weight};
+  ${({ theme }) => responsiveValues("font-size", {
+    s: "24px",
+    m: "32px",
+    l: "36px",
+    xl: "40px"
+  })};
+  line-height: 150%;
+`;
+
+export const MobileProjectSubtitle = styled.h3`
+  font-family: ${({ theme }) => theme.typography.display.family};
+  font-weight: ${({ theme }) => theme.typography.cover.weight};
+  ${({ theme }) => responsiveValues("font-size", {
+    s: "16px",
+    m: "18px",
+    l: "20px",
+    xl: "22px"
+  })};
+  color: ${tokens.color[4]};
 `;

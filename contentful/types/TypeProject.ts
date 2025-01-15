@@ -6,17 +6,19 @@ import { TypeSectionFields } from "./TypeSection";
 
 export interface TypeProjectFields {
     title: Contentful.EntryFields.Symbol;
-    shortName: Contentful.EntryFields.Symbol;
+    shortName?: Contentful.EntryFields.Symbol;
     excerpt: Contentful.EntryFields.Symbol;
     introduction: Contentful.EntryFields.Symbol;
     projectContextSections: Contentful.Entry<TypeProjectContextSectionFields>[];
     metadata: Contentful.Entry<TypeProjectMetadataFields>;
-    slug: Contentful.EntryFields.Symbol;
-    content: CFRichTextTypes.Block | CFRichTextTypes.Inline;
     coverImage: Contentful.Asset;
+    assetGrid?: Contentful.Asset[];
+    largeImageCard?: Contentful.Asset;
+    slug: Contentful.EntryFields.Symbol;
+    content?: CFRichTextTypes.Block | CFRichTextTypes.Inline;
     order?: Contentful.EntryFields.Integer;
-    sections: Contentful.Entry<TypeSectionFields>[];
-    centerStage: Contentful.EntryFields.Text;
+    sections?: Contentful.Entry<TypeSectionFields>[];
+    centerStage?: Contentful.EntryFields.Text;
 }
 
 export type TypeProject = Contentful.Entry<TypeProjectFields>;
