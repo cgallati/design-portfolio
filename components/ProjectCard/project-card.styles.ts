@@ -4,7 +4,7 @@ import { responsiveValues, tokens, mq } from "../../lib/theme";
 import { keyframes } from "@emotion/react";
 
 export const ProjectListSection = styled.section`
-  margin: auto;
+  margin: 0 auto;
 `;
 
 export const animationFade = keyframes`

@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import Image from "next/image";
 import {
   PageContainer,
   Header,
@@ -15,6 +16,8 @@ import { UrlObject } from "url";
 import Link from "next/link";
 import { MenuIcon } from "./MenuIcon";
 import { useState } from "react";
+import styled from "@emotion/styled";
+import { responsiveValues } from "../../lib/theme";
 
 interface NavLinkProps {
   display: string;
@@ -65,6 +68,82 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
         </OverlayNav>
       </OverlayMenu>
       <PageContent>{children}</PageContent>
+      <Footer>
+        <MaxWidthWrapper>
+          <StyledLink href="mailto:steven@stevenvasil.com">
+          <ConnectWrapper>
+            <ConnectText>Let&apos;s Connect</ConnectText>
+            <Image src="/assets/Vector.svg" alt="Connect arrow" width={20} height={20} />
+          </ConnectWrapper>
+          <EmailText>Shoot me an email</EmailText>
+          </StyledLink>
+        </MaxWidthWrapper>
+      </Footer>
     </PageContainer>
   );
 };
+
+
+const Footer = styled.footer`
+  height: 350px;
+  background: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const MaxWidthWrapper = styled.div`
+  width: 100%;
+  ${responsiveValues("padding", {
+    s: "0 2rem",
+    m: "0 3rem",
+    l: "0 4rem",
+    xl: "0 5rem",
+  })};
+  max-width: 1450px;
+  margin: 0 auto;
+  box-sizing: content-box;
+`;
+
+const ConnectWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+const ConnectText = styled.p`
+color: #151515;
+font-family: Poppins;
+${responsiveValues("font-size", {
+  s: "20px",
+  m: "24px",
+  l: "28px",
+  xl: "32px",
+})};
+font-style: normal;
+font-weight: 400;
+line-height: 49.495px; /* 141.29% */
+`;
+
+const EmailText = styled.p`
+  color: #969696;
+font-family: Poppins;
+${responsiveValues("font-size", {
+  s: "20px",
+  m: "24px",
+  l: "28px",
+  xl: "32px",
+})};
+font-style: normal;
+font-weight: 300;
+line-height: 49.495px; /* 141.29% */
+`;

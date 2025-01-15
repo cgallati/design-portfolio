@@ -6,12 +6,15 @@ import { responsiveValues, tokens } from "../lib/theme";
 
 import styled from "@emotion/styled";
 const PageWrapper = styled.div`
-  ${responsiveValues("margin", {
-    s: "0 " + tokens.spacing[4],
-    m: "0 " + tokens.spacing[4],
-    l: "0 " + tokens.spacing[7],
-    xl: "0 " + "13rem",
+  ${responsiveValues("padding", {
+    s: "0 2rem",
+    m: "0 3rem",
+    l: "0 4rem",
+    xl: "0 5rem",
   })};
+  max-width: 1450px;
+  margin: 0 auto;
+  box-sizing: content-box;
 `;
 
 export default function Index({
