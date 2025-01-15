@@ -67,8 +67,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
       <EmbeddedImage
         src={"https:" + file.url}
         alt={description}
-        width={file.details.image.width}
-        height={file.details.image.height}
         priority={true}
       />
       <ProjectIntroWrapper>
