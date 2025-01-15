@@ -32,7 +32,7 @@ export const MetadataDescription = styled.h3`
   color: #636363;
   font-family: Poppins, sans-serif;
   ${responsiveValues("font-size", {
-    s: "18px",
+    s: "22px",
     m: "22px",
     l: "24px",
     xl: "28px",
@@ -47,7 +47,7 @@ export const MetadataItemsWrapper = styled.div`
     width: 50%;
   }
   ${responsiveValues("font-size", {
-    s: "12px",
+    s: "16px",
     m: "16px",
     l: "18px",
     xl: "20px",
