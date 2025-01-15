@@ -29,19 +29,19 @@ function MyApp({ Component, pageProps }) {
             <link rel="icon" href="/favicon/favicon.ico" />
         </Head>
       <DefaultSeo
-        title={"Steven Vasil | UX Designer"}
+        title={"Steven Vasil"}
         openGraph={{
           type: "website",
           locale: "en_IE",
           url: "https://stevenvasil.com/",
-          siteName: "Steven Vasil | UX Designer",
+          siteName: "Steven Vasil",
           description: "Portfolio",
           images: [
             {
               url: "/assets/startup25.png",
               width: 800,
               height: 600,
-              alt: "Steven Vasil | UX Designer",
+              alt: "Steven Vasil",
               type: "image/png",
             },
           ],
