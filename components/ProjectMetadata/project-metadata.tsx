@@ -1,3 +1,4 @@
+import { HorizontalLine } from "../styles";
 import {
   MetadataDescription,
   MetadataDescriptionWrapper,
@@ -8,6 +9,7 @@ import {
   MetadataWrapper,
   MobileOnlyMetadataItemDivider,
 } from "./project-metadata.styles";
+import { useInView } from "react-intersection-observer";
 
 export const ProjectMetadata = ({
   introduction,
@@ -22,31 +24,67 @@ export const ProjectMetadata = ({
   skills: string[];
   timeline: string;
 }) => {
+  const { ref: mobileRef, inView: mobileInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: roleRef, inView: roleInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: teamRef, inView: teamInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: skillsRef, inView: skillsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: horizontalLineRef, inView: horizontalLineInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <MetadataWrapper>
-      <MetadataDescriptionWrapper>
-        <MetadataDescription>{introduction}</MetadataDescription>
-      </MetadataDescriptionWrapper>
-      <MobileOnlyMetadataItemDivider />
-      <MetadataItemsWrapper>
+    <>
+      <HorizontalLine inView={horizontalLineInView} ref={horizontalLineRef} />
+      <MetadataWrapper>
+        <MetadataDescriptionWrapper>
+          <MetadataDescription>{introduction}</MetadataDescription>
+        </MetadataDescriptionWrapper>
+        <div ref={mobileRef}>
+          <MobileOnlyMetadataItemDivider inView={mobileInView} />
+        </div>
+        <MetadataItemsWrapper>
         <MetadataItemsKey>Role</MetadataItemsKey>
         <MetadataItemsValue>{role}</MetadataItemsValue>
-        <MetadataItemDivider />
+        <div ref={roleRef}>
+          <MetadataItemDivider inView={roleInView} />
+        </div>
         <MetadataItemsKey>Team</MetadataItemsKey>
         {team.map((teammate) => {
           return (
             <MetadataItemsValue key={teammate}>{teammate}</MetadataItemsValue>
           );
         })}
-        <MetadataItemDivider />
+        <div ref={teamRef}>
+          <MetadataItemDivider inView={teamInView} />
+        </div>
         <MetadataItemsKey>Skills</MetadataItemsKey>
         {skills.map((skill) => {
           return <MetadataItemsValue key={skill}>{skill}</MetadataItemsValue>;
         })}
-        <MetadataItemDivider />
+        <div ref={skillsRef}>
+          <MetadataItemDivider inView={skillsInView} />
+        </div>
         <MetadataItemsKey>Timeline</MetadataItemsKey>
         <MetadataItemsValue>{timeline}</MetadataItemsValue>
       </MetadataItemsWrapper>
     </MetadataWrapper>
+    </>
   );
 };

@@ -11,7 +11,8 @@ export const SlideFrame = styled.div`
 
 export const Text = styled.p<{ inView: boolean }>`
   ${({ theme }) =>
-    responsiveValues("font-size", theme.typography.subheading.size)}
+    responsiveValues("font-size", theme.typography.subheading.size)
+  }
   font-weight: ${({ theme }) => theme.typography.subheading.weight};
   ${({ theme }) => responsiveValues("max-width", theme.spacing.centerStage)}
   opacity: 0;

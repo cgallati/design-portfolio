@@ -5,6 +5,9 @@ import { SideBySide } from "../SideBySide";
 import { BrandElementsDisplay } from "../BrandElementsDisplay";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { Banner } from "../Banner";
+import { CenterStage } from "../CenterStage";
+import { ProjectContext, SingleContextSection } from "../ProjectContext";
+import { DoubleQuoteSection } from "../DoubleQuoteSection";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -50,12 +53,16 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   sideBySide: SideBySide,
   brandElementsDisplay: BrandElementsDisplay,
   banner: Banner,
+  sectionCenteredText: CenterStage,
+  projectContextSection: SingleContextSection,
+  sectionDoubleQuote: DoubleQuoteSection,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,
   setVisible,
   index,
 }) => {
+  console.log({slides});
   const [ref, entry] = useIntersectionObserver({
     threshold: 0.1,
     root: null,

@@ -4,11 +4,10 @@ import { mq, responsiveValues } from "../../lib/theme";
 export const MetadataWrapper = styled.section`
   ${responsiveValues("margin", {
     s: "0 0 52px",
-    m: "55px 0",
-    l: "65px 0",
-    xl: "73px 0",
+    m: "0",
+    l: "1rem  0",
+    xl: "2rem 0",
   })};
-  border-top: solid rgba(0, 0, 0, 0.3) 1px;
   display: flex;
   flex-direction: column;
   ${mq[0]} {
@@ -22,9 +21,9 @@ export const MetadataDescriptionWrapper = styled.div`
   }
   ${responsiveValues("margin", {
     s: "2rem 0",
-    m: "1rem",
-    l: "1rem",
-    xl: "1rem",
+    m: "1rem 1rem 1rem 0",
+    l: "1rem 1rem 1rem 0",
+    xl: "1rem 1rem 1rem 0",
   })};
 `;
 
@@ -73,11 +72,12 @@ export const MetadataItemsValue = styled.p`
   line-height: 155%;
 `;
 
-export const MetadataItemDivider = styled.div`
+export const MetadataItemDivider = styled.div<{ inView: boolean }>`
   height: 1px;
-  width: 100%;
+  width: ${({ inView }) => (inView ? "100%" : "0%")};
   background: rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
+  transition: width 2s ease-out .3s;
 `;
 
 export const MobileOnlyMetadataItemDivider = styled(MetadataItemDivider)`

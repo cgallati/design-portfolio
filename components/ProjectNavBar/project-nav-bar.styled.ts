@@ -11,7 +11,6 @@ export const StickyNavBar = styled.div`
   z-index: 1000;
   border-top: 1px solid rgba(19, 19, 19, 0.1);
   border-bottom: 1px solid rgba(19, 19, 19, 0.1);
-
 `;
 
 export const ProjectNav = styled.nav`
@@ -40,6 +39,8 @@ export const NavList = styled.ul<{ isOpen: boolean }>`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    max-height: none;
+    opacity: 1;
   }
 `;
 
