@@ -4,9 +4,9 @@ import { mq, responsiveValues } from "../../lib/theme";
 export const MetadataWrapper = styled.section`
   ${responsiveValues("margin", {
     s: "0 0 52px",
-    m: "0",
-    l: "1rem  0",
-    xl: "2rem 0",
+    m: "0 0 2rem",
+    l: "1rem 0 3rem",
+    xl: "2rem 0 4rem",
   })};
   display: flex;
   flex-direction: column;

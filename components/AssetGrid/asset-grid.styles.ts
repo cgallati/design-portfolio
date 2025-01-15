@@ -13,7 +13,7 @@ export const AssetGridContainer = styled.div`
     xl: "60px",
   })};
   ${responsiveValues("padding", {
-    s: "0 " + tokens.spacing[4],
+    s: "0 " + tokens.spacing[2],
     m: "0 " + tokens.spacing[4],
     l: "0 " + tokens.spacing[7],
     xl: "0 " + tokens.spacing[10],

@@ -45,7 +45,7 @@ export const ProjectCard = ({
         />
         <HoverProjectInfo className="hover-info">
           <HoverProjectTitle>{title}</HoverProjectTitle>
-          <HoverProjectSubtitle>{subtitle}</HoverProjectSubtitle>
+          {subtitle && <HoverProjectSubtitle>{subtitle}</HoverProjectSubtitle>}
         </HoverProjectInfo>
         <MobileProjectInfo>
           <MobileProjectTitle>
@@ -62,7 +62,7 @@ export const ProjectCard = ({
               }}
             />
           </MobileProjectTitle>
-          <MobileProjectSubtitle>{subtitle}</MobileProjectSubtitle>
+          {subtitle && <MobileProjectSubtitle>{subtitle}</MobileProjectSubtitle>}
         </MobileProjectInfo>
       </ProjectCardArticle>
     </Link>

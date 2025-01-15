@@ -65,15 +65,16 @@ export const ProjectMetadata = ({
         <div ref={roleRef}>
           <MetadataItemDivider inView={roleInView} />
         </div>
-        <MetadataItemsKey>Team</MetadataItemsKey>
-        {team.map((teammate) => {
+        {team && team.length > 0 && <MetadataItemsKey>Team</MetadataItemsKey>}
+        {team &&team.map((teammate) => {
           return (
             <MetadataItemsValue key={teammate}>{teammate}</MetadataItemsValue>
           );
         })}
-        <div ref={teamRef}>
+        { team && team.length > 0 && <div ref={teamRef}>
           <MetadataItemDivider inView={teamInView} />
         </div>
+        }
         <MetadataItemsKey>Skills</MetadataItemsKey>
         {skills.map((skill) => {
           return <MetadataItemsValue key={skill}>{skill}</MetadataItemsValue>;
