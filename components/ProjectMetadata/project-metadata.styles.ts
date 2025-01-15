@@ -74,10 +74,9 @@ export const MetadataItemsValue = styled.p`
 
 export const MetadataItemDivider = styled.div<{ inView: boolean }>`
   height: 1px;
-  width: ${({ inView }) => (inView ? "100%" : "0%")};
+  width: 100%;
   background: rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
-  transition: width 2s ease-out .3s;
 `;
 
 export const MobileOnlyMetadataItemDivider = styled(MetadataItemDivider)`
