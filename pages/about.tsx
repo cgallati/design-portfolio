@@ -83,10 +83,10 @@ const AboutParagraph = styled.p`
     xl: "15rem 11rem",
   })}
   ${responsiveValues("font-size", {
-    s: "28px",
-    m: "32px",
+    s: "22px",
+    m: "28px",
     l: "36px",
-    xl: "41.929px",
+    xl: "42px",
   })};
   font-style: normal;
   font-weight: 300;
@@ -173,8 +173,8 @@ const PrimaryText = styled.p`
   color: #151515;
 font-family: Poppins;
   ${responsiveValues("font-size", {
-    s: "16px",
-    m: "18px",
+    s: "14px",
+    m: "16px",
     l: "22px",
     xl: "26px",
   })};
@@ -187,8 +187,8 @@ const SecondaryText = styled.p`
   color: #ADADAD;
 font-family: Poppins;
   ${responsiveValues("font-size", {
-    s: "13px",
-    m: "16px",
+    s: "11px",
+    m: "14px",
     l: "18px",
     xl: "20px",
   })};
@@ -207,9 +207,9 @@ flex: 1;
 color: #131313;
 font-family: Poppins;
 ${responsiveValues("font-size", {
-    s: "15px",
-    m: "18px",
-    l: "22px",
+    s: "13px",
+    m: "16px",
+    l: "18px",
     xl: "24px",
   })};
 font-style: normal;

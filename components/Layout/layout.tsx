@@ -95,10 +95,10 @@ const Footer = styled.footer`
 const MaxWidthWrapper = styled.div`
   width: 100%;
   ${responsiveValues("padding", {
-    s: "0 2rem",
-    m: "0 3rem",
-    l: "0 4rem",
-    xl: "0 5rem",
+    s: "0 2rem 6rem",
+    m: "0 3rem 4rem",
+    l: "0 4rem 4rem",
+    xl: "0 5rem 4rem",
   })};
   max-width: 1450px;
   margin: 0 auto;
@@ -124,26 +124,26 @@ const ConnectText = styled.p`
 color: #151515;
 font-family: Poppins;
 ${responsiveValues("font-size", {
-  s: "20px",
-  m: "24px",
+  s: "24px",
+  m: "26px",
   l: "28px",
   xl: "32px",
 })};
 font-style: normal;
 font-weight: 400;
-line-height: 49.495px; /* 141.29% */
+line-height: 130%; 
 `;
 
 const EmailText = styled.p`
   color: #969696;
 font-family: Poppins;
 ${responsiveValues("font-size", {
-  s: "20px",
-  m: "24px",
+  s: "24px",
+  m: "26px",
   l: "28px",
   xl: "32px",
 })};
 font-style: normal;
 font-weight: 300;
-line-height: 49.495px; /* 141.29% */
+line-height: 180%; 
 `;

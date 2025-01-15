@@ -15,7 +15,12 @@ export const ContextTitle = styled.h2`
   font-family: Poppins, sans-serif;
   ${({
     theme,
-  }) => responsiveValues("font-size", theme.typography.display.size)};
+  }) => responsiveValues("font-size", {
+    s: "21px",
+    m: "26px",
+    l: "36px",
+    xl: "48px",
+  })};
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
@@ -49,8 +54,8 @@ export const ContextParagraph = styled.p`
   ${({
     theme,
   }) => responsiveValues("font-size", {
-    s: "15px",
-    m: "18px",
+    s: "12px",
+    m: "16px",
     l: "20px",
     xl: "24px",
   })};
