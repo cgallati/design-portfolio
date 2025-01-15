@@ -6,19 +6,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://stevenvasil.com/" />
-          <meta property="og:title" content="Steven Vasil" />
-          <meta property="og:description" content="UX Designer" />
-          <meta property="og:image" content="/assets/startup25.png" />
-
-          {/* Twitter */}
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://stevenvasil.com/" />
-          <meta property="twitter:title" content="Steven Vasil" />
-          <meta property="twitter:description" content="UX Designer" />
-          <meta property="twitter:image" content="/assets/startup25.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

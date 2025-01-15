@@ -26,30 +26,25 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={lightTheme} >
         <Global styles={globalStyles(lightTheme)} />
         <Head>
-            <title>STEVEN VASIL</title>
+            <link rel="icon" href="/favicon/favicon.ico" />
         </Head>
       <DefaultSeo
-        title={"Steven Vasil"}
+        title={"Steven Vasil | UX Designer"}
         openGraph={{
           type: "website",
           locale: "en_IE",
           url: "https://stevenvasil.com/",
-          siteName: "STEVEN VASIL",
+          siteName: "Steven Vasil | UX Designer",
           description: "Portfolio",
           images: [
             {
-              url: "https://www.example.ie/og-image-01.jpg",
+              url: "/assets/startup25.png",
               width: 800,
               height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
+              alt: "Steven Vasil | UX Designer",
+              type: "image/png",
             },
           ],
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
         }}
       />
       <Layout navLinks={linksWithState}>
