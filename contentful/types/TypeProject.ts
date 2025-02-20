@@ -7,11 +7,12 @@ import { TypeSectionFields } from "./TypeSection";
 export interface TypeProjectFields {
     title: Contentful.EntryFields.Symbol;
     shortName?: Contentful.EntryFields.Symbol;
-    excerpt: Contentful.EntryFields.Symbol;
+    excerpt?: Contentful.EntryFields.Symbol;
     introduction: Contentful.EntryFields.Symbol;
     projectContextSections: Contentful.Entry<TypeProjectContextSectionFields>[];
     metadata: Contentful.Entry<TypeProjectMetadataFields>;
     coverImage: Contentful.Asset;
+    alternateCoverVideo?: Contentful.Asset;
     assetGrid?: Contentful.Asset[];
     largeImageCard?: Contentful.Asset;
     slug: Contentful.EntryFields.Symbol;

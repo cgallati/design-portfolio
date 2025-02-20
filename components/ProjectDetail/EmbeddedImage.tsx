@@ -6,11 +6,23 @@ export const EmbeddedImage = ({
   src,
   alt,
   priority = false,
+  jkItsAVid
 }: {
   src: string;
   alt: string;
   priority?: boolean;
+  jkItsAVid?: string;
 }) => {
+  if (jkItsAVid) {
+    return (
+      <EmbeddedImageContainer>
+        <StyledVideo autoPlay loop controls muted>
+          <source src={jkItsAVid} type="video/mp4" />
+        </StyledVideo>
+      </EmbeddedImageContainer>
+    );
+  }
+
   return (
     <EmbeddedImageContainer>
       <Image
@@ -37,4 +49,12 @@ const EmbeddedImageContainer = styled.div`
     height: auto;
     aspect-ratio: 16 / 9;
   }
+`;
+
+const StyledVideo = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `;

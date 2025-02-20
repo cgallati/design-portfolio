@@ -301,7 +301,7 @@
         "id": "project",
         "type": "ContentType",
         "createdAt": "2022-11-13T02:37:19.863Z",
-        "updatedAt": "2025-01-14T19:58:19.341Z",
+        "updatedAt": "2025-02-20T01:48:54.267Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -309,8 +309,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 67,
-        "publishedAt": "2025-01-14T19:58:19.341Z",
+        "publishedVersion": 71,
+        "publishedAt": "2025-02-20T01:48:54.267Z",
         "firstPublishedAt": "2022-11-13T02:37:20.098Z",
         "createdBy": {
           "sys": {
@@ -326,8 +326,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 34,
-        "version": 68,
+        "publishedCounter": 36,
+        "version": 72,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -374,7 +374,7 @@
           "name": "Excerpt",
           "type": "Symbol",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -439,6 +439,23 @@
           "localized": false,
           "required": true,
           "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "alternateCoverVideo",
+          "name": "Alternate Cover Video",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "video"
+              ]
+            }
           ],
           "disabled": false,
           "omitted": false,
@@ -1738,7 +1755,7 @@
             "linkType": "Space"
           }
         },
-        "version": 67,
+        "version": 71,
         "createdAt": "2022-11-13T02:37:20.224Z",
         "createdBy": {
           "sys": {
@@ -1747,7 +1764,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-01-14T19:58:20.080Z",
+        "updatedAt": "2025-02-20T01:48:55.071Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -1859,6 +1876,16 @@
           "fieldId": "coverImage",
           "settings": {
             "helpText": "The image shown on the project card on the Homepage and as the hero image on the Project Detail page.",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "alternateCoverVideo",
+          "settings": {
+            "helpText": "If this is provided, it will replace the cover image on the project detail page.",
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
           },
@@ -2566,7 +2593,7 @@
         "id": "4uY7DHGLRydzzAyntibYo6",
         "type": "Entry",
         "createdAt": "2024-06-09T01:07:11.940Z",
-        "updatedAt": "2025-01-15T02:56:04.083Z",
+        "updatedAt": "2025-01-15T18:13:55.149Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2574,8 +2601,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-01-15T02:56:04.083Z",
+        "publishedVersion": 36,
+        "publishedAt": "2025-01-15T18:13:55.149Z",
         "firstPublishedAt": "2024-06-09T01:07:48.555Z",
         "createdBy": {
           "sys": {
@@ -2591,8 +2618,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 9,
-        "version": 22,
+        "publishedCounter": 15,
+        "version": 37,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2621,7 +2648,7 @@
           "en-US": "Hello, I’m Steven."
         },
         "introduction": {
-          "en-US": "I’m a UX design student at SCAD who believes experience design should focus on the entire journey, where each impression matters."
+          "en-US": "I’m a UX design student at SCAD focused on crafting seamless experiences across both physical and digital spaces, where every detail makes an impact."
         },
         "projects": {
           "en-US": [
@@ -2636,7 +2663,21 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "4opOgiAkkvsov7Ix6M04M0"
+                "id": "6oJm1TB11jkdn3OwY1B2AK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5IhNZihngN6z5jPn85BnPj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7qAGiOHQpy6zZGws0Pxq8W"
               }
             },
             {
@@ -4213,7 +4254,7 @@
         "id": "7wHX9qWgNf5zACwGpHtOns",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:44.511Z",
-        "updatedAt": "2025-01-15T05:03:40.738Z",
+        "updatedAt": "2025-01-15T17:58:28.556Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4221,8 +4262,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-01-15T05:03:40.738Z",
+        "publishedVersion": 38,
+        "publishedAt": "2025-01-15T17:58:28.556Z",
         "firstPublishedAt": "2024-12-16T01:45:48.303Z",
         "createdBy": {
           "sys": {
@@ -4238,8 +4279,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 8,
-        "version": 22,
+        "publishedCounter": 12,
+        "version": 39,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4271,7 +4312,7 @@
           "en-US": "Rune"
         },
         "excerpt": {
-          "en-US": "Hover text goes here."
+          "en-US": "UX/UI Design, Human Factors, Branding, Prototyping"
         },
         "introduction": {
           "en-US": "A powerful AI platform that bridges the gap between educators and students, enabling objective, real-time assessments of writing development."
@@ -4312,59 +4353,47 @@
             }
           }
         },
-        "largeImageCard": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "2p2EDhorU678d4XO9iTnYD"
-            }
-          }
-        },
-        "slug": {
-          "en-US": "rune"
-        },
-        "content": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Every classroom has students who face unseen challenges. One of the most overlooked yet impactful difficulties is related to writing development. Writing difficulties often go unnoticed or are misunderstood, affecting students confidence, academic performance, and engagement.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "sections": {
+        "assetGrid": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Entry",
-                "id": "4gsj0zJzQUTSQcEabTLna9"
+                "linkType": "Asset",
+                "id": "2p2EDhorU678d4XO9iTnYD"
               }
             },
             {
               "sys": {
                 "type": "Link",
-                "linkType": "Entry",
-                "id": "6k2epcQmhvLSTVmClc1oln"
+                "linkType": "Asset",
+                "id": "iQguGMJjzywW4MkcQjLfY"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "Xo6Utye7jkl2avkARC3RV"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4jMnUAqxdxgeiBT6rHGW09"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "61Q28yxQBWzxzFObWJX3O1"
               }
             }
           ]
+        },
+        "slug": {
+          "en-US": "rune"
         }
       }
     },
@@ -4386,7 +4415,7 @@
         "id": "5mm1V8wwH0PsIZhUpwxwyr",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:49.647Z",
-        "updatedAt": "2025-01-15T03:01:15.546Z",
+        "updatedAt": "2025-01-16T03:25:10.717Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4394,8 +4423,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-01-15T03:01:15.546Z",
+        "publishedVersion": 16,
+        "publishedAt": "2025-01-16T03:25:10.717Z",
         "firstPublishedAt": "2024-12-16T01:43:08.011Z",
         "createdBy": {
           "sys": {
@@ -4411,8 +4440,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 13,
+        "publishedCounter": 4,
+        "version": 17,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4441,7 +4470,7 @@
           "en-US": "Rune Project Metadata"
         },
         "metadataDescription": {
-          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
+          "en-US": "As Design Lead, I guided a multidisciplinary team to integrate branding, human factors, and functionality, creating a solution that bridges physical tools and digital insights."
         },
         "role": {
           "en-US": "Design Lead"
@@ -4462,7 +4491,7 @@
           ]
         },
         "timeline": {
-          "en-US": "3 Months"
+          "en-US": "10 Weeks"
         }
       }
     },
@@ -4660,7 +4689,7 @@
         "id": "2XUpZM2KIcnUBOLThHCXPu",
         "type": "Entry",
         "createdAt": "2025-01-04T23:16:57.920Z",
-        "updatedAt": "2025-01-14T22:44:24.795Z",
+        "updatedAt": "2025-01-15T19:10:01.352Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4668,8 +4697,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-01-14T22:44:24.795Z",
+        "publishedVersion": 13,
+        "publishedAt": "2025-01-15T19:10:01.352Z",
         "firstPublishedAt": "2025-01-04T23:17:58.444Z",
         "createdBy": {
           "sys": {
@@ -4685,8 +4714,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 5,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4743,7 +4772,7 @@
         "id": "247V0KvXQKNrz91zWr4j6E",
         "type": "Entry",
         "createdAt": "2025-01-04T23:26:01.396Z",
-        "updatedAt": "2025-01-14T22:44:26.917Z",
+        "updatedAt": "2025-01-15T19:09:57.533Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4751,8 +4780,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-01-14T22:44:26.917Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-01-15T19:09:57.533Z",
         "firstPublishedAt": "2025-01-04T23:27:21.486Z",
         "createdBy": {
           "sys": {
@@ -4768,8 +4797,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4801,7 +4830,7 @@
           "en-US": "Solution"
         },
         "paragraph1": {
-          "en-US": "With Rune, we empower educators and support students by transforming writing assessment from subjective observation to precise, data-driven insight. All while enhancing class engagement and the learning environment."
+          "en-US": "Rune integrates a smart pen with an intuitive user interface to provide real-time insights into student writing. By combining advanced data tracking with a user-friendly design, Rune allows educators to identify and address student challenges with precision. This solution fosters student confidence, streamlines assessment, and promotes academic success through actionable feedback and engagement tools."
         }
       }
     },
@@ -4823,7 +4852,7 @@
         "id": "15j2rGKkw1qQKTlf8SGGLe",
         "type": "Entry",
         "createdAt": "2025-01-14T19:36:07.514Z",
-        "updatedAt": "2025-01-14T20:51:50.467Z",
+        "updatedAt": "2025-01-15T18:02:55.577Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4831,8 +4860,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 24,
-        "publishedAt": "2025-01-14T20:51:50.467Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-01-15T18:02:55.577Z",
         "firstPublishedAt": "2025-01-14T19:45:36.582Z",
         "createdBy": {
           "sys": {
@@ -4848,8 +4877,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 8,
-        "version": 25,
+        "publishedCounter": 12,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4875,13 +4904,13 @@
       },
       "fields": {
         "title": {
-          "en-US": "Nest Redesign"
+          "en-US": "Nest"
         },
         "excerpt": {
-          "en-US": "Increasing usability and adding features"
+          "en-US": "UX/UI Design, Prototyping, User Testing"
         },
         "introduction": {
-          "en-US": "Here is a quick description of this project. "
+          "en-US": "A reimagined thermostat that blends luxury and innovative technology to deliver seamless integration into modern homes. "
         },
         "projectContextSections": {
           "en-US": [
@@ -4925,20 +4954,6 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "2rH8qlbhAf5eV98ihD0nUG"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "3uCx8Sh0ubnLqYx8nZwPeb"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
                 "id": "6TLTt2BRI5AxyCWTPqjXAJ"
               }
             },
@@ -4946,14 +4961,28 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "2p2EDhorU678d4XO9iTnYD"
+                "id": "66odeK0yFB5tEfINv5KAuR"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "4CvgV4XQuLlJ9MozpBgnOo"
+                "id": "7wJczYkRo6CtUbfOl87T1u"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "wuqwYApcNCsDmtWf5GoiG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3ASE9hnjSSINs4EHwtn0AC"
               }
             }
           ]
@@ -4981,7 +5010,7 @@
         "id": "F2wTIWY05jcS3brO5DMb7",
         "type": "Entry",
         "createdAt": "2025-01-14T19:36:58.953Z",
-        "updatedAt": "2025-01-14T22:24:41.074Z",
+        "updatedAt": "2025-01-15T08:29:12.834Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4989,8 +5018,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-01-14T22:24:41.074Z",
+        "publishedVersion": 8,
+        "publishedAt": "2025-01-15T08:29:12.834Z",
         "firstPublishedAt": "2025-01-14T19:45:13.042Z",
         "createdBy": {
           "sys": {
@@ -5006,8 +5035,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5039,7 +5068,7 @@
           "en-US": "Background"
         },
         "paragraph1": {
-          "en-US": "Our objective was to transform the Nest thermostat into a standalone brand that embodies both high-end luxury and innovative technology. We aimed to create a product that seamlessly integrates into modern homes while providing unparalleled control and efficiency in climate management."
+          "en-US": "Our goal was to redefine the Nest thermostat as a standalone brand, combining high-end luxury with cutting-edge technology. We focused on designing a product that integrates effortlessly into modern homes, delivering exceptional control and efficiency in climate management."
         }
       }
     },
@@ -5061,7 +5090,7 @@
         "id": "6SCaUMu5ex73NXJK0tuzII",
         "type": "Entry",
         "createdAt": "2025-01-14T19:37:25.119Z",
-        "updatedAt": "2025-01-14T22:24:55.299Z",
+        "updatedAt": "2025-01-16T03:47:36.877Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5069,8 +5098,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-01-14T22:24:55.299Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-01-16T03:47:36.877Z",
         "firstPublishedAt": "2025-01-14T19:45:31.922Z",
         "createdBy": {
           "sys": {
@@ -5086,8 +5115,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 4,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5119,7 +5148,7 @@
           "en-US": "Solution"
         },
         "paragraph1": {
-          "en-US": "Our design emphasizes innovation, aiming to reinvent the thermostat by enhancing its features to create a unique and luxurious experience without sacrificing practicality and usability."
+          "en-US": "We redesigned the Nest thermostat with a focus on user-centered design, utilizing A/B testing to refine the interface and ensure intuitive interactions. The new design emphasizes clarity and functionality, blending luxury with innovative technology. User research and testing informed key decisions, such as optimizing button selection and navigation flow."
         }
       }
     },
@@ -5141,7 +5170,7 @@
         "id": "7tifnQhz7wi0fV54DX15g8",
         "type": "Entry",
         "createdAt": "2025-01-14T19:37:40.522Z",
-        "updatedAt": "2025-01-15T02:25:57.991Z",
+        "updatedAt": "2025-01-15T18:23:15.709Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5149,8 +5178,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 20,
-        "publishedAt": "2025-01-15T02:25:57.991Z",
+        "publishedVersion": 38,
+        "publishedAt": "2025-01-15T18:23:15.709Z",
         "firstPublishedAt": "2025-01-14T19:38:50.104Z",
         "createdBy": {
           "sys": {
@@ -5166,8 +5195,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 4,
-        "version": 21,
+        "publishedCounter": 8,
+        "version": 39,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5196,24 +5225,24 @@
           "en-US": "Nest Metadata"
         },
         "metadataDescription": {
-          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
+          "en-US": "I helped lead the thermostat team, guiding design direction and overseeing user testing to refine the experience. Our focus was on creating a seamless blend of luxury, functionality, and innovation for modern homes."
         },
         "role": {
           "en-US": "Project Lead"
         },
         "team": {
           "en-US": [
-            "Max Bloom (Project Manager)",
-            "Austin Joseph (Physical Designer)",
-            "Max Clardie-Hook (Digital Designer)"
+            "Alyssa Kaczmarski",
+            "Leo Consiglio",
+            "Kyla Harrod",
+            "Hayden White"
           ]
         },
         "skills": {
           "en-US": [
             "UX/UI Design",
-            "Brand Identity Design",
-            "Human Factors",
-            "Industrial Design"
+            "Prototyping",
+            "User Testing"
           ]
         },
         "timeline": {
@@ -6033,6 +6062,1494 @@
         },
         "quote2": {
           "en-US": "“No accommodations are yet made for me, my teachers aren't even aware of anything named dysgraphia\""
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6oJm1TB11jkdn3OwY1B2AK",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:19:10.277Z",
+        "updatedAt": "2025-01-15T17:59:38.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2025-01-15T17:59:38.047Z",
+        "firstPublishedAt": "2025-01-15T08:25:12.432Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6oJm1TB11jkdn3OwY1B2AK"
+      },
+      "fields": {
+        "title": {
+          "en-US": "StartUp 2025"
+        },
+        "excerpt": {
+          "en-US": "Web Design, CSS/HTML, Info Arch, Branding"
+        },
+        "introduction": {
+          "en-US": "An annual design competition at SCAD that fosters innovation and collaboration across disciplines, inspiring students to push creative boundaries and develop impactful solutions."
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4mQMP2eNNql4lsmjOoK71b"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "74Y66nrYu3VYkp1CSbSejW"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4vkQtzpLtvVTBrGIVXAvXm"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "Yr2sdAAJukCa5Hdhnqo1z"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "Yr2sdAAJukCa5Hdhnqo1z"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7eKt5QYwDG440lvT4ZvLbe"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4IFCGCiEQi0wkyIQYhiQch"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2vM2uERbPgsbXX5KfMRVnG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3pY3g70WC8ewEfLuGPXNtl"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "startup-2025"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4mQMP2eNNql4lsmjOoK71b",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:19:41.851Z",
+        "updatedAt": "2025-01-15T08:20:00.758Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:20:00.758Z",
+        "firstPublishedAt": "2025-01-15T08:20:00.758Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4mQMP2eNNql4lsmjOoK71b"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Startup Background"
+        },
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "Tasked with designing and using Webflow to develop the website for SCAD StartUp 2025. Each year FLUX hosts StartUp, a design competition that sparks creativity and innovation. We redefined the information architecture and created a modern, clean design."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "74Y66nrYu3VYkp1CSbSejW",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:20:05.172Z",
+        "updatedAt": "2025-01-15T08:20:19.771Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:20:19.771Z",
+        "firstPublishedAt": "2025-01-15T08:20:19.771Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/74Y66nrYu3VYkp1CSbSejW"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "StartUp Solution"
+        },
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "A clean, modern design that emphasizes the theme of this years competition. After fledging out information architecture, we were able to put together something that is delightful and easily digestible. "
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4vkQtzpLtvVTBrGIVXAvXm",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:20:33.895Z",
+        "updatedAt": "2025-01-15T08:21:38.701Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-01-15T08:21:38.701Z",
+        "firstPublishedAt": "2025-01-15T08:21:38.701Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4vkQtzpLtvVTBrGIVXAvXm"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "StartUp Metadata"
+        },
+        "metadataDescription": {
+          "en-US": "As Design Lead, I helped define the style and direction of the website. I also led the build in Webflow."
+        },
+        "role": {
+          "en-US": "Project Lead"
+        },
+        "team": {
+          "en-US": [
+            "Andrea De Silva (Web/Dev Designer)"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "Web Design",
+            "Brand Identity Design",
+            "CSS / HTML"
+          ]
+        },
+        "timeline": {
+          "en-US": "3 Months"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5IhNZihngN6z5jPn85BnPj",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:56:05.332Z",
+        "updatedAt": "2025-01-15T18:00:32.318Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2025-01-15T18:00:32.318Z",
+        "firstPublishedAt": "2025-01-15T09:10:13.590Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5IhNZihngN6z5jPn85BnPj"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discus"
+        },
+        "excerpt": {
+          "en-US": "UX/UI Design, Electronics, Programming, Product Design"
+        },
+        "introduction": {
+          "en-US": "A modern take on the classic CD player, Discus combines gesture-based controls with sleek design to transform the way users interact with their music. "
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4PaTRf9Cbc9KebP5E4Qa61"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1svJJr2SKDBDaboIDo5jZT"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "iNO8lDJ7vSF2JUfRVVlJS"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1CWmJ1SNUVnS2g7hHeINWl"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1CWmJ1SNUVnS2g7hHeINWl"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7dQJPYaC1qcLXXeJfZNHoU"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6tdgFOSsHP83nOB93iW8wN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3zFwq8e2yv0PAZ8KGJafQZ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7uw5M9iKnvnSFCoDzKivCP"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "discus"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4PaTRf9Cbc9KebP5E4Qa61",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:56:24.566Z",
+        "updatedAt": "2025-01-15T08:56:38.841Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:56:38.841Z",
+        "firstPublishedAt": "2025-01-15T08:56:38.841Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4PaTRf9Cbc9KebP5E4Qa61"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Discus background"
+        },
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "Discus was born from a desire to redefine the interaction with physical media, focusing on CDs as both a nostalgic format and a design element. The goal was to create a product that felt intuitive and innovative while honoring the tactile experience of traditional music players."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1svJJr2SKDBDaboIDo5jZT",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:56:43.672Z",
+        "updatedAt": "2025-01-15T08:56:56.699Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:56:56.699Z",
+        "firstPublishedAt": "2025-01-15T08:56:56.699Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1svJJr2SKDBDaboIDo5jZT"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Discus Solution"
+        },
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "Discus features a gesture-controlled interface that allows users to swipe left and right to change tracks and up and down to switch CDs. It automatically starts playback when approached, delivering a seamless and engaging experience. The layered acrylic design emphasizes simplicity and showcases the CDs as a central visual element."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "iNO8lDJ7vSF2JUfRVVlJS",
+        "type": "Entry",
+        "createdAt": "2025-01-15T08:57:10.509Z",
+        "updatedAt": "2025-01-15T09:00:39.027Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2025-01-15T09:00:39.027Z",
+        "firstPublishedAt": "2025-01-15T09:00:04.632Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/iNO8lDJ7vSF2JUfRVVlJS"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Discus Metadata"
+        },
+        "metadataDescription": {
+          "en-US": "I conceptualized, engineered, and built Discus from the ground up. I designed the gesture control system, prototyped the physical structure, and integrated hardware and software to create a cohesive and intuitive experience."
+        },
+        "role": {
+          "en-US": "Designer"
+        },
+        "skills": {
+          "en-US": [
+            "UX / UI Design",
+            "Electronic Prototyping",
+            "Human Factors",
+            "Programming",
+            "Industrial Design"
+          ]
+        },
+        "timeline": {
+          "en-US": "10 Weeks"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7qAGiOHQpy6zZGws0Pxq8W",
+        "type": "Entry",
+        "createdAt": "2025-01-15T09:13:22.914Z",
+        "updatedAt": "2025-01-15T18:02:36.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-01-15T18:02:36.607Z",
+        "firstPublishedAt": "2025-01-15T09:25:10.725Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/7qAGiOHQpy6zZGws0Pxq8W"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo"
+        },
+        "excerpt": {
+          "en-US": "UX/UI Design, Branding, Graphic Design"
+        },
+        "introduction": {
+          "en-US": "A personalized skincare app that connects weather data to your routine, offering tailored guidance for healthier skin. Integrating real-time insights like UV levels and explaining their impact."
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6VkOwoz6ZS9erm0erooiin"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5g76NVos7xC5UKYt0lvrVx"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5WF1ppaNugmFOhNfn2ZsGx"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "xX2Lmz0rom69OLDuHDxle"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "xX2Lmz0rom69OLDuHDxle"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7qLExEshM3CrRV5fT4262g"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5o9qmfiaBL5LPGZn6BC50P"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4PmcqvrUFTNgMGbmNSV6oJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7gdDt7HXu8XbbImQSJ77pP"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "lumo"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6VkOwoz6ZS9erm0erooiin",
+        "type": "Entry",
+        "createdAt": "2025-01-15T09:13:51.350Z",
+        "updatedAt": "2025-01-15T09:14:07.964Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T09:14:07.964Z",
+        "firstPublishedAt": "2025-01-15T09:14:07.964Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6VkOwoz6ZS9erm0erooiin"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Lumb BG"
+        },
+        "title": {
+          "en-US": "Background"
+        },
+        "paragraph1": {
+          "en-US": "Lumo was created to bridge the gap between skincare and environmental factors, addressing the limitations of existing apps with poor UX and excessive monetization. By integrating weather data into personalized routines, Lumo provides meaningful insights that empower users to make informed decisions for healthier skin."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5g76NVos7xC5UKYt0lvrVx",
+        "type": "Entry",
+        "createdAt": "2025-01-15T09:14:11.085Z",
+        "updatedAt": "2025-01-15T09:14:24.581Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T09:14:24.581Z",
+        "firstPublishedAt": "2025-01-15T09:14:24.581Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectContextSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5g76NVos7xC5UKYt0lvrVx"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Lumo Solution"
+        },
+        "title": {
+          "en-US": "Solution"
+        },
+        "paragraph1": {
+          "en-US": "Lumo combines real-time weather updates, like UV levels, with tailored skincare routines and reminders. The app explains the impact of environmental factors on skin health, offering expert guidance and promoting healthier habits. "
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5WF1ppaNugmFOhNfn2ZsGx",
+        "type": "Entry",
+        "createdAt": "2025-01-15T09:14:34.377Z",
+        "updatedAt": "2025-01-15T09:31:26.421Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2025-01-15T09:31:26.421Z",
+        "firstPublishedAt": "2025-01-15T09:24:52.451Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projectMetadata"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5WF1ppaNugmFOhNfn2ZsGx"
+      },
+      "fields": {
+        "contentEntryTitle": {
+          "en-US": "Lumo MD"
+        },
+        "metadataDescription": {
+          "en-US": "I directed the design strategy, focusing on creating an intuitive and visually engaging interface. I also mentored two graphic designers on my team, teaching them Figma and guiding them in best practices for crafting effective user interfaces."
+        },
+        "role": {
+          "en-US": "Project Lead"
+        },
+        "team": {
+          "en-US": [
+            "Desmarie Orsolasa",
+            "Luu Seoug"
+          ]
+        },
+        "skills": {
+          "en-US": [
+            "UX / UI Design",
+            "Brand Identity Design",
+            "Graphic Design",
+            "Prototyping"
+          ]
+        },
+        "timeline": {
+          "en-US": "10 Weeks"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "251YYC8QWV6JC3HVtvchf7",
+        "type": "Entry",
+        "createdAt": "2025-01-29T22:39:29.963Z",
+        "updatedAt": "2025-01-29T22:39:40.434Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-29T22:39:40.434Z",
+        "firstPublishedAt": "2025-01-29T22:39:40.434Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/251YYC8QWV6JC3HVtvchf7"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Testing Revalidation"
+        },
+        "picture": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "61Q28yxQBWzxzFObWJX3O1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1EJi0Q5zcHTLELnv6YeIe9",
+        "type": "Entry",
+        "createdAt": "2025-02-20T01:26:37.514Z",
+        "updatedAt": "2025-02-20T01:51:09.830Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-02-20T01:51:09.830Z",
+        "firstPublishedAt": "2025-02-20T01:30:19.715Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1EJi0Q5zcHTLELnv6YeIe9"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest (1)"
+        },
+        "excerpt": {
+          "en-US": "UX/UI Design, Prototyping, User Testing"
+        },
+        "introduction": {
+          "en-US": "A reimagined thermostat that blends luxury and innovative technology to deliver seamless integration into modern homes. "
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "F2wTIWY05jcS3brO5DMb7"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6SCaUMu5ex73NXJK0tuzII"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tifnQhz7wi0fV54DX15g8"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+            }
+          }
+        },
+        "alternateCoverVideo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2xpPxajOpkNC77HUsbmPcI"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "66odeK0yFB5tEfINv5KAuR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7wJczYkRo6CtUbfOl87T1u"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "wuqwYApcNCsDmtWf5GoiG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3ASE9hnjSSINs4EHwtn0AC"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "nest-1"
         }
       }
     }
@@ -7662,7 +9179,7 @@
         "id": "2p2EDhorU678d4XO9iTnYD",
         "type": "Asset",
         "createdAt": "2024-12-16T01:44:46.040Z",
-        "updatedAt": "2024-12-16T01:45:21.991Z",
+        "updatedAt": "2025-01-15T08:44:51.627Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7670,8 +9187,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2024-12-16T01:45:21.991Z",
+        "publishedVersion": 10,
+        "publishedAt": "2025-01-15T08:44:51.627Z",
         "firstPublishedAt": "2024-12-16T01:45:21.991Z",
         "createdBy": {
           "sys": {
@@ -7687,8 +9204,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7708,19 +9225,19 @@
           "en-US": "Rune Rainbow"
         },
         "description": {
-          "en-US": "4 Rune pens displayed in an arced array. "
+          "en-US": "4 Rune pens displayed in an array. "
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/32imgqslv3rc/2p2EDhorU678d4XO9iTnYD/4431026a0d5707ad833e00ca192ee453/Screenshot_2024-12-15_at_8.44.31_PM.png",
+            "url": "//images.ctfassets.net/32imgqslv3rc/2p2EDhorU678d4XO9iTnYD/03562f62b2a9c2ad9e74e5950571bdd2/rune_array_rainbow.png",
             "details": {
-              "size": 307932,
+              "size": 3191761,
               "image": {
-                "width": 1648,
-                "height": 926
+                "width": 6900,
+                "height": 3880
               }
             },
-            "fileName": "Screenshot 2024-12-15 at 8.44.31 PM.png",
+            "fileName": "rune array rainbow.png",
             "contentType": "image/png"
           }
         }
@@ -7744,7 +9261,909 @@
         "id": "6TLTt2BRI5AxyCWTPqjXAJ",
         "type": "Asset",
         "createdAt": "2025-01-14T19:49:58.013Z",
-        "updatedAt": "2025-01-14T19:50:17.133Z",
+        "updatedAt": "2025-01-15T08:38:59.319Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2025-01-15T08:38:59.319Z",
+        "firstPublishedAt": "2025-01-14T19:50:17.133Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/6TLTt2BRI5AxyCWTPqjXAJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest Thermostat Redesign"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/6TLTt2BRI5AxyCWTPqjXAJ/0b4e84647d708867bb0039cda10491e6/Three_Nests.png",
+            "details": {
+              "size": 1539729,
+              "image": {
+                "width": 6272,
+                "height": 3520
+              }
+            },
+            "fileName": "Three Nests.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "Yr2sdAAJukCa5Hdhnqo1z",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:22:51.007Z",
+        "updatedAt": "2025-01-15T17:54:23.955Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2025-01-15T17:54:23.955Z",
+        "firstPublishedAt": "2025-01-15T08:23:26.981Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/Yr2sdAAJukCa5Hdhnqo1z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "StartUp Mockup"
+        },
+        "description": {
+          "en-US": "A rendering of the Startup 2025 Homepage on a MacBook Pro. "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/Yr2sdAAJukCa5Hdhnqo1z/8ce5f7f28ba2808ae85e54be1e46c9ba/Startup_25.png",
+            "details": {
+              "size": 2995262,
+              "image": {
+                "width": 6272,
+                "height": 3520
+              }
+            },
+            "fileName": "Startup 25.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "66odeK0yFB5tEfINv5KAuR",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:34:41.841Z",
+        "updatedAt": "2025-01-15T08:39:25.988Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-01-15T08:39:25.988Z",
+        "firstPublishedAt": "2025-01-15T08:35:05.831Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/66odeK0yFB5tEfINv5KAuR"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest mobile app redesign."
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/66odeK0yFB5tEfINv5KAuR/3bda7d374272c72b25f12ce528d42a0a/nest_mobile_app.png",
+            "details": {
+              "size": 651661,
+              "image": {
+                "width": 2988,
+                "height": 3520
+              }
+            },
+            "fileName": "nest mobile app.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7wJczYkRo6CtUbfOl87T1u",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:35:22.758Z",
+        "updatedAt": "2025-01-15T08:40:17.013Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-01-15T08:40:17.013Z",
+        "firstPublishedAt": "2025-01-15T08:35:33.677Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7wJczYkRo6CtUbfOl87T1u"
+      },
+      "fields": {
+        "title": {
+          "en-US": "nest closeup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7wJczYkRo6CtUbfOl87T1u/bcf55b1e8be8da93cf5b6eef18db4ab6/nest_closeup.png",
+            "details": {
+              "size": 200908,
+              "image": {
+                "width": 2968,
+                "height": 1608
+              }
+            },
+            "fileName": "nest closeup.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "wuqwYApcNCsDmtWf5GoiG",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:35:39.718Z",
+        "updatedAt": "2025-01-15T08:40:44.362Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-01-15T08:40:44.362Z",
+        "firstPublishedAt": "2025-01-15T08:35:51.975Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/wuqwYApcNCsDmtWf5GoiG"
+      },
+      "fields": {
+        "title": {
+          "en-US": "nest mobile app array"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/wuqwYApcNCsDmtWf5GoiG/2062b5bf420dbe7bd3fb3a48a7890e0e/nest_mobile_app_array.png",
+            "details": {
+              "size": 1106754,
+              "image": {
+                "width": 2968,
+                "height": 1608
+              }
+            },
+            "fileName": "nest mobile app array.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3ASE9hnjSSINs4EHwtn0AC",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:36:00.441Z",
+        "updatedAt": "2025-01-15T08:41:05.131Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-01-15T08:41:05.131Z",
+        "firstPublishedAt": "2025-01-15T08:36:12.103Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3ASE9hnjSSINs4EHwtn0AC"
+      },
+      "fields": {
+        "title": {
+          "en-US": "double nest mobile app"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3ASE9hnjSSINs4EHwtn0AC/b6e773954e9312c3181f1343deaea144/double_enst_mobile_app.png",
+            "details": {
+              "size": 1237846,
+              "image": {
+                "width": 6272,
+                "height": 3520
+              }
+            },
+            "fileName": "double enst mobile app.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "iQguGMJjzywW4MkcQjLfY",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:46:01.775Z",
+        "updatedAt": "2025-01-15T08:46:18.608Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T08:46:18.608Z",
+        "firstPublishedAt": "2025-01-15T08:46:18.608Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/iQguGMJjzywW4MkcQjLfY"
+      },
+      "fields": {
+        "title": {
+          "en-US": "rune closeup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/iQguGMJjzywW4MkcQjLfY/be64d10364b9e30d2ac912f5fac58e9c/rune_closeup.png",
+            "details": {
+              "size": 2627917,
+              "image": {
+                "width": 2988,
+                "height": 3520
+              }
+            },
+            "fileName": "rune closeup.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "Xo6Utye7jkl2avkARC3RV",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:46:24.556Z",
+        "updatedAt": "2025-01-15T08:46:36.394Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:46:36.394Z",
+        "firstPublishedAt": "2025-01-15T08:46:36.394Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/Xo6Utye7jkl2avkARC3RV"
+      },
+      "fields": {
+        "title": {
+          "en-US": "rune logo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/Xo6Utye7jkl2avkARC3RV/a07cfc073dc638c0da26d397adde2d5a/rune_logo.png",
+            "details": {
+              "size": 47793,
+              "image": {
+                "width": 2968,
+                "height": 1608
+              }
+            },
+            "fileName": "rune logo.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4jMnUAqxdxgeiBT6rHGW09",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:46:48.645Z",
+        "updatedAt": "2025-01-15T08:46:59.167Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-15T08:46:59.167Z",
+        "firstPublishedAt": "2025-01-15T08:46:59.167Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4jMnUAqxdxgeiBT6rHGW09"
+      },
+      "fields": {
+        "title": {
+          "en-US": "rune UI closup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4jMnUAqxdxgeiBT6rHGW09/df70de0b3d35e7ac8a35b10596c4ccb8/rune_UI_closup.png",
+            "details": {
+              "size": 395337,
+              "image": {
+                "width": 2968,
+                "height": 1608
+              }
+            },
+            "fileName": "rune UI closup.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "61Q28yxQBWzxzFObWJX3O1",
+        "type": "Asset",
+        "createdAt": "2025-01-15T08:47:10.160Z",
+        "updatedAt": "2025-01-29T21:37:36.610Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-01-29T21:37:36.610Z",
+        "firstPublishedAt": "2025-01-15T08:47:18.520Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/61Q28yxQBWzxzFObWJX3O1"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rune Mockup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/61Q28yxQBWzxzFObWJX3O1/13c79cb5e01b3ab3a305de20e23d8b65/Frame_15657.png",
+            "details": {
+              "size": 2587796,
+              "image": {
+                "width": 6272,
+                "height": 3520
+              }
+            },
+            "fileName": "Frame 15657.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1CWmJ1SNUVnS2g7hHeINWl",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:02:34.821Z",
+        "updatedAt": "2025-01-15T09:07:59.616Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2025-01-15T09:07:59.616Z",
+        "firstPublishedAt": "2025-01-15T09:03:40.062Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/1CWmJ1SNUVnS2g7hHeINWl"
+      },
+      "fields": {
+        "title": {
+          "en-US": "discus"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/1CWmJ1SNUVnS2g7hHeINWl/05973a5ec838082ec76beb328e496ebe/Frame_15537.png",
+            "details": {
+              "size": 283693,
+              "image": {
+                "width": 1568,
+                "height": 874
+              }
+            },
+            "fileName": "Frame 15537.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7dQJPYaC1qcLXXeJfZNHoU",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:08:31.576Z",
+        "updatedAt": "2025-01-15T09:08:45.891Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7753,8 +10172,8 @@
           }
         },
         "publishedVersion": 5,
-        "publishedAt": "2025-01-14T19:50:17.133Z",
-        "firstPublishedAt": "2025-01-14T19:50:17.133Z",
+        "publishedAt": "2025-01-15T09:08:45.891Z",
+        "firstPublishedAt": "2025-01-15T09:08:45.891Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -7783,27 +10202,1086 @@
             "en-US": "published"
           }
         },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/6TLTt2BRI5AxyCWTPqjXAJ"
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7dQJPYaC1qcLXXeJfZNHoU"
       },
       "fields": {
         "title": {
-          "en-US": "Nest Thermostat Redesign"
+          "en-US": "Discus Prototype"
         },
         "description": {
           "en-US": ""
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/32imgqslv3rc/6TLTt2BRI5AxyCWTPqjXAJ/8b36eee65e75efb581725fa9d609b050/temp-nest-image.png",
+            "url": "//images.ctfassets.net/32imgqslv3rc/7dQJPYaC1qcLXXeJfZNHoU/5012777640c6a3e03fe6c1a191501ffe/DSCF2499_1.jpeg",
             "details": {
-              "size": 262079,
+              "size": 128023,
               "image": {
-                "width": 1725,
-                "height": 970
+                "width": 747,
+                "height": 872
               }
             },
-            "fileName": "temp-nest-image.png",
+            "fileName": "DSCF2499 1.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6tdgFOSsHP83nOB93iW8wN",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:08:56.790Z",
+        "updatedAt": "2025-01-15T09:09:06.613Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T09:09:06.613Z",
+        "firstPublishedAt": "2025-01-15T09:09:06.613Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/6tdgFOSsHP83nOB93iW8wN"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discus Logo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/6tdgFOSsHP83nOB93iW8wN/e8a24ac57266bb57a82de6959ef21c45/Frame_15655.png",
+            "details": {
+              "size": 9747,
+              "image": {
+                "width": 742,
+                "height": 402
+              }
+            },
+            "fileName": "Frame 15655.png",
             "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3zFwq8e2yv0PAZ8KGJafQZ",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:09:18.573Z",
+        "updatedAt": "2025-01-15T09:09:42.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-15T09:09:42.171Z",
+        "firstPublishedAt": "2025-01-15T09:09:42.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3zFwq8e2yv0PAZ8KGJafQZ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discus Closeup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3zFwq8e2yv0PAZ8KGJafQZ/3c1eda20b03ec4f7f70423e20e69dba9/Frame_15658.png",
+            "details": {
+              "size": 95736,
+              "image": {
+                "width": 742,
+                "height": 402
+              }
+            },
+            "fileName": "Frame 15658.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7uw5M9iKnvnSFCoDzKivCP",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:09:53.668Z",
+        "updatedAt": "2025-01-15T09:10:06.037Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-15T09:10:06.037Z",
+        "firstPublishedAt": "2025-01-15T09:10:06.037Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7uw5M9iKnvnSFCoDzKivCP"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Discus Angled"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7uw5M9iKnvnSFCoDzKivCP/8dbed42711c10843efedca9271a2174d/Discus.4.jpeg",
+            "details": {
+              "size": 90708,
+              "image": {
+                "width": 1568,
+                "height": 880
+              }
+            },
+            "fileName": "Discus.4.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "xX2Lmz0rom69OLDuHDxle",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:21:59.912Z",
+        "updatedAt": "2025-01-15T09:22:41.305Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-01-15T09:22:41.305Z",
+        "firstPublishedAt": "2025-01-15T09:22:17.742Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/xX2Lmz0rom69OLDuHDxle"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/xX2Lmz0rom69OLDuHDxle/d9aa48a07a6cc445478d55443b674d90/Frame_15654.png",
+            "details": {
+              "size": 652040,
+              "image": {
+                "width": 1568,
+                "height": 880
+              }
+            },
+            "fileName": "Frame 15654.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5o9qmfiaBL5LPGZn6BC50P",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:22:53.564Z",
+        "updatedAt": "2025-01-15T09:23:05.611Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T09:23:05.611Z",
+        "firstPublishedAt": "2025-01-15T09:23:05.611Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/5o9qmfiaBL5LPGZn6BC50P"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo logo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/5o9qmfiaBL5LPGZn6BC50P/3fba4a07d28795919ee48de12d50df92/Frame_15655.png",
+            "details": {
+              "size": 91918,
+              "image": {
+                "width": 742,
+                "height": 402
+              }
+            },
+            "fileName": "Frame 15655.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7qLExEshM3CrRV5fT4262g",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:23:22.992Z",
+        "updatedAt": "2025-01-15T09:23:32.660Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T09:23:32.660Z",
+        "firstPublishedAt": "2025-01-15T09:23:32.660Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7qLExEshM3CrRV5fT4262g"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo Closeup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7qLExEshM3CrRV5fT4262g/1431c281a33ec5afbf9299271edc29d1/Lumo_Closup.png",
+            "details": {
+              "size": 145131,
+              "image": {
+                "width": 747,
+                "height": 880
+              }
+            },
+            "fileName": "Lumo Closup.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4PmcqvrUFTNgMGbmNSV6oJ",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:23:41.892Z",
+        "updatedAt": "2025-01-15T09:23:50.029Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T09:23:50.029Z",
+        "firstPublishedAt": "2025-01-15T09:23:50.029Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4PmcqvrUFTNgMGbmNSV6oJ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo component"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4PmcqvrUFTNgMGbmNSV6oJ/9ab98e03390cfa302a24bff3da62e88a/Frame_15658.png",
+            "details": {
+              "size": 101651,
+              "image": {
+                "width": 742,
+                "height": 402
+              }
+            },
+            "fileName": "Frame 15658.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7gdDt7HXu8XbbImQSJ77pP",
+        "type": "Asset",
+        "createdAt": "2025-01-15T09:24:08.533Z",
+        "updatedAt": "2025-01-15T09:24:18.777Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-15T09:24:18.777Z",
+        "firstPublishedAt": "2025-01-15T09:24:18.777Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7gdDt7HXu8XbbImQSJ77pP"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lumo flow"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7gdDt7HXu8XbbImQSJ77pP/b9f47f3466e0365d76b7e0d4ba97310f/Frame_15659.png",
+            "details": {
+              "size": 900369,
+              "image": {
+                "width": 1568,
+                "height": 880
+              }
+            },
+            "fileName": "Frame 15659.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7eKt5QYwDG440lvT4ZvLbe",
+        "type": "Asset",
+        "createdAt": "2025-01-15T17:43:22.396Z",
+        "updatedAt": "2025-01-15T17:55:00.213Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-01-15T17:55:00.213Z",
+        "firstPublishedAt": "2025-01-15T17:43:38.553Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7eKt5QYwDG440lvT4ZvLbe"
+      },
+      "fields": {
+        "title": {
+          "en-US": "startup double phone mockup"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/7eKt5QYwDG440lvT4ZvLbe/80e4a832c5baa9052af1edb067a1c53f/double_mockup.png",
+            "details": {
+              "size": 492357,
+              "image": {
+                "width": 2988,
+                "height": 3520
+              }
+            },
+            "fileName": "double mockup.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4IFCGCiEQi0wkyIQYhiQch",
+        "type": "Asset",
+        "createdAt": "2025-01-15T17:43:41.529Z",
+        "updatedAt": "2025-01-15T17:53:44.272Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-01-15T17:53:44.272Z",
+        "firstPublishedAt": "2025-01-15T17:44:06.054Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4IFCGCiEQi0wkyIQYhiQch"
+      },
+      "fields": {
+        "title": {
+          "en-US": "ten years"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4IFCGCiEQi0wkyIQYhiQch/81e894734e18d04313f93d06ae6ee9c5/10_years.png",
+            "details": {
+              "size": 797379,
+              "image": {
+                "width": 2964,
+                "height": 1608
+              }
+            },
+            "fileName": "10 years.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2vM2uERbPgsbXX5KfMRVnG",
+        "type": "Asset",
+        "createdAt": "2025-01-15T17:47:59.741Z",
+        "updatedAt": "2025-01-15T17:52:28.576Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2025-01-15T17:52:28.576Z",
+        "firstPublishedAt": "2025-01-15T17:48:39.118Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/2vM2uERbPgsbXX5KfMRVnG"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Mobile startup 2025"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/2vM2uERbPgsbXX5KfMRVnG/7483e97c2a41e31f5b3a1ae307fca126/Screenshot_2025-01-15_at_12.50.57_PM.jpeg",
+            "details": {
+              "size": 267746,
+              "image": {
+                "width": 3294,
+                "height": 1782
+              }
+            },
+            "fileName": "Screenshot 2025-01-15 at 12.50.57 PM.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3pY3g70WC8ewEfLuGPXNtl",
+        "type": "Asset",
+        "createdAt": "2025-01-15T17:48:44.844Z",
+        "updatedAt": "2025-01-15T17:52:40.166Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-01-15T17:52:40.166Z",
+        "firstPublishedAt": "2025-01-15T17:49:00.197Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3pY3g70WC8ewEfLuGPXNtl"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Desktop and Mobile Startup 2025"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3pY3g70WC8ewEfLuGPXNtl/851fb7071f849a726d76113bc4a4bf31/Screenshot_2025-01-15_at_12.51.15_PM.jpeg",
+            "details": {
+              "size": 342419,
+              "image": {
+                "width": 3300,
+                "height": 1850
+              }
+            },
+            "fileName": "Screenshot 2025-01-15 at 12.51.15 PM.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "2xpPxajOpkNC77HUsbmPcI",
+        "type": "Asset",
+        "createdAt": "2025-02-20T01:16:26.137Z",
+        "updatedAt": "2025-02-20T01:19:47.006Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-02-20T01:19:47.006Z",
+        "firstPublishedAt": "2025-02-20T01:19:47.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/2xpPxajOpkNC77HUsbmPcI"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Temp Video"
+        },
+        "file": {
+          "en-US": {
+            "url": "//videos.ctfassets.net/32imgqslv3rc/2xpPxajOpkNC77HUsbmPcI/e8ba68bd6dee6854d72db0ae1f9d38e5/ForBiggerJoyrides.mp4",
+            "details": {
+              "size": 2372820
+            },
+            "fileName": "ForBiggerJoyrides.mp4",
+            "contentType": "video/mp4"
           }
         }
       }

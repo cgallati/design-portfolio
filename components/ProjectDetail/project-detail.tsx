@@ -46,7 +46,8 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
     metadata,
     projectContextSections,
     largeImageCard,
-    assetGrid
+    assetGrid,
+    alternateCoverVideo
   } = fields;
   const { role, team, skills, timeline, metadataDescription } = metadata.fields;
   const { description, file } = coverImage.fields;
@@ -70,6 +71,7 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
         src={"https:" + file.url}
         alt={description}
         priority={true}
+        jkItsAVid={alternateCoverVideo?.fields?.file?.url}
       />
       <ProjectIntroWrapper>
         <ProjectContext sections={contextSections || []} />
