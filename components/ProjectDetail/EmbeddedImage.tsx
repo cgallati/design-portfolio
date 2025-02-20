@@ -16,7 +16,7 @@ export const EmbeddedImage = ({
   if (jkItsAVid) {
     return (
       <EmbeddedImageContainer>
-        <StyledVideo autoPlay muted playsInline>
+        <StyledVideo autoPlay muted playsInline loop>
           <source src={jkItsAVid} type="video/mp4" />
         </StyledVideo>
       </EmbeddedImageContainer>
