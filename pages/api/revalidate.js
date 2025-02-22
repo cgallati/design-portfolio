@@ -16,8 +16,8 @@ export default async function handler(req, res) {
   try {
     // Note: if this fails to parse you may have forget to set the
     // "content-type" header correctly as mentioned here https://github.com/vercel/next.js/blob/canary/examples/cms-contentful/README.md#step-9-try-using-on-demand-revalidation
-    let slug = req.body.fields.slug["en-US"];
-
+    let slug = req.body?.fields?.slug?.["en-US"];
+    console.log(`Slug: ${slug}`);
     // revalidate the individual project (if project was changed) and the home page
     slug && (await res.revalidate(`/project/${slug}`));
     await res.revalidate("/");
