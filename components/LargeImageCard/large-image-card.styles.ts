@@ -9,7 +9,7 @@ export const LargeImageWrapper = styled.div`
     s: tokens.spacing[12] + " " + tokens.spacing[4],
     m: tokens.spacing[15] + " " + tokens.spacing[4],
     l: tokens.spacing[15] + " " + tokens.spacing[7],
-    xl:tokens.spacing[15] + " " + tokens.spacing[10],
+    xl:tokens.spacing[15] + " " + tokens.spacing[15],
   })};
 `;
 

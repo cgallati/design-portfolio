@@ -19,10 +19,10 @@ export const AssetGridContainer = styled.div`
     xl: "0 " + tokens.spacing[10],
   })};
   ${responsiveValues("margin-bottom", {
-    s: "4rem",
-    m: "6rem",
-    l: "12rem",
-    xl: "16rem",
+    s: "1rem",
+    m: "1rem",
+    l: "2rem",
+    xl: "3rem",
   })};
 
   img {

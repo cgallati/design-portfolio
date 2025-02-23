@@ -44,3 +44,31 @@ export const getProject = async (slug: string): Promise<ProjectWithPointers> => 
     previous: prev ? prev.fields.slug : null,
   };
 };
+
+export type ProjectNavigation = {
+  next: string | null;
+  previous: string | null;
+};
+
+export const getProjectNavigation = async (slug: string): Promise<ProjectNavigation> => {
+  const homePage = await getHomePage();
+  const projects = homePage.fields.projects;
+  
+  if (!projects) {
+    return { next: null, previous: null };
+  }
+
+  const projectIndex = projects.findIndex((project) => project.fields.slug === slug);
+  
+  if (projectIndex === -1) {
+    return { next: null, previous: null };
+  }
+
+  const next = projects[projectIndex + 1];
+  const previous = projects[projectIndex - 1];
+
+  return {
+    next: next ? next.fields.slug : null,
+    previous: previous ? previous.fields.slug : null,
+  };
+};

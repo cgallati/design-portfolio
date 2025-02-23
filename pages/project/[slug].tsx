@@ -1,9 +1,9 @@
-import {getProject, getProjectList, ProjectWithPointers} from "../../contentful/api";
+import {getProject, getProjectList, ProjectWithPointers, getProjectNavigation, ProjectNavigation} from "../../contentful/api";
 import { NextPage } from "next";
 import { ProjectDetail } from "../../components";
 
-const Project: NextPage<{ project: ProjectWithPointers }> = ({ project }) => {
-  return <ProjectDetail project={project} />;
+const Project: NextPage<{ project: ProjectWithPointers, navigation: ProjectNavigation }> = ({ project, navigation }) => {
+  return <ProjectDetail project={project} navigation={navigation} />;
 };
 
 export async function getStaticPaths() {
@@ -19,7 +19,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const project = await getProject(params.slug);
-  return { props: { project } };
+  const navigation = await getProjectNavigation(params.slug);
+  return { props: { project, navigation } };
 }
 
 export default Project;

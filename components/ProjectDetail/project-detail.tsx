@@ -12,11 +12,16 @@ import { responsiveValues, tokens } from "../../lib/theme";
 import { LargeImageCard } from "../LargeImageCard/large-image-card";
 import { AssetGrid } from "../";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
+import { ProjectNavigation } from "../../contentful/api";
+import Image from "next/image";
 
-
-
-export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
+export const ProjectDetail: FC<{ 
+  project: ProjectWithPointers;
+  navigation: ProjectNavigation;
+}> = ({
   project,
+  navigation
 }) => {
   const [activeSection, setActiveSection] = React.useState<number>(0);
   const [visibleSections, setVisibleSections] = React.useState<number[]>([]);
@@ -42,7 +47,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
     title,
     coverImage,
     sections,
-    centerStage,
     metadata,
     projectContextSections,
     largeImageCard,
@@ -61,6 +65,60 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
       };
     }
   );
+
+  const NavigationContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ${responsiveValues("margin", {
+      s: `${tokens.spacing[4]} 0`,
+      m: `${tokens.spacing[6]} 1rem`,
+      l: `${tokens.spacing[8]} 2rem`,
+      xl: `${tokens.spacing[10]} 3rem`,
+    })};
+    gap: ${tokens.spacing[4]};
+
+    a {
+      text-decoration: none;
+    }
+  `;
+
+  const NavigationButton = styled.div`
+    display: flex;
+    align-items: center;
+    gap: ${tokens.spacing[1]};
+    padding: ${tokens.spacing[3]} ${tokens.spacing[4]};
+    color: ${({ theme }) => theme.color.primary};
+    transition: all 0.2s ease-in-out;
+    ${responsiveValues("font-size", {
+      s: "16px",
+      m: "18px",
+      l: "20px",
+      xl: "22px"
+    })};
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    
+    img {
+      ${responsiveValues("width", {
+        s: "16px",
+        m: "18px",
+        l: "20px",
+        xl: "22px"
+      })};
+      ${responsiveValues("height", {
+        s: "16px",
+        m: "18px",
+        l: "20px",
+        xl: "22px"
+      })};
+    }
+    
+    &[data-disabled="true"] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  `;
 
   return (
     <>
@@ -111,7 +169,6 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
             sections={sections}
             activeSection={activeSection}
           />
-          {/* <CenterStage text={centerStage} /> */}
           <ProjectSections
             sections={sections}
             addVisibleSection={addVisibleSection}
@@ -119,6 +176,20 @@ export const ProjectDetail: FC<{ project: ProjectWithPointers }> = ({
           />
         </>
       )}
+      <NavigationContainer>
+        <Link href={navigation.previous ? `/project/${navigation.previous}` : "#"} passHref>
+          <NavigationButton data-disabled={!navigation.previous}>
+            <Image src="/assets/prev-arrow.svg" alt="Previous" width={22} height={22} />
+            Prev
+          </NavigationButton>
+        </Link>
+        <Link href={navigation.next ? `/project/${navigation.next}` : "#"} passHref>
+          <NavigationButton data-disabled={!navigation.next}>
+            Next
+            <Image src="/assets/next-arrow.svg" alt="Next" width={22} height={22} />
+          </NavigationButton>
+        </Link>
+      </NavigationContainer>
     </>
   );
 };
