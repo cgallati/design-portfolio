@@ -5,6 +5,7 @@ import {
   IntroSectionTextContainer,
   IntroSectionTitle,
 } from "./intro-section.styles";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 type IntroSectionProps = {
   title: string;
@@ -14,9 +15,10 @@ export const IntroSection: FC<IntroSectionProps> = ({
   title,
   introduction,
 }) => {
+  const {ref: titleRef} = useScrollAnimation();
   return (
     <IntroSectionFrame>
-      <IntroSectionTextContainer>
+      <IntroSectionTextContainer ref={titleRef}>
         <IntroSectionTitle>{title}</IntroSectionTitle>
         <IntroSectionSubtitle>{introduction}</IntroSectionSubtitle>
       </IntroSectionTextContainer>

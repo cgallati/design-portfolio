@@ -7,6 +7,7 @@ import {
   FullWidthImageWrapper,
   TallImageWrapper,
 } from "./asset-grid.styles";
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 interface ImageFields {
   file: {
@@ -26,10 +27,16 @@ interface AssetGridProps {
 }
 
 export const AssetGrid: React.FC<AssetGridProps> = ({ images }) => {
+  const {ref: ref1} = useScrollAnimation();
+  const {ref: ref2} = useScrollAnimation();
+  const {ref: ref3} = useScrollAnimation();
+  const {ref: ref4} = useScrollAnimation();
+  const {ref: ref5} = useScrollAnimation();
+
   return (
     <AssetGridContainer>
       {images[0] && 
-        <FullWidthImageWrapper>
+        <FullWidthImageWrapper ref={ref1}>
           <Image 
             src={"https:" + images[0].file.url} 
             alt={images[0].description} 
@@ -42,7 +49,7 @@ export const AssetGrid: React.FC<AssetGridProps> = ({ images }) => {
         </FullWidthImageWrapper>
       }
       <RowContainer>
-        {images[1] && <TallImageWrapper><Image 
+        {images[1] && <TallImageWrapper ref={ref2}><Image 
           src={"https:" + images[1].file.url} 
           alt={images[1].description}
           fill
@@ -52,7 +59,7 @@ export const AssetGrid: React.FC<AssetGridProps> = ({ images }) => {
           }}
         /></TallImageWrapper>}
         <ColumnContainer>
-          {images[2] && <FullWidthImageWrapper><Image 
+          {images[2] && <FullWidthImageWrapper ref={ref3}><Image 
             src={"https:" + images[2].file.url} 
             alt={images[2].description}
             fill
@@ -61,7 +68,7 @@ export const AssetGrid: React.FC<AssetGridProps> = ({ images }) => {
               objectFit: "cover",
             }}
           /></FullWidthImageWrapper>}
-          {images[3] && <FullWidthImageWrapper><Image 
+          {images[3] && <FullWidthImageWrapper ref={ref4}><Image 
             src={"https:" + images[3].file.url} 
             alt={images[3].description}
             fill
@@ -72,7 +79,7 @@ export const AssetGrid: React.FC<AssetGridProps> = ({ images }) => {
           /></FullWidthImageWrapper>}
         </ColumnContainer>
       </RowContainer>
-      {images[4] && <FullWidthImageWrapper><Image 
+      {images[4] && <FullWidthImageWrapper ref={ref5}><Image 
         src={"https:" + images[4].file.url} 
         alt={images[4].description}
         fill

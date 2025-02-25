@@ -1,10 +1,10 @@
 import React, { FC, useEffect } from "react";
 import { EmbeddedImage } from "./EmbeddedImage";
+import { NavigationContainer } from "./navigation-container";
 import { IntroSection } from "../IntroSection";
 import { ProjectNavBar } from "../ProjectNavBar";
 import { ProjectSections } from "../ProjectSections";
 import { ProjectWithPointers } from "../../contentful/api";
-import { CenterStage } from "../CenterStage";
 import { ProjectMetadata } from "../ProjectMetadata";
 import styled from "@emotion/styled";
 import { ProjectContext } from "../ProjectContext";
@@ -15,6 +15,7 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { ProjectNavigation } from "../../contentful/api";
 import Image from "next/image";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ProjectDetail: FC<{ 
   project: ProjectWithPointers;
@@ -66,22 +67,6 @@ export const ProjectDetail: FC<{
     }
   );
 
-  const NavigationContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ${responsiveValues("margin", {
-      s: `${tokens.spacing[4]} 0`,
-      m: `${tokens.spacing[6]} 1rem`,
-      l: `${tokens.spacing[8]} 2rem`,
-      xl: `${tokens.spacing[10]} 3rem`,
-    })};
-    gap: ${tokens.spacing[4]};
-
-    a {
-      text-decoration: none;
-    }
-  `;
 
   const NavigationButton = styled.div`
     display: flex;

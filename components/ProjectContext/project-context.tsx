@@ -8,6 +8,7 @@ import {
 import { HorizontalLine } from "../styles";
 import { useInView } from "react-intersection-observer";
 import { fi } from "date-fns/locale";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 type ProjectContextProps = {
   sections: {
@@ -33,16 +34,12 @@ export const ProjectContext: React.FC<ProjectContextProps> = ({ sections }) => {
 
 // todo: normalize the two data models for this
 export const SingleContextSection: React.FC<{ title: string, paragraphs: string[], fields?: any }> = ({ title, paragraphs, fields }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
+  const {ref} = useScrollAnimation()
   const eitherParagraphs = paragraphs || [fields.paragraph1, fields.paragraph2, fields.paragraph3]; 
   return (
-    <>
-      <div ref={ref}>
-        <HorizontalLine inView={inView} />
+    <div ref={ref}>
+      <div>
+        <HorizontalLine inView={true}/>
       </div>
       <ContextSection>
       <ContextTitle>{title || fields.title}</ContextTitle>
@@ -54,6 +51,6 @@ export const SingleContextSection: React.FC<{ title: string, paragraphs: string[
         ))}
       </ParagraphsWrapper>
     </ContextSection>
-  </>
+  </div>
   )
 }

@@ -11,6 +11,7 @@ import {
 import { Asset } from "contentful";
 import Link from "next/link";
 import Image from "next/image";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ProjectCard = ({
   title,
@@ -26,12 +27,14 @@ export const ProjectCard = ({
   index: number;
 }) => {
   const imgSize = img.fields.file.details.image;
+
+  const { ref } = useScrollAnimation();
   return (
     <Link
       href={"/project/" + slug}
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <ProjectCardArticle index={index}>
+      <ProjectCardArticle index={index} ref={ref}>
         <ProjectCardImage
           alt={img.fields.description}
           src={"https:" + img.fields.file.url}

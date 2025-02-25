@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { mq, tokens } from "../../lib/theme";
+import { mq } from "../../lib/theme";
 import styled from "@emotion/styled";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const EmbeddedImage = ({
   src,
@@ -13,9 +14,13 @@ export const EmbeddedImage = ({
   priority?: boolean;
   jkItsAVid?: string;
 }) => {
+
+  const {ref} = useScrollAnimation();
+  const {ref: embeddedImageRef} = useScrollAnimation();
+
   if (jkItsAVid) {
     return (
-      <EmbeddedImageContainer>
+      <EmbeddedImageContainer ref={ref}>
         <StyledVideo autoPlay muted playsInline loop>
           <source src={jkItsAVid} type="video/mp4" />
         </StyledVideo>
@@ -24,7 +29,7 @@ export const EmbeddedImage = ({
   }
 
   return (
-    <EmbeddedImageContainer>s
+    <EmbeddedImageContainer ref={embeddedImageRef}>
       <Image
         src={src}
         fill

@@ -10,7 +10,7 @@ import {
   MobileOnlyMetadataItemDivider,
 } from "./project-metadata.styles";
 import { useInView } from "react-intersection-observer";
-
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 export const ProjectMetadata = ({
   introduction,
   role,
@@ -49,9 +49,11 @@ export const ProjectMetadata = ({
     threshold: 0.3,
   });
 
+  const {ref: scrollRef} = useScrollAnimation();
+
   return (
-    <>
-      <HorizontalLine inView={horizontalLineInView} ref={horizontalLineRef} />
+    <div ref={scrollRef}>
+      <HorizontalLine inView={true}/>
       <MetadataWrapper>
         <MetadataDescriptionWrapper>
           <MetadataDescription>{introduction}</MetadataDescription>
@@ -86,6 +88,6 @@ export const ProjectMetadata = ({
         <MetadataItemsValue>{timeline}</MetadataItemsValue>
       </MetadataItemsWrapper>
     </MetadataWrapper>
-    </>
+    </div>
   );
 };
