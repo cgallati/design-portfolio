@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useBreakpoint } from './useBreakpoint';
 
 interface AnimationConfig {
   startOpacity?: number;
@@ -12,10 +13,12 @@ interface AnimationConfig {
 }
 
 export function useScrollAnimation(config: AnimationConfig = {}) {
+    const { breakpoint, isMobile } = useBreakpoint();
+
   const {
     startOpacity = 0,
     endOpacity = 1,
-    translateY = 120,
+    translateY = isMobile ? 60 : 120,
     duration = 1000,
     delay = 0,
     easing = 'cubic-bezier(0.25, 0.1, 0.25, 1.0)',
