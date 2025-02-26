@@ -2,47 +2,54 @@ import styled from "@emotion/styled";
 import { HorizontalLine, ProjectListSection } from "../components/";
 import { tokens, responsiveValues, mq } from "../lib/theme";
 import Image from "next/image";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export default function About() {
+  const { ref: introRef } = useScrollAnimation();
+  const { ref: aboutRef } = useScrollAnimation();
+  const { ref: vpRef } = useScrollAnimation();
+
   return (
     <AboutPageWrapper>
-      <AboutParagraph>
+      <AboutParagraph ref={introRef}>
         I’m a UX designer with a background in graphic design, passionate about
         creating user-centered experiences across physical and digital spaces.
         I design for clarity, function, and beauty, crafting systems that solve
         complex problems with impact.
       </AboutParagraph>
-      <HorizontalLine inView={true} />
-      <FlexRow>
-        <ImageContainer>
-          <ImageWrapper>
-            <Image 
-              src="/assets/avatar.png" 
-              alt="Profile avatar"
-              fill
-              sizes="100vw"
-              style={{ 
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
-            />
-            </ImageWrapper>
-        </ImageContainer>
-        <FlexColumn>
-          <FlexItem>
-            <PrimaryText>BFA in User Experience (UX) Design</PrimaryText>
-            <SecondaryText>Savannah College of Art and Design</SecondaryText>
-          </FlexItem>
-          <HorizontalLine inView={true} />
-          <FlexItem>
-            <PrimaryText>Associates in Graphic Design</PrimaryText>
-            <SecondaryText>Trident Technical College</SecondaryText>
-          </FlexItem>
-        </FlexColumn>
-        <MobileOnlyHorizontalLine inView={true} />
-      </FlexRow>
+      <div ref={aboutRef}>
+        <HorizontalLine inView={true} />
+        <FlexRow>
+          <ImageContainer>
+            <ImageWrapper>
+              <Image 
+                src="/assets/avatar.png" 
+                alt="Profile avatar"
+                fill
+                sizes="100vw"
+                style={{ 
+                  borderRadius: '50%',
+                  objectFit: 'cover'
+                }}
+              />
+              </ImageWrapper>
+          </ImageContainer>
+          <FlexColumn>
+            <FlexItem>
+              <PrimaryText>BFA in User Experience (UX) Design</PrimaryText>
+              <SecondaryText>Savannah College of Art and Design</SecondaryText>
+            </FlexItem>
+            <HorizontalLine inView={true} />
+            <FlexItem>
+              <PrimaryText>Associates in Graphic Design</PrimaryText>
+              <SecondaryText>Trident Technical College</SecondaryText>
+            </FlexItem>
+          </FlexColumn>
+          <MobileOnlyHorizontalLine inView={true} />
+        </FlexRow>
       <DesktopOnlyHorizontalLine inView={true} />
-      <VeepRow>
+      </div>
+      <VeepRow ref={vpRef}>
         <VeepText>
           As Vice President of FLUX, I oversee marketing, communications, and
           internal operations while collaborating with officers to plan

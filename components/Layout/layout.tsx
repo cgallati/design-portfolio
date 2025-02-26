@@ -18,6 +18,7 @@ import { MenuIcon } from "./MenuIcon";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import { responsiveValues } from "../../lib/theme";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 interface NavLinkProps {
   display: string;
@@ -32,6 +33,8 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const { ref } = useScrollAnimation();
 
   return (
     <PageContainer>
@@ -68,21 +71,22 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
         </OverlayNav>
       </OverlayMenu>
       <PageContent>{children}</PageContent>
-      <Footer>
+      <Footer >
         <MaxWidthWrapper>
-          <StyledLink href="mailto:steven@stevenvasil.com">
-          <ConnectWrapper>
-            <ConnectText>Let&apos;s Connect</ConnectText>
-            <Image src="/assets/Vector.svg" alt="Connect arrow" width={20} height={20} />
-          </ConnectWrapper>
+          <StyledLink href="mailto:steven@stevenvasil.com" >
+            <div ref={ref}>
+            <ConnectWrapper>
+              <ConnectText>Let&apos;s Connect</ConnectText>
+              <Image src="/assets/Vector.svg" alt="Connect arrow" width={20} height={20} />
+            </ConnectWrapper>
           <EmailText>Shoot me an email</EmailText>
+          </div>
           </StyledLink>
         </MaxWidthWrapper>
       </Footer>
     </PageContainer>
   );
 };
-
 
 const Footer = styled.footer`
   height: 350px;

@@ -3,7 +3,11 @@ import { responsiveValues, tokens } from "../../lib/theme";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const NavigationContainer = ({ children }) => {
-    const  {ref} = useScrollAnimation();
+    const  {ref} = useScrollAnimation({
+        translateY: 0,
+        duration: 1000,
+        delay: 1000,
+    });
 
   return (
     <StyledNavigationContainer ref={ref}>
