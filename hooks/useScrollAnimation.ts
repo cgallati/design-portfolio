@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useBreakpoint } from './useBreakpoint';
+import { useRouter } from 'next/router';
 
 interface AnimationConfig {
   startOpacity?: number;
@@ -14,6 +15,7 @@ interface AnimationConfig {
 
 export function useScrollAnimation(config: AnimationConfig = {}) {
     const { breakpoint, isMobile } = useBreakpoint();
+    const router = useRouter();
 
   const {
     startOpacity = 0,
@@ -47,6 +49,33 @@ export function useScrollAnimation(config: AnimationConfig = {}) {
     }
     ref.current = element;
   };
+
+  // Reset animation state when route changes
+  useEffect(() => {
+    // Reset state variables first
+    setHasAnimated(false);
+    setIsVisible(false);
+    setIsInitialized(false);
+    
+    // Reset styles if ref exists - with suppressVisualUpdates trick
+    if (ref.current) {
+      // Disable transitions temporarily to prevent animation during reset
+      ref.current.style.transition = 'none';
+      // Force a reflow to ensure the transition removal takes effect
+      void ref.current.offsetWidth;
+      // Set initial state
+      ref.current.style.opacity = startOpacity.toString();
+      ref.current.style.transform = `translateY(${translateY}px)`;
+      
+      // Re-enable transitions on next frame
+      requestAnimationFrame(() => {
+        if (ref.current) {
+          ref.current.style.transition = `opacity ${duration}ms ${easing}, transform ${duration}ms ${easing}`;
+          ref.current.style.transitionDelay = `${delay}ms`;
+        }
+      });
+    }
+  }, [router.asPath, startOpacity, translateY, duration, delay, easing]);
 
   useEffect(() => {
     const currentRef = ref.current;
