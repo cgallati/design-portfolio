@@ -38,6 +38,7 @@ export const DialContainer = styled.div`
 
 export const PercentageCircleSVG = styled.svg`
   height: 100%;
+  width: 100%; /* Add explicit width */
   transform: rotate(-90deg);
   ${responsiveValues("max-width", {
     s: "320px",
@@ -45,6 +46,13 @@ export const PercentageCircleSVG = styled.svg`
     l: "240px",
     xl: "340px"
   })};
+  ${responsiveValues("max-height", { /* Add explicit max-height */
+    s: "320px",
+    m: "340px",
+    l: "240px",
+    xl: "340px"
+  })};
+  viewBox="0 0 340 340"; /* Add viewBox attribute */
 `;
 
 export const PercentageCircle = styled.circle<{ percentage: number }>`
@@ -54,6 +62,12 @@ export const PercentageCircle = styled.circle<{ percentage: number }>`
   stroke-linecap: butt;
   transform-origin: center;
   transition: stroke-dashoffset 1.5s ease;
+  /* Safari requires explicit dimensions for SVG elements */
+  width: 100%;
+  height: 100%;
+  cx="170"; /* Add cx attribute */
+  cy="170"; /* Add cy attribute */
+  r="160"; /* Add r attribute */
 `;
 
 export const PercentageValue = styled.div`
