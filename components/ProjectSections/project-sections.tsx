@@ -11,28 +11,28 @@ import { DoubleQuoteSection } from "../DoubleQuoteSection";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
-  addVisibleSection: (section: number) => void;
-  removeVisibleSection: (section: number) => void;
+  // addVisibleSection: (section: number) => void;
+  // removeVisibleSection: (section: number) => void;
 };
 
 type ProjectSlidesProps = {
   slides: Entry<Record<string, any>>[];
   index: number;
-  setVisible: (arg0: boolean) => void;
+  // setVisible: (arg0: boolean) => void;
 };
 
 export const ProjectSections: FC<ProjectSectionsProps> = ({
   sections,
-  addVisibleSection,
-  removeVisibleSection,
+  // addVisibleSection,
+  // removeVisibleSection,
 }) => {
-  const handleSetVisible = (index: number) => (isVisible: boolean) => {
-    if (isVisible) {
-      addVisibleSection(index);
-    } else {
-      removeVisibleSection(index);
-    }
-  };
+  // const handleSetVisible = (index: number) => (isVisible: boolean) => {
+  //   if (isVisible) {
+  //     addVisibleSection(index);
+  //   } else {
+  //     removeVisibleSection(index);
+  //   }
+  // };
 
   return (
     <>
@@ -40,7 +40,7 @@ export const ProjectSections: FC<ProjectSectionsProps> = ({
         <section key={index} id={`project-slide-${index}`}>
           <SectionSlides
             slides={section.fields.content}
-            setVisible={handleSetVisible(index)}
+            // setVisible={handleSetVisible(index)}
             index={index}
           />
         </section>
@@ -59,25 +59,26 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,
-  setVisible,
+  // setVisible,
   index,
 }) => {
-  const [ref, entry] = useIntersectionObserver({
-    threshold: 0.1,
-    root: null,
-    rootMargin: "0px",
-  });
+  // const [ref, entry] = useIntersectionObserver({
+  //   threshold: 0.1,
+  //   root: null,
+  //   rootMargin: "0px",
+  // });
 
-  useEffect(() => {
-    if (entry?.isIntersecting) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }, [entry?.isIntersecting]);
+  // useEffect(() => {
+  //   if (entry?.isIntersecting) {
+  //     setVisible(true);
+  //   } else {
+  //     setVisible(false);
+  //   }
+  // }, [entry?.isIntersecting]);
 
   return (
-    <div ref={ref} id={"intersection-ref-" + index}>
+    // <div ref={ref} id={"intersection-ref-" + index}>
+    <div id={"intersection-ref-" + index}>
       {slides?.map((slide, index) => {
         const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
         if (!Component) return "FAILED TO MAP CONTENT TO BLOCK COMPONENT";

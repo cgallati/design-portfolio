@@ -23,23 +23,23 @@ export const ProjectDetail: FC<{
   project,
   navigation
 }) => {
-  const [activeSection, setActiveSection] = React.useState<number>(0);
-  const [visibleSections, setVisibleSections] = React.useState<number[]>([]);
-  const { ref, inView, entry } = useInView();
+  // const [activeSection, setActiveSection] = React.useState<number>(0);
+  // const [visibleSections, setVisibleSections] = React.useState<number[]>([]);
+  const { ref, inView } = useInView();
 
-  const addVisibleSection = (section: number) => {
-    if (!visibleSections.includes(section)) {
-      setVisibleSections([...visibleSections, section]);
-    }
-  };
+  // const addVisibleSection = (section: number) => {
+  //   if (!visibleSections.includes(section)) {
+  //     setVisibleSections([...visibleSections, section]);
+  //   }
+  // };
 
-  const removeVisibleSection = (section: number) => {
-    setVisibleSections(visibleSections.filter((s) => s !== section));
-  };
+  // const removeVisibleSection = (section: number) => {
+  //   setVisibleSections(visibleSections.filter((s) => s !== section));
+  // };
 
-  useEffect(() => {
-    setActiveSection(visibleSections.sort((a, b) => a - b)[0]);
-  }, [visibleSections]);
+  // useEffect(() => {
+  //   setActiveSection(visibleSections.sort((a, b) => a - b)[0]);
+  // }, [visibleSections]);
 
   const { fields } = project;
   const {
@@ -149,14 +149,14 @@ export const ProjectDetail: FC<{
             <h3>How did we get here?</h3>
             <p>Let&apos;s jump into it.</p>
           </HowDidWeGetHereWrapper>
-          <ProjectNavBar
+          {/* <ProjectNavBar
             sections={sections}
             activeSection={activeSection}
-          />
+          /> */}
           <ProjectSections
             sections={sections}
-            addVisibleSection={addVisibleSection}
-            removeVisibleSection={removeVisibleSection}
+            // addVisibleSection={addVisibleSection}
+            // removeVisibleSection={removeVisibleSection}
           />
         </>
       )}

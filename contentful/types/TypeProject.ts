@@ -17,7 +17,6 @@ export interface TypeProjectFields {
     largeImageCard?: Contentful.Asset;
     slug: Contentful.EntryFields.Symbol;
     content?: CFRichTextTypes.Block | CFRichTextTypes.Inline;
-    order?: Contentful.EntryFields.Integer;
     sections?: Contentful.Entry<TypeSectionFields>[];
     centerStage?: Contentful.EntryFields.Text;
 }
