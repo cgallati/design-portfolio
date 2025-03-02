@@ -51,7 +51,7 @@ export const PercentageSection: React.FC<Entry<TypePercentageSectionFields>> = (
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     observer.observe(circle);
@@ -64,7 +64,7 @@ export const PercentageSection: React.FC<Entry<TypePercentageSectionFields>> = (
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <PercentageSectionContainer ref={containerRef}>
+    <PercentageSectionContainer ref={containerRef.ref}>
       <DialContainer>
         <PercentageCircleSVG viewBox="0 0 100 100">
           {/* Percentage circle (animated) - no background circle */}

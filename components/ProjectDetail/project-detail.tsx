@@ -204,16 +204,21 @@ const HowDidWeGetHereWrapper = styled.div<{ inView: boolean }>`
 
 
   ${responsiveValues("padding", {
-    s: "3.5rem 1rem 10rem",
-    m: "5rem 2.5rem 15rem",
-    l: "7rem 4rem 19rem",
+    s: "3.5rem 4rem 10rem",
+    m: "5rem 5rem 15rem",
+    l: "7rem 10rem 19rem",
     xl: "25rem 17rem 23rem",
   })};
 
   h3 {
     color: #151515;
     font-family: Poppins;
-    font-size: 40.635px;
+    ${responsiveValues("font-size", {
+      s: "24px",
+      m: "28px",
+      l: "32px",
+      xl: "40.635px",
+    })};
     font-style: normal;
     font-weight: 400;
     line-height: 140%; 
@@ -221,7 +226,12 @@ const HowDidWeGetHereWrapper = styled.div<{ inView: boolean }>`
   p {
     color: #636363;
     font-family: Poppins;
-    font-size: 41.911px;
+    ${responsiveValues("font-size", {
+      s: "18px",
+      m: "20px",
+      l: "22px",
+      xl: "41.911px",
+    })};
     font-style: normal;
     font-weight: 300;
     line-height: 135%; 
