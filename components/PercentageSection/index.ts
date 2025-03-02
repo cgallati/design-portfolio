@@ -1,0 +1,1 @@
+export { PercentageSection } from './percentage-section';
