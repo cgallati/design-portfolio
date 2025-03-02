@@ -7,11 +7,21 @@ export const QuoteSectionWrapper = styled.section`
 
 export const QuoteSection = styled.div`
   display: flex;
-  flex-direction: row;
-  padding: 4rem 2rem;
+  flex-direction: column;
+  ${mq[1]} {
+    flex-direction: row;
+    
+    align-items: center;
+  }
+  ${responsiveValues("padding", {
+    s: "2rem 2rem",
+    m: "3rem 1rem",
+    l: "4rem 2rem",
+    xl: "4rem 2rem",
+  })};
   gap: 3rem;
   justify-content: space-between;
-  align-items: center;
+  
 `;
 
 export const QuoteBlurb = styled.p`
@@ -21,16 +31,22 @@ export const QuoteBlurb = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
-  max-width: 500px;
+  flex: 1;
+  ${responsiveValues("max-width", {
+    s: "100%",
+    m: "100%",
+    l: "500px",
+    xl: "500px",
+  })};
 `;
 
 export const QuotesContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  ${mq[0]} {
+  // flex-direction: row;
+  // ${mq[1]} {
     flex-direction: column;
-  }
-  flex-basis: 50%;
+  // }
+  flex: 1;
   gap: 2rem;
 `;
 
@@ -38,7 +54,12 @@ export const QuoteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  max-width: 75%;
+  ${responsiveValues("max-width", {
+    s: "100%",
+    m: "100%",
+    l: "100%",
+    xl: "75%",
+  })};
   gap: 1rem;
 `;
 
