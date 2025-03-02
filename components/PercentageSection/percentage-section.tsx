@@ -64,7 +64,7 @@ export const PercentageSection: React.FC<Entry<TypePercentageSectionFields>> = (
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <PercentageSectionContainer ref={containerRef.ref}>
+    <PercentageSectionContainer ref={(el) => containerRef.ref(el)}>
       <DialContainer>
         <PercentageCircleSVG viewBox="0 0 100 100">
           {/* Percentage circle (animated) - no background circle */}
@@ -82,7 +82,7 @@ export const PercentageSection: React.FC<Entry<TypePercentageSectionFields>> = (
       </DialContainer>
       
       <BlurbContainer>
-        <Blurb ref={blurbRef}>{blurb}</Blurb>
+        <Blurb ref={(el) => el && blurbRef.ref(el)}>{blurb}</Blurb>
       </BlurbContainer>
     </PercentageSectionContainer>
   );

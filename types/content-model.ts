@@ -12,7 +12,6 @@ export type Project = {
   content: CFRichTextTypes.Block | CFRichTextTypes.Inline;
   next?: string;
   previous?: string;
-  order?: number;
   sections?: Contentful.Entry<TypeSectionFields>[];
 }
 
