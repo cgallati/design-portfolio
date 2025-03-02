@@ -11,6 +11,7 @@ export const QuoteSection = styled.div`
   padding: 4rem 2rem;
   gap: 3rem;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const QuoteBlurb = styled.p`

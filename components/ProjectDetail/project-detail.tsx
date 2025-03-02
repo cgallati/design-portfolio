@@ -15,7 +15,6 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { ProjectNavigation } from "../../contentful/api";
 import Image from "next/image";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ProjectDetail: FC<{ 
   project: ProjectWithPointers;
@@ -42,7 +41,7 @@ export const ProjectDetail: FC<{
     setActiveSection(visibleSections.sort((a, b) => a - b)[0]);
   }, [visibleSections]);
 
-  const { next, previous, fields } = project;
+  const { fields } = project;
   const {
     introduction,
     title,
@@ -126,7 +125,7 @@ export const ProjectDetail: FC<{
           timeline={timeline}
         />
       </ProjectIntroWrapper>
-      {assetGrid && <AssetGrid images={assetGrid.map((image) => ({
+      {assetGrid && !sections && <AssetGrid images={assetGrid.map((image) => ({
         file: { 
           url: image.fields.file.url,
           details: {

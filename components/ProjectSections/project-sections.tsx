@@ -62,7 +62,6 @@ const SectionSlides: FC<ProjectSlidesProps> = ({
   setVisible,
   index,
 }) => {
-  console.log({slides});
   const [ref, entry] = useIntersectionObserver({
     threshold: 0.1,
     root: null,
