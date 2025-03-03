@@ -7,12 +7,14 @@ import {
   Text,
   TextWrapper,
 } from "./banner.styles";
+import { HorizontalLine } from "../styles";
 
 export const Banner: FC<TypeBanner> = ({
   fields: { title, bannerText: text },
 }) => {
   return (
     <BannerWrapper>
+      <HorizontalLine inView={true}/>
       <BannerContainer>
         <Title>{title}</Title>
         <TextWrapper>
