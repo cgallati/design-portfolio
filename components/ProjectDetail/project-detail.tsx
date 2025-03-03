@@ -222,10 +222,10 @@ const HowDidWeGetHereWrapper = styled.div<{ inView: boolean }>`
 
 
   ${responsiveValues("padding", {
-    s: "3.5rem 4rem 10rem",
-    m: "5rem 5rem 15rem",
-    l: "7rem 10rem 19rem",
-    xl: "25rem 17rem 23rem",
+    s: "3.5rem 4rem 5rem",
+    m: "5rem 5rem 5rem",
+    l: "7rem 10rem 10rem",
+    xl: "25rem 17rem 12rem",
   })};
 
   h3 {
