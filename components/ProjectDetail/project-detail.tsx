@@ -160,6 +160,18 @@ export const ProjectDetail: FC<{
           />
         </>
       )}
+      {assetGrid && sections && <AssetGrid images={assetGrid.map((image) => ({
+        file: { 
+          url: image.fields.file.url,
+          details: {
+            image: {
+              width: image.fields.file.details.image.width,
+              height: image.fields.file.details.image.height
+            }
+          }
+        },
+        description: image.fields.description,
+      }))} />}
       <NavigationContainer>
         <Link href={navigation.previous ? `/project/${navigation.previous}` : "#"} passHref>
           <NavigationButton data-disabled={!navigation.previous}>
