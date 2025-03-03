@@ -19,7 +19,7 @@ export const PercentageSectionContainer = styled.div`
 
 export const DialContainer = styled.div`
   position: relative;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   width: 320px;
   height: 320px;
   
