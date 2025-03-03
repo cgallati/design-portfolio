@@ -2,6 +2,7 @@ export type { TypeAuthor, TypeAuthorFields } from "./TypeAuthor";
 export type { TypeBanner, TypeBannerFields } from "./TypeBanner";
 export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from "./TypeBrandElementsDisplay";
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
+export type { TypeImgHeadingAndText, TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
 export type { TypePercentageSection, TypePercentageSectionFields } from "./TypePercentageSection";
 export type { TypePost, TypePostFields } from "./TypePost";
 export type { TypeProject, TypeProjectFields } from "./TypeProject";

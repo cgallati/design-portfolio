@@ -9,6 +9,7 @@ import { CenterStage } from "../CenterStage";
 import { ProjectContext, SingleContextSection } from "../ProjectContext";
 import { DoubleQuoteSection } from "../DoubleQuoteSection";
 import { PercentageSection } from "../PercentageSection";
+import { ImgHeadingText } from "../ImgHeadingText";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -58,6 +59,7 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   projectContextSection: SingleContextSection,
   sectionDoubleQuote: DoubleQuoteSection,
   percentageSection: PercentageSection,
+  imgHeadingAndText: ImgHeadingText,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,
