@@ -103,7 +103,7 @@ export const lightTheme: Theme = {
       xl: tokens.spacing[4] + " " + tokens.spacing[6]  + " " + tokens.spacing[8] ,
     },
     centerStage: {
-      s: '15rem',
+      s: '20rem',
       m: '30rem',
       l: '45rem',
       xl: '53rem',

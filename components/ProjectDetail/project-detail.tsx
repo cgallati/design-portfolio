@@ -15,7 +15,6 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { ProjectNavigation } from "../../contentful/api";
 import Image from "next/image";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ProjectDetail: FC<{ 
   project: ProjectWithPointers;
@@ -24,25 +23,25 @@ export const ProjectDetail: FC<{
   project,
   navigation
 }) => {
-  const [activeSection, setActiveSection] = React.useState<number>(0);
-  const [visibleSections, setVisibleSections] = React.useState<number[]>([]);
-  const { ref, inView, entry } = useInView();
+  // const [activeSection, setActiveSection] = React.useState<number>(0);
+  // const [visibleSections, setVisibleSections] = React.useState<number[]>([]);
+  const { ref, inView } = useInView();
 
-  const addVisibleSection = (section: number) => {
-    if (!visibleSections.includes(section)) {
-      setVisibleSections([...visibleSections, section]);
-    }
-  };
+  // const addVisibleSection = (section: number) => {
+  //   if (!visibleSections.includes(section)) {
+  //     setVisibleSections([...visibleSections, section]);
+  //   }
+  // };
 
-  const removeVisibleSection = (section: number) => {
-    setVisibleSections(visibleSections.filter((s) => s !== section));
-  };
+  // const removeVisibleSection = (section: number) => {
+  //   setVisibleSections(visibleSections.filter((s) => s !== section));
+  // };
 
-  useEffect(() => {
-    setActiveSection(visibleSections.sort((a, b) => a - b)[0]);
-  }, [visibleSections]);
+  // useEffect(() => {
+  //   setActiveSection(visibleSections.sort((a, b) => a - b)[0]);
+  // }, [visibleSections]);
 
-  const { next, previous, fields } = project;
+  const { fields } = project;
   const {
     introduction,
     title,
@@ -126,7 +125,7 @@ export const ProjectDetail: FC<{
           timeline={timeline}
         />
       </ProjectIntroWrapper>
-      {assetGrid && <AssetGrid images={assetGrid.map((image) => ({
+      {assetGrid && !sections && <AssetGrid images={assetGrid.map((image) => ({
         file: { 
           url: image.fields.file.url,
           details: {
@@ -150,14 +149,14 @@ export const ProjectDetail: FC<{
             <h3>How did we get here?</h3>
             <p>Let&apos;s jump into it.</p>
           </HowDidWeGetHereWrapper>
-          <ProjectNavBar
+          {/* <ProjectNavBar
             sections={sections}
             activeSection={activeSection}
-          />
+          /> */}
           <ProjectSections
             sections={sections}
-            addVisibleSection={addVisibleSection}
-            removeVisibleSection={removeVisibleSection}
+            // addVisibleSection={addVisibleSection}
+            // removeVisibleSection={removeVisibleSection}
           />
         </>
       )}
@@ -205,16 +204,21 @@ const HowDidWeGetHereWrapper = styled.div<{ inView: boolean }>`
 
 
   ${responsiveValues("padding", {
-    s: "3.5rem 1rem 10rem",
-    m: "5rem 2.5rem 15rem",
-    l: "7rem 4rem 19rem",
+    s: "3.5rem 4rem 10rem",
+    m: "5rem 5rem 15rem",
+    l: "7rem 10rem 19rem",
     xl: "25rem 17rem 23rem",
   })};
 
   h3 {
     color: #151515;
     font-family: Poppins;
-    font-size: 40.635px;
+    ${responsiveValues("font-size", {
+      s: "24px",
+      m: "28px",
+      l: "32px",
+      xl: "40.635px",
+    })};
     font-style: normal;
     font-weight: 400;
     line-height: 140%; 
@@ -222,7 +226,12 @@ const HowDidWeGetHereWrapper = styled.div<{ inView: boolean }>`
   p {
     color: #636363;
     font-family: Poppins;
-    font-size: 41.911px;
+    ${responsiveValues("font-size", {
+      s: "18px",
+      m: "20px",
+      l: "22px",
+      xl: "41.911px",
+    })};
     font-style: normal;
     font-weight: 300;
     line-height: 135%; 

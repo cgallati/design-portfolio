@@ -30,7 +30,7 @@ export const DoubleQuoteSection: React.FC<DoubleQuoteSectionProps> = ({ fields }
 
   return (
     <QuoteSectionWrapper>
-    <HorizontalLine ref={ref} inView={inView}/>
+    <HorizontalLine ref={ref}/>
       <QuoteSection>
         <QuoteBlurb>{blurb}</QuoteBlurb>
         <QuotesContainer>
@@ -38,14 +38,14 @@ export const DoubleQuoteSection: React.FC<DoubleQuoteSectionProps> = ({ fields }
             <QuoteLabel>{label1}</QuoteLabel>
             <QuoteText>{quote1}</QuoteText>
           </QuoteWrapper>
-          <HorizontalLine inView={inView}/>
+          <HorizontalLine/>
           <QuoteWrapper>
             <QuoteLabel>{label2}</QuoteLabel>
             <QuoteText>{quote2}</QuoteText>
           </QuoteWrapper>
         </QuotesContainer>
       </QuoteSection>
-      <HorizontalLine inView={inView}/>
+      <HorizontalLine/>
     </QuoteSectionWrapper>
   );
 };

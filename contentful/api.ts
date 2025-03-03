@@ -18,12 +18,7 @@ export const getProjectList = async (): Promise<TypeProject[]> => {
   return client.getEntries<TypeProjectFields>({
     content_type: "project",
     include: 2,
-  }).then(projects => projects.items
-    .map((project) => ({
-      ...project,
-      order: project.fields.order ? project.fields.order : null,
-    }))
-    .sort((a, b) => (a.order <= b.order ? -1 : 1)));
+  }).then(projects => projects.items);
 };
 
 export type ProjectWithPointers = TypeProject & {next: string, previous: string};
