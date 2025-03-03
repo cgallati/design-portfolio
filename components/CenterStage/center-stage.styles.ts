@@ -14,8 +14,8 @@ export const Text = styled.p<{ inView: boolean }>`
     responsiveValues("font-size", {
       s: tokens.typography.size[2],
       m: tokens.typography.size[3],
-      l: tokens.typography.size[4],
-      xl: tokens.typography.size[5],
+      l: tokens.typography.size[3],
+      xl: tokens.typography.size[3],
     })
   }
   font-weight: ${({ theme }) => theme.typography.subheading.weight};
