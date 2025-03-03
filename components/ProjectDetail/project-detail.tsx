@@ -113,7 +113,7 @@ export const ProjectDetail: FC<{
         src={"https:" + file.url}
         alt={description}
         priority={true}
-        jkItsAVid={alternateCoverVideo?.fields?.file?.url}
+        jkItsAVid={!sections && alternateCoverVideo?.fields?.file?.url}
       />
       <ProjectIntroWrapper>
         <ProjectContext sections={contextSections || []} />
@@ -125,6 +125,12 @@ export const ProjectDetail: FC<{
           timeline={timeline}
         />
       </ProjectIntroWrapper>
+      {sections && <EmbeddedImage
+        src={"https:" + file.url}
+        alt={description}
+        priority={true}
+        jkItsAVid={alternateCoverVideo?.fields?.file?.url}
+      />}
       {assetGrid && !sections && <AssetGrid images={assetGrid.map((image) => ({
         file: { 
           url: image.fields.file.url,
