@@ -4,10 +4,15 @@ import { mq, responsiveValues, tokens } from "../../lib/theme";
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 0 2rem;
+  ${responsiveValues("padding", {
+    s: "0 2rem",
+    m: "0 3rem",
+    l: "0 4rem",
+    xl: "0 5rem",
+  })};
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{chunkierVarient?: boolean}>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,6 +22,12 @@ export const Container = styled.div`
     l: "6rem 0",
     xl: "7rem 0",
   })};
+  ${props => props.chunkierVarient && responsiveValues("margin", {
+    s: "3rem 0",
+    m: "10rem 0",
+    l: "15rem 0",
+    xl: "20rem 0",
+  })};
   ${mq[1]} {
     flex-direction: row;
   }
@@ -25,7 +36,7 @@ export const Container = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  flex: 1;
+  flex-basis: 50%;
   height: auto;
   ${responsiveValues("margin-right", {
     s: "1rem",
@@ -50,22 +61,32 @@ export const ImageWrapper = styled.div`
 
 
 export const ContentWrapper = styled.div`
-  flex: 1;
+  flex-basis: 50%;
   ${mq[1]} {
     width: 50%;
+    max-width: 500px;
   }
 `;
 
 export const Heading = styled.h3`
   ${({ theme }) => responsiveValues("font-size", {
-    s: tokens.typography.size[2],
-    m: tokens.typography.size[3],
-    l: tokens.typography.size[3],
-    xl: tokens.typography.size[4]
+    s: '20px',
+    m: '24px',
+    l: '26px',
+    xl: '28px'
   })}
   font-weight: 400;
   ${({ theme }) => responsiveValues("margin-bottom", theme.spacing.breathing)}
   color: ${({ theme }) => theme.color.primary};
+`;
+
+export const BiggerHeading = styled(Heading)`
+  ${({ theme }) => responsiveValues("font-size", {
+    s: '32px',
+    m: '36px',
+    l: '40px',
+    xl: '40px'
+  })}
 `;
 
 export const TextContent = styled.p`

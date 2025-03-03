@@ -3,7 +3,12 @@ import { responsiveValues, mq } from "../../lib/theme";
 
 export const BannerWrapper = styled.div`
   width: 100%; /* Full width of the screen */
-  padding: 0 2rem;
+  ${responsiveValues("padding", {
+    s: "0 2rem",
+    m: "0 3rem",
+    l: "0 4rem",
+    xl: "0 5rem",
+  })};
 `;
 
 export const BannerContainer = styled.div`

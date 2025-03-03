@@ -6,19 +6,19 @@ import {
   ContentWrapper,
   Heading,
   TextContent,
-  Wrapper
+  Wrapper,
+  BiggerHeading
 } from "./img-heading-text.styles";
-import { SlideFrame } from "../Layout";
 import { HorizontalLine } from "../styles";
 import Image from "next/image";
 
 export const ImgHeadingText: FC<TypeImgHeadingAndText> = ({ fields }) => {
-  const { image, heading, text } = fields;
+  const { image, heading, text, chunkierVariant } = fields;
 
   return (
     <Wrapper>
       <HorizontalLine/>
-      <Container>
+      <Container chunkierVarient={chunkierVariant}>
         <ImageWrapper>
           <Image
             src={"https:" + image.fields.file.url}
@@ -29,10 +29,10 @@ export const ImgHeadingText: FC<TypeImgHeadingAndText> = ({ fields }) => {
           />
         </ImageWrapper>
         <ContentWrapper>
-          <Heading>{heading}</Heading>
+          {chunkierVariant ? <BiggerHeading>{heading}</BiggerHeading> : <Heading>{heading}</Heading>}
           <TextContent>{text}</TextContent>
         </ContentWrapper>
-      </Container>
+      </Container >
       <HorizontalLine/>
     </Wrapper>
   );

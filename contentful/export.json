@@ -1718,7 +1718,7 @@
         "id": "imgHeadingAndText",
         "type": "ContentType",
         "createdAt": "2025-03-03T01:20:50.190Z",
-        "updatedAt": "2025-03-03T01:20:50.632Z",
+        "updatedAt": "2025-03-03T16:10:22.327Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1726,8 +1726,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2025-03-03T01:20:50.632Z",
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T16:10:22.327Z",
         "firstPublishedAt": "2025-03-03T01:20:50.632Z",
         "createdBy": {
           "sys": {
@@ -1743,8 +1743,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1800,6 +1800,20 @@
           "required": true,
           "validations": [
           ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "chunkierVariant",
+          "name": "chunkier variant",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
           "disabled": false,
           "omitted": false
         }
@@ -3614,7 +3628,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2025-03-03T01:20:50.815Z",
         "createdBy": {
           "sys": {
@@ -3623,7 +3637,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T01:20:51.134Z",
+        "updatedAt": "2025-03-03T16:10:22.861Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -3665,6 +3679,16 @@
         {
           "fieldId": "text",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chunkierVariant",
+          "settings": {
+            "helpText": "If enabled, wider vertical margins and a larger heading.",
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
           "widgetNamespace": "builtin"
         }
       ]
@@ -9811,7 +9835,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T05:49:50.585Z",
+        "updatedAt": "2025-03-03T16:13:47.063Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9819,8 +9843,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 44,
-        "publishedAt": "2025-03-03T05:49:50.585Z",
+        "publishedVersion": 48,
+        "publishedAt": "2025-03-03T16:13:47.063Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -9836,8 +9860,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 19,
-        "version": 45,
+        "publishedCounter": 20,
+        "version": 49,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9928,6 +9952,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "3PlwZoqjeQBl0L7X1INV5c"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "9YyertZ2B7HdPUdHGwtOz"
               }
             },
             {
@@ -10242,7 +10273,7 @@
         "id": "RtZdZ7JPuOj66aAWiJynT",
         "type": "Entry",
         "createdAt": "2025-03-03T01:21:12.407Z",
-        "updatedAt": "2025-03-03T01:23:03.895Z",
+        "updatedAt": "2025-03-03T16:10:38.578Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10250,8 +10281,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2025-03-03T01:23:03.895Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-03-03T16:10:38.578Z",
         "firstPublishedAt": "2025-03-03T01:23:03.895Z",
         "createdBy": {
           "sys": {
@@ -10267,8 +10298,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10310,6 +10341,9 @@
         },
         "text": {
           "en-US": "AI-powered detection of writing irregularities and difficulties—integrated into a smart writing device—has the potential to transform how we approach writing development."
+        },
+        "chunkierVariant": {
+          "en-US": false
         }
       }
     },
@@ -11321,6 +11355,98 @@
         },
         "caption": {
           "en-US": "By transforming handwriting assessment from a subjective challenge into a data-driven process, Rune enables educators to monitor and address writing difficulties more effectively."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "9YyertZ2B7HdPUdHGwtOz",
+        "type": "Entry",
+        "createdAt": "2025-03-03T16:10:53.878Z",
+        "updatedAt": "2025-03-03T16:13:28.493Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-03-03T16:13:28.493Z",
+        "firstPublishedAt": "2025-03-03T16:13:28.493Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imgHeadingAndText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/9YyertZ2B7HdPUdHGwtOz"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Prototyping Lifecycle"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5D2elKrbYK65ejMpZXySVm"
+            }
+          }
+        },
+        "heading": {
+          "en-US": "Prototyping"
+        },
+        "text": {
+          "en-US": "Developing a tool that could integrate seamlessly into classrooms required multiple designs, iterations, testing, and refinement. Here’s how we approached the design process, taking feedback and usability to heart."
+        },
+        "chunkierVariant": {
+          "en-US": true
         }
       }
     }
@@ -15865,6 +15991,88 @@
               }
             },
             "fileName": "Component 93.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5D2elKrbYK65ejMpZXySVm",
+        "type": "Asset",
+        "createdAt": "2025-03-03T16:12:48.315Z",
+        "updatedAt": "2025-03-03T16:13:01.481Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T16:13:01.481Z",
+        "firstPublishedAt": "2025-03-03T16:13:01.481Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/5D2elKrbYK65ejMpZXySVm"
+      },
+      "fields": {
+        "title": {
+          "en-US": "prototyping flow"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/5D2elKrbYK65ejMpZXySVm/b7c83a1da2ac7b6b5f43f053264f1324/prototyping_flow.png",
+            "details": {
+              "size": 82766,
+              "image": {
+                "width": 3037,
+                "height": 1242
+              }
+            },
+            "fileName": "prototyping flow.png",
             "contentType": "image/png"
           }
         }

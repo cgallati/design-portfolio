@@ -5,7 +5,12 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+  ${responsiveValues("padding", {
+    s: "0 2rem",
+    m: "0 3rem",
+    l: "0 4rem",
+    xl: "0 5rem",
+  })};
   align-items: center;
   ${responsiveValues("margin-bottom", {
     s: "4rem",
