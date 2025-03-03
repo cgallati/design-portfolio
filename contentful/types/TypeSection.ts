@@ -2,6 +2,7 @@ import * as Contentful from "contentful";
 import { TypeBannerFields } from "./TypeBanner";
 import { TypeBrandElementsDisplayFields } from "./TypeBrandElementsDisplay";
 import { TypeCenteredImageSectionFields } from "./TypeCenteredImageSection";
+import { TypeImageAndParagraphsFields } from "./TypeImageAndParagraphs";
 import { TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
 import { TypeLeftHeaderRightTextFields } from "./TypeLeftHeaderRightText";
 import { TypePercentageSectionFields } from "./TypePercentageSection";
@@ -12,10 +13,11 @@ import { TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
 import { TypeSectionDoubleQuoteFields } from "./TypeSectionDoubleQuote";
 import { TypeSideBySideFields } from "./TypeSideBySide";
 import { TypeTextOverImageFields } from "./TypeTextOverImage";
+import { TypeTitleAndTextFields } from "./TypeTitleAndText";
 
 export interface TypeSectionFields {
     title: Contentful.EntryFields.Symbol;
-    content?: Contentful.Entry<TypeBannerFields | TypeBrandElementsDisplayFields | TypeCenteredImageSectionFields | TypeImgHeadingAndTextFields | TypeLeftHeaderRightTextFields | TypePercentageSectionFields | TypeProjectContextSectionFields | TypePrototypeSlidesFields | TypeScreenshotAndCaptionFields | TypeSectionCenteredTextFields | TypeSectionDoubleQuoteFields | TypeSideBySideFields | TypeTextOverImageFields>[];
+    content?: Contentful.Entry<TypeBannerFields | TypeBrandElementsDisplayFields | TypeCenteredImageSectionFields | TypeImageAndParagraphsFields | TypeImgHeadingAndTextFields | TypeLeftHeaderRightTextFields | TypePercentageSectionFields | TypeProjectContextSectionFields | TypePrototypeSlidesFields | TypeScreenshotAndCaptionFields | TypeSectionCenteredTextFields | TypeSectionDoubleQuoteFields | TypeSideBySideFields | TypeTextOverImageFields | TypeTitleAndTextFields>[];
 }
 
 export type TypeSection = Contentful.Entry<TypeSectionFields>;

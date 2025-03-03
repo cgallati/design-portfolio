@@ -4,6 +4,7 @@ export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from ".
 export type { TypeCardSlide, TypeCardSlideFields } from "./TypeCardSlide";
 export type { TypeCenteredImageSection, TypeCenteredImageSectionFields } from "./TypeCenteredImageSection";
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
+export type { TypeImageAndParagraphs, TypeImageAndParagraphsFields } from "./TypeImageAndParagraphs";
 export type { TypeImgHeadingAndText, TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
 export type { TypeLeftHeaderRightText, TypeLeftHeaderRightTextFields } from "./TypeLeftHeaderRightText";
 export type { TypePercentageSection, TypePercentageSectionFields } from "./TypePercentageSection";
@@ -18,3 +19,4 @@ export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./T
 export type { TypeSectionDoubleQuote, TypeSectionDoubleQuoteFields } from "./TypeSectionDoubleQuote";
 export type { TypeSideBySide, TypeSideBySideFields } from "./TypeSideBySide";
 export type { TypeTextOverImage, TypeTextOverImageFields } from "./TypeTextOverImage";
+export type { TypeTitleAndText, TypeTitleAndTextFields } from "./TypeTitleAndText";

@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T04:31:14.507Z",
+        "updatedAt": "2025-03-03T05:33:01.745Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 25,
-        "publishedAt": "2025-03-03T04:31:14.507Z",
+        "publishedVersion": 29,
+        "publishedAt": "2025-03-03T05:33:01.745Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 13,
-        "version": 26,
+        "publishedCounter": 15,
+        "version": 30,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -886,7 +886,9 @@
                   "leftHeaderRightText",
                   "screenshotAndCaption",
                   "textOverImage",
-                  "prototypeSlides"
+                  "prototypeSlides",
+                  "imageAndParagraphs",
+                  "titleAndText"
                 ]
               }
             ],
@@ -2305,6 +2307,181 @@
           "linkType": "Asset"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "imageAndParagraphs",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T04:59:43.678Z",
+        "updatedAt": "2025-03-03T05:00:20.379Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T05:00:20.379Z",
+        "firstPublishedAt": "2025-03-03T04:59:44.175Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/imageAndParagraphs"
+      },
+      "displayField": "hiddenTitle",
+      "name": "Image and Paragraphs",
+      "description": "",
+      "fields": [
+        {
+          "id": "hiddenTitle",
+          "name": "Hidden Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "paragraph1",
+          "name": "Paragraph 1",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "paragraph2",
+          "name": "Paragraph 2",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "titleAndText",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T05:32:45.794Z",
+        "updatedAt": "2025-03-03T05:32:46.569Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-03-03T05:32:46.569Z",
+        "firstPublishedAt": "2025-03-03T05:32:46.569Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/titleAndText"
+      },
+      "displayField": "title",
+      "name": "Title and Text",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "text",
+          "name": "text",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -2769,7 +2946,7 @@
             "linkType": "Space"
           }
         },
-        "version": 26,
+        "version": 30,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -2778,7 +2955,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T04:31:14.989Z",
+        "updatedAt": "2025-03-03T05:33:02.272Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -3750,6 +3927,128 @@
         {
           "fieldId": "image",
           "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2025-03-03T04:59:44.327Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T05:00:21.037Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "imageAndParagraphs",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "paragraph1",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "paragraph2",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-03-03T05:32:46.720Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T05:32:47.051Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "titleAndText",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "text",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -9362,7 +9661,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T04:33:52.027Z",
+        "updatedAt": "2025-03-03T05:33:54.240Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9370,8 +9669,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 34,
-        "publishedAt": "2025-03-03T04:33:52.027Z",
+        "publishedVersion": 41,
+        "publishedAt": "2025-03-03T05:33:54.240Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -9387,8 +9686,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 15,
-        "version": 35,
+        "publishedCounter": 18,
+        "version": 42,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9478,7 +9777,21 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
+                "id": "3PlwZoqjeQBl0L7X1INV5c"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
                 "id": "7CSsEHUtt8VBtXBuj0gBNj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3T8tJAIkFUrX1BC4fQrBg6"
               }
             },
             {
@@ -10599,6 +10912,172 @@
               "id": "3ZvGFgeqm3e1KzpmKY90BJ"
             }
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3PlwZoqjeQBl0L7X1INV5c",
+        "type": "Entry",
+        "createdAt": "2025-03-03T05:00:51.417Z",
+        "updatedAt": "2025-03-03T05:01:54.504Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-03-03T05:01:54.504Z",
+        "firstPublishedAt": "2025-03-03T05:01:54.504Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageAndParagraphs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3PlwZoqjeQBl0L7X1INV5c"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Rune Image and Paragraphs"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5Ev9akik5wfK2zsF7bcjbR"
+            }
+          }
+        },
+        "paragraph1": {
+          "en-US": "Equipped with multiple sensors, the pen tracks key handwriting metrics such as letter formation, angle, grip, pressure, and speed. This data helps identify students who may be struggling with writing mechanics, offering a more objective and actionable way to assess and support student development."
+        },
+        "paragraph2": {
+          "en-US": "By transforming handwriting assessment from a subjective challenge into a data-driven process, Rune enables educators to monitor and address writing difficulties more effectively."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3T8tJAIkFUrX1BC4fQrBg6",
+        "type": "Entry",
+        "createdAt": "2025-03-03T05:33:21.152Z",
+        "updatedAt": "2025-03-03T05:33:38.426Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T05:33:38.426Z",
+        "firstPublishedAt": "2025-03-03T05:33:38.426Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "titleAndText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3T8tJAIkFUrX1BC4fQrBg6"
+      },
+      "fields": {
+        "title": {
+          "en-US": "How do we integrate this into classrooms?"
+        },
+        "text": {
+          "en-US": "Inspired by game-based learning platforms, Rune replaces digital input with a smart pen, allowing students to participate in activities and quizzes by writing on physical paper."
         }
       }
     }
@@ -14979,6 +15458,88 @@
               }
             },
             "fileName": "pen1tester.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5Ev9akik5wfK2zsF7bcjbR",
+        "type": "Asset",
+        "createdAt": "2025-03-03T05:01:34.741Z",
+        "updatedAt": "2025-03-03T05:01:49.498Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T05:01:49.498Z",
+        "firstPublishedAt": "2025-03-03T05:01:49.498Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/5Ev9akik5wfK2zsF7bcjbR"
+      },
+      "fields": {
+        "title": {
+          "en-US": "rune close up"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/5Ev9akik5wfK2zsF7bcjbR/a95e015acc3bf1431aa326b2d2b542a8/rune_close_up.png",
+            "details": {
+              "size": 2304929,
+              "image": {
+                "width": 2533,
+                "height": 2984
+              }
+            },
+            "fileName": "rune close up.png",
             "contentType": "image/png"
           }
         }
