@@ -3,7 +3,7 @@ import { SlideFrame, Text } from "./center-stage.styles";
 import { useInView } from "react-intersection-observer";
 
 export const CenterStage: FC<{ text: string, fields?: any  }> = ({ text, fields }) => {
-  const { ref, inView, entry } = useInView();
+  const { ref, inView, entry } = useInView({ triggerOnce: true });
 
   const eitherText = text || fields.text;
 
