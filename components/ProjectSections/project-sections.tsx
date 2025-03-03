@@ -13,6 +13,7 @@ import { ImgHeadingText } from "../ImgHeadingText";
 import { CenteredImage } from "../CenteredImage";
 import { LeftHeaderRightText } from "../LeftHeaderRightText";
 import { ScreenshotAndCaption } from "../ScreenshotAndCaption";
+import { TextOverImage } from "../TextOverImage";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -66,6 +67,7 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   centeredImageSection: CenteredImage,
   leftHeaderRightText: LeftHeaderRightText,
   screenshotAndCaption: ScreenshotAndCaption,
+  textOverImage: TextOverImage,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,

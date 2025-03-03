@@ -10,10 +10,11 @@ import { TypeScreenshotAndCaptionFields } from "./TypeScreenshotAndCaption";
 import { TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
 import { TypeSectionDoubleQuoteFields } from "./TypeSectionDoubleQuote";
 import { TypeSideBySideFields } from "./TypeSideBySide";
+import { TypeTextOverImageFields } from "./TypeTextOverImage";
 
 export interface TypeSectionFields {
     title: Contentful.EntryFields.Symbol;
-    content?: Contentful.Entry<TypeBannerFields | TypeBrandElementsDisplayFields | TypeCenteredImageSectionFields | TypeImgHeadingAndTextFields | TypeLeftHeaderRightTextFields | TypePercentageSectionFields | TypeProjectContextSectionFields | TypeScreenshotAndCaptionFields | TypeSectionCenteredTextFields | TypeSectionDoubleQuoteFields | TypeSideBySideFields>[];
+    content?: Contentful.Entry<TypeBannerFields | TypeBrandElementsDisplayFields | TypeCenteredImageSectionFields | TypeImgHeadingAndTextFields | TypeLeftHeaderRightTextFields | TypePercentageSectionFields | TypeProjectContextSectionFields | TypeScreenshotAndCaptionFields | TypeSectionCenteredTextFields | TypeSectionDoubleQuoteFields | TypeSideBySideFields | TypeTextOverImageFields>[];
 }
 
 export type TypeSection = Contentful.Entry<TypeSectionFields>;

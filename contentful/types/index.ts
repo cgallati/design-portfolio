@@ -15,3 +15,4 @@ export type { TypeSection, TypeSectionFields } from "./TypeSection";
 export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
 export type { TypeSectionDoubleQuote, TypeSectionDoubleQuoteFields } from "./TypeSectionDoubleQuote";
 export type { TypeSideBySide, TypeSideBySideFields } from "./TypeSideBySide";
+export type { TypeTextOverImage, TypeTextOverImageFields } from "./TypeTextOverImage";
