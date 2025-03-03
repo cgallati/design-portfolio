@@ -26,7 +26,7 @@ export const BannerContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 46px; /* Large font size for the title */
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   flex: 1;
 `;
@@ -37,7 +37,7 @@ export const TextWrapper = styled.div`
 
 export const Text = styled.p`
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   line-height: 1.6;
     ${responsiveValues("max-width", {

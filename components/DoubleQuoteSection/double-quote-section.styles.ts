@@ -70,7 +70,7 @@ export const QuoteLabel = styled.h3`
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 150%;
 `;
 
@@ -79,6 +79,6 @@ export const QuoteText = styled.p`
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 155%;
 `;

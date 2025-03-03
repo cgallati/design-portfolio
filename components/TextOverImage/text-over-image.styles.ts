@@ -45,7 +45,7 @@ export const Text = styled.p`
   ${({ theme }) => responsiveValues("font-size", theme.typography.body.size)}
   line-height: 1.6;
   color: #636363;
-  font-weight: 400;
+  font-weight: 300;
 `;
 
 export const ImageWrapper = styled.div`

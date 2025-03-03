@@ -75,7 +75,7 @@ export const Heading = styled.h3`
     l: '26px',
     xl: '28px'
   })}
-  font-weight: 400;
+  font-weight: 300;
   ${({ theme }) => responsiveValues("margin-bottom", theme.spacing.breathing)}
   color: ${({ theme }) => theme.color.primary};
 `;
@@ -93,5 +93,5 @@ export const TextContent = styled.p`
   ${({ theme }) => responsiveValues("font-size", theme.typography.body.size)}
   color: #636363;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 300;
 `;
