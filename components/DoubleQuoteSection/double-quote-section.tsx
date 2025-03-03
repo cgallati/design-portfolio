@@ -8,8 +8,8 @@ import {
   QuoteLabel,
   QuoteSectionWrapper,
 } from "./double-quote-section.styles";
-import { useInView } from "react-intersection-observer";
 import { HorizontalLine } from "../styles";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 type DoubleQuoteSectionProps = {
   fields: {
@@ -22,16 +22,14 @@ type DoubleQuoteSectionProps = {
 };
 
 export const DoubleQuoteSection: React.FC<DoubleQuoteSectionProps> = ({ fields }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  }); 
+  const { ref: animationRef } = useScrollAnimation();
   const { blurb, label1, label2, quote1, quote2 } = fields;
 
   return (
-    <QuoteSectionWrapper>
-    <HorizontalLine ref={ref}/>
-      <QuoteSection>
+    <div ref={animationRef}>
+    <QuoteSectionWrapper >
+      <HorizontalLine />
+      <QuoteSection >
         <QuoteBlurb>{blurb}</QuoteBlurb>
         <QuotesContainer>
           <QuoteWrapper>
@@ -47,5 +45,6 @@ export const DoubleQuoteSection: React.FC<DoubleQuoteSectionProps> = ({ fields }
       </QuoteSection>
       <HorizontalLine/>
     </QuoteSectionWrapper>
+    </div>
   );
 };

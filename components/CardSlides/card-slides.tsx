@@ -88,7 +88,6 @@ export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
     <CarouselContainer>
       <SlidesTrack ref={trackRef} transform={transform}>
         {slides.map((slide, index) => {
-          console.log({slide});
           if (!slide || !slide.fields) {
             return <SlideWrapper key={`empty-${index}`}><Slide></Slide></SlideWrapper>;
           }
