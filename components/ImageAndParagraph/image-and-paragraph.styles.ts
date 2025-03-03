@@ -9,8 +9,8 @@ export const Container = styled.div`
   ${responsiveValues("padding", {
     s: "0 2rem",
     m: "0 3rem",
-    l: "0 3rem",
-    xl: "0 8rem",
+    l: "0 4rem",
+    xl: "0 5rem",
   })};
   
   ${mq[1]} {

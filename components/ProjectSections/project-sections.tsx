@@ -18,6 +18,7 @@ import { CardSlides } from "../CardSlides";
 import { ImageAndParagraph } from "../ImageAndParagraph";
 import { TitleAndText } from "../TitleAndText";
 import { ImageAndCaption } from "../ImageAndCaption";
+import { ImageRightTextLeft } from "../ImageRightTextLeft";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -76,6 +77,7 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   imageAndParagraphs: ImageAndParagraph,
   titleAndText: TitleAndText,
   imageAndCaption: ImageAndCaption,
+  imageRightTextLeft: ImageRightTextLeft,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,

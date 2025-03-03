@@ -6,6 +6,7 @@ export type { TypeCenteredImageSection, TypeCenteredImageSectionFields } from ".
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypeImageAndCaption, TypeImageAndCaptionFields } from "./TypeImageAndCaption";
 export type { TypeImageAndParagraphs, TypeImageAndParagraphsFields } from "./TypeImageAndParagraphs";
+export type { TypeImageRightTextLeft, TypeImageRightTextLeftFields } from "./TypeImageRightTextLeft";
 export type { TypeImgHeadingAndText, TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
 export type { TypeLeftHeaderRightText, TypeLeftHeaderRightTextFields } from "./TypeLeftHeaderRightText";
 export type { TypePercentageSection, TypePercentageSectionFields } from "./TypePercentageSection";

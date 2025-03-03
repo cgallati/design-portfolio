@@ -15,13 +15,29 @@ import {
   Dot,
 } from "./card-slides.styles";
 import { ChevronLeft, ChevronRight } from "./icons";
+import { getMediaQueryIndex } from "../../lib/theme";
 
 export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
   const { slides = [] } = fields || {};
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [transform, setTransform] = useState("translateX(0%)");
+  const [isMediumUp, setIsMediumUp] = useState(false);
   const slideCount = slides?.length || 0;
   const trackRef = useRef<HTMLDivElement>(null);
+
+  // Initialize and track the medium breakpoint
+  useEffect(() => {
+    const updateBreakpoint = () => {
+      setIsMediumUp(getMediaQueryIndex(1));
+    };
+    
+    // Set initial value
+    updateBreakpoint();
+    
+    // Update on resize
+    window.addEventListener('resize', updateBreakpoint);
+    return () => window.removeEventListener('resize', updateBreakpoint);
+  }, []);
 
   const goToSlide = useCallback(
     (index: number) => {
@@ -97,7 +113,7 @@ export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
                       alt={image.fields.description || title || ""}
                       fill
                       objectFit="contain"
-                      objectPosition="left"
+                      objectPosition={isMediumUp ? "right" : "center"}
                     />
                   )}
                 </ImageContainer>

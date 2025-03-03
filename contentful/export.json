@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T05:48:15.884Z",
+        "updatedAt": "2025-03-03T17:20:08.802Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 31,
-        "publishedAt": "2025-03-03T05:48:15.884Z",
+        "publishedVersion": 33,
+        "publishedAt": "2025-03-03T17:20:08.802Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 16,
-        "version": 32,
+        "publishedCounter": 17,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -889,7 +889,8 @@
                   "prototypeSlides",
                   "imageAndParagraphs",
                   "titleAndText",
-                  "imageAndCaption"
+                  "imageAndCaption",
+                  "imageRightTextLeft"
                 ]
               }
             ],
@@ -2585,6 +2586,105 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "imageRightTextLeft",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T17:18:41.690Z",
+        "updatedAt": "2025-03-03T17:19:24.796Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-03-03T17:19:24.796Z",
+        "firstPublishedAt": "2025-03-03T17:18:42.462Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/imageRightTextLeft"
+      },
+      "displayField": "hiddenTitle",
+      "name": "Image Right Text Left",
+      "description": "Horizontal line over heading and text on the left and an image on the right. ",
+      "fields": [
+        {
+          "id": "hiddenTitle",
+          "name": "Hidden Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "text",
+          "name": "Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -3049,7 +3149,7 @@
             "linkType": "Space"
           }
         },
-        "version": 32,
+        "version": 34,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -3058,7 +3158,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T05:48:16.296Z",
+        "updatedAt": "2025-03-03T17:20:09.344Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -4222,6 +4322,72 @@
         },
         {
           "fieldId": "caption",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2025-03-03T17:18:42.626Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T17:19:25.407Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "imageRightTextLeft",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "text",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
@@ -9835,7 +10001,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T16:13:47.063Z",
+        "updatedAt": "2025-03-03T17:21:41.409Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9843,8 +10009,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 48,
-        "publishedAt": "2025-03-03T16:13:47.063Z",
+        "publishedVersion": 52,
+        "publishedAt": "2025-03-03T17:21:41.409Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -9860,8 +10026,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 20,
-        "version": 49,
+        "publishedCounter": 21,
+        "version": 53,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9959,6 +10125,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "9YyertZ2B7HdPUdHGwtOz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6mdBwHLf42uNHSpDdONSzJ"
               }
             },
             {
@@ -11447,6 +11620,95 @@
         },
         "chunkierVariant": {
           "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6mdBwHLf42uNHSpDdONSzJ",
+        "type": "Entry",
+        "createdAt": "2025-03-03T17:20:19.482Z",
+        "updatedAt": "2025-03-03T17:21:01.915Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T17:21:01.915Z",
+        "firstPublishedAt": "2025-03-03T17:21:01.915Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageRightTextLeft"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6mdBwHLf42uNHSpDdONSzJ"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Form Exploration Component"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "339uhklWNox1X8i7Ug3uEC"
+            }
+          }
+        },
+        "heading": {
+          "en-US": "Form Exploration"
+        },
+        "text": {
+          "en-US": "We started by exploring different form factors to test, with human factors taken into consideration."
         }
       }
     }
@@ -16073,6 +16335,88 @@
               }
             },
             "fileName": "prototyping flow.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "339uhklWNox1X8i7Ug3uEC",
+        "type": "Asset",
+        "createdAt": "2025-03-03T17:20:24.413Z",
+        "updatedAt": "2025-03-03T17:20:47.569Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T17:20:47.569Z",
+        "firstPublishedAt": "2025-03-03T17:20:47.569Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/339uhklWNox1X8i7Ug3uEC"
+      },
+      "fields": {
+        "title": {
+          "en-US": "form exploration"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/339uhklWNox1X8i7Ug3uEC/36fb553fce7040275f948ee7902863f0/form_exploration.png",
+            "details": {
+              "size": 5904351,
+              "image": {
+                "width": 3008,
+                "height": 1952
+              }
+            },
+            "fileName": "form exploration.png",
             "contentType": "image/png"
           }
         }
