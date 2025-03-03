@@ -64,7 +64,7 @@ export const Paragraph = styled.div`
   color: #636363;
   line-height: 1.6;
   white-space: pre-wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
   
   &:last-child {
     margin-bottom: 0;
