@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { responsiveValues } from "../../lib/theme";
+import { responsiveValues, tokens } from "../../lib/theme";
 
 export const SlideFrame = styled.div`
   display: flex;
@@ -11,7 +11,12 @@ export const SlideFrame = styled.div`
 
 export const Text = styled.p<{ inView: boolean }>`
   ${({ theme }) =>
-    responsiveValues("font-size", theme.typography.subheading.size)
+    responsiveValues("font-size", {
+      s: tokens.typography.size[2],
+      m: tokens.typography.size[3],
+      l: tokens.typography.size[4],
+      xl: tokens.typography.size[5],
+    })
   }
   font-weight: ${({ theme }) => theme.typography.subheading.weight};
   ${({ theme }) => responsiveValues("max-width", theme.spacing.centerStage)}
