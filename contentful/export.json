@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T05:33:01.745Z",
+        "updatedAt": "2025-03-03T05:48:15.884Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 29,
-        "publishedAt": "2025-03-03T05:33:01.745Z",
+        "publishedVersion": 31,
+        "publishedAt": "2025-03-03T05:48:15.884Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 15,
-        "version": 30,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -888,7 +888,8 @@
                   "textOverImage",
                   "prototypeSlides",
                   "imageAndParagraphs",
-                  "titleAndText"
+                  "titleAndText",
+                  "imageAndCaption"
                 ]
               }
             ],
@@ -2482,6 +2483,94 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "imageAndCaption",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T05:47:46.225Z",
+        "updatedAt": "2025-03-03T05:48:00.662Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T05:48:00.662Z",
+        "firstPublishedAt": "2025-03-03T05:47:46.503Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/imageAndCaption"
+      },
+      "displayField": "hiddenTitle",
+      "name": "Image and caption",
+      "description": "Screenshot sized image on the left, caption on the right",
+      "fields": [
+        {
+          "id": "hiddenTitle",
+          "name": "Hidden title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "caption",
+          "name": "Caption",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -2946,7 +3035,7 @@
             "linkType": "Space"
           }
         },
-        "version": 30,
+        "version": 32,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -2955,7 +3044,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T05:33:02.272Z",
+        "updatedAt": "2025-03-03T05:48:16.296Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -4049,6 +4138,67 @@
         {
           "fieldId": "text",
           "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2025-03-03T05:47:46.656Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T05:48:01.120Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "imageAndCaption",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "caption",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -9661,7 +9811,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T05:33:54.240Z",
+        "updatedAt": "2025-03-03T05:49:50.585Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9669,8 +9819,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 41,
-        "publishedAt": "2025-03-03T05:33:54.240Z",
+        "publishedVersion": 44,
+        "publishedAt": "2025-03-03T05:49:50.585Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -9686,8 +9836,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 18,
-        "version": 42,
+        "publishedCounter": 19,
+        "version": 45,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9820,6 +9970,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "4DfBHknn5k91YpZJONpsTE"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6p9MXJ6endjNaFWwDwJPRK"
               }
             },
             {
@@ -11078,6 +11235,92 @@
         },
         "text": {
           "en-US": "Inspired by game-based learning platforms, Rune replaces digital input with a smart pen, allowing students to participate in activities and quizzes by writing on physical paper."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6p9MXJ6endjNaFWwDwJPRK",
+        "type": "Entry",
+        "createdAt": "2025-03-03T05:48:26.293Z",
+        "updatedAt": "2025-03-03T05:49:35.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T05:49:35.146Z",
+        "firstPublishedAt": "2025-03-03T05:49:35.146Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageAndCaption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6p9MXJ6endjNaFWwDwJPRK"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Handwriting assessment "
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "60JyffOZEb7HqPccijYZuo"
+            }
+          }
+        },
+        "caption": {
+          "en-US": "By transforming handwriting assessment from a subjective challenge into a data-driven process, Rune enables educators to monitor and address writing difficulties more effectively."
         }
       }
     }
@@ -15540,6 +15783,88 @@
               }
             },
             "fileName": "rune close up.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "60JyffOZEb7HqPccijYZuo",
+        "type": "Asset",
+        "createdAt": "2025-03-03T05:49:20.204Z",
+        "updatedAt": "2025-03-03T05:49:31.879Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T05:49:31.879Z",
+        "firstPublishedAt": "2025-03-03T05:49:31.879Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/60JyffOZEb7HqPccijYZuo"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Component 93 (update needed)"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/60JyffOZEb7HqPccijYZuo/acabe69332f5672fbe55b80cf2046c66/Component_93.png",
+            "details": {
+              "size": 73778,
+              "image": {
+                "width": 611,
+                "height": 482
+              }
+            },
+            "fileName": "Component 93.png",
             "contentType": "image/png"
           }
         }
