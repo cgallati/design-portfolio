@@ -90,7 +90,7 @@ export const BlurbContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 5rem 0;
-  
+  font-weight: 300;
   ${mq[1]} {
     margin: 0;
     text-align: left;
@@ -111,5 +111,10 @@ export const Blurb = styled.p`
   })};
   line-height: 1.6;
   margin: 0;
-  max-width: 380px;
+  ${responsiveValues("max-width", {
+    s: "380px",
+    m: "420px",
+    l: "460px",
+    xl: "550px"
+  })};
 `;
