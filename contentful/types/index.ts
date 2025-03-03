@@ -4,11 +4,13 @@ export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from ".
 export type { TypeCenteredImageSection, TypeCenteredImageSectionFields } from "./TypeCenteredImageSection";
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypeImgHeadingAndText, TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
+export type { TypeLeftHeaderRightText, TypeLeftHeaderRightTextFields } from "./TypeLeftHeaderRightText";
 export type { TypePercentageSection, TypePercentageSectionFields } from "./TypePercentageSection";
 export type { TypePost, TypePostFields } from "./TypePost";
 export type { TypeProject, TypeProjectFields } from "./TypeProject";
 export type { TypeProjectContextSection, TypeProjectContextSectionFields } from "./TypeProjectContextSection";
 export type { TypeProjectMetadata, TypeProjectMetadataFields } from "./TypeProjectMetadata";
+export type { TypeScreenshotAndCaption, TypeScreenshotAndCaptionFields } from "./TypeScreenshotAndCaption";
 export type { TypeSection, TypeSectionFields } from "./TypeSection";
 export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";
 export type { TypeSectionDoubleQuote, TypeSectionDoubleQuoteFields } from "./TypeSectionDoubleQuote";

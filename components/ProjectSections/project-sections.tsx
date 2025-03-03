@@ -6,11 +6,13 @@ import { BrandElementsDisplay } from "../BrandElementsDisplay";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { Banner } from "../Banner";
 import { CenterStage } from "../CenterStage";
-import { ProjectContext, SingleContextSection } from "../ProjectContext";
+import { SingleContextSection } from "../ProjectContext";
 import { DoubleQuoteSection } from "../DoubleQuoteSection";
 import { PercentageSection } from "../PercentageSection";
 import { ImgHeadingText } from "../ImgHeadingText";
 import { CenteredImage } from "../CenteredImage";
+import { LeftHeaderRightText } from "../LeftHeaderRightText";
+import { ScreenshotAndCaption } from "../ScreenshotAndCaption";
 
 type ProjectSectionsProps = {
   sections: Entry<TypeSectionFields>[];
@@ -62,6 +64,8 @@ const SLIDE_COMPONENT_MAP: Record<string, FC> = {
   percentageSection: PercentageSection,
   imgHeadingAndText: ImgHeadingText,
   centeredImageSection: CenteredImage,
+  leftHeaderRightText: LeftHeaderRightText,
+  screenshotAndCaption: ScreenshotAndCaption,
 };
 const SectionSlides: FC<ProjectSlidesProps> = ({
   slides,
@@ -86,7 +90,6 @@ const SectionSlides: FC<ProjectSlidesProps> = ({
     // <div ref={ref} id={"intersection-ref-" + index}>
     <div id={"intersection-ref-" + index}>
       {slides?.map((slide, index) => {
-        console.log(slide.sys.contentType.sys.id);
         const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
         if (!Component) return "FAILED TO MAP CONTENT TO BLOCK COMPONENT";
         return <Component key={index + "inner"} {...slide} />;

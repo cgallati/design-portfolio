@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T02:21:49.692Z",
+        "updatedAt": "2025-03-03T03:35:40.976Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-03-03T02:21:49.692Z",
+        "publishedVersion": 21,
+        "publishedAt": "2025-03-03T03:35:40.976Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 9,
-        "version": 18,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -882,7 +882,9 @@
                   "sectionDoubleQuote",
                   "percentageSection",
                   "imgHeadingAndText",
-                  "centeredImageSection"
+                  "centeredImageSection",
+                  "leftHeaderRightText",
+                  "screenshotAndCaption"
                 ]
               }
             ],
@@ -1874,6 +1876,170 @@
           "linkType": "Asset"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "leftHeaderRightText",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T03:23:10.762Z",
+        "updatedAt": "2025-03-03T03:23:11.073Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-03-03T03:23:11.073Z",
+        "firstPublishedAt": "2025-03-03T03:23:11.073Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/leftHeaderRightText"
+      },
+      "displayField": "header",
+      "name": "Left Header Right Text",
+      "description": "under a horizontal line",
+      "fields": [
+        {
+          "id": "header",
+          "name": "header",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "text",
+          "name": "text",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "screenshotAndCaption",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T03:35:17.033Z",
+        "updatedAt": "2025-03-03T03:35:17.292Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-03-03T03:35:17.292Z",
+        "firstPublishedAt": "2025-03-03T03:35:17.292Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/screenshotAndCaption"
+      },
+      "displayField": "hiddenTitle",
+      "name": "Screenshot and Caption",
+      "description": "Screenshot sized image on the left, caption on the right",
+      "fields": [
+        {
+          "id": "hiddenTitle",
+          "name": "Hidden title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "screenshot",
+          "name": "Screenshot",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "caption",
+          "name": "Caption",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -2338,7 +2504,7 @@
             "linkType": "Space"
           }
         },
-        "version": 18,
+        "version": 22,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -2347,7 +2513,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T02:21:50.095Z",
+        "updatedAt": "2025-03-03T03:35:41.437Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -3024,6 +3190,123 @@
         {
           "fieldId": "image",
           "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-03-03T03:23:11.221Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T03:23:11.963Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "leftHeaderRightText",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "header",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "text",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-03-03T03:35:17.394Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T03:35:17.763Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "screenshotAndCaption",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "screenshot",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "caption",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -8035,7 +8318,7 @@
         "id": "2MoEZvYZuezqovn09Ad6tq",
         "type": "Entry",
         "createdAt": "2025-03-02T18:20:11.783Z",
-        "updatedAt": "2025-03-03T02:43:13.535Z",
+        "updatedAt": "2025-03-03T03:09:33.481Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8043,8 +8326,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2025-03-03T02:43:13.535Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-03-03T03:09:33.481Z",
         "firstPublishedAt": "2025-03-02T18:20:22.004Z",
         "createdBy": {
           "sys": {
@@ -8060,8 +8343,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 7,
-        "version": 17,
+        "publishedCounter": 8,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8087,7 +8370,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Rune (new case study version)"
+          "en-US": "Rune (new case study version whipeeeeeee)"
         },
         "shortName": {
           "en-US": "Rune"
@@ -8636,7 +8919,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T02:23:09.664Z",
+        "updatedAt": "2025-03-03T03:38:36.473Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8644,8 +8927,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 18,
-        "publishedAt": "2025-03-03T02:23:09.664Z",
+        "publishedVersion": 24,
+        "publishedAt": "2025-03-03T03:38:36.473Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -8661,8 +8944,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 8,
-        "version": 19,
+        "publishedCounter": 10,
+        "version": 25,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8746,6 +9029,34 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "3SW2foSJhriuR5L36u78Pm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5SwoYlwC7f68HUfhSPz5XA"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3NS0oR1MOjGnoRudLoYe3X"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6YwLZaiFe6fwhF3g26Wml2"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4CMQwSayJMiIYkjxV5JoQ0"
               }
             }
           ]
@@ -9155,6 +9466,332 @@
               "id": "3v1a3BwlWXaywnqKX33xdd"
             }
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5SwoYlwC7f68HUfhSPz5XA",
+        "type": "Entry",
+        "createdAt": "2025-03-03T03:23:42.592Z",
+        "updatedAt": "2025-03-03T03:24:03.922Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T03:24:03.922Z",
+        "firstPublishedAt": "2025-03-03T03:24:03.922Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "leftHeaderRightText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5SwoYlwC7f68HUfhSPz5XA"
+      },
+      "fields": {
+        "header": {
+          "en-US": "Low-Mid Fi Designs"
+        },
+        "text": {
+          "en-US": "While testing different physical form factors, our team also dove into crafting the digital experience that would pair with our smart pen."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3NS0oR1MOjGnoRudLoYe3X",
+        "type": "Entry",
+        "createdAt": "2025-03-03T03:36:33.147Z",
+        "updatedAt": "2025-03-03T03:36:52.036Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T03:36:52.036Z",
+        "firstPublishedAt": "2025-03-03T03:36:52.036Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "leftHeaderRightText"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3NS0oR1MOjGnoRudLoYe3X"
+      },
+      "fields": {
+        "header": {
+          "en-US": "Low-Mid Fi Designs"
+        },
+        "text": {
+          "en-US": "While testing different physical form factors, our team also dove into crafting the digital experience that would pair with our smart pen."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "6YwLZaiFe6fwhF3g26Wml2",
+        "type": "Entry",
+        "createdAt": "2025-03-03T03:36:59.036Z",
+        "updatedAt": "2025-03-03T03:37:48.530Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T03:37:48.530Z",
+        "firstPublishedAt": "2025-03-03T03:37:48.530Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "screenshotAndCaption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/6YwLZaiFe6fwhF3g26Wml2"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Screenshot 1"
+        },
+        "screenshot": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4sNSABMmoZ5n9r3IBVEEml"
+            }
+          }
+        },
+        "caption": {
+          "en-US": "Traditional educational approaches rely heavily on teacher observation to identify issues. While dedicated, teachers face large class sizes and limited resources, making it difficult to catch nuanced writing issues."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4CMQwSayJMiIYkjxV5JoQ0",
+        "type": "Entry",
+        "createdAt": "2025-03-03T03:37:58.261Z",
+        "updatedAt": "2025-03-03T03:38:33.110Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T03:38:33.110Z",
+        "firstPublishedAt": "2025-03-03T03:38:33.110Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "screenshotAndCaption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4CMQwSayJMiIYkjxV5JoQ0"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Screenshot 2"
+        },
+        "screenshot": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4nLnj0lVdj814GLk2qNbNY"
+            }
+          }
+        },
+        "caption": {
+          "en-US": "Traditional educational approaches rely heavily on teacher observation to identify issues. While dedicated, teachers face large class sizes and limited resources, making it difficult to catch nuanced writing issues."
         }
       }
     }
@@ -13125,6 +13762,170 @@
               }
             },
             "fileName": "rune-features.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4sNSABMmoZ5n9r3IBVEEml",
+        "type": "Asset",
+        "createdAt": "2025-03-03T03:37:11.121Z",
+        "updatedAt": "2025-03-03T03:37:37.346Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T03:37:37.346Z",
+        "firstPublishedAt": "2025-03-03T03:37:37.346Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4sNSABMmoZ5n9r3IBVEEml"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Screenshot 1"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4sNSABMmoZ5n9r3IBVEEml/e6c8f27dd2d00155d8e39396f887fd1b/screenshot_1.png",
+            "details": {
+              "size": 291275,
+              "image": {
+                "width": 2752,
+                "height": 1776
+              }
+            },
+            "fileName": "screenshot 1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "4nLnj0lVdj814GLk2qNbNY",
+        "type": "Asset",
+        "createdAt": "2025-03-03T03:38:04.425Z",
+        "updatedAt": "2025-03-03T03:38:19.869Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-03-03T03:38:19.869Z",
+        "firstPublishedAt": "2025-03-03T03:38:19.869Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/4nLnj0lVdj814GLk2qNbNY"
+      },
+      "fields": {
+        "title": {
+          "en-US": "screenshot 2"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/4nLnj0lVdj814GLk2qNbNY/71e05fc36694f4f88838919c7e6924f2/screenshot_2.png",
+            "details": {
+              "size": 486785,
+              "image": {
+                "width": 2752,
+                "height": 1776
+              }
+            },
+            "fileName": "screenshot 2.png",
             "contentType": "image/png"
           }
         }
