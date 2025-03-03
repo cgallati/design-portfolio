@@ -42,10 +42,7 @@ export const QuoteBlurb = styled.p`
 
 export const QuotesContainer = styled.div`
   display: flex;
-  // flex-direction: row;
-  // ${mq[1]} {
-    flex-direction: column;
-  // }
+  flex-direction: column;
   flex: 1;
   gap: 2rem;
 `;

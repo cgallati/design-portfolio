@@ -21,6 +21,7 @@ export const Banner: FC<TypeBanner> = ({
           <Text>{text}</Text>
         </TextWrapper>
       </BannerContainer>
+      <HorizontalLine/>
     </BannerWrapper>
   );
 };
