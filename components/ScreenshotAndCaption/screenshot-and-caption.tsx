@@ -7,13 +7,18 @@ import {
   CaptionWrapper,
   Caption,
 } from "./screenshot-and-caption.styles";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ScreenshotAndCaption: FC<TypeScreenshotAndCaption> = ({ fields }) => {
   const { screenshot, caption } = fields;
+  
+  // Add scroll animations
+  const screenshotRef = useScrollAnimation();
+  const captionRef = useScrollAnimation({ delay: 200 });
 
   return (
     <Container>
-      <ScreenshotWrapper>
+      <ScreenshotWrapper ref={(el) => screenshotRef.ref(el)}>
         <Image
           src={"https:" + screenshot.fields.file.url}
           alt={screenshot.fields.description || ""}
@@ -22,7 +27,7 @@ export const ScreenshotAndCaption: FC<TypeScreenshotAndCaption> = ({ fields }) =
           objectPosition="left top"
         />
       </ScreenshotWrapper>
-      <CaptionWrapper>
+      <CaptionWrapper ref={(el) => captionRef.ref(el)}>
         <Caption>{caption}</Caption>
       </CaptionWrapper>
     </Container>

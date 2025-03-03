@@ -35,7 +35,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-weight: 500;
+  font-weight: 300;
   color: #232323;
   ${responsiveValues("font-size", {
     s: "20px",
@@ -53,11 +53,12 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   ${responsiveValues("font-size", {
-    s: "14px",
-    m: "16px",
-    l: "18px",
-    xl: "20px",
+    s: "20px",
+    m: "30px",
+    l: "36px",
+    xl: "40px",
   })};
+  font-weight: 300;
   color: #636363;
   line-height: 1.6;
   white-space: pre-wrap;

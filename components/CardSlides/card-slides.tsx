@@ -16,6 +16,7 @@ import {
 } from "./card-slides.styles";
 import { ChevronLeft, ChevronRight } from "./icons";
 import { getMediaQueryIndex } from "../../lib/theme";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
   const { slides = [] } = fields || {};
@@ -24,6 +25,9 @@ export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
   const [isMediumUp, setIsMediumUp] = useState(false);
   const slideCount = slides?.length || 0;
   const trackRef = useRef<HTMLDivElement>(null);
+  
+  // Add scroll animation for the entire carousel
+  const carouselRef = useScrollAnimation();
 
   // Initialize and track the medium breakpoint
   useEffect(() => {
@@ -85,7 +89,7 @@ export const CardSlides: FC<TypePrototypeSlides> = ({ fields }) => {
   }
 
   return (
-    <CarouselContainer>
+    <CarouselContainer ref={(el) => carouselRef.ref(el)}>
       <SlidesTrack ref={trackRef} transform={transform}>
         {slides.map((slide, index) => {
           if (!slide || !slide.fields) {

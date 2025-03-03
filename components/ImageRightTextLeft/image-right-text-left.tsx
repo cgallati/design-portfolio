@@ -11,10 +11,15 @@ import {
 import { HorizontalLine } from "../styles";
 import Image from "next/image";
 import { getMediaQueryIndex } from "../../lib/theme";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export const ImageRightTextLeft: FC<TypeImageRightTextLeft> = ({ fields }) => {
   const { image, heading, text } = fields;
   const [isMediumUp, setIsMediumUp] = useState(false);
+  
+  // Add scroll animations
+  const contentRef = useScrollAnimation();
+  const imageRef = useScrollAnimation({ delay: 200 });
   
   useEffect(() => {
     // Initialize on mount
@@ -33,11 +38,11 @@ export const ImageRightTextLeft: FC<TypeImageRightTextLeft> = ({ fields }) => {
     <Wrapper>
       <HorizontalLine/>
       <Container>
-        <ContentWrapper>
+        <ContentWrapper ref={(el) => contentRef.ref(el)}>
           <Heading>{heading}</Heading>
           <TextContent>{text}</TextContent>
         </ContentWrapper>
-        <ImageWrapper>
+        <ImageWrapper ref={(el) => imageRef.ref(el)}>
           <Image
             src={"https:" + image.fields.file.url}
             alt={image.fields.description || ""}
