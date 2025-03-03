@@ -2511,7 +2511,7 @@
         "id": "imageAndCaption",
         "type": "ContentType",
         "createdAt": "2025-03-03T05:47:46.225Z",
-        "updatedAt": "2025-03-03T05:48:00.662Z",
+        "updatedAt": "2025-03-03T17:49:47.147Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2519,8 +2519,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-03-03T05:48:00.662Z",
+        "publishedVersion": 11,
+        "publishedAt": "2025-03-03T17:49:47.147Z",
         "firstPublishedAt": "2025-03-03T05:47:46.503Z",
         "createdBy": {
           "sys": {
@@ -2536,8 +2536,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2575,9 +2575,23 @@
           "linkType": "Asset"
         },
         {
+          "id": "biggerImageAndGreyBg",
+          "name": "Bigger image and grey bg",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "caption",
-          "name": "Caption",
-          "type": "Symbol",
+          "name": "caption",
+          "type": "Text",
           "localized": false,
           "required": true,
           "validations": [
@@ -4277,7 +4291,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 12,
         "createdAt": "2025-03-03T05:47:46.656Z",
         "createdBy": {
           "sys": {
@@ -4286,7 +4300,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T05:48:01.120Z",
+        "updatedAt": "2025-03-03T17:49:47.688Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -4321,8 +4335,13 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "biggerImageAndGreyBg",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "caption",
-          "widgetId": "singleLine",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -10001,7 +10020,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T17:21:41.409Z",
+        "updatedAt": "2025-03-03T17:49:33.039Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10009,8 +10028,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 52,
-        "publishedAt": "2025-03-03T17:21:41.409Z",
+        "publishedVersion": 55,
+        "publishedAt": "2025-03-03T17:49:33.039Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -10026,8 +10045,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 21,
-        "version": 53,
+        "publishedCounter": 22,
+        "version": 56,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10174,6 +10193,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "4DfBHknn5k91YpZJONpsTE"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "HZZ9ADwlhALPHq4vASxWF"
               }
             },
             {
@@ -11463,7 +11489,7 @@
         "id": "6p9MXJ6endjNaFWwDwJPRK",
         "type": "Entry",
         "createdAt": "2025-03-03T05:48:26.293Z",
-        "updatedAt": "2025-03-03T05:49:35.146Z",
+        "updatedAt": "2025-03-03T17:49:25.468Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -11471,8 +11497,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2025-03-03T05:49:35.146Z",
+        "publishedVersion": 6,
+        "publishedAt": "2025-03-03T17:49:25.468Z",
         "firstPublishedAt": "2025-03-03T05:49:35.146Z",
         "createdBy": {
           "sys": {
@@ -11488,8 +11514,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -11525,6 +11551,9 @@
               "id": "60JyffOZEb7HqPccijYZuo"
             }
           }
+        },
+        "biggerImageAndGreyBg": {
+          "en-US": false
         },
         "caption": {
           "en-US": "By transforming handwriting assessment from a subjective challenge into a data-driven process, Rune enables educators to monitor and address writing difficulties more effectively."
@@ -11709,6 +11738,95 @@
         },
         "text": {
           "en-US": "We started by exploring different form factors to test, with human factors taken into consideration."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "HZZ9ADwlhALPHq4vASxWF",
+        "type": "Entry",
+        "createdAt": "2025-03-03T17:46:54.972Z",
+        "updatedAt": "2025-03-03T17:49:00.161Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2025-03-03T17:49:00.161Z",
+        "firstPublishedAt": "2025-03-03T17:47:58.214Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageAndCaption"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/HZZ9ADwlhALPHq4vASxWF"
+      },
+      "fields": {
+        "hiddenTitle": {
+          "en-US": "Big laptop image on grey background"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "51ufR0ztLFkohQLxuV2u8O"
+            }
+          }
+        },
+        "biggerImageAndGreyBg": {
+          "en-US": true
+        },
+        "caption": {
+          "en-US": "The dashboard offers real-time, AI-driven insights into individual writing habits, alerting teachers to early motor skill issues and suggesting interventions. By bridging physical handwriting with digital intelligence, Rune streamlines classroom management and enhances student outcomes."
         }
       }
     }
@@ -16417,6 +16535,88 @@
               }
             },
             "fileName": "form exploration.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "51ufR0ztLFkohQLxuV2u8O",
+        "type": "Asset",
+        "createdAt": "2025-03-03T17:47:38.163Z",
+        "updatedAt": "2025-03-03T17:47:50.699Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T17:47:50.699Z",
+        "firstPublishedAt": "2025-03-03T17:47:50.699Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/51ufR0ztLFkohQLxuV2u8O"
+      },
+      "fields": {
+        "title": {
+          "en-US": "MacBook Pro 16 - 5th Gen - Silver"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/51ufR0ztLFkohQLxuV2u8O/6098c1880272672f1a47a0b641dce932/MacBook_Pro_16__-_5th_Gen_-_Silver.png",
+            "details": {
+              "size": 1517546,
+              "image": {
+                "width": 3996,
+                "height": 2634
+              }
+            },
+            "fileName": "MacBook Pro 16_ - 5th Gen - Silver.png",
             "contentType": "image/png"
           }
         }
