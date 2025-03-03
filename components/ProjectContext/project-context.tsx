@@ -39,7 +39,7 @@ export const SingleContextSection: React.FC<{ title: string, paragraphs: string[
   return (
     <div ref={ref}>
       <div>
-        <HorizontalLine inView={true}/>
+        <HorizontalLine/>
       </div>
       <ContextSection>
       <ContextTitle>{title || fields.title}</ContextTitle>

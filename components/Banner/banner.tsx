@@ -14,7 +14,7 @@ export const Banner: FC<TypeBanner> = ({
 }) => {
   return (
     <BannerWrapper>
-      <HorizontalLine inView={true}/>
+      <HorizontalLine/>
       <BannerContainer>
         <Title>{title}</Title>
         <TextWrapper>

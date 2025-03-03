@@ -53,7 +53,7 @@ export const ProjectMetadata = ({
 
   return (
     <div ref={scrollRef}>
-      <HorizontalLine inView={true}/>
+      <HorizontalLine/>
       <MetadataWrapper>
         <MetadataDescriptionWrapper>
           <MetadataDescription>{introduction}</MetadataDescription>

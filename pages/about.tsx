@@ -18,7 +18,7 @@ export default function About() {
         complex problems with impact.
       </AboutParagraph>
       <div ref={aboutRef}>
-        <HorizontalLine inView={true} />
+        <HorizontalLine />
         <FlexRow>
           <ImageContainer>
             <ImageWrapper>
@@ -39,15 +39,15 @@ export default function About() {
               <PrimaryText>BFA in User Experience (UX) Design</PrimaryText>
               <SecondaryText>Savannah College of Art and Design</SecondaryText>
             </FlexItem>
-            <HorizontalLine inView={true} />
+            <HorizontalLine />
             <FlexItem>
               <PrimaryText>Associates in Graphic Design</PrimaryText>
               <SecondaryText>Trident Technical College</SecondaryText>
             </FlexItem>
           </FlexColumn>
-          <MobileOnlyHorizontalLine inView={true} />
+          <MobileOnlyHorizontalLine />
         </FlexRow>
-      <DesktopOnlyHorizontalLine inView={true} />
+      <DesktopOnlyHorizontalLine />
       </div>
       <VeepRow ref={vpRef}>
         <VeepText>
