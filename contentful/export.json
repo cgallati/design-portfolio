@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T01:21:02.851Z",
+        "updatedAt": "2025-03-03T02:21:49.692Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2025-03-03T01:21:02.851Z",
+        "publishedVersion": 17,
+        "publishedAt": "2025-03-03T02:21:49.692Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 8,
-        "version": 16,
+        "publishedCounter": 9,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -881,7 +881,8 @@
                   "projectContextSection",
                   "sectionDoubleQuote",
                   "percentageSection",
-                  "imgHeadingAndText"
+                  "imgHeadingAndText",
+                  "centeredImageSection"
                 ]
               }
             ],
@@ -1796,6 +1797,83 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "centeredImageSection",
+        "type": "ContentType",
+        "createdAt": "2025-03-03T02:21:10.710Z",
+        "updatedAt": "2025-03-03T02:21:11.131Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-03-03T02:21:11.131Z",
+        "firstPublishedAt": "2025-03-03T02:21:11.131Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/centeredImageSection"
+      },
+      "displayField": "hiddenName",
+      "name": "Centered Image Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "hiddenName",
+          "name": "Hidden name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
     }
   ],
   "tags": [
@@ -2260,7 +2338,7 @@
             "linkType": "Space"
           }
         },
-        "version": 16,
+        "version": 18,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -2269,7 +2347,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T01:21:03.425Z",
+        "updatedAt": "2025-03-03T02:21:50.095Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -2890,6 +2968,62 @@
         {
           "fieldId": "text",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-03-03T02:21:11.260Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-03T02:21:11.691Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "centeredImageSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hiddenName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -7901,7 +8035,7 @@
         "id": "2MoEZvYZuezqovn09Ad6tq",
         "type": "Entry",
         "createdAt": "2025-03-02T18:20:11.783Z",
-        "updatedAt": "2025-03-02T20:37:48.027Z",
+        "updatedAt": "2025-03-03T02:22:04.073Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7927,7 +8061,7 @@
           }
         },
         "publishedCounter": 5,
-        "version": 11,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7937,7 +8071,7 @@
         },
         "fieldStatus": {
           "*": {
-            "en-US": "published"
+            "en-US": "changed"
           }
         },
         "automationTags": [
@@ -8050,6 +8184,30 @@
         },
         "slug": {
           "en-US": "rune-1"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         },
         "sections": {
           "en-US": [
@@ -8502,7 +8660,7 @@
         "id": "53cJZcWL5ja3xfTDkrE42A",
         "type": "Entry",
         "createdAt": "2025-03-02T19:38:53.394Z",
-        "updatedAt": "2025-03-03T01:23:08.911Z",
+        "updatedAt": "2025-03-03T02:23:09.664Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8510,8 +8668,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2025-03-03T01:23:08.911Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-03-03T02:23:09.664Z",
         "firstPublishedAt": "2025-03-02T19:40:05.421Z",
         "createdBy": {
           "sys": {
@@ -8527,8 +8685,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 7,
-        "version": 15,
+        "publishedCounter": 8,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8605,6 +8763,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "RtZdZ7JPuOj66aAWiJynT"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3SW2foSJhriuR5L36u78Pm"
               }
             }
           ]
@@ -8931,6 +9096,89 @@
         },
         "text": {
           "en-US": "AI-powered detection of writing irregularities and difficulties—integrated into a smart writing device—has the potential to transform how we approach writing development."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3SW2foSJhriuR5L36u78Pm",
+        "type": "Entry",
+        "createdAt": "2025-03-03T02:22:02.765Z",
+        "updatedAt": "2025-03-03T02:22:57.199Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-03-03T02:22:57.199Z",
+        "firstPublishedAt": "2025-03-03T02:22:57.199Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "centeredImageSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3SW2foSJhriuR5L36u78Pm"
+      },
+      "fields": {
+        "hiddenName": {
+          "en-US": "Rune features"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3v1a3BwlWXaywnqKX33xdd"
+            }
+          }
         }
       }
     }
@@ -12819,6 +13067,88 @@
               }
             },
             "fileName": "rune-logo.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3v1a3BwlWXaywnqKX33xdd",
+        "type": "Asset",
+        "createdAt": "2025-03-03T02:22:25.925Z",
+        "updatedAt": "2025-03-03T02:22:48.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-03T02:22:48.607Z",
+        "firstPublishedAt": "2025-03-03T02:22:48.607Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/3v1a3BwlWXaywnqKX33xdd"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rune Features"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/32imgqslv3rc/3v1a3BwlWXaywnqKX33xdd/389988906b98ba501b204cedf2d6083a/rune-features.png",
+            "details": {
+              "size": 1192439,
+              "image": {
+                "width": 5544,
+                "height": 1881
+              }
+            },
+            "fileName": "rune-features.png",
             "contentType": "image/png"
           }
         }
