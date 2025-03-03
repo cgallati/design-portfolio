@@ -84,6 +84,7 @@ const SectionSlides: FC<ProjectSlidesProps> = ({
     // <div ref={ref} id={"intersection-ref-" + index}>
     <div id={"intersection-ref-" + index}>
       {slides?.map((slide, index) => {
+        console.log(slide.sys.contentType.sys.id);
         const Component = SLIDE_COMPONENT_MAP[slide.sys.contentType.sys.id];
         if (!Component) return "FAILED TO MAP CONTENT TO BLOCK COMPONENT";
         return <Component key={index + "inner"} {...slide} />;
