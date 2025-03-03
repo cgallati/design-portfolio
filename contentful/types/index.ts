@@ -1,6 +1,7 @@
 export type { TypeAuthor, TypeAuthorFields } from "./TypeAuthor";
 export type { TypeBanner, TypeBannerFields } from "./TypeBanner";
 export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from "./TypeBrandElementsDisplay";
+export type { TypeCardSlide, TypeCardSlideFields } from "./TypeCardSlide";
 export type { TypeCenteredImageSection, TypeCenteredImageSectionFields } from "./TypeCenteredImageSection";
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypeImgHeadingAndText, TypeImgHeadingAndTextFields } from "./TypeImgHeadingAndText";
@@ -10,6 +11,7 @@ export type { TypePost, TypePostFields } from "./TypePost";
 export type { TypeProject, TypeProjectFields } from "./TypeProject";
 export type { TypeProjectContextSection, TypeProjectContextSectionFields } from "./TypeProjectContextSection";
 export type { TypeProjectMetadata, TypeProjectMetadataFields } from "./TypeProjectMetadata";
+export type { TypePrototypeSlides, TypePrototypeSlidesFields } from "./TypePrototypeSlides";
 export type { TypeScreenshotAndCaption, TypeScreenshotAndCaptionFields } from "./TypeScreenshotAndCaption";
 export type { TypeSection, TypeSectionFields } from "./TypeSection";
 export type { TypeSectionCenteredText, TypeSectionCenteredTextFields } from "./TypeSectionCenteredText";

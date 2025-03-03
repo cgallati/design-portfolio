@@ -17,7 +17,7 @@ export const getHomePage = async (): Promise<TypeHomePage> => {
 export const getProjectList = async (): Promise<TypeProject[]> => {
   return client.getEntries<TypeProjectFields>({
     content_type: "project",
-    include: 2,
+    include: 3,
   }).then(projects => projects.items);
 };
 
