@@ -20,15 +20,30 @@ export const BannerContainer = styled.div`
   }
   justify-content: space-between;
   text-align: left;
-  margin: 0;
-  padding: 150px 20px;
+  ${responsiveValues("padding", {
+    s: "80px 0",
+    m: "80px 10px",
+    l: "60px 20px",
+    xl: "86px 20px",
+  })};
 `;
 
 export const Title = styled.h2`
-  font-size: 46px; /* Large font size for the title */
+  ${responsiveValues("font-size", {
+    s: "28px",
+    m: "32px",
+    l: "36px",
+    xl: "46px",
+  })}; 
   font-weight: 300;
   margin: 0;
   flex: 1;
+  ${responsiveValues("margin", {
+    s: "0 0 20px",
+    m: "0 0 20px",
+    l: "0",
+    xl: "0",
+  })}
 `;
 
 export const TextWrapper = styled.div`

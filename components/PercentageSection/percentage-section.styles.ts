@@ -6,9 +6,13 @@ export const PercentageSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: ${({ theme }) => responsiveValues("margin", theme.spacing.breathing)};
   align-items: center;
-  
+  ${({ theme }) => responsiveValues("margin", {
+    s: "6rem 0",
+    m: "64px 0",
+    l: " 0",
+    xl: "3rem 0"
+  })};
   ${mq[1]} {
     flex-direction: row;
     align-items: center;
