@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   })};
 `;
 
-export const Container = styled.div<{chunkierVarient?: boolean}>`
+export const Container = styled.div<{chunkierVariant?: boolean}>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ export const Container = styled.div<{chunkierVarient?: boolean}>`
     l: "6rem 0",
     xl: "7rem 0",
   })};
-  ${props => props.chunkierVarient && responsiveValues("margin", {
+  ${props => props.chunkierVariant && responsiveValues("margin", {
     s: "3rem 0",
     m: "10rem 0",
     l: "15rem 0",
@@ -53,7 +53,7 @@ export const ImageWrapper = styled.div`
   })};
   ${responsiveValues("min-height", {
     s: "200px",
-    m: "150px",
+    m: "250px",
     l: "250px",
     xl: "300px",
   })};
