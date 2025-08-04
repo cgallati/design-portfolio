@@ -808,7 +808,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-06-09T01:06:42.354Z",
-        "updatedAt": "2025-03-03T17:20:08.802Z",
+        "updatedAt": "2025-03-05T04:48:15.059Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -816,8 +816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 33,
-        "publishedAt": "2025-03-03T17:20:08.802Z",
+        "publishedVersion": 35,
+        "publishedAt": "2025-03-05T04:48:15.059Z",
         "firstPublishedAt": "2024-06-09T01:06:42.821Z",
         "createdBy": {
           "sys": {
@@ -833,8 +833,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 17,
-        "version": 34,
+        "publishedCounter": 18,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -890,7 +890,8 @@
                   "imageAndParagraphs",
                   "titleAndText",
                   "imageAndCaption",
-                  "imageRightTextLeft"
+                  "imageRightTextLeft",
+                  "contentWithImage"
                 ]
               }
             ],
@@ -2721,6 +2722,105 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "contentWithImage",
+        "type": "ContentType",
+        "createdAt": "2025-03-05T04:45:20.527Z",
+        "updatedAt": "2025-03-05T04:58:39.432Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-03-05T04:58:39.432Z",
+        "firstPublishedAt": "2025-03-05T04:45:20.989Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/content_types/contentWithImage"
+      },
+      "displayField": "heading",
+      "name": "Content With Asset",
+      "description": "Horizontal line over a heading, subheading, and text, followed by a full width image or video.",
+      "fields": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "text",
+          "name": "text",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "asset",
+          "name": "asset",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
     }
   ],
   "tags": [
@@ -3185,7 +3285,7 @@
             "linkType": "Space"
           }
         },
-        "version": 34,
+        "version": 36,
         "createdAt": "2024-06-09T01:06:42.934Z",
         "createdBy": {
           "sys": {
@@ -3194,7 +3294,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-03-03T17:20:09.344Z",
+        "updatedAt": "2025-03-05T04:48:15.515Z",
         "updatedBy": {
           "sys": {
             "id": "7wI7ZGqIeChakvUu2xxSuK",
@@ -4443,6 +4543,72 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "32imgqslv3rc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2025-03-05T04:45:21.186Z",
+        "createdBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-03-05T04:58:39.868Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7wI7ZGqIeChakvUu2xxSuK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "contentWithImage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "text",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "asset",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -4464,7 +4630,7 @@
         "id": "4uY7DHGLRydzzAyntibYo6",
         "type": "Entry",
         "createdAt": "2024-06-09T01:07:11.940Z",
-        "updatedAt": "2025-02-22T22:53:45.930Z",
+        "updatedAt": "2025-03-03T18:54:31.613Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4472,8 +4638,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 52,
-        "publishedAt": "2025-02-22T22:53:45.930Z",
+        "publishedVersion": 54,
+        "publishedAt": "2025-03-03T18:54:31.613Z",
         "firstPublishedAt": "2024-06-09T01:07:48.555Z",
         "createdBy": {
           "sys": {
@@ -4489,8 +4655,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 23,
-        "version": 53,
+        "publishedCounter": 24,
+        "version": 55,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4527,7 +4693,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "7wHX9qWgNf5zACwGpHtOns"
+                "id": "2MoEZvYZuezqovn09Ad6tq"
               }
             },
             {
@@ -6122,180 +6288,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "7wHX9qWgNf5zACwGpHtOns",
-        "type": "Entry",
-        "createdAt": "2024-12-16T01:41:44.511Z",
-        "updatedAt": "2025-02-22T22:37:09.171Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 44,
-        "publishedAt": "2025-02-22T22:37:09.171Z",
-        "firstPublishedAt": "2024-12-16T01:45:48.303Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 15,
-        "version": 45,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/7wHX9qWgNf5zACwGpHtOns"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Rune"
-        },
-        "shortName": {
-          "en-US": "Rune"
-        },
-        "excerpt": {
-          "en-US": "UX/UI Design, Human Factors, Branding, Prototyping"
-        },
-        "introduction": {
-          "en-US": "A powerful AI platform that bridges the gap between educators and students, enabling objective, real-time assessments of writing development."
-        },
-        "projectContextSections": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "2XUpZM2KIcnUBOLThHCXPu"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "247V0KvXQKNrz91zWr4j6E"
-              }
-            }
-          ]
-        },
-        "metadata": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5mm1V8wwH0PsIZhUpwxwyr"
-            }
-          }
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "2p2EDhorU678d4XO9iTnYD"
-            }
-          }
-        },
-        "alternateCoverVideo": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6pJEBZcDrMPf0yrv4CQa6X"
-            }
-          }
-        },
-        "assetGrid": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "2p2EDhorU678d4XO9iTnYD"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "iQguGMJjzywW4MkcQjLfY"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "Xo6Utye7jkl2avkARC3RV"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "4jMnUAqxdxgeiBT6rHGW09"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "61Q28yxQBWzxzFObWJX3O1"
-              }
-            }
-          ]
-        },
-        "slug": {
-          "en-US": "rune"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
         "id": "5mm1V8wwH0PsIZhUpwxwyr",
         "type": "Entry",
         "createdAt": "2024-12-16T01:41:49.647Z",
-        "updatedAt": "2025-01-16T03:25:10.717Z",
+        "updatedAt": "2025-03-04T20:13:42.761Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6303,8 +6299,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2025-01-16T03:25:10.717Z",
+        "publishedVersion": 18,
+        "publishedAt": "2025-03-04T20:13:42.761Z",
         "firstPublishedAt": "2024-12-16T01:43:08.011Z",
         "createdBy": {
           "sys": {
@@ -6317,16 +6313,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
-        "publishedCounter": 4,
-        "version": 17,
+        "publishedCounter": 5,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
         "fieldStatus": {
@@ -6371,7 +6367,7 @@
           ]
         },
         "timeline": {
-          "en-US": "10 Weeks"
+          "en-US": "8 Weeks"
         }
       }
     },
@@ -7050,7 +7046,7 @@
         "id": "7tifnQhz7wi0fV54DX15g8",
         "type": "Entry",
         "createdAt": "2025-01-14T19:37:40.522Z",
-        "updatedAt": "2025-01-15T18:23:15.709Z",
+        "updatedAt": "2025-03-04T20:14:58.647Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7058,8 +7054,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 38,
-        "publishedAt": "2025-01-15T18:23:15.709Z",
+        "publishedVersion": 40,
+        "publishedAt": "2025-03-04T20:14:58.647Z",
         "firstPublishedAt": "2025-01-14T19:38:50.104Z",
         "createdBy": {
           "sys": {
@@ -7072,16 +7068,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
-        "publishedCounter": 8,
-        "version": 39,
+        "publishedCounter": 9,
+        "version": 41,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
         "fieldStatus": {
@@ -7126,165 +7122,7 @@
           ]
         },
         "timeline": {
-          "en-US": "10 Weeks"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
-        "id": "4opOgiAkkvsov7Ix6M04M0",
-        "type": "Entry",
-        "createdAt": "2025-01-15T02:51:46.872Z",
-        "updatedAt": "2025-01-15T02:56:41.059Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 9,
-        "publishedAt": "2025-01-15T02:56:41.059Z",
-        "firstPublishedAt": "2025-01-15T02:55:32.732Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 10,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/4opOgiAkkvsov7Ix6M04M0"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Everything Zen"
-        },
-        "excerpt": {
-          "en-US": "Here is a quick description of this project."
-        },
-        "introduction": {
-          "en-US": "A project encompassing branding, marketing, and UX/UI design, showing how designing with each in mind can create lasting impact."
-        },
-        "projectContextSections": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "3TYNmIBjfiXpvR1DBzWmPc"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "fDQ5MBEseO3hhtL2nZRh3"
-              }
-            }
-          ]
-        },
-        "metadata": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2XImKA5kJwycwtVaShxNl8"
-            }
-          }
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "2rH8qlbhAf5eV98ihD0nUG"
-            }
-          }
-        },
-        "assetGrid": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "2rH8qlbhAf5eV98ihD0nUG"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "3uCx8Sh0ubnLqYx8nZwPeb"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "2p2EDhorU678d4XO9iTnYD"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "4CvgV4XQuLlJ9MozpBgnOo"
-              }
-            }
-          ]
-        },
-        "slug": {
-          "en-US": "everything-zen"
+          "en-US": "6 Weeks"
         }
       }
     },
@@ -8694,7 +8532,7 @@
         "id": "iNO8lDJ7vSF2JUfRVVlJS",
         "type": "Entry",
         "createdAt": "2025-01-15T08:57:10.509Z",
-        "updatedAt": "2025-01-15T09:00:39.027Z",
+        "updatedAt": "2025-03-04T20:14:12.129Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8702,8 +8540,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2025-01-15T09:00:39.027Z",
+        "publishedVersion": 19,
+        "publishedAt": "2025-03-04T20:14:12.129Z",
         "firstPublishedAt": "2025-01-15T09:00:04.632Z",
         "createdBy": {
           "sys": {
@@ -8716,16 +8554,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
-        "publishedCounter": 3,
-        "version": 18,
+        "publishedCounter": 4,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
         "fieldStatus": {
@@ -8764,7 +8602,7 @@
           ]
         },
         "timeline": {
-          "en-US": "10 Weeks"
+          "en-US": "5 Weeks"
         }
       }
     },
@@ -9104,7 +8942,7 @@
         "id": "5WF1ppaNugmFOhNfn2ZsGx",
         "type": "Entry",
         "createdAt": "2025-01-15T09:14:34.377Z",
-        "updatedAt": "2025-01-15T09:31:26.421Z",
+        "updatedAt": "2025-03-04T20:14:36.050Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9112,8 +8950,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2025-01-15T09:31:26.421Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-03-04T20:14:36.050Z",
         "firstPublishedAt": "2025-01-15T09:24:52.451Z",
         "createdBy": {
           "sys": {
@@ -9126,16 +8964,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
-        "publishedCounter": 3,
-        "version": 14,
+        "publishedCounter": 4,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
+            "id": "3Y0roSaJ8Rwo5KNLzj5zWO"
           }
         },
         "fieldStatus": {
@@ -9179,7 +9017,7 @@
           ]
         },
         "timeline": {
-          "en-US": "10 Weeks"
+          "en-US": "5 Weeks"
         }
       }
     },
@@ -9281,177 +9119,10 @@
             "id": "32imgqslv3rc"
           }
         },
-        "id": "1EJi0Q5zcHTLELnv6YeIe9",
-        "type": "Entry",
-        "createdAt": "2025-02-20T01:26:37.514Z",
-        "updatedAt": "2025-02-20T02:13:21.954Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 8,
-        "publishedAt": "2025-02-20T02:13:21.954Z",
-        "firstPublishedAt": "2025-02-20T01:30:19.715Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 9,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7wI7ZGqIeChakvUu2xxSuK"
-          }
-        },
-        "fieldStatus": {
-          "*": {
-            "en-US": "published"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1EJi0Q5zcHTLELnv6YeIe9"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Nest (1)"
-        },
-        "excerpt": {
-          "en-US": "UX/UI Design, Prototyping, User Testing"
-        },
-        "introduction": {
-          "en-US": "A reimagined thermostat that blends luxury and innovative technology to deliver seamless integration into modern homes. "
-        },
-        "projectContextSections": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "F2wTIWY05jcS3brO5DMb7"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6SCaUMu5ex73NXJK0tuzII"
-              }
-            }
-          ]
-        },
-        "metadata": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "7tifnQhz7wi0fV54DX15g8"
-            }
-          }
-        },
-        "coverImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6TLTt2BRI5AxyCWTPqjXAJ"
-            }
-          }
-        },
-        "alternateCoverVideo": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6pJEBZcDrMPf0yrv4CQa6X"
-            }
-          }
-        },
-        "assetGrid": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "66odeK0yFB5tEfINv5KAuR"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "7wJczYkRo6CtUbfOl87T1u"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "wuqwYApcNCsDmtWf5GoiG"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Asset",
-                "id": "3ASE9hnjSSINs4EHwtn0AC"
-              }
-            }
-          ]
-        },
-        "slug": {
-          "en-US": "nest-1"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "32imgqslv3rc"
-          }
-        },
         "id": "2MoEZvYZuezqovn09Ad6tq",
         "type": "Entry",
         "createdAt": "2025-03-02T18:20:11.783Z",
-        "updatedAt": "2025-03-03T04:10:29.083Z",
+        "updatedAt": "2025-03-03T18:53:39.668Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9459,8 +9130,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 21,
-        "publishedAt": "2025-03-03T04:10:29.083Z",
+        "publishedVersion": 23,
+        "publishedAt": "2025-03-03T18:53:39.668Z",
         "firstPublishedAt": "2025-03-02T18:20:22.004Z",
         "createdBy": {
           "sys": {
@@ -9476,8 +9147,8 @@
             "id": "7wI7ZGqIeChakvUu2xxSuK"
           }
         },
-        "publishedCounter": 9,
-        "version": 22,
+        "publishedCounter": 10,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9503,7 +9174,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Rune (case study version)"
+          "en-US": "Rune"
         },
         "shortName": {
           "en-US": "Rune"
@@ -11868,6 +11539,356 @@
         },
         "caption": {
           "en-US": "The dashboard offers real-time, AI-driven insights into individual writing habits, alerting teachers to early motor skill issues and suggesting interventions. By bridging physical handwriting with digital intelligence, Rune streamlines classroom management and enhances student outcomes."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "3brUizGZU0msXfNzAmlTg6",
+        "type": "Entry",
+        "createdAt": "2025-03-05T04:52:59.179Z",
+        "updatedAt": "2025-03-05T05:01:14.278Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-03-05T05:01:14.278Z",
+        "firstPublishedAt": "2025-03-05T04:53:09.085Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/3brUizGZU0msXfNzAmlTg6"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nest (new case study draft)"
+        },
+        "excerpt": {
+          "en-US": "UX/UI Design, Prototyping, User Testing"
+        },
+        "introduction": {
+          "en-US": "A reimagined thermostat that blends luxury and innovative technology to deliver seamless integration into modern homes. "
+        },
+        "projectContextSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "F2wTIWY05jcS3brO5DMb7"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6SCaUMu5ex73NXJK0tuzII"
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7tifnQhz7wi0fV54DX15g8"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+            }
+          }
+        },
+        "assetGrid": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6TLTt2BRI5AxyCWTPqjXAJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "66odeK0yFB5tEfINv5KAuR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7wJczYkRo6CtUbfOl87T1u"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "wuqwYApcNCsDmtWf5GoiG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3ASE9hnjSSINs4EHwtn0AC"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "nest-new-case-study-draft"
+        },
+        "sections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1wdbigJM0bKKgcnKTa8Ly2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "1wdbigJM0bKKgcnKTa8Ly2",
+        "type": "Entry",
+        "createdAt": "2025-03-05T04:53:28.862Z",
+        "updatedAt": "2025-03-05T05:00:27.509Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-03-05T05:00:27.509Z",
+        "firstPublishedAt": "2025-03-05T04:53:37.877Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/1wdbigJM0bKKgcnKTa8Ly2"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Case study"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5SotNOD115z1LiQBTjQ89i"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5SotNOD115z1LiQBTjQ89i"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "5SotNOD115z1LiQBTjQ89i",
+        "type": "Entry",
+        "createdAt": "2025-03-05T04:53:44.919Z",
+        "updatedAt": "2025-03-05T04:59:47.902Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-03-05T04:59:47.902Z",
+        "firstPublishedAt": "2025-03-05T04:55:32.448Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentWithImage"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/entries/5SotNOD115z1LiQBTjQ89i"
+      },
+      "fields": {
+        "heading": {
+          "en-US": "Design A"
+        },
+        "subtitle": {
+          "en-US": "To gain an understanding of what users like and dislike about current smart thermostats, we sent out a survey."
+        },
+        "text": {
+          "en-US": "Assigned to redefine the scheduling feature, I developed Design A as a solution for multi-day editing. Through iteration, I designed a system that works within the HMI constraints of the physical thermostat. With no touchscreen, interaction is limited to turning and pressing the dial—a challenge that pushed me to create an intuitive solution for complex HMI problems."
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7nn8YUb048JQ4RMgvc4DuY"
+            }
+          }
         }
       }
     }
@@ -16741,6 +16762,84 @@
             },
             "fileName": "Prototype2.png",
             "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "32imgqslv3rc"
+          }
+        },
+        "id": "7nn8YUb048JQ4RMgvc4DuY",
+        "type": "Asset",
+        "createdAt": "2025-03-05T04:58:59.543Z",
+        "updatedAt": "2025-03-05T04:59:43.609Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-03-05T04:59:43.609Z",
+        "firstPublishedAt": "2025-03-05T04:59:43.609Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7wI7ZGqIeChakvUu2xxSuK"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/32imgqslv3rc/environments/master/assets/7nn8YUb048JQ4RMgvc4DuY"
+      },
+      "fields": {
+        "title": {
+          "en-US": "temporary video"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//videos.ctfassets.net/32imgqslv3rc/7nn8YUb048JQ4RMgvc4DuY/5618263bc1790205c98eb3a4946b1ab8/Rune_Vision_Video.mov",
+            "details": {
+              "size": 8995686
+            },
+            "fileName": "Rune Vision Video.mov",
+            "contentType": "video/quicktime"
           }
         }
       }

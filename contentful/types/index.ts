@@ -3,6 +3,7 @@ export type { TypeBanner, TypeBannerFields } from "./TypeBanner";
 export type { TypeBrandElementsDisplay, TypeBrandElementsDisplayFields } from "./TypeBrandElementsDisplay";
 export type { TypeCardSlide, TypeCardSlideFields } from "./TypeCardSlide";
 export type { TypeCenteredImageSection, TypeCenteredImageSectionFields } from "./TypeCenteredImageSection";
+export type { TypeContentWithImage, TypeContentWithImageFields } from "./TypeContentWithImage";
 export type { TypeHomePage, TypeHomePageFields } from "./TypeHomePage";
 export type { TypeImageAndCaption, TypeImageAndCaptionFields } from "./TypeImageAndCaption";
 export type { TypeImageAndParagraphs, TypeImageAndParagraphsFields } from "./TypeImageAndParagraphs";
