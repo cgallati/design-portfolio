@@ -14,7 +14,7 @@ const CURRENT_PROJECT_PAGE = {
   title: "Aerolink",
   introduction:
     "Aerolink helps pilots build a clearer picture of non-towered airport traffic by uniting three channels they already rely on separately: radio calls, aircraft position, and airport conditions. The result is a shared, airport-centered view that reduces uncertainty during approach and takeoff planning.",
-  status: "In active development",
+  status: "In active development · designer-built, AI-assisted",
   demoUrl: "https://aerolink-demo.vercel.app",
   demoNote: "Designed for iPad mini — works best on iPads or desktop.",
 };

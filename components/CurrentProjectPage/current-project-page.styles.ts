@@ -23,6 +23,7 @@ export const StatusBadge = styled.div`
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  max-width: 100%;
   color: ${({ theme }) => theme.color.primary};
   font-family: ${({ theme }) => theme.typography.interactive.family};
   ${({ theme }) =>
@@ -39,6 +40,7 @@ export const StatusBadge = styled.div`
     height: 9px;
     border-radius: 50%;
     background: #ffae3b;
+    flex-shrink: 0;
   }
 `;
 
