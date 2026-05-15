@@ -42,7 +42,9 @@ export const NavBar = styled.nav`
   }
 `;
 
-export const NavLink = styled(Link)<{ active: boolean }>`
+export const NavLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== "active",
+})<{ active: boolean }>`
   flex: 1;
   text-decoration: none;
   position: relative;
