@@ -6,6 +6,34 @@ Designed by and featuring Steven Vasil.
 - Contentful
 - Emotion
 
+## Features
+
+### Current Project Teaser
+
+A lightweight, code-defined "currently building" callout that appears on the home page between the intro section and the project list. It's intended for in-progress projects that don't yet warrant a full case study but you still want to surface for visitors (e.g. a recruiter visiting from a job application).
+
+The teaser links to a standalone page at `/current` that renders a minimal stub — a status pill at the top, the project title and intro, and a CTA out to the live demo. The page is intentionally short (designed to fit on one desktop screen) so it can be shipped without writing a full case study. The `/current` page does NOT fetch from Contentful; all content lives in code so you can ship updates quickly without round-tripping through the CMS.
+
+**To update the home page teaser copy:**
+Edit the `CURRENT_PROJECT_TEASER` constants block at the top of `components/CurrentProjectTeaser/current-project-teaser.tsx`:
+
+- `eyebrow` — small label above the title (default: `"Currently building"`)
+- `title` — project name
+- `status` — one-line description shown on the home page
+- `href` — internal route to the detail page (default: `"/current"`)
+
+**To update the `/current` page content:**
+Edit the `CURRENT_PROJECT_PAGE` constants block at the top of `components/CurrentProjectPage/current-project-page.tsx`:
+
+- `title`, `introduction` — passed to `IntroSection`
+- `status` — short pill label rendered at the top of the page (e.g. `"In active development"`)
+- `demoUrl` — external URL to the live demo (opens in a new tab)
+- `demoNote` — short note about the demo's intended environment (defaults to an iPad-mini / desktop note)
+
+The page renders a single centered `HeroSection` containing, in order: title, status label (text with an orange dot, no background), intro paragraph, and the demo CTA + iPad-mini note. `PageWrapper` has `min-height: 100vh` so the white area fills the viewport and the footer drops below the fold.
+
+**To remove the teaser entirely** once a full case study replaces it: delete the `<CurrentProjectTeaser />` line in `pages/index.tsx` and (optionally) remove the `components/CurrentProjectTeaser/` and `components/CurrentProjectPage/` directories and `pages/current.tsx`.
+
 ### TODO
 #### Setup Preview Mode:
 

@@ -1,7 +1,11 @@
 import { getHomePage } from "../contentful/api";
 import { TypeHomePage } from "../contentful/types";
 import { IntroSection } from "../components/IntroSection";
-import { ProjectCard, ProjectListSection } from "../components";
+import {
+  ProjectCard,
+  ProjectListSection,
+  CurrentProjectTeaser,
+} from "../components";
 import { responsiveValues, tokens } from "../lib/theme";
 
 import styled from "@emotion/styled";
@@ -28,6 +32,7 @@ export default function Index({
   return (
     <PageWrapper>
       <IntroSection title={title} introduction={introduction} />
+      <CurrentProjectTeaser />
       {projects && (
         <ProjectListSection>
           {projects.map(({ fields }, index) => (

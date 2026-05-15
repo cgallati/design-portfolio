@@ -11,7 +11,9 @@ import {globalStyles} from "../lib/theme/globalStyles";
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const isHomeOrProject =
-    pathname === "/" || pathname.split("/")[1] === "project";
+    pathname === "/" ||
+    pathname.split("/")[1] === "project" ||
+    pathname === "/current";
 
   const isRoot = (route: string) => route === "/";
   const isActive = (link: { href: string; display: string }) =>
