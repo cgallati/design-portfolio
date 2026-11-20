@@ -17,10 +17,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  const project = await getProject(params.slug);
-  const navigation = await getProjectNavigation(params.slug);
-  return { props: { project, navigation } };
+export async function getStaticProps({ params, preview = false }) {
+  const project = await getProject(params.slug, preview);
+  if (!project) return { notFound: true, revalidate: 60 };
+  const navigation = await getProjectNavigation(params.slug, preview);
+  return { props: { project, navigation, preview } };
 }
 
 export default Project;

@@ -52,7 +52,7 @@ export default function Index({
 }
 
 export async function getStaticProps({ preview = false }) {
-  const content = await getHomePage();
+  const content = await getHomePage(preview);
   return {
     props: { preview, content },
   };
