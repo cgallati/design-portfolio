@@ -1,32 +1,19 @@
+// Entry point for Contentful's "Open preview" button.
+// /api/preview?secret=...&slug=<project-slug>  -> draft view of /project/<slug>
+// /api/preview?secret=...                      -> draft view of the home page
+export default function preview(req, res) {
+  const { secret, slug } = req.query;
 
-export default async function preview(req, res) {
-  const { secret, slug } = req.query
-
-  if (secret !== process.env.CONTENTFUL_PREVIEW_SECRET || !slug) {
-    return res.status(401).json({ message: 'Invalid token' })
+  if (!process.env.CONTENTFUL_PREVIEW_SECRET || secret !== process.env.CONTENTFUL_PREVIEW_SECRET) {
+    return res.status(401).json({ message: "Invalid token" });
   }
 
-  // Fetch the headless CMS to check if the provided `slug` exists
-  // const post = await getPreviewPostBySlug(slug)
-
-  // If the slug doesn't exist prevent preview mode from being enabled
-  if (!post) {
-    return res.status(401).json({ message: 'Invalid slug' })
+  // Only allow plain slugs so this can't be used as an open redirect.
+  if (slug && !/^[a-z0-9-]+$/.test(slug)) {
+    return res.status(400).json({ message: "Invalid slug" });
   }
 
-  // Enable Preview Mode by setting the cookies
-  res.setPreviewData({})
-
-  // Redirect to the path from the fetched post
-  // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
-  // res.writeHead(307, { Location: `/posts/${post.slug}` })
-  const url = `/posts/${post.slug}`
-  res.setHeader('Content-Type', 'text/html')
-  res.write(
-    `<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=${url}" />
-    <script>window.location.href = '${url}'</script>
-    </head>
-    </html>`
-  )
-  res.end()
+  // Short-lived preview session (1 hour).
+  res.setPreviewData({}, { maxAge: 60 * 60 });
+  res.redirect(307, slug ? `/project/${slug}` : "/");
 }

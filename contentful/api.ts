@@ -7,15 +7,27 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export const getHomePage = async (): Promise<TypeHomePage> => {
-    const homePage = await client.getEntries<TypeHomePageFields>({
+// Draft content via the Content Preview API. Only used in Next.js preview mode
+// (entered through /api/preview); falls back to published content if unset.
+const previewClient = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+  ? createClient({
+      space: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+      host: "preview.contentful.com",
+    })
+  : client;
+
+const getClient = (preview = false) => (preview ? previewClient : client);
+
+export const getHomePage = async (preview = false): Promise<TypeHomePage> => {
+    const homePage = await getClient(preview).getEntries<TypeHomePageFields>({
         content_type: "homePage",
     });
     return homePage.items[0];
 };
 
-export const getProjectList = async (): Promise<TypeProject[]> => {
-  return client.getEntries<TypeProjectFields>({
+export const getProjectList = async (preview = false): Promise<TypeProject[]> => {
+  return getClient(preview).getEntries<TypeProjectFields>({
     content_type: "project",
     include: 3,
   }).then(projects => projects.items);
@@ -23,14 +35,15 @@ export const getProjectList = async (): Promise<TypeProject[]> => {
 
 export type ProjectWithPointers = TypeProject & {next: string, previous: string};
 
-export const getProject = async (slug: string): Promise<ProjectWithPointers> => {
-  const projects = await getProjectList();
+export const getProject = async (slug: string, preview = false): Promise<ProjectWithPointers | null> => {
+  const projects = await getProjectList(preview);
   const projectIndex = projects.findIndex((project) => project.fields.slug === slug);
   const project = projects[projectIndex];
+  if (!project) return null;
   const next = projects[projectIndex + 1];
   const prev = projects[projectIndex - 1];
 
-  let parsedData = await client.parseEntries<TypeProjectFields>(project);
+  let parsedData = await getClient(preview).parseEntries<TypeProjectFields>(project);
   return {
     ...project,
     // @ts-ignore
@@ -45,8 +58,8 @@ export type ProjectNavigation = {
   previous: string | null;
 };
 
-export const getProjectNavigation = async (slug: string): Promise<ProjectNavigation> => {
-  const homePage = await getHomePage();
+export const getProjectNavigation = async (slug: string, preview = false): Promise<ProjectNavigation> => {
+  const homePage = await getHomePage(preview);
   const projects = homePage.fields.projects;
   
   if (!projects) {

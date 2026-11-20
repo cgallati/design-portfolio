@@ -50,6 +50,31 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <Layout navLinks={linksWithState}>
+        {pageProps.preview && (
+          // API route needs a full navigation, not a client-side <Link>
+          // eslint-disable-next-line @next/next/no-html-link-for-pages
+          <a
+            href="/api/exit-preview"
+            style={{
+              position: "fixed",
+              bottom: 16,
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 1000,
+              background: "#151515",
+              color: "#fff",
+              padding: "10px 18px",
+              borderRadius: 999,
+              fontFamily: "Poppins, sans-serif",
+              fontSize: 14,
+              textDecoration: "none",
+              boxShadow: "0 6px 20px rgba(0,0,0,.2)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Previewing drafts · Exit preview
+          </a>
+        )}
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
