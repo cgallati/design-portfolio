@@ -1,30 +1,61 @@
 import styled from "@emotion/styled";
-import { HorizontalLine, ProjectListSection } from "../components/";
+import { HorizontalLine } from "../components/";
 import { tokens, responsiveValues, mq } from "../lib/theme";
 import Image from "next/image";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { OPEN_TO_WORK } from "../lib/constants";
 
+// Experience rows (logo left, details right). Keep descriptions NDA-safe.
 const EXPERIENCE = [
-  { role: "UX Designer", org: "YouTube · Contract", dates: "2026 – Present" },
-  { role: "UX Designer Intern", org: "Lenovo", dates: "2025 – 2026" },
-  { role: "UX Researcher, HMI", org: "Oshkosh Corporation · Contract", dates: "2025" },
-  { role: "Brand Experience", org: "Everything Zen Sailing Charters · Freelance", dates: "2022 – 2023" },
+  {
+    logo: "/assets/logos/youtube.svg",
+    logoWidth: 220,
+    alt: "YouTube",
+    role: "UX Designer",
+    org: "YouTube · Contract · 2026 – Present",
+    description:
+      "Designing product experiences on a contract with YouTube in San Bruno, working across research, interaction design, and prototyping for one of the world's largest platforms.",
+  },
+  {
+    logo: "/assets/logos/lenovo.png",
+    logoWidth: 240,
+    alt: "Lenovo",
+    role: "UX Designer Intern",
+    org: "Lenovo User Experience Exploration (LUXE) · 2025 – 2026",
+    description:
+      "Part of Lenovo's first LUXE intern cohort. Worked on UX strategy for next-gen AR products, researched where AI and UX intersect, and explored cross-device collaboration. Moderated a panel on accessible design and inclusive AI, and was voted \u201cMost Likely to Launch a Product\u201d by fellow interns.",
+  },
+  {
+    logo: "/assets/logos/oshkosh.svg",
+    logoWidth: 260,
+    alt: "Oshkosh",
+    role: "UX Researcher, HMI",
+    org: "Oshkosh Corporation · Contract · 2025",
+    description:
+      "Researched human-machine interfaces for Oshkosh through SCADpro, translating field insights into design direction for complex vehicle systems.",
+  },
+  {
+    logo: "/assets/logos/flux.svg",
+    logoWidth: 130,
+    alt: "SCAD FLUX",
+    role: "Co-President",
+    org: "SCAD FLUX (Future Leaders of User Experience)",
+    description:
+      "Led SCAD's 800+ member UX club through its 10th year. Launched FLUXathon 2025, bringing in a Google designer for a hands-on vibe coding workshop that ended with every team shipping a working iOS prototype.",
+  },
 ];
 
 export default function About() {
   const { ref: introRef } = useScrollAnimation();
   const { ref: aboutRef } = useScrollAnimation();
   const { ref: expRef } = useScrollAnimation();
-  const { ref: vpRef } = useScrollAnimation();
 
   return (
     <AboutPageWrapper>
       <AboutParagraph ref={introRef}>
-        I’m a UX designer with a background in graphic design, passionate about
-        creating user-centered experiences across physical and digital spaces.
-        I design for clarity, function, and beauty, crafting systems that solve
-        complex problems with impact.
+        I’m a UX designer with a background in graphic design. I turn complex
+        systems into clear, confident products, grounded in research and tested
+        with real users.
         {OPEN_TO_WORK.enabled && <OpenToWork>{OPEN_TO_WORK.text}</OpenToWork>}
       </AboutParagraph>
       <div ref={aboutRef}>
@@ -59,30 +90,26 @@ export default function About() {
         </FlexRow>
       <DesktopOnlyHorizontalLine />
       </div>
-      <ExperienceSection ref={expRef}>
-        <SectionLabel>Experience</SectionLabel>
-        {EXPERIENCE.map(({ role, org, dates }) => (
-          <ExperienceRow key={org}>
-            <div>
+      <div ref={expRef}>
+        {EXPERIENCE.map(({ logo, logoWidth, alt, role, org, description }) => (
+          <ExperienceRow key={alt}>
+            <LogoCell>
+              <Image
+                src={logo}
+                alt={alt}
+                width={logoWidth}
+                height={logoWidth}
+                style={{ width: "100%", maxWidth: logoWidth, height: "auto" }}
+              />
+            </LogoCell>
+            <ExperienceDetails>
               <PrimaryText>{role}</PrimaryText>
               <SecondaryText>{org}</SecondaryText>
-            </div>
-            <SecondaryText>{dates}</SecondaryText>
+              <ExperienceDescription>{description}</ExperienceDescription>
+            </ExperienceDetails>
           </ExperienceRow>
         ))}
-      </ExperienceSection>
-      <VeepRow ref={vpRef}>
-        <VeepText>
-          As Co-President of FLUX, SCAD&apos;s 800+ member UX club, I led the
-          officer team through its 10th year, launched FLUXathon 2025 with a
-          hands-on vibe coding workshop from Google, and earlier built the web
-          design team behind the SCAD StartUp competition.
-        </VeepText>
-        <VeepCreds>
-            <PrimaryText>Co-President</PrimaryText>
-            <SecondaryText> FLUX (Future Leaders of User Experience)</SecondaryText>
-        </VeepCreds>
-      </VeepRow>
+      </div>
     </AboutPageWrapper>
   );
 }
@@ -237,63 +264,63 @@ const OpenToWork = styled.span`
   color: #151515;
 `;
 
-const ExperienceSection = styled.section`
-  padding-top: 55px;
-`;
-
-const SectionLabel = styled.p`
-  color: #adadad;
-  font-family: Poppins;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-`;
-
 const ExperienceRow = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  padding: 1rem 0;
+  flex-direction: column;
+  gap: 2rem;
   border-bottom: 2px solid #e5e5e5;
-
-  & > p {
-    white-space: nowrap;
-  }
-`;
-
-const VeepRow = styled(FlexRow)`
-  justify-content: space-between;
-  padding: 55px 0 100px;
-`;
-
-const VeepText = styled.p`
-flex: 1;
-color: #636363;
-font-family: Poppins;
-${responsiveValues("font-size", {
-    s: "18px",
-    m: "18px",
-    l: "22px",
-    xl: "24px",
+  ${responsiveValues("padding", {
+    s: "3rem 0",
+    m: "3.5rem 0",
+    l: "4.5rem 0",
+    xl: "5rem 0",
   })};
-font-style: normal;
-font-weight: 300;
-${responsiveValues("line-height", {
-    s: "34px",
-    m: "33px",
-    l: "40px",
-    xl: "48px",
-  })};
-max-width: 600px;
-`;
 
-const VeepCreds = styled.div`
-flex-basis: 50%;
-display: none;
   ${mq[0]} {
-    display: block;
+    flex-direction: row;
+    align-items: center;
   }
 
+  &:last-of-type {
+    border-bottom: none;
+    padding-bottom: 100px;
+  }
+`;
+
+const LogoCell = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  ${responsiveValues("max-width", { s: "160px", m: "none", l: "none", xl: "none" })};
+  ${mq[0]} {
+    justify-content: center;
+    padding: 0 2rem;
+  }
+`;
+
+const ExperienceDetails = styled.div`
+  flex: 1;
+  ${mq[0]} {
+    ${responsiveValues("padding-left", {
+      s: "0",
+      m: "1rem",
+      l: "2rem",
+      xl: "4rem",
+    })};
+  }
+`;
+
+const ExperienceDescription = styled.p`
+  color: #636363;
+  font-family: Poppins;
+  font-weight: 300;
+  ${responsiveValues("font-size", {
+    s: "16px",
+    m: "17px",
+    l: "18px",
+    xl: "20px",
+  })};
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  max-width: 600px;
 `;

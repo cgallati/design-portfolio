@@ -8,26 +8,21 @@ Designed by and featuring Steven Vasil.
 
 ## Features
 
-### "Currently" Teaser
+### Home hero
 
-A small, code-defined card on the home page between the intro and the project list, used for a short "what I'm doing now" blurb (currently: UX Designer at YouTube). Content lives in code, not Contentful.
-
-Edit the `CURRENT_PROJECT_TEASER` block at the top of `components/CurrentProjectTeaser/current-project-teaser.tsx`:
-
-- `eyebrow`, `title`, `status` — the copy
-- `href` — set to an internal route to make the card a link (shows an arrow); `null` renders a static card
+The home headline is the Contentful `homePage` entry: `title` is the first (black) line and `introduction` the second (italic grey) line. The badge rows under it (label + logo) are the `HERO_BADGES` constant in `components/IntroSection/hero-badges.tsx`; logo art lives in `public/assets/logos/`.
 
 ### Open-to-work line
 
-`OPEN_TO_WORK` in `lib/constants.ts` controls the job-hunt line shown in the teaser and on the About page. Flip `enabled` to hide it.
+`OPEN_TO_WORK` in `lib/constants.ts` controls the job-hunt line shown under the home badges and on the About page. Flip `enabled` to hide it.
 
 ### Experience / LinkedIn
 
-The About page experience list is the `EXPERIENCE` array at the top of `pages/about.tsx`. The LinkedIn URL (footer link) is `LINKEDIN_URL` in `lib/constants.ts`.
+The About page experience rows (logo, role, org, description) are the `EXPERIENCE` array at the top of `pages/about.tsx`. The LinkedIn URL (footer link) is `LINKEDIN_URL` in `lib/constants.ts`.
 
 ### Redirects
 
-`/current` (the old Aerolink WIP page) redirects via `next.config.js`. Point it at `/project/aerolink` once that Contentful entry is published.
+`/current` (the old Aerolink WIP page) permanently redirects to `/project/aerolink` via `next.config.js`.
 
 ### TODO
 #### Setup Preview Mode:

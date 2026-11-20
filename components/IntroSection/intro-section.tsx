@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import {
   IntroSectionFrame,
   IntroSectionSubtitle,
@@ -10,17 +10,24 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 type IntroSectionProps = {
   title: string;
   introduction: string;
+  italicIntroduction?: boolean;
+  children?: ReactNode;
 };
 export const IntroSection: FC<IntroSectionProps> = ({
   title,
   introduction,
+  italicIntroduction = false,
+  children,
 }) => {
   const {ref: titleRef} = useScrollAnimation();
   return (
     <IntroSectionFrame>
       <IntroSectionTextContainer ref={titleRef}>
         <IntroSectionTitle>{title}</IntroSectionTitle>
-        <IntroSectionSubtitle>{introduction}</IntroSectionSubtitle>
+        <IntroSectionSubtitle italic={italicIntroduction}>
+          {introduction}
+        </IntroSectionSubtitle>
+        {children}
       </IntroSectionTextContainer>
     </IntroSectionFrame>
   );

@@ -41,8 +41,10 @@ export const IntroSectionTitle = styled.h1`
   color: ${({ theme }) => theme.color.primary};
 `;
 
-export const IntroSectionSubtitle = styled.p`
-  font-style: normal;
+export const IntroSectionSubtitle = styled("p", {
+  shouldForwardProp: (prop) => prop !== "italic",
+})<{ italic?: boolean }>`
+  font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-family: ${({ theme }) => theme.typography.display.family};
   ${({ theme }) => responsiveValues("font-size", theme.typography.display.size)}
   font-weight: ${({ theme }) => theme.typography.subheading.weight};
