@@ -42,4 +42,4 @@ next-env.d.ts
 *storybook.log
 
 # Local backup of refactor branch's pre-Payload snapshot, not for VCS
-archive/
+archive/.claude/settings.local.json
