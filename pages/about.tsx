@@ -3,10 +3,19 @@ import { HorizontalLine, ProjectListSection } from "../components/";
 import { tokens, responsiveValues, mq } from "../lib/theme";
 import Image from "next/image";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { OPEN_TO_WORK } from "../lib/constants";
+
+const EXPERIENCE = [
+  { role: "UX Designer", org: "YouTube · Contract", dates: "2026 – Present" },
+  { role: "UX Designer Intern", org: "Lenovo", dates: "2025 – 2026" },
+  { role: "UX Researcher, HMI", org: "Oshkosh Corporation · Contract", dates: "2025" },
+  { role: "Brand Experience", org: "Everything Zen Sailing Charters · Freelance", dates: "2022 – 2023" },
+];
 
 export default function About() {
   const { ref: introRef } = useScrollAnimation();
   const { ref: aboutRef } = useScrollAnimation();
+  const { ref: expRef } = useScrollAnimation();
   const { ref: vpRef } = useScrollAnimation();
 
   return (
@@ -16,6 +25,7 @@ export default function About() {
         creating user-centered experiences across physical and digital spaces.
         I design for clarity, function, and beauty, crafting systems that solve
         complex problems with impact.
+        {OPEN_TO_WORK.enabled && <OpenToWork>{OPEN_TO_WORK.text}</OpenToWork>}
       </AboutParagraph>
       <div ref={aboutRef}>
         <HorizontalLine />
@@ -36,7 +46,7 @@ export default function About() {
           </ImageContainer>
           <FlexColumn>
             <FlexItem>
-              <PrimaryText>BFA in User Experience (UX) Design</PrimaryText>
+              <PrimaryText>BFA in User Experience (UX) Design, 2026</PrimaryText>
               <SecondaryText>Savannah College of Art and Design</SecondaryText>
             </FlexItem>
             <HorizontalLine />
@@ -49,15 +59,27 @@ export default function About() {
         </FlexRow>
       <DesktopOnlyHorizontalLine />
       </div>
+      <ExperienceSection ref={expRef}>
+        <SectionLabel>Experience</SectionLabel>
+        {EXPERIENCE.map(({ role, org, dates }) => (
+          <ExperienceRow key={org}>
+            <div>
+              <PrimaryText>{role}</PrimaryText>
+              <SecondaryText>{org}</SecondaryText>
+            </div>
+            <SecondaryText>{dates}</SecondaryText>
+          </ExperienceRow>
+        ))}
+      </ExperienceSection>
       <VeepRow ref={vpRef}>
         <VeepText>
-          As Vice President of FLUX, I oversee marketing, communications, and
-          internal operations while collaborating with officers to plan
-          initatives. Previously, I coordinated with the SCAD StartUp competition
-          and created a web design team to enhance our digital presence.
+          As Co-President of FLUX, SCAD&apos;s 800+ member UX club, I led the
+          officer team through its 10th year, launched FLUXathon 2025 with a
+          hands-on vibe coding workshop from Google, and earlier built the web
+          design team behind the SCAD StartUp competition.
         </VeepText>
         <VeepCreds>
-            <PrimaryText>Vice President</PrimaryText>
+            <PrimaryText>Co-President</PrimaryText>
             <SecondaryText> FLUX (Future Leaders of User Experience)</SecondaryText>
         </VeepCreds>
       </VeepRow>
@@ -205,6 +227,40 @@ font-family: Poppins;
 font-style: normal;
 font-weight: 400;
 line-height: 200%; 
+`;
+
+const OpenToWork = styled.span`
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.5em;
+  font-weight: 400;
+  color: #151515;
+`;
+
+const ExperienceSection = styled.section`
+  padding-top: 55px;
+`;
+
+const SectionLabel = styled.p`
+  color: #adadad;
+  font-family: Poppins;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+`;
+
+const ExperienceRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid #e5e5e5;
+
+  & > p {
+    white-space: nowrap;
+  }
 `;
 
 const VeepRow = styled(FlexRow)`

@@ -13,7 +13,9 @@ const teaserEnter = keyframes`
   }
 `;
 
-export const TeaserCard = styled.article`
+export const TeaserCard = styled("article", {
+  shouldForwardProp: (prop) => prop !== "interactive",
+})<{ interactive?: boolean }>`
   background: ${tokens.color[6]};
   color: ${tokens.color[0]};
   ${({ theme }) => responsiveValues("border-radius", theme.radius)};
@@ -31,6 +33,10 @@ export const TeaserCard = styled.article`
   transition: transform 0.3s ease, background 0.3s ease;
   animation: ${teaserEnter} 800ms cubic-bezier(0.25, 0.1, 0.25, 1) 400ms both;
 
+  ${({ interactive }) => (interactive ? hoverStyles : "")}
+`;
+
+const hoverStyles = `
   ${mq[1]} {
     &:hover {
       transform: translateY(-2px);
@@ -117,4 +123,17 @@ export const TeaserArrow = styled.span`
   transition: transform 0.3s ease;
   flex-shrink: 0;
   line-height: 1;
+`;
+
+export const TeaserNote = styled.p`
+  font-family: ${({ theme }) => theme.typography.body.family};
+  ${responsiveValues("font-size", {
+    s: "0.85rem",
+    m: "0.9rem",
+    l: "0.95rem",
+    xl: "1rem",
+  })};
+  margin: 1rem 0 0;
+  color: #ffae3b;
+  line-height: 1.5;
 `;

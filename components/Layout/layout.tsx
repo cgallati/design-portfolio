@@ -19,6 +19,7 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import { responsiveValues } from "../../lib/theme";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { LINKEDIN_URL } from "../../lib/constants";
 
 interface NavLinkProps {
   display: string;
@@ -82,6 +83,9 @@ export const Layout: FC<{ navLinks: NavLinkProps[]; children: ReactNode }> = ({
           <EmailText>Shoot me an email</EmailText>
           </div>
           </StyledLink>
+          <SecondaryLink href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            Or find me on LinkedIn ↗
+          </SecondaryLink>
         </MaxWidthWrapper>
       </Footer>
     </PageContainer>
@@ -121,6 +125,26 @@ const StyledLink = styled.a`
 
   &:hover {
     text-decoration: none;
+  }
+`;
+
+const SecondaryLink = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  color: #636363;
+  font-family: Poppins;
+  font-weight: 300;
+  ${responsiveValues("font-size", {
+    s: "16px",
+    m: "17px",
+    l: "18px",
+    xl: "20px",
+  })};
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: #151515;
   }
 `;
 

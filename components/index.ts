@@ -6,4 +6,3 @@ export * from "./styles";
 export * from './AssetGrid';
 export * from './PercentageSection';
 export * from './CurrentProjectTeaser';
-export * from './CurrentProjectPage';

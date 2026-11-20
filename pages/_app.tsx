@@ -12,8 +12,7 @@ function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const isHomeOrProject =
     pathname === "/" ||
-    pathname.split("/")[1] === "project" ||
-    pathname === "/current";
+    pathname.split("/")[1] === "project";
 
   const isRoot = (route: string) => route === "/";
   const isActive = (link: { href: string; display: string }) =>
@@ -31,13 +30,14 @@ function MyApp({ Component, pageProps }) {
             <link rel="icon" href="/favicon/favicon.ico" />
         </Head>
       <DefaultSeo
-        title={"Steven Vasil"}
+        title={"Steven Vasil — UX Designer"}
+        description={"Steven Vasil is a UX designer crafting experiences across physical and digital spaces."}
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: "https://stevenvasil.com/",
           siteName: "Steven Vasil",
-          description: "Portfolio",
+          description: "UX designer crafting experiences across physical and digital spaces.",
           images: [
             {
               url: "/assets/startup25.png",

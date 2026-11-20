@@ -8,31 +8,26 @@ Designed by and featuring Steven Vasil.
 
 ## Features
 
-### Current Project Teaser
+### "Currently" Teaser
 
-A lightweight, code-defined "currently building" callout that appears on the home page between the intro section and the project list. It's intended for in-progress projects that don't yet warrant a full case study but you still want to surface for visitors (e.g. a recruiter visiting from a job application).
+A small, code-defined card on the home page between the intro and the project list, used for a short "what I'm doing now" blurb (currently: UX Designer at YouTube). Content lives in code, not Contentful.
 
-The teaser links to a standalone page at `/current` that renders a minimal stub — a status pill at the top, the project title and intro, and a CTA out to the live demo. The page is intentionally short (designed to fit on one desktop screen) so it can be shipped without writing a full case study. The `/current` page does NOT fetch from Contentful; all content lives in code so you can ship updates quickly without round-tripping through the CMS.
+Edit the `CURRENT_PROJECT_TEASER` block at the top of `components/CurrentProjectTeaser/current-project-teaser.tsx`:
 
-**To update the home page teaser copy:**
-Edit the `CURRENT_PROJECT_TEASER` constants block at the top of `components/CurrentProjectTeaser/current-project-teaser.tsx`:
+- `eyebrow`, `title`, `status` — the copy
+- `href` — set to an internal route to make the card a link (shows an arrow); `null` renders a static card
 
-- `eyebrow` — small label above the title (default: `"Currently building"`)
-- `title` — project name
-- `status` — one-line description shown on the home page
-- `href` — internal route to the detail page (default: `"/current"`)
+### Open-to-work line
 
-**To update the `/current` page content:**
-Edit the `CURRENT_PROJECT_PAGE` constants block at the top of `components/CurrentProjectPage/current-project-page.tsx`:
+`OPEN_TO_WORK` in `lib/constants.ts` controls the job-hunt line shown in the teaser and on the About page. Flip `enabled` to hide it.
 
-- `title`, `introduction` — passed to `IntroSection`
-- `status` — short pill label rendered at the top of the page (e.g. `"In active development"`)
-- `demoUrl` — external URL to the live demo (opens in a new tab)
-- `demoNote` — short note about the demo's intended environment (defaults to an iPad-mini / desktop note)
+### Experience / LinkedIn
 
-The page renders a single centered `HeroSection` containing, in order: title, status label (text with an orange dot, no background), intro paragraph, and the demo CTA + iPad-mini note. `PageWrapper` has `min-height: 100vh` so the white area fills the viewport and the footer drops below the fold.
+The About page experience list is the `EXPERIENCE` array at the top of `pages/about.tsx`. The LinkedIn URL (footer link) is `LINKEDIN_URL` in `lib/constants.ts`.
 
-**To remove the teaser entirely** once a full case study replaces it: delete the `<CurrentProjectTeaser />` line in `pages/index.tsx` and (optionally) remove the `components/CurrentProjectTeaser/` and `components/CurrentProjectPage/` directories and `pages/current.tsx`.
+### Redirects
+
+`/current` (the old Aerolink WIP page) redirects via `next.config.js`. Point it at `/project/aerolink` once that Contentful entry is published.
 
 ### TODO
 #### Setup Preview Mode:

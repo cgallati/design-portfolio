@@ -23,6 +23,6 @@ type Story = StoryObj<typeof IntroSection>;
 export const Primary: Story = {
     args: {
         title: 'Hello, I’m Steven.',
-        introduction: 'I’m a UX design student at SCAD who believes experience design should focus on the entire journey, where each impression matters.',
+        introduction: 'I’m a UX designer who believes experience design should focus on the entire journey, where each impression matters.',
     },
 };
