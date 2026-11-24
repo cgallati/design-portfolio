@@ -34,6 +34,14 @@ The page renders a single centered `HeroSection` containing, in order: title, st
 
 **To remove the teaser entirely** once a full case study replaces it: delete the `<CurrentProjectTeaser />` line in `pages/index.tsx` and (optionally) remove the `components/CurrentProjectTeaser/` and `components/CurrentProjectPage/` directories and `pages/current.tsx`.
 
+### Draft preview
+
+Draft (unpublished) Contentful content can be reviewed on the real site before publishing.
+
+- Env vars (Vercel, Production + Preview): `CONTENTFUL_PREVIEW_ACCESS_TOKEN` (Contentful → Settings → API keys → Content Preview API token) and `CONTENTFUL_PREVIEW_SECRET` (any random string).
+- Contentful → Settings → Content preview has a platform whose URLs point at `/api/preview?secret=<secret>&slug={entry.fields.slug}` (Project) and `/api/preview?secret=<secret>` (Home Page). Each entry then has an "Open preview" button.
+- `/api/preview` sets a 1-hour Next.js preview cookie and redirects to the page; a "Previewing drafts · Exit preview" pill shows while it's active (`/api/exit-preview` clears it).
+
 ### TODO
 #### Setup Preview Mode:
 
